@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{7E435065-E0EA-41F3-B485-049F3D24CA3A}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{C1F4855D-24C3-4F2E-AB10-F790D123F9A0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2qHw9/A+utZsdWzvnP6SX8BDIjRToKGgQ9s/8DSjt/AAAAAAOgAAAAAIAACAAAAAo4I+zwuR8o7h1rQ1HnBoaLqd4Uc3QchVsctlew+noHiAAAADBSdmPUY2o1sEbmf2ypP0P6Cz1rKr1YcKDS1F1A7tjNkAAAAATgi0pXQMVJzTuRB/3NWcz8Xlj/Jg8CJe97ht3yozXixfEh9HTeQvTR+bu1hdxcs2XO29pOO9kJN9L8axUnOlo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACo2x3XqG0AoJkPa11JPAysg+/TkqtF7Lk3kewrCKioiwAAAAAOgAAAAAIAACAAAAAIoZ/CZZEtnDddyv/8DcJeEKhtbP3YUEz0Q4d5udrdkCAAAABVmkx6GJn2dai0TP0QQGlEdRpc/E8iYedymUg96+aZSEAAAAA51qW52kDao41a2iE/0bdctYtFKVQCA6mPm7xaw71zeNYN4We1C3+IcKGkWE8QwRBvPVi4RMnUFDShkzpEUFPK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4ndHbIf79nRVo1TaFGIC4Zq4yuF1cAKcliwEk1A0kIAAAAAAOgAAAAAIAACAAAACC2GG6t0zfcCV5daiC+9WY8VVInqQZw4u7YRq3wo7YbiAAAABkuG0mKYCYNZCLiZ0jwBRXez4ssskUTs6VTs2/d8V/sEAAAADGv1vYMnzao4zG5xBxFRbeYdKPe4n3GUvIOtTIA7IbZ+ppXLnr0y3TS3Rktun/TFdeVuoq/HtDp70HqSJJB5g0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADUZygMEmlp9gm15R9iRJ/Gq/Fmhm/YsRXXzEgvApUOCgAAAAAOgAAAAAIAACAAAADEX/VdXYfgV1ISo/T+5HtES3yxNxVRG9TzBJKaSEMWdCAAAABBBA2NZkSG4Nn9fEDDuV5a9s73JSb5+8udhLkC3KrbIkAAAADIr9Pqs0mW2mMCgngI0HQVJikg1N9KL5iddwMBwPU+NDoCn0Hj4WvZDOTgxDLl0CCAk1nR6WvTUGCUnJ+qFH+1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -692,37 +692,37 @@ FROM TB_STATE</property>
         <NodeLayout
           Size="135,42"
           Id="Package\Data Flow Task\TB_STATE"
-          TopLeft="437.5,171.5" />
+          TopLeft="188.5,78.5" />
         <NodeLayout
           Size="121,42"
           Id="Package\Data Flow Task\bcm_ste"
-          TopLeft="468.5,293.5" />
+          TopLeft="343.5,172.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="505,213.5">
+          TopLeft="256,120.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,80"
+              EndConnector="148,52"
               Start="0,0"
-              End="24,72.5">
+              End="148,44.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36" />
+                    End="0,22" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36"
-                    Point2="0,40"
-                    Point3="4,40" />
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
                   <mssgle:LineSegment
-                    End="20,40" />
+                    End="144,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="20,40"
-                    Point2="24,40"
-                    Point3="24,44" />
+                    Point1="144,26"
+                    Point2="148,26"
+                    Point3="148,30" />
                   <mssgle:LineSegment
-                    End="24,72.5" />
+                    End="148,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
