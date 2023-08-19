@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ADMIN-PC"
   DTS:CreatorName="ADMIN-PC\Admin"
-  DTS:DTSID="{F3817DD9-98E8-495E-871D-6D7335658536}"
+  DTS:DTSID="{1BFE2C3A-BBC9-4547-B398-C49DFD956D7C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="TB_CNT-bcm_cnt_cd"
+  DTS:ObjectName="bcm_cnt_cd"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{6D0C5B53-0EF8-4371-9166-1EA9C1CE7E8D}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{051C6E82-C4D7-445E-B577-BBB4FEA005CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBxf67TBzJGuy/8cRxDTgNQdSbsEJmDFAsc2sYZlvZ5AAAAAAOgAAAAAIAACAAAAAa66l0SbxfFUx6cbtDH9peJxYjCUEbLbCXrxzfkFIEAiAAAADYkKt6+5YZO9umPjoqxn0D+vIigOYX8uCQeoGeZ+N4cEAAAAACnSq+2tAITMdhb7+PXAW9v0ISVq6Tmrd64Oc/eeZirE+KVHc+pqrZSD1V43i3HZs7yH9WbElPxQ/3ceM+hHv1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmv1uUg5QQsidc1bp2u3jgX/IQnQRkmMPXeFIXuJ7y3AAAAAAOgAAAAAIAACAAAABGrh0JLxj7G3s/pSDKZcjmz/EOIk2oj3qwIBNORHd3rSAAAAAo5Bmq+a+FTi3r7701s1JvJs0NwbG7qzoKi3942nC/kUAAAAA6I70tie6kJoQrmEBp4MqC+SSowxEp4uqPOqa10K8I+swBmCtlHEhtQyKiSc36t0xdHme69a6iwcPUJw9xVLFF</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABDnzFHRS78+GVFPVUJI5MX3mplhgdurYhNEs3fPAA7jQAAAAAOgAAAAAIAACAAAACjRF62qvbgJmPWzfzGQywSY0IaQ0nmJOxzClAFQPqQkCAAAACG7TdfTPi1RWkAKd+hBWJOVhdV42EVqMWHLIDvVYFILUAAAABpQgJbYHpMi7pCgxuKL/o7NZf23kFvxv+n8vMkuPxI7cNBheu2imZGyJWb6hYsi0oqVSQXX7Pf07Mf0Qjeaf49</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/hPAMcMNOokZ25q0wpmW0ajW07vCZTgwijpYKQ2FGAgAAAAAOgAAAAAIAACAAAACY1r48g06e7vU+LJteu4amGa4BuylNHWa31Qc+kaSnwiAAAADeKSSf4VPJ5AcWm25VJQNITAj0MBAks8DR+ckqfUL2hEAAAAC92VFknF06donsID3/4ziLk3rWwE3csbBbQ8EKZYVV9/oV3m9BAorD1vhYk6b0hUTy7AZrFjric2X/RfGU1QHE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB2Xypb8OfgXB1u3jNx+9qsoT8TrM5vsMAV5uUPgxdwZwAAAAAOgAAAAAIAACAAAADO8CM7nEPOKdcMM3RDPuEpv8J6aR7nWBcaxDo8sECs2yAAAABHYFT0eKo7DgEkJUMpfWnfUIEgMxccTfPqAIdoXp9BvkAAAACqySQjosTNkF855JBriiYRHFmj2XfOsisYMs13N7HKPEXpfCzMXUVCx+w9tbf8IKGNMYC00CD+raZoczNyytAf</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC+006cHToMG3TNuVtP9omnTKuHTOep9DR9JY/LhSa8OgAAAAAOgAAAAAIAACAAAADl1/8WFS0Rrck1qlhmG7xm7cflZnc9tpAqxpyao+C6NiAAAAC+Y4s4v0X/7ZdHlygC49fKfea3qLhN9lASwlHrPrBkZUAAAAAtPzFzsdhZZKhkRndXPyF0DGy9+GrP59ITQC96Jz5MAWq2J6tIEPc2bZ7HWGAn7OrfUKF/85I0ev+roVav0Apf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3562,15 +3562,10 @@ FROM TB_CNT</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\bcm_cnt_cd">
+    design-time-name="Package\Data Flow Task\TB_CNT">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3588,10 +3583,15 @@ FROM TB_CNT</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TB_CNT">
+    design-time-name="Package\Data Flow Task\bcm_cnt_cd">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
