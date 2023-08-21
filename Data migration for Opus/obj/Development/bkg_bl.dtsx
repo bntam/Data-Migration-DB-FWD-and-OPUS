@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="TB_INTG_BL"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{8A1C2E2F-A72F-4EAF-BCB5-65428FD60CBF}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{AE3F2EF6-6560-48FD-B6BC-D54B9EEF13E7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLNCLI11.1;Application Name=SSIS-Package-{11315081-3502-4999-A4BE-FE4A1ABBF19C}10.0.68.204.fwdaif.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{11315081-3502-4999-A4BE-FE4A1ABBF19C}10.0.68.204.fwdaif.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADcapH4tP1o/NJUU2yOVi8t2oZL43GWkXSGiX2+j2r5dQAAAAAOgAAAAAIAACAAAAAkGkvqyxVeT+iULDMnFy9tslYlnHzPbaxx+UJ/wO62ZyAAAAAIB/sLuAG92wfK6GgdS1rtekuO/GM8Br2pWmF5VoXdhkAAAABOveyfFikxXeGNdGEbRJMhJOq6X0sNp0cTOl+uJ3R5D/w+MN4bYqxrcMGOsmSQEjkSEyO520bjyHczSE2cbr1a</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3tffiMhtNW/nHWuATU/1FwNxxdPSbLEdN4+UNz9HKIwAAAAAOgAAAAAIAACAAAAAsJtRA8DjxrFsWxgD8aWLl/mzm/iMEi7V1MvXAXP6okCAAAADktEYlxNeytE43a+l0X0aNBrl9P+6tgck0WrB7MrM/SEAAAACiDsynnEz2jLnF7plnNftmWO8uW/OyBaSqfVj4ka1Sq67WCcU2PVwGhclpNTkc5BDvK7JaVhSD44kDYxwsskt7</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABbBbBbhRM/yfgOF3HLxs3HjKU0qG0QWyg/24lVnS0tbAAAAAAOgAAAAAIAACAAAAAvDxWabi9CqIvYFSvFG4zaSp4qh/mU9sPToKGsDT2HjCAAAABiH2Igh2k1DTsaxjguTd2xn1TijQYS16cWvIVWatLzHEAAAAA9pc17IBdCAQgSz0X7AHG7WqRTkvqnAY3VeTWsKn+8+SXG4fsNOs2gCuD23nvFqLfv51aT0WwxTTGtxo8oj62S</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADOhRjQId6KefkTYOxCaZ+9NDjODNRgvBZpbu69JhZddwAAAAAOgAAAAAIAACAAAADQdTMi2vWLd8ZRw/wzoCBnabY1KDUlsTj4rAbO3bFFXyAAAABhT2R3ky0qxkOAY7msaDaQip8bDibIsMBChipUaggnH0AAAAAIgnI0CUfzTldjqvcpDETSsfxCaXl1S79UECfqPvGsHxcIwzMoRA6BRDLuyauImntzp0dFA/Al9GGDvq+UNy17</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,11 +57,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;">
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWK3P1zcG8VSrJ18V0OuIY+f5z+vL4XS5K0h7+xj2yHQAAAAAOgAAAAAIAACAAAAA/vS7UsDjuqNhAkallrybmf+kDhE6LU3o1g3VwZfibnCAAAACL4WIIwBTuwocobddy2mC0sQ84r+v0QEIeEKa0wLpDJUAAAAAV42hrAHu7NV1dViojDO5nn5POydHXBGiOlZu985VbampcK5NRK8tCxhZZkKk3YmM1UngOG/3FRU8tCP4PDxoj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAuvPKCF/YS5GuV+7HQBOsTf8zcmhTRmsV7r17btcE1AAAAAAOgAAAAAIAACAAAADriNH/3K1dVSj+ck2FvXzk5scJnSnxY8HjO2nmpnywwSAAAAC0xABHZSCMk3F/MJxegN7a6PqYOHm7AyKhFWq32YUC/EAAAAA5jlw0AcsznymOKOxuT4GkzrIcZSMYcMOVirMvS4eHdo1zrj8bf+UPmVIU37/GfeqfPui+atyUJ/8azbfYgYP4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -15937,12 +15937,36 @@ bkg_bl</property>
 	,BL.DEL_NM	AS	del_nm
 	,LEFT(BL.OBRD_DT_TM,8)	AS	onb_dt
 	,BL.CURR_CD	AS	curr_cd
-	,LEFT(BL.ETD_DT_TM,8)	AS	etd_dt
-	,LEFT(BL.ETD_DT_TM,8)	AS	flght_dt
-	,CASE WHEN LEN(BL.ETA_DT_TM) &gt; 8 THEN RIGHT(BL.ETD_DT_TM, 4) ELSE '' END AS	flght_tm
-	,LEFT(BL.ETA_DT_TM,8)	AS	eta_dt
-	,LEFT(BL.ETA_DT_TM,8)	AS	arr_dt
-	,CASE WHEN LEN(BL.ETA_DT_TM) &gt; 8 THEN RIGHT(BL.ETA_DT_TM, 4) ELSE '' END AS	arr_tm
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN LEFT(BL.ETD_DT_TM,8)
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' THEN ''
+	    ELSE ''
+	END AS	etd_dt
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN ''
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' THEN LEFT(BL.ETD_DT_TM,8)
+	    ELSE ''
+	END AS	flght_dt
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN ''
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' AND LEN(BL.ETD_DT_TM) &gt; 8 THEN RIGHT(BL.ETD_DT_TM, 4)
+	    ELSE ''
+	END AS	flght_tm
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN LEFT(BL.ETA_DT_TM,8)
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' THEN ''
+	    ELSE ''
+	END AS	eta_dt
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN ''
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' THEN LEFT(BL.ETA_DT_TM,8)
+	    ELSE ''
+	END AS	arr_dt
+	,CASE
+	    WHEN BL.AIR_SEA_CLSS_CD = 'S' THEN ''
+	    WHEN BL.AIR_SEA_CLSS_CD = 'A' AND LEN(BL.ETA_DT_TM) &gt; 8 THEN RIGHT(BL.ETA_DT_TM, 4)
+	    ELSE ''
+	END AS	arr_tm
 	,BL.SHP_MOD_CD	AS	shp_mod_cd
 	,BL.FM_SVC_TERM_CD	AS	fm_svc_term_cd
 	,BL.TO_SVC_TERM_CD	AS	to_svc_term_cd
@@ -23330,7 +23354,7 @@ AND co_cd = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="244,172" />
       </GraphLayout>
@@ -23342,41 +23366,41 @@ AND co_cd = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="111,42"
-          Id="Package\Data Flow Task\bkg_bl"
-          TopLeft="651,340" />
+          Size="262.4,41.6"
+          Id="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND"
+          TopLeft="124,23" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\Data Flow Task\fwd_bkg_bl"
-          TopLeft="486,25" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="229,224" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Data Flow Task\update bkg_bl"
-          TopLeft="570,455" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="515,140" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="186,108" />
-        <NodeLayout
-          Size="133,42"
+          Size="132.8,41.6"
           Id="Package\Data Flow Task\Merge Join"
           TopLeft="381,255" />
         <NodeLayout
-          Size="159,42"
+          Size="148,41.6"
+          Id="Package\Data Flow Task\update bkg_bl"
+          TopLeft="570,455" />
+        <NodeLayout
+          Size="99.2,41.6"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="229,224" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="186,108" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Data Flow Task\fwd_bkg_bl"
+          TopLeft="486,25" />
+        <NodeLayout
+          Size="159.2,41.6"
           Id="Package\Data Flow Task\Conditional Split"
           TopLeft="357,341" />
         <NodeLayout
-          Size="262,42"
-          Id="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND"
-          TopLeft="124,23" />
+          Size="111.2,41.6"
+          Id="Package\Data Flow Task\bkg_bl"
+          TopLeft="651,340" />
+        <NodeLayout
+          Size="108,41.6"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="515,140" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[UPDATE]"
           TopLeft="436.5,383">
@@ -23645,15 +23669,10 @@ AND co_cd = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\bkg_bl">
+    design-time-name="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -23671,10 +23690,15 @@ AND co_cd = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND">
+    design-time-name="Package\Data Flow Task\bkg_bl">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

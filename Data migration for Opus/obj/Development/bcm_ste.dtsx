@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{C1F4855D-24C3-4F2E-AB10-F790D123F9A0}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{B8F91DF8-872C-4727-9898-2DB0BA717C56}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLNCLI11.1;Application Name=SSIS-Package-{64305106-5D70-424C-8206-A634D405999F}10.0.68.204.fwdaif.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{64305106-5D70-424C-8206-A634D405999F}10.0.68.204.fwdaif.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACo2x3XqG0AoJkPa11JPAysg+/TkqtF7Lk3kewrCKioiwAAAAAOgAAAAAIAACAAAAAIoZ/CZZEtnDddyv/8DcJeEKhtbP3YUEz0Q4d5udrdkCAAAABVmkx6GJn2dai0TP0QQGlEdRpc/E8iYedymUg96+aZSEAAAAA51qW52kDao41a2iE/0bdctYtFKVQCA6mPm7xaw71zeNYN4We1C3+IcKGkWE8QwRBvPVi4RMnUFDShkzpEUFPK</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQ7Eyaiw3rD6y0HfaW/LBbCUvA9bymw/GqN6UzNgop/gAAAAAOgAAAAAIAACAAAAD32tRs6GvYCxZRiZoA2Bk+CW0mSo20S21XAhkMh5uzsCAAAAC/wOLO/xuh8pm3IvFYL856FoNigVCE7japopJ5qaKHSEAAAAD11ZLZKW5FqimAuIEH9Q2vE+R2vaLF9qXNYv+tXKZWUHIL7SZPQn0lboBBmoJ0gKFeaLFcU3fxTzt9/Ghieccm</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADUZygMEmlp9gm15R9iRJ/Gq/Fmhm/YsRXXzEgvApUOCgAAAAAOgAAAAAIAACAAAADEX/VdXYfgV1ISo/T+5HtES3yxNxVRG9TzBJKaSEMWdCAAAABBBA2NZkSG4Nn9fEDDuV5a9s73JSb5+8udhLkC3KrbIkAAAADIr9Pqs0mW2mMCgngI0HQVJikg1N9KL5iddwMBwPU+NDoCn0Hj4WvZDOTgxDLl0CCAk1nR6WvTUGCUnJ+qFH+1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzPzAz4knZbZgmcc7PTKOx81yriuOX5SvcWIqWngd2jgAAAAAOgAAAAAIAACAAAADSQKzGdvzvWMoVHlkHKL4yjTOgvjRL0RluFPiQwRZwBiAAAACKfiT3nVfPnoj29abqGos4hs8ndwlnwdT8UvcjhqC05UAAAAChFbAmkP29GH3fgyVox/CyXexUkXdOD/MLBRy/KGqTMBXmQXDm9OHR1eEsQYOCRofNKaSA/XGnEdbG1/IyTnxX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -678,7 +678,7 @@ FROM TB_STATE</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="244,172" />
       </GraphLayout>
@@ -690,11 +690,11 @@ FROM TB_STATE</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135,42"
+          Size="135.2,41.6"
           Id="Package\Data Flow Task\TB_STATE"
           TopLeft="188.5,78.5" />
         <NodeLayout
-          Size="121,42"
+          Size="120.8,41.6"
           Id="Package\Data Flow Task\bcm_ste"
           TopLeft="343.5,172.5" />
         <EdgeLayout
