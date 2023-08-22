@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="TB_INTG_BL"
   DTS:PackageType="5"
-  DTS:VersionBuild="73"
-  DTS:VersionGUID="{AE3F2EF6-6560-48FD-B6BC-D54B9EEF13E7}">
+  DTS:VersionBuild="74"
+  DTS:VersionGUID="{5DBBF8DB-FDFF-41DE-96CC-3BBF26736923}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3tffiMhtNW/nHWuATU/1FwNxxdPSbLEdN4+UNz9HKIwAAAAAOgAAAAAIAACAAAAAsJtRA8DjxrFsWxgD8aWLl/mzm/iMEi7V1MvXAXP6okCAAAADktEYlxNeytE43a+l0X0aNBrl9P+6tgck0WrB7MrM/SEAAAACiDsynnEz2jLnF7plnNftmWO8uW/OyBaSqfVj4ka1Sq67WCcU2PVwGhclpNTkc5BDvK7JaVhSD44kDYxwsskt7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA2mlX1yMK1DBDNiRv4uY8TuIiLzXsIVs0nUsvpuxj8fQAAAAAOgAAAAAIAACAAAAC+1Lrp2x3Eq0WXkW5tAj4kkQh9c6tkpodj85zRR6UO3iAAAADO+Ykq1uKYh6NY8DX8wChIG70PB7J5+6LTeOTi5asdekAAAADXnF4G1hCamjpqTuOAz5Ntfb1xi+QDePR3CsFune5d1C2dTTgcXKhSyyJ34up06D2Wj4HrT3WnUPYEnDDgAXRt</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADOhRjQId6KefkTYOxCaZ+9NDjODNRgvBZpbu69JhZddwAAAAAOgAAAAAIAACAAAADQdTMi2vWLd8ZRw/wzoCBnabY1KDUlsTj4rAbO3bFFXyAAAABhT2R3ky0qxkOAY7msaDaQip8bDibIsMBChipUaggnH0AAAAAIgnI0CUfzTldjqvcpDETSsfxCaXl1S79UECfqPvGsHxcIwzMoRA6BRDLuyauImntzp0dFA/Al9GGDvq+UNy17</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9RnL4tmNDw8Ne79YqXLeWCVzoCd2uhy1sBpefmsifxwAAAAAOgAAAAAIAACAAAAA20Ggab2uDvcIK+nEjTYQbJbGKwkqJnm1/l/T+BaIR0CAAAACdTeXpu0H8M29ht3bWQPLmui3FKLQy2RfxNnbNbJY+fUAAAADw9yOb5/5kM+MYum4ZuyCWeF3NPTHLrfYnWWekZCYpA+n97G0ouTvw6tOl4V4RJhaMqlIAFp3/LoU2iF/tL+cb</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAuvPKCF/YS5GuV+7HQBOsTf8zcmhTRmsV7r17btcE1AAAAAAOgAAAAAIAACAAAADriNH/3K1dVSj+ck2FvXzk5scJnSnxY8HjO2nmpnywwSAAAAC0xABHZSCMk3F/MJxegN7a6PqYOHm7AyKhFWq32YUC/EAAAAA5jlw0AcsznymOKOxuT4GkzrIcZSMYcMOVirMvS4eHdo1zrj8bf+UPmVIU37/GfeqfPui+atyUJ/8azbfYgYP4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5Nxy4q1HdzlMKXCKSn8Ul0pgW/duLpjTG0Ayzoh4huAAAAAAOgAAAAAIAACAAAAAjGPRkSJ7BrNw/ZUWGTSxEVyhl5aGiA4/yXU1uFPj80yAAAACw3azGcuF7WzMtdcPHgPdJPuXopkuT7aMmZH8KI2cqMEAAAAAimQ9Dr3n4xDqsVg9+M5ThsbbxiF03008XToNnUG4mfzV3zUiqK+Dg+tWw3AU0x2EvCiiDu8lQMoZXBGLEoTWl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -16101,7 +16101,10 @@ bkg_bl</property>
 	,'' AS bk_usr_id
 	,'' AS cnt_of_org_tp_cd
 	,'' AS ib_tz_dt
-	,'' AS blck_flg
+	,CASE
+		WHEN LEN(BLCK.BL_STS_CD) &gt; 0 THEN 'Y'
+		ELSE 'N'
+	END AS	blck_flg
 	,'' AS trns_scnd_nm
 	,'' AS trns_n3rd_nm
 	,'' AS trns_n1st_eta_dt
@@ -16110,6 +16113,8 @@ FROM TB_INTG_BL BL
 JOIN TB_ADD_INFO_BND BND
     ON BL.INTG_BL_SEQ = BND.INTG_BL_SEQ
     AND BND.DELT_FLG = 'N'
+LEFT OUTER JOIN TB_INTG_BL_BLCK BLCK
+	ON BL.INTG_BL_SEQ = BLCK.INTG_BL_SEQ
 WHERE BL.BIZ_CLSS_CD = 'M'</property>
                 <property
                   dataType="System.String"
