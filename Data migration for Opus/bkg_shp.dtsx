@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_shp"
   DTS:PackageType="5"
-  DTS:VersionBuild="104"
-  DTS:VersionGUID="{17344D96-39B0-4E42-BA63-5BD31E6B4273}">
+  DTS:VersionBuild="105"
+  DTS:VersionGUID="{95DBD746-6631-4677-942F-A016A0C629F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACMVdwCszb0gtOyI9Hee9ewRlz9iwfypEX0+quV8QYYyAAAAAAOgAAAAAIAACAAAACgh3gEttbvFRvpbfg3Ge+tUJ0MU3Go0maHyniudvvc8SAAAADPuFBwky9WfiJxC/q/znsj55ilY5jo0t6hvoh0s+hlLkAAAAAQHwVfdouGK0Gt/vX1wsNhieQ2yZWWaOtgjQhS9hWi7lrBtryjYUokKrQ7y37SUJR0Xwp9280gL4m1zdh/+yEK</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB31GxGAqTO7kryNZYQVUjQjwXTFSpFvPUja0rf3WIO1AAAAAAOgAAAAAIAACAAAAAdxpC5n/LiFhkoHEwN8JMMS/TpaLGp3U+KhKH9kXT6ASAAAABzccNHK1DvdhYGKxCjWG1CnYHKkHEyM66R2WdJIuTGMkAAAADLMQeZLa6udjA0L2Uxxw++EKxdoGQ36pycb4a5L+tBcmu9TWFlmRJRu7hFaZXnfrlcBttRgGHcYmZGgcPbXHPs</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADLSjNuO6AFfVpxpThndE10RAeVM/2At9QQGCuDFpnTfwAAAAAOgAAAAAIAACAAAABckcQJo4b1nNboU+CxEkr4/00cQDIE5wXq0jBCd0n9ciAAAAAJ9GW+3jSY8PtDAWXPpxzkdvgPOvRlVAewvTjLhfiVF0AAAADcxcBvTm8+Eb5DSpmxc+pZH4nTQfp5L8TDKacKhT5BXps73kV/VZs2NPuHpdJIVEX3VLUHvRFM3BgwNxq6SUmT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABWmszHcrPqcwkkHD+JoNsACH69gxqeLh3tG5ds6lYuTQAAAAAOgAAAAAIAACAAAAAKsCyZxxyRFw2Lw1vZefJ4BjBW0BEevlEoqbX+BE3aUiAAAAD7oK8Q3nXnCvCKQqHyt6/d0tDn8PZ2mam3m3evQw5nvUAAAAAXk7PYd/++lnMY2n/sNBCGJ7M1UOm9M4/ISHW0GeCGfNw/gSl37OJcSFEjAPb9WHom7YKpsLTgoV4UH5JhvsXk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADHJEUDV8P6FKpbwvyNS5EHZqyE4BQQQxOw+V/d0rP/EgAAAAAOgAAAAAIAACAAAAC+fd7BGEDJfsVcuCCLvjJD89wHfnBXYeb0+EycZTEBvCAAAADqkWDNuBbuHtc6jlLdKmDTQdN31lif35d0nTPsM+FM7UAAAAB2gg2lD0Yk7zO3fl2nK2lTsobqvzd7/7QQgmMox3WNnpRUHy2oRzwNCIJg8aqB8FMabrbZTOdSAeVmYEXcnQCL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAe7oncXsi6/FGF97DeuQApKeUFahC6zXhWKhCoowoVDAAAAAAOgAAAAAIAACAAAADPzIi3EuAgEKlSAzN1GTMvu4CWsTkuiCPOeMlaD6LAOCAAAAD1P/nIky+iKVnHvZrL111P3x4Cvzvq9MFZoSuRRkPJxkAAAAAeJLnl7HdyXf+Irq+6F3tEPdsNaoVm3HS2i6/2nS0ObGeQ3wTmKCzJq3F7brNPMMiyy3qseB6rEhfxexNAiEZr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -25202,7 +25202,7 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="244,172" />
+          TopLeft="243.16666669978,172" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -25212,59 +25212,41 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="117.6,41.6"
-          Id="Package\Data Flow Task\bkg_shp"
-          TopLeft="489.999980529151,301.383335728513" />
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\Data Flow Task\DELETE"
-          TopLeft="259.374989693364,111.816667536232" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="483.124980802338,88.1833340341514" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="103.749995877345,144.516667815182" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="465.416648172671,173.116668042474" />
+          Size="139.2,41.6"
+          Id="Package\Data Flow Task\fwd_bkg_shp"
+          TopLeft="482.666666799121,4.19999983469646" />
         <NodeLayout
           Size="351.2,41.6"
           Id="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND + TB_INTG_BL_RLT"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
+          Size="128,41.6"
+          Id="Package\Data Flow Task\Multicast 1"
+          TopLeft="169.166659944588,238.333335227437" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="465.416648172671,173.116668042474" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="483.124980802338,88.1833340341514" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Data Flow Task\DELETE"
+          TopLeft="259.374989693364,111.816667536232" />
+        <NodeLayout
           Size="156,41.6"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="73.5416637443832,75.1833339308377" />
         <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\Data Flow Task\fwd_bkg_shp"
-          TopLeft="482.666666799121,4.19999983469646" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="533.270814487505,129.783334034151">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.3333340083228"
-              Start="0,0"
-              End="0,35.8333340083228">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.8333340083228" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="117.6,41.6"
+          Id="Package\Data Flow Task\bkg_shp"
+          TopLeft="489.999980529151,301.383335728513" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="103.749995877345,144.516667815182" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ODBC Source Output]"
           TopLeft="552.266666799121,45.7999998346965">
@@ -25291,100 +25273,6 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
                     Point3="-15.9416859967831,25.1916670997275" />
                   <mssgle:LineSegment
                     End="-15.9416859967831,34.8833341994549" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="152.045829810864,116.783333930838">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.7333338843447"
-              Start="0,0"
-              End="0,20.2333338843447">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2333338843447" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="128,41.6"
-          Id="Package\Data Flow Task\Multicast 1"
-          TopLeft="169.166659944588,238.333335227437" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
-          TopLeft="233.166659944588,238.333335227437">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.8083297487769,-84.9166676912045"
-              Start="0,0"
-              End="85.8083297487769,-77.4166676912045">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-38.4583338456022" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-38.4583338456022"
-                    Point2="0,-42.4583338456022"
-                    Point3="4,-42.4583338456022" />
-                  <mssgle:LineSegment
-                    End="81.8083297487769,-42.4583338456022" />
-                  <mssgle:CubicBezierSegment
-                    Point1="81.8083297487769,-42.4583338456022"
-                    Point2="85.8083297487769,-42.4583338456022"
-                    Point3="85.8083297487769,-46.4583338456022" />
-                  <mssgle:LineSegment
-                    End="85.8083297487769,-77.4166676912045" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="152.549995877345,186.116667815182">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="60.6166640672422,52.2166674122543"
-              Start="0,0"
-              End="60.6166640672422,44.7166674122543">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.9432103183729" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.9432103183729"
-                    Point2="0,30.9432103183729"
-                    Point3="4,30.9432103183729" />
-                  <mssgle:LineSegment
-                    End="56.6166640672422,30.9432103183729" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56.6166640672422,30.9432103183729"
-                    Point2="60.6166640672422,30.9432103183729"
-                    Point3="60.6166640672422,34.9432103183729" />
-                  <mssgle:LineSegment
-                    End="60.6166640672422,44.7166674122543" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25428,6 +25316,40 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
+          TopLeft="233.166659944588,238.333335227437">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.8083297487769,-84.9166676912045"
+              Start="0,0"
+              End="85.8083297487769,-77.4166676912045">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-38.4583338456022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-38.4583338456022"
+                    Point2="0,-42.4583338456022"
+                    Point3="4,-42.4583338456022" />
+                  <mssgle:LineSegment
+                    End="81.8083297487769,-42.4583338456022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.8083297487769,-42.4583338456022"
+                    Point2="85.8083297487769,-42.4583338456022"
+                    Point3="85.8083297487769,-46.4583338456022" />
+                  <mssgle:LineSegment
+                    End="85.8083297487769,-77.4166676912045" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Join Output]"
           TopLeft="549.641647684244,214.716668042474">
           <EdgeLayout.Curve>
@@ -25441,6 +25363,84 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,79.1666676860383" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="152.045829810864,116.783333930838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.7333338843447"
+              Start="0,0"
+              End="0,20.2333338843447">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2333338843447" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="152.549995877345,186.116667815182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.6166640672422,52.2166674122543"
+              Start="0,0"
+              End="60.6166640672422,44.7166674122543">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.9432103183729" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.9432103183729"
+                    Point2="0,30.9432103183729"
+                    Point3="4,30.9432103183729" />
+                  <mssgle:LineSegment
+                    End="56.6166640672422,30.9432103183729" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.6166640672422,30.9432103183729"
+                    Point2="60.6166640672422,30.9432103183729"
+                    Point3="60.6166640672422,34.9432103183729" />
+                  <mssgle:LineSegment
+                    End="60.6166640672422,44.7166674122543" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="533.270814487505,129.783334034151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.3333340083228"
+              Start="0,0"
+              End="0,35.8333340083228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8333340083228" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25487,7 +25487,7 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\bkg_shp">
+    design-time-name="Package\Data Flow Task\fwd_bkg_shp">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -25508,7 +25508,7 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\fwd_bkg_shp">
+    design-time-name="Package\Data Flow Task\bkg_shp">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

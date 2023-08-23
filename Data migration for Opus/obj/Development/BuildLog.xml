@@ -2,15 +2,10 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-08-22T09:00:00.3465612Z</LastWriteTime>
+    <LastWriteTime>2023-08-23T03:22:55.3358993Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
-    <ProjectBuildItemInfo>
-      <Name>bcm_ste.dtsx</Name>
-      <LastWriteTime>2023-08-21T03:23:46.1412218Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>bkg_bl.dtsx</Name>
       <LastWriteTime>2023-08-21T09:40:07.1566952Z</LastWriteTime>
@@ -23,12 +18,32 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>bkg_shp.dtsx</Name>
-      <LastWriteTime>2023-08-22T02:00:08.3682122Z</LastWriteTime>
+      <LastWriteTime>2023-08-23T02:45:54.5013939Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>bkg_prnr.dtsx</Name>
-      <LastWriteTime>2023-08-22T10:11:33.2616726Z</LastWriteTime>
+      <LastWriteTime>2023-08-22T10:43:04.9611675Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bcm_ste.dtsx</Name>
+      <LastWriteTime>2023-08-23T01:47:20.5030222Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bcm_vsl_cd.dtsx</Name>
+      <LastWriteTime>2023-08-23T02:13:33.3997549Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bkg_aes.dtsx</Name>
+      <LastWriteTime>2023-08-23T03:17:40.718235Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bkg_aes_cmdt.dtsx</Name>
+      <LastWriteTime>2023-08-23T03:22:52.8790494Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
