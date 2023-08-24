@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Application Name=SSIS-bcm_cnt_cd-{D947DBC5-661B-42D6-9EF6-E175ED7F92CA}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACXyoT0zxEVdWVW3+77kyo+KRJkZKn5hSACsGALEXLMiwAAAAAOgAAAAAIAACAAAAB6XDgScSdCEal1/mBWO57yWlLGkkEPe01x4Jxsv/ooHiAAAADWLekTCEzeXrrFA8SNd+hNhgWypKKz38cUZ0P1nr6PPkAAAABhR8iBtjdlddUt7oTxrWGQGA0+bv5tWHJ0KBZiJL94idcLz2ufeKEMjJXxIGN7CzetWNwD7QRCwGgNPYh86Kt+</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Application Name=SSIS-bcm_cnt_cd-{D947DBC5-661B-42D6-9EF6-E175ED7F92CA}10.0.68.204.fwdaif.sa;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -40,12 +35,7 @@
       DTS:ObjectName="ODBC fwd">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
-          <DTS:Password
-            DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/X+SOVY/pKWBlmWM2bZT+OIEjtw5hxhpBKNNqhPcInAAAAAAOgAAAAAIAACAAAAAhUNq0mEzEI7C/LOMSQAnkzhQ+lg0+37E2FLlEKhNufyAAAACz5JJ5VB5001beWUe3Wrn3WmrWFIjDHXY1g0qqKSLkD0AAAAB4j8Db1+uGPJ3V1g0cK80fu870YZy5YL5ix6sDZ4WbNZM3byLItTNqekL9NZjvmoLdfwq1FSmp/Ry0XS+dBUou</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -57,12 +47,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALkojipsz1Z4McJe627bGsdhjSHDYXEiGaGzx2dKqhzAAAAAAOgAAAAAIAACAAAAD3txOOImHtCcqp+KDu642WXLSieyhCx/Uo9pHPV3ltyCAAAAA3yDrKYpAfRSGq1dbHjXTxYwlQjeUJuXgzWtiSmTvxNkAAAADoceDC2V9eSoQAuEUlGGu+msbgUSM5kGR5N6E4TGP8jun6fK6A1CNaPsh8O7F2SmWTGI/Ceqwwq2AYbMfjvtmJ</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
