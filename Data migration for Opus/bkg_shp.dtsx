@@ -11,28 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_shp"
   DTS:PackageType="5"
-  DTS:VersionBuild="105"
-  DTS:VersionGUID="{95DBD746-6631-4677-942F-A016A0C629F3}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{9027960E-3C86-405B-8D65-82E1766A14E1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{9A3BD35D-890A-4F59-A265-A3ACE0256A36}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Application Name=SSIS-TB_INTG_BL-{9A3BD35D-890A-4F59-A265-A3ACE0256A36}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB31GxGAqTO7kryNZYQVUjQjwXTFSpFvPUja0rf3WIO1AAAAAAOgAAAAAIAACAAAAAdxpC5n/LiFhkoHEwN8JMMS/TpaLGp3U+KhKH9kXT6ASAAAABzccNHK1DvdhYGKxCjWG1CnYHKkHEyM66R2WdJIuTGMkAAAADLMQeZLa6udjA0L2Uxxw++EKxdoGQ36pycb4a5L+tBcmu9TWFlmRJRu7hFaZXnfrlcBttRgGHcYmZGgcPbXHPs</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ODBC fwd]"
       DTS:CreationName="ODBC"
@@ -44,7 +27,24 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABWmszHcrPqcwkkHD+JoNsACH69gxqeLh3tG5ds6lYuTQAAAAAOgAAAAAIAACAAAAAKsCyZxxyRFw2Lw1vZefJ4BjBW0BEevlEoqbX+BE3aUiAAAAD7oK8Q3nXnCvCKQqHyt6/d0tDn8PZ2mam3m3evQw5nvUAAAAAXk7PYd/++lnMY2n/sNBCGJ7M1UOm9M4/ISHW0GeCGfNw/gSl37OJcSFEjAPb9WHom7YKpsLTgoV4UH5JhvsXk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwX/w2A/tGrVv57u5XK3dmj7P7pPGxlI4V+moXxnA2GAAAAAAOgAAAAAIAACAAAADohlX8i9OOlSO+Q9pncoxRm1UyLp8Z5TyP+eFEnRMZbyAAAAB/e+ksIvpjPv6MZ6wJbnx3Wbf1I0qTxV6kgRgCu/aPWkAAAACh/M/0NJfRQzh8V75fUOGr3lWR+CePOevqZ3BXfm+rYPNuz24wSOWPJaunp430r9qr4K/I9dPDQBXeYvg/axDb</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9A3BD35D-890A-4F59-A265-A3ACE0256A36}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{9A3BD35D-890A-4F59-A265-A3ACE0256A36}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFr1pDo6AjxI+hHydf+BfUWwLJ53xG9wyjkuO46ek5VAAAAAAOgAAAAAIAACAAAAAPGxnJK8c3nyK3f4nAecYrwVeoPImVHtJtqdqA6S54xyAAAADIqO9+WY00NF3+luHdh91gQtkhqOMM4OFFZJDo1wYsHUAAAADP8L6NDwoOg+exgj5kdVNlpVQhT3w5y2RJvPVegv6DcWWPGwqNp0dCD5AWuXpxmwnnB0de99Fg0g8fNwu3kcCp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,11 +57,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;">
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAe7oncXsi6/FGF97DeuQApKeUFahC6zXhWKhCoowoVDAAAAAAOgAAAAAIAACAAAADPzIi3EuAgEKlSAzN1GTMvu4CWsTkuiCPOeMlaD6LAOCAAAAD1P/nIky+iKVnHvZrL111P3x4Cvzvq9MFZoSuRRkPJxkAAAAAeJLnl7HdyXf+Irq+6F3tEPdsNaoVm3HS2i6/2nS0ObGeQ3wTmKCzJq3F7brNPMMiyy3qseB6rEhfxexNAiEZr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABk03H7PYJei/7pEd0jRme+eqsqEArinUb2pjk9RH+0owAAAAAOgAAAAAIAACAAAADD272Vz+AVa5wE8DMSpb1PpHpZBsAOEcm8EeLltNqVWiAAAAAyp9CEwR6I5hBF1J0RotNtwdP/1hcBJb9C1xkdgmCXREAAAAARchg6eLvoQScIBLANN8TO3He5WBOtKYh60dRjc459UVYBw3YVnrBiuxelpSzI2jhtEgWfwR62lF+fHUi4XQnn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -20210,8 +20210,8 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\TB_INTG_BL + TB_ADD_INFO_BND + TB_INTG_BL_RLT.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -25200,7 +25200,7 @@ WHERE BL.BIZ_CLSS_CD = 'H'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="243.16666669978,172" />
       </GraphLayout>

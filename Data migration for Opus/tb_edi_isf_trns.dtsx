@@ -1,0 +1,2324 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/11/2023 7:39:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ADMIN-PC"
+  DTS:CreatorName="ADMIN-PC\Admin"
+  DTS:DTSID="{D2F5D59D-1088-4F95-943F-9227BD3C9C79}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="theme"
+  DTS:PackageType="5"
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{23F2411E-50F6-43EA-A146-1084BB98A698}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC fwd]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{53E0039B-A033-4B46-8577-D37847B2A91D}"
+      DTS:ObjectName="ODBC fwd">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAMW0HqUyqbh5UV2dc/RZngdyc1KbhF14LmyMxmGvpbwAAAAAOgAAAAAIAACAAAADgjP29gXP6zdJmtAjbHq/dSOX1OJ6eZwqMoQR3mEuHMCAAAACjXi0NyK4yFhvi7gBSmbBQ+zxfyexQ2JXfy8+dGc/5xEAAAADxxo6sOUlWjckz66KkyUx5B3vNYyrckmkAY/592J3WmTQIdl1TUNeR9xGSD76Na3hNuueKeg8SOEeV9Nf1uVBv</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{866E1C1F-3AD5-4632-98B7-0D6BEF85056A}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{866E1C1F-3AD5-4632-98B7-0D6BEF85056A}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAtwJaek4QbPXUGDsT/QYs8qYRi1cNM+s3aY1kQ6H39FwAAAAAOgAAAAAIAACAAAABsRAQtgQuAgcf+em8wO/aASh7SCDYrCfMQ9uXMWswDqyAAAAAC4c98JF+PkezvNdO+AchD0XyNVQI8BOOM20k7+A4AGUAAAABCAxMdnGtDBmzUeeiIy+2dOdbkkKp0XaUIKKZSSNctEhHS0LnYukAp4uAgAEXKnP2NxTJTEc1gRvYf4N8VG/Gh</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB fwd]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6A24B9BD-15FE-48FD-AF9C-C9CDE2AF819C}"
+      DTS:ObjectName="OLEDB fwd">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACj7GufMcsSVl0LSHhdX7Ip9WrQYfMpgSV5PTwPzCAKNAAAAAAOgAAAAAIAACAAAACrT03y7gIGdgo6x51CDUvpx0NI2Vhh59+uHL+AOWz7fCAAAAB20Ff//lvNlY1KsEcn6Qn3AIFcnKYOyoG/YSzofl1hIEAAAACP9Gfo8Cuuo/U1tzOEGPEABxde7zzcExGaNIP2loWP0OqkicGIfpyE7ekN7XVOHZ3MNmTD2TqRORysRMGZsFEP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{169530E3-9AD8-4A55-9F0F-3B60CEEE90EA}"
+      DTS:ObjectName="cnt_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{799E4135-25BD-4AC4-872F-895647C58CBE}"
+      DTS:ObjectName="cnt_desc">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{0931271D-46DC-499A-8F80-9F01AFD4A9F0}"
+      DTS:ObjectName="cnt_nm">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{885A4677-9390-4667-B6EA-FD2B2D83367C}"
+      DTS:ObjectName="conti_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{2F87DAD4-C623-4064-9ABC-A32CABC5C36F}"
+      DTS:ObjectName="co_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="7"
+      DTS:DTSID="{37E33777-DBFE-4AD3-9B46-8B01F8B3BA97}"
+      DTS:ObjectName="cre_dt">
+      <DTS:Property
+        DTS:DataType="7"
+        DTS:Name="ParameterValue">8/17/2023 12:40:40 PM</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{425DC83A-91A8-4751-B95E-4F8846981ECC}"
+      DTS:ObjectName="cre_usr_id">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{4A5DEB7D-241C-4685-97FB-2EF657681D41}"
+      DTS:ObjectName="curr_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{13FD883B-E6E3-4141-980C-A08E8BA5AB66}"
+      DTS:ObjectName="delt_flg">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="7"
+      DTS:DTSID="{78F9D6AD-5CFF-4DE8-8AA2-CEA17C402949}"
+      DTS:ObjectName="upd_dt">
+      <DTS:Property
+        DTS:DataType="7"
+        DTS:Name="ParameterValue">8/17/2023 12:41:00 PM</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B3F93B53-5220-4156-ACB8-B2CC81931D07}"
+      DTS:ObjectName="upd_usr_id">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{63F5B370-01BC-494D-806D-E4434FEC9014}"
+      DTS:ObjectName="use_flg">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{273D6FA5-3128-4B24-9EDC-92F217A1A6AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[isf_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="isf_no"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[snd_seq]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="snd_seq"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_seq]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[snd_usrid]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="snd_usrid"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[snd_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="snd_tms"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[msg_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="msg_no"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[rcv_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rcv_tms"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[rcv_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[acr_dt]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="acr_dt"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[acr_batch_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="acr_batch_no"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_batch_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ack_tp]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="ack_tp"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[ack_tp]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[reason_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="reason_cd"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[reason_txt]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="reason_txt"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[isf_act_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="isf_act_cd"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_act_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_no]"
+                      name="isf_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_seq]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_seq]"
+                      name="snd_seq"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_seq]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_usrid]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_usrid]"
+                      name="snd_usrid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_usrid]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_tms]"
+                      name="snd_tms"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_tms]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="14"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]"
+                      name="msg_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[msg_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_tms]"
+                      name="rcv_tms"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[rcv_tms]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_dt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_dt]"
+                      name="acr_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_batch_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_batch_no]"
+                      name="acr_batch_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_batch_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ack_tp]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ack_tp]"
+                      name="ack_tp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[ack_tp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_cd]"
+                      name="reason_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_txt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_txt]"
+                      name="reason_txt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_txt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_act_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_act_cd]"
+                      name="isf_act_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_act_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM tb_edi_isf_trns
+WHERE   isf_no = ?
+AND snd_seq = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLEDB fwd]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[isf_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="isf_no"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[snd_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="snd_seq"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_seq]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="numeric"
+                      name="Param_1"
+                      precision="39">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[isf_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="isf_no"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[snd_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="snd_seq"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_seq]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[snd_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="snd_usrid"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_usrid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[snd_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="snd_tms"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_tms]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="msg_no"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rcv_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rcv_tms"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_tms]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[acr_dt]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="acr_dt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[acr_batch_no]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="acr_batch_no"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_batch_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[ack_tp]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="ack_tp"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ack_tp]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[reason_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="reason_cd"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[reason_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="reason_txt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_txt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[isf_act_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="isf_act_cd"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_act_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_no]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_no]"
+                      name="isf_no"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_seq]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_seq]"
+                      name="snd_seq"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_seq]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_usrid]"
+                      name="snd_usrid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_usrid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_tms]"
+                      name="snd_tms">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[snd_tms]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]"
+                      name="msg_no">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_tms]"
+                      name="rcv_tms">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_tms]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_dt]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_dt]"
+                      name="acr_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_batch_no]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_batch_no]"
+                      name="acr_batch_no">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[acr_batch_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ack_tp]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ack_tp]"
+                      name="ack_tp">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ack_tp]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_cd]"
+                      name="reason_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_txt]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_txt]"
+                      name="reason_txt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[reason_txt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_act_cd]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_act_cd]"
+                      name="isf_act_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[isf_act_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\TB_EDI_ISF_TRNS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_EDI_ISF_TRNS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+isf_no,
+substring(cast(snd_seq as varchar(5)), 1, 3) as snd_seq,
+snd_usrid as cre_usr_id,
+snd_tms as cre_dt,
+snd_usrid as upd_usr_id,
+snd_tms as upd_dt,
+snd_usrid,
+snd_tms,
+msg_no,
+rcv_tms,
+acr_dt,
+case when trim(acr_batch_no) = '' then NULL
+else acr_batch_no end as acr_batch_no,
+ack_tp,
+reason_cd,
+reason_txt,
+isf_act_cd
+from tb_edi_isf_trns</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[isf_no]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_no]"
+                      name="isf_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_seq]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_seq]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_seq]"
+                      name="snd_seq"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_usrid]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_usrid]"
+                      name="snd_usrid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_tms]"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[snd_tms]"
+                      name="snd_tms"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[msg_no]"
+                      length="14"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[msg_no]"
+                      name="msg_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[rcv_tms]"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[rcv_tms]"
+                      name="rcv_tms"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_dt]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[acr_dt]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_dt]"
+                      name="acr_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_batch_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[acr_batch_no]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[acr_batch_no]"
+                      name="acr_batch_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[ack_tp]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[ack_tp]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[ack_tp]"
+                      name="ack_tp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[reason_cd]"
+                      length="3"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_cd]"
+                      name="reason_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_txt]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[reason_txt]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[reason_txt]"
+                      name="reason_txt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_act_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[isf_act_cd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].Columns[isf_act_cd]"
+                      name="isf_act_cd"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[isf_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      name="isf_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_seq]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="snd_seq" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="snd_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      name="snd_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="14"
+                      name="msg_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      name="rcv_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[acr_dt]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="acr_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[acr_batch_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="acr_batch_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[ack_tp]"
+                      codePage="949"
+                      dataType="str"
+                      length="2"
+                      name="ack_tp" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[reason_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="reason_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[reason_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="40"
+                      name="reason_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output].ExternalColumns[isf_act_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="isf_act_cd" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[isf_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[isf_no]"
+                      name="isf_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_seq]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_seq]"
+                      name="snd_seq" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_usrid]"
+                      name="snd_usrid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[snd_tms]"
+                      name="snd_tms" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="14"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[msg_no]"
+                      name="msg_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[rcv_tms]"
+                      name="rcv_tms" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[acr_dt]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[acr_dt]"
+                      name="acr_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[acr_batch_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[acr_batch_no]"
+                      name="acr_batch_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ack_tp]"
+                      codePage="949"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ack_tp]"
+                      name="ack_tp" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[reason_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[reason_cd]"
+                      name="reason_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[reason_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[reason_txt]"
+                      name="reason_txt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[isf_act_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[isf_act_cd]"
+                      name="isf_act_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\tb_edi_isf_trns"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="tb_edi_isf_trns"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."tb_edi_isf_trns"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\tb_edi_isf_trns.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC fwd]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[isf_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="isf_no"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[isf_no]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[snd_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="snd_seq"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_seq]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_seq]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[snd_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="snd_usrid"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_usrid]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[snd_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="snd_tms"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_tms]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[snd_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="msg_no"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[msg_no]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[rcv_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rcv_tms"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[rcv_tms]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[acr_dt]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="acr_dt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[acr_dt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[acr_batch_no]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="acr_batch_no"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[acr_batch_no]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acr_batch_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[ack_tp]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="ack_tp"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[ack_tp]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ack_tp]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[reason_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="reason_cd"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[reason_cd]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[reason_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="reason_txt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[reason_txt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[reason_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].Columns[isf_act_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="isf_act_cd"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[isf_act_cd]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[isf_act_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[isf_no]"
+                      dataType="wstr"
+                      length="50"
+                      name="isf_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_seq]"
+                      dataType="numeric"
+                      name="snd_seq"
+                      precision="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      name="snd_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[snd_tms]"
+                      dataType="dbTimeStamp"
+                      name="snd_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[msg_no]"
+                      dataType="wstr"
+                      length="50"
+                      name="msg_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[rcv_tms]"
+                      dataType="dbTimeStamp"
+                      name="rcv_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[acr_dt]"
+                      dataType="wstr"
+                      length="12"
+                      name="acr_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[acr_batch_no]"
+                      dataType="numeric"
+                      name="acr_batch_no"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[ack_tp]"
+                      dataType="wstr"
+                      length="2"
+                      name="ack_tp" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[reason_cd]"
+                      dataType="wstr"
+                      length="19"
+                      name="reason_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[reason_txt]"
+                      dataType="nText"
+                      name="reason_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input].ExternalColumns[isf_act_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="isf_act_cd" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\tb_edi_isf_trns.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\tb_edi_isf_trns.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\tb_edi_isf_trns.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\tb_edi_isf_trns.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Command Output]"
+              endId="Package\Data Flow Task\tb_edi_isf_trns.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\TB_EDI_ISF_TRNS.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="244,172" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task\tb_edi_isf_trns"
+          TopLeft="508.5,366.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task\TB_EDI_ISF_TRNS"
+          TopLeft="78.0000017881393,8.99999989668526" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="108.5,177.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="95.5,95.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="166.500001788139,50.9999998966853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.49999821186071,44.5000001033147"
+              Start="0,0"
+              End="9.49999821186071,37.0000001033147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.2500000516574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.2500000516574"
+                    Point2="0,22.2500000516574"
+                    Point3="4,22.2500000516574" />
+                  <mssgle:LineSegment
+                    End="5.49999821186071,22.2500000516574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.49999821186071,22.2500000516574"
+                    Point2="9.49999821186071,22.2500000516574"
+                    Point3="9.49999821186071,26.2500000516574" />
+                  <mssgle:LineSegment
+                    End="9.49999821186071,37.0000001033147" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="176,137.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18,40"
+              Start="0,0"
+              End="-18,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-14,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14,20"
+                    Point2="-18,20"
+                    Point3="-18,24" />
+                  <mssgle:LineSegment
+                    End="-18,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="59.5,276.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="158,219.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,57"
+              Start="0,0"
+              End="-12,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="-4,28.5" />
+                  <mssgle:LineSegment
+                    End="-8,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,28.5"
+                    Point2="-12,28.5"
+                    Point3="-12,32.5" />
+                  <mssgle:LineSegment
+                    End="-12,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
+          TopLeft="146,318.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="438,48"
+              Start="0,0"
+              End="438,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="434,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="434,24"
+                    Point2="438,24"
+                    Point3="438,28" />
+                  <mssgle:LineSegment
+                    End="438,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\tb_edi_isf_trns">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TB_EDI_ISF_TRNS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

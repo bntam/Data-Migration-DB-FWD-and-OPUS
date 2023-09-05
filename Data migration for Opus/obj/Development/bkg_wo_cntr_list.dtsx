@@ -11,28 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_wo_cntr_list"
   DTS:PackageType="5"
-  DTS:VersionBuild="79"
-  DTS:VersionGUID="{84926857-0B87-4138-836E-0AB3582305D4}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{89036879-B899-4C26-83C5-6AF68DBE7FC2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{8677DD39-0D2A-469E-A14B-325AA9AAB1B9}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{8677DD39-0D2A-469E-A14B-325AA9AAB1B9}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADY2yd1ekm0EpcBNH1V3MrNPLpXCavQk/kF4lpGnOhZ0QAAAAAOgAAAAAIAACAAAAA0k+1c31orrvwoSlxrrESuK5+pruyKBaZQveKpSYI4wiAAAAAGc71RqC2aTGXs2IwMMg9JvP7PBPIqlqJDxAfyxx2sHUAAAAA0M7C6/Olz9YLTFF1c+jEZTKfJzG//7nlGLGjzOJksFDgnSPHwYZ6n4L6KW4LFH80s0Ut/F+HFyLxBPOC0yxCi</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ODBC fwd]"
       DTS:CreationName="ODBC"
@@ -44,7 +27,24 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVxXxpp5lmt+QTG3CkwbvCayWelvNbSGVGlXcCYT6viwAAAAAOgAAAAAIAACAAAABUkWWnahIb4DCJMbKRTaiwuKK39ma4Pc8gBiHJsvlr0yAAAADE1pshijukSQWlMPRX9rKXjGKaW4nV4WA6uGwpOM3yMUAAAABIVIPTB1HUgfADUo01dJ63/pnsqXbURRRxA7xtQQGQZGuGXs1/CT1yr16lZtcRrNtXwrl8eaw4PzvqSlSp40Wd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACA8ZzBitjv4ouCKZRwUyG0BGIJ6iUt1ryTJ+KngQAPmgAAAAAOgAAAAAIAACAAAABx5Orths1XOCR0CqGMnwBRkpSzOH1pb01kub9pc0TY4SAAAACRK0faETu54y7JpqgLn0IWzrMQXx8UdxXJ4Yp1wIbkQ0AAAAAZJyg0lIg0SCHpQlgZ76Gcl6NklX9PkpNSnZqSJMp8esMLgM7KT+dMxTHlFK+rqKZqxsGquFHltv4HlgA+eBug</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8677DD39-0D2A-469E-A14B-325AA9AAB1B9}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{8677DD39-0D2A-469E-A14B-325AA9AAB1B9}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAstUDxqnFOW8OcSg9u6Hs/eZTiTDd1TvMuD0lJ1GuzQAAAAAOgAAAAAIAACAAAABOKyNweNXOjkGHcIeVkzRTJ5HMs3Fs0khg9ma+hVP+/yAAAABBuowZJ5lBns+adippOIkBWOLOYm4b7CEa1U5cHCsrdEAAAABE2+ZdW8Y6buNEc0y+SCarMyC/YMwduyAahwAMuRqZGGDQtLuAUJ9j/uv2BuX11SUFa4mFQH+KlGXuTWrAT3lR</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAfw2H/ajf62510+PIvSazo5S25P2rWAaE79I3TrMKTwAAAAAOgAAAAAIAACAAAAAPZonCtHuAub8kIQdzyo6EriucNLXadzc1GAeyHZkY1iAAAADAHa+eMQVxGiNKffZRhOOodDV1PA1BaUFbuD3ZLK5jQ0AAAAC6iFbXkIZ9nJ9Dx5q1qZ1ixMJxjK21kA/cOYRvKFzIJDUgyzgleAM+3uE8a8Mnc4qG4uiGCGztIoJMWJHdJ4u8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJ1kqNFnzcx4lfki8DMCwPL0XMceiURRtMFQKsZpqvdgAAAAAOgAAAAAIAACAAAABYFjNgVjOzSFFtT6DgIf8/eKOVOjxKeRVLSyLLpCqEBiAAAABpgWK0GICXsSatm4N01mbRzB7XcEPsKRhqAI3eu+JLg0AAAAB4dtNiT/TU0u+O8tIb/QJddNOVDqHvfAhHdrUBjZdJyvTuhWwKMsnbfz9ewQkhWTI8zzr0KDJhZFcvKB+jJYeU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1848,8 +1848,8 @@ FROM
               <connections>
                 <connection
                   refId="Package\Data Flow Task\TB_WO_CNTR_LIST.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

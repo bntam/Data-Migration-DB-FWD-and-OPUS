@@ -11,45 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_cntr_list"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{D900FCFD-9A8E-4AFC-8507-068DA82534D8}">
+  DTS:VersionBuild="94"
+  DTS:VersionGUID="{02787F05-7641-4EB0-8B23-B1EFB1E648D7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{DABF75FD-1784-4FCF-ADB6-FDE2AA3CEEBD}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{DABF75FD-1784-4FCF-ADB6-FDE2AA3CEEBD}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAp5hMDMfSrcC4QH2yux+cM8xpt1y60BfqCCFX8cGfc6QAAAAAOgAAAAAIAACAAAAD/oxkDkfa2vYFrk3cDYGJuxe4F7frfw9ydMhk9dCwchCAAAABJjT8AptO+huAUsx+EwaUd/atfP/t1gAYtSA9Wyu1e+0AAAAC0SCqFyACHwEf1+2Sg3vfzNxmsz+kv8hKQz+YkLbpA5qfskTBJjX6QVQrdZlTVJBt4D1ZksKPilAffYEh9Dj0h</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{10E05AF4-E1B2-4085-8194-681699C84EA3}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{10E05AF4-E1B2-4085-8194-681699C84EA3}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACn1380CAT1fVt1muOWvn5YOflW1eqzX87jW57lJ7VY/gAAAAAOgAAAAAIAACAAAAAcjR0eV4ul1jS2kqO9ebPYGU5xsPea9uuKU2wDM7Bj8CAAAAAYyZddwt3e/ZwSkkhraAEJ8fcvDkfR+9TRB/TA0ZUT2kAAAAAPN0YzQOMLhzf93llzZtBPgAHdGXcmEFoAoRdPHJqiuwSnkRnLdSbEXnj7qE+UjOfFhQTKAPOtWvZVaDKV+ejT</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ODBC fwd]"
       DTS:CreationName="ODBC"
@@ -61,7 +27,24 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAMCMNUvqLC/RGYQurcS15hZ69IefHP8hB7tUvHxWEavwAAAAAOgAAAAAIAACAAAADKmr2yLedOfy7zU9eP1aIJaMDvTqUJiQ5T7nmu23etfCAAAACUehAfx35FunTp9qfCr1zZbWkar8x1zKA7FKSPezTLhEAAAADXyw/1Fv9la2Nqk3dV2gMYeNAU17pN3U8g4Pgcpf0ySdsKwBYvMS/b+u0dvrKcHlVzjOHX1ykJ+6i8AXmsY27k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3Wh2EK1sPL4BwsuKQz5/ypGD7OLLVPvaMKPRV9kmxrQAAAAAOgAAAAAIAACAAAACPa5jpq9j4D0oQ7IZtMttk8cgKdRXi5TISRpuUqWp3ziAAAAB2LEenK6yMjTOg/YuiLpILY4kcpdb0kgZn5HGMDC2GXkAAAACc5GIYAii4+psR96NeOM0VZLxNlwVmSNqQIfcOXp0RKXtMDE+HWCjs+X2YiK+9bZDjhQzwVkoF+xYkHNaLwtTM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{10E05AF4-E1B2-4085-8194-681699C84EA3}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{10E05AF4-E1B2-4085-8194-681699C84EA3}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD3ahEL9xYsBJv+RIY6JiSjojY/G9e90O6TDvOk+NUA0AAAAAAOgAAAAAIAACAAAADzSXLhtNkb0ce+9R1kVwZpqKJOtakEOXNGMaJSAU668CAAAAA9ajEEC0eIi5ZL9lDW0dIflw5qEmOLSI2q+uVHfwMLtUAAAACWxt8Ul7fHI3sXvSUpb158oK0k2+NusH5fqAr/ecmMPxRclvxjedL+KRKBOTV3wzGGxtnb1nX6sIFs1iARag+x</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -78,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB5nyaTuLpXqhCKLOI8Lp//KrnJyq8945s65SGRco12DwAAAAAOgAAAAAIAACAAAAC27tRoN0lTKyM1wVMOM4BsX7K2L+IC7E/o3K2k6EmY2yAAAADZ7UpoGF3YAph/FTB9FoRcxWVGd9Zoh55Ij52L/zN7RUAAAABhKQGEax7oUmvyGpfB1RC5ZZFWHQ2wsJ524Jgl7LqYh+aW5KwZdOi3ySkjDj5YqExC/eBj1qq+bwQvhnRXcCYd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABs1pVtL23fsW+Va/wNuDRDVppbGGjEYVh3odhe8TsvVwAAAAAOgAAAAAIAACAAAAAL+2EAtU9aVFC8T30eQlahVnzQPv/6zs/I6cl3p73wOyAAAACz3E1w0rCsEZrLocpdTN/1ChIABSEvzSggWRJIoifsBEAAAADscv6kxIC6BWLqxBrSE0NY58XrnH1h8OXDEiFIMU6/Ou0tLav60SnUNSGnbOj7XJN+/1zikwBEXJgodxLDyKoA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -9059,8 +9042,8 @@ FROM TB_CNTR_LIST</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\TB_CNTR_LIST.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.68.204.fwdaif.sa 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa 1]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10486,17 +10469,37 @@ FROM TB_CNTR_LIST</property>
           Id="Package\Data Flow Task\Sort"
           TopLeft="154.5,162.5" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Data Flow Task\fwd_bkg_cntr_list"
-          TopLeft="402,15" />
+          Size="159,42"
+          Id="Package\Data Flow Task\TB_CNTR_LIST"
+          TopLeft="147,4" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="120.5,92.5" />
         <NodeLayout
+          Size="133,42"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="386.5,166.5" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\fwd_bkg_cntr_list"
+          TopLeft="402,15" />
+        <NodeLayout
           Size="108,42"
           Id="Package\Data Flow Task\Sort 1"
           TopLeft="449.5,97.5" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Data Flow Task\DELETE"
+          TopLeft="126.5,308.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="131.5,239.5" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Data Flow Task\bkg_cntr_list"
+          TopLeft="353.5,262.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[ODBC Source Output]"
           TopLeft="484,57">
@@ -10532,61 +10535,31 @@ FROM TB_CNTR_LIST</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="202.5,134.5">
+          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
+          TopLeft="212.166666666667,239.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28"
+              EndConnector="240.833333333333,-31"
               Start="0,0"
-              End="0,20.5">
+              End="240.833333333333,-23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="131.5,239.5" />
-        <NodeLayout
-          Size="122,42"
-          Id="Package\Data Flow Task\DELETE"
-          TopLeft="126.5,308.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="204,204.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-11,35"
-              Start="0,0"
-              End="-11,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
+                    End="0,-8.63884430176565" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
+                    Point1="0,-8.63884430176565"
+                    Point2="0,-12.6388443017657"
+                    Point3="4,-12.6388443017657" />
                   <mssgle:LineSegment
-                    End="-7,17.5" />
+                    End="236.833333333333,-12.6388443017657" />
                   <mssgle:CubicBezierSegment
-                    Point1="-7,17.5"
-                    Point2="-11,17.5"
-                    Point3="-11,21.5" />
+                    Point1="236.833333333333,-12.6388443017657"
+                    Point2="240.833333333333,-12.6388443017657"
+                    Point3="240.833333333333,-16.6388443017657" />
                   <mssgle:LineSegment
-                    End="-11,27.5" />
+                    End="240.833333333333,-23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10617,40 +10590,32 @@ FROM TB_CNTR_LIST</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Data Flow Task\bkg_cntr_list"
-          TopLeft="353.5,262.5" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task\TB_CNTR_LIST"
-          TopLeft="147,4" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="226.5,46">
+          Id="Package\Data Flow Task.Paths[Merge Join Output]"
+          TopLeft="473.833333333333,208.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-25.5,46.5"
+              EndConnector="-49.8333333333333,54"
               Start="0,0"
-              End="-25.5,39">
+              End="-49.8333333333333,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.25" />
+                    End="0,17.9851411589896" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.25"
-                    Point2="0,23.25"
-                    Point3="-4,23.25" />
+                    Point1="0,17.9851411589896"
+                    Point2="0,21.9851411589896"
+                    Point3="-4,21.9851411589896" />
                   <mssgle:LineSegment
-                    End="-21.5,23.25" />
+                    End="-45.8333333333333,21.9851411589896" />
                   <mssgle:CubicBezierSegment
-                    Point1="-21.5,23.25"
-                    Point2="-25.5,23.25"
-                    Point3="-25.5,27.25" />
+                    Point1="-45.8333333333333,21.9851411589896"
+                    Point2="-49.8333333333333,21.9851411589896"
+                    Point3="-49.8333333333333,25.9851411589896" />
                   <mssgle:LineSegment
-                    End="-25.5,39" />
+                    End="-49.8333333333333,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10659,36 +10624,20 @@ FROM TB_CNTR_LIST</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="386.5,166.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
-          TopLeft="212.166666666667,239.5">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="202.5,134.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="240.833333333333,-31"
+              EndConnector="0,28"
               Start="0,0"
-              End="240.833333333333,-23.5">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-8.63884430176565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-8.63884430176565"
-                    Point2="0,-12.6388443017657"
-                    Point3="4,-12.6388443017657" />
-                  <mssgle:LineSegment
-                    End="236.833333333333,-12.6388443017657" />
-                  <mssgle:CubicBezierSegment
-                    Point1="236.833333333333,-12.6388443017657"
-                    Point2="240.833333333333,-12.6388443017657"
-                    Point3="240.833333333333,-16.6388443017657" />
-                  <mssgle:LineSegment
-                    End="240.833333333333,-23.5" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10732,31 +10681,65 @@ FROM TB_CNTR_LIST</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="473.833333333333,208.5">
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="204,204.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49.8333333333333,54"
+              EndConnector="-11,35"
               Start="0,0"
-              End="-49.8333333333333,46.5">
+              End="-11,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9851411589896" />
+                    End="0,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9851411589896"
-                    Point2="0,21.9851411589896"
-                    Point3="-4,21.9851411589896" />
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
                   <mssgle:LineSegment
-                    End="-45.8333333333333,21.9851411589896" />
+                    End="-7,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-45.8333333333333,21.9851411589896"
-                    Point2="-49.8333333333333,21.9851411589896"
-                    Point3="-49.8333333333333,25.9851411589896" />
+                    Point1="-7,17.5"
+                    Point2="-11,17.5"
+                    Point3="-11,21.5" />
                   <mssgle:LineSegment
-                    End="-49.8333333333333,46.5" />
+                    End="-11,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="226.5,46">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.5,46.5"
+              Start="0,0"
+              End="-25.5,39">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.25"
+                    Point2="0,23.25"
+                    Point3="-4,23.25" />
+                  <mssgle:LineSegment
+                    End="-21.5,23.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,23.25"
+                    Point2="-25.5,23.25"
+                    Point3="-25.5,27.25" />
+                  <mssgle:LineSegment
+                    End="-25.5,39" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

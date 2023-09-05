@@ -1,0 +1,2404 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/11/2023 7:39:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ADMIN-PC"
+  DTS:CreatorName="ADMIN-PC\Admin"
+  DTS:DTSID="{28ACBF7B-C2A8-45EF-831B-D81825B1A161}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="tb_edi_kams_send"
+  DTS:PackageType="5"
+  DTS:VersionBuild="125"
+  DTS:VersionGUID="{18AD92FD-EF7F-40A1-AF35-1DF329C077B6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC fwd]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{30CE1A4B-8CD8-47AB-BEF8-4373760971F0}"
+      DTS:ObjectName="ODBC fwd">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyyWntln9NFG7DA1WZz2Bhbgp/OC3/tT1z9yCc/PaGLgAAAAAOgAAAAAIAACAAAACkHV2Y5nJrBCrOeo6oUxjhzoiT0ByxHPlkCej8NFmwAiAAAACmVbXdHjr0dDBggCi6fVTRAXki5TZEAeNbhL+WPo6SdUAAAADfJWolEWmhJz2thZF8wUucT6G+3ZUEo/A3e6uIc2SMHoxXiIKESuUvcwhIkpyxXRRKsagcj35Hou0L+aMHDy7G</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5C446A9C-862A-4B76-9AF0-77765C431133}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{5C446A9C-862A-4B76-9AF0-77765C431133}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABrry/rt0VrTS7QsqO7DkeJ3nNxF1qaCO51k+McComDowAAAAAOgAAAAAIAACAAAAA78Fo9FBN33L1cAnUIvLCwjlO3il+A2x5BiFLWqnIg2CAAAACK2Wg/PmNK8Dg11oNGgj633pbKL1+uKmdaYt/P1h4odUAAAAAIhXGyY144h+WvxFoyJ61zoM2FBbPtEB3v7lVaVrR7YCRvQ2TnI+JPyXVs6u+aC9mo/3WCyaYTayfm9C2K6kuV</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB fwd]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2CCCBB8A-1076-4171-AEBE-B2837BAB1DAB}"
+      DTS:ObjectName="OLEDB fwd">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADJf5ov0NCe4JAXFaaOiraiMtTYwsYwue5iaQ4uKRPmDAAAAAAOgAAAAAIAACAAAAD3upNuU5p7K9ibNXETi1ddP+1AEHC+5Sf3E9I3L6PzkSAAAAAyp0SC2ZXWVZBm7XniQtTFXO+tzNcGn2fXr3yYgd50PEAAAADl/Z7uiWF5C58lnflPK793jcS7dS3ffRV9u/R8xQmIlNVISi5EmVVAAs2LU97JI0bbzs7f9dewQht/tqvycLHI</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{A8978442-652E-4F09-AB4E-7BEDC0CA544E}"
+      DTS:ObjectName="cnt_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{46CBDB59-D3C6-41ED-AC75-FCC61930F420}"
+      DTS:ObjectName="cnt_desc">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{BE3CF45A-DB78-40AE-B4BB-4F0E8D9DFB0A}"
+      DTS:ObjectName="cnt_nm">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{615B7D8D-E186-4E62-AB70-442DDD959281}"
+      DTS:ObjectName="conti_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{4250CAB8-DE1B-41AB-963B-B3E4B6EDFD59}"
+      DTS:ObjectName="co_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="7"
+      DTS:DTSID="{5ABF2E59-ADA3-4C0A-A401-509E61986E94}"
+      DTS:ObjectName="cre_dt">
+      <DTS:Property
+        DTS:DataType="7"
+        DTS:Name="ParameterValue">8/17/2023 12:40:40 PM</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{3D002DD1-49AA-4174-89C9-5219AAA1F44C}"
+      DTS:ObjectName="cre_usr_id">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{458EBE43-F322-42BE-848E-24E0C13FFAC2}"
+      DTS:ObjectName="curr_cd">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{0335A6CB-2B5F-4E8F-B737-45E1210D0E2A}"
+      DTS:ObjectName="delt_flg">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="7"
+      DTS:DTSID="{DE91B9CB-332A-4D59-A7A9-0882F7E98777}"
+      DTS:ObjectName="upd_dt">
+      <DTS:Property
+        DTS:DataType="7"
+        DTS:Name="ParameterValue">8/17/2023 12:41:00 PM</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{635E73FD-EB2E-4467-AD04-3F689521316F}"
+      DTS:ObjectName="upd_usr_id">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{46ED956E-B9C1-414F-9CA6-927DF69F6A1F}"
+      DTS:ObjectName="use_flg">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AD56EB9D-A2F2-4C64-997E-3CFB131E40B4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[msg_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="msg_no"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[seq]"
+                      cachedDataType="numeric"
+                      cachedName="seq"
+                      cachedPrecision="3"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[seq]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ref_msg_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ref_msg_no"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[ref_msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[file_nm]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="file_nm"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[file_nm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[msg_txt]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="msg_txt"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[rcv_msg_txt]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="rcv_msg_txt"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rcv_msg_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rgst_tms"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_usrid]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="rgst_usrid"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_ofc_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="rgst_ofc_cd"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[modi_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="modi_tms"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[modi_usrid]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="modi_usrid"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[modi_ofc_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="modi_ofc_cd"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[status]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="status"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[status]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]"
+                      name="msg_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[seq]"
+                      name="seq"
+                      precision="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[seq]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ref_msg_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ref_msg_no]"
+                      name="ref_msg_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[ref_msg_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[file_nm]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[file_nm]"
+                      name="file_nm"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[file_nm]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_txt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_txt]"
+                      name="msg_txt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_txt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_msg_txt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_msg_txt]"
+                      name="rcv_msg_txt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rcv_msg_txt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
+                      name="rgst_tms"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_tms]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
+                      name="rgst_usrid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_usrid]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
+                      name="rgst_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
+                      name="modi_tms"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_tms]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
+                      name="modi_usrid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_usrid]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
+                      name="modi_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM tb_edi_kams_send
+WHERE  msg_id = ?
+AND seq = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLEDB fwd]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="msg_no"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[seq]"
+                      cachedDataType="numeric"
+                      cachedName="seq"
+                      cachedPrecision="3"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[seq]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="numeric"
+                      name="Param_1"
+                      precision="39">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="msg_no"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[seq]"
+                      cachedDataType="numeric"
+                      cachedName="seq"
+                      cachedPrecision="3"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[seq]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[ref_msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ref_msg_no"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ref_msg_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[file_nm]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="file_nm"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[file_nm]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[msg_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="msg_txt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_txt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rcv_msg_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="rcv_msg_txt"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_msg_txt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rgst_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rgst_tms"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rgst_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="rgst_usrid"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[rgst_ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="rgst_ofc_cd"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[modi_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="modi_tms"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[modi_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="modi_usrid"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[modi_ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="modi_ofc_cd"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[status]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="status"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[status]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]"
+                      name="msg_no"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[seq]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[seq]"
+                      name="seq"
+                      precision="3"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[seq]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ref_msg_no]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ref_msg_no]"
+                      name="ref_msg_no">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ref_msg_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[file_nm]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[file_nm]"
+                      name="file_nm">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[file_nm]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_txt]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_txt]"
+                      name="msg_txt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[msg_txt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_msg_txt]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_msg_txt]"
+                      name="rcv_msg_txt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_msg_txt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_tms]"
+                      name="rgst_tms">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
+                      name="rgst_usrid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
+                      name="rgst_ofc_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_tms]"
+                      name="modi_tms">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_usrid]"
+                      name="modi_usrid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
+                      name="modi_ofc_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[status]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[status]"
+                      name="status">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[status]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\TB_EDI_KAMS_SEND"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_EDI_KAMS_SEND"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+msg_no,
+seq,
+ref_msg_no,
+file_nm,
+msg_txt,
+rcv_msg_txt,
+rgst_tms,
+rgst_usrid,
+rgst_ofc_cd,
+modi_tms,
+modi_usrid,
+modi_ofc_cd,
+status,
+rgst_tms as cre_dt,
+rgst_usrid as cre_usr_id,
+modi_tms as upd_dt,
+modi_usrid as upd_usr_id
+from tb_edi_kams_send</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[msg_no]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_no]"
+                      name="msg_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[seq]"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[seq]"
+                      name="seq"
+                      precision="3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[ref_msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[ref_msg_no]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[ref_msg_no]"
+                      name="ref_msg_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[file_nm]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[file_nm]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[file_nm]"
+                      name="file_nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[msg_txt]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[msg_txt]"
+                      name="msg_txt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rcv_msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rcv_msg_txt]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rcv_msg_txt]"
+                      name="rcv_msg_txt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_tms]"
+                      name="rgst_tms"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
+                      name="rgst_usrid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
+                      name="rgst_ofc_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_tms]"
+                      name="modi_tms"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_usrid]"
+                      name="modi_usrid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
+                      name="modi_ofc_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[status]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[status]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="msg_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[seq]"
+                      dataType="numeric"
+                      name="seq"
+                      precision="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[ref_msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="ref_msg_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[file_nm]"
+                      codePage="949"
+                      dataType="str"
+                      length="100"
+                      name="file_nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="4000"
+                      name="msg_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rcv_msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="4000"
+                      name="rcv_msg_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      name="rgst_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="rgst_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="rgst_ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      name="modi_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="modi_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="modi_ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output].ExternalColumns[status]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="status" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[msg_no]"
+                      name="msg_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[seq]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[seq]"
+                      name="seq"
+                      precision="3" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ref_msg_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ref_msg_no]"
+                      name="ref_msg_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[file_nm]"
+                      codePage="949"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[file_nm]"
+                      name="file_nm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[msg_txt]"
+                      name="msg_txt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rcv_msg_txt]"
+                      codePage="949"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rcv_msg_txt]"
+                      name="rcv_msg_txt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
+                      name="rgst_tms" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
+                      name="rgst_usrid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
+                      name="rgst_ofc_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
+                      name="modi_tms" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
+                      name="modi_usrid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
+                      name="modi_ofc_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[status]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[status]"
+                      name="status" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\tb_edi_kams_send"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="tb_edi_kams_send"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."tb_edi_kams_send"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\tb_edi_kams_send.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC fwd]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[seq]"
+                      cachedDataType="numeric"
+                      cachedName="seq"
+                      cachedPrecision="3"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[seq]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[seq]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[ref_msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ref_msg_no"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[ref_msg_no]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ref_msg_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[file_nm]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="file_nm"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[file_nm]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[file_nm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[msg_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="msg_txt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[msg_txt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[rcv_msg_txt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="rcv_msg_txt"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rcv_msg_txt]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rcv_msg_txt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[rgst_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="rgst_tms"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[rgst_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="rgst_usrid"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[rgst_ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="rgst_ofc_cd"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[modi_tms]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="modi_tms"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_tms]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[modi_usrid]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="modi_usrid"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_usrid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[modi_ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="modi_ofc_cd"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[status]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="status"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[status]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[status]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].Columns[msg_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="msg_no"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[msg_no]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="msg_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[seq]"
+                      dataType="numeric"
+                      name="seq"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[ref_msg_no]"
+                      dataType="wstr"
+                      length="20"
+                      name="ref_msg_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[file_nm]"
+                      dataType="wstr"
+                      length="100"
+                      name="file_nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[msg_txt]"
+                      dataType="wstr"
+                      length="4000"
+                      name="msg_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rcv_msg_txt]"
+                      dataType="wstr"
+                      length="4000"
+                      name="rcv_msg_txt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[status]"
+                      dataType="wstr"
+                      length="5"
+                      name="status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      name="rgst_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      name="rgst_ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
+                      dataType="dbTimeStamp"
+                      name="rgst_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
+                      dataType="wstr"
+                      length="12"
+                      name="modi_usrid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      name="modi_ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
+                      dataType="dbTimeStamp"
+                      name="modi_tms" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\tb_edi_kams_send.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\tb_edi_kams_send.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\tb_edi_kams_send.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\tb_edi_kams_send.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Command Output]"
+              endId="Package\Data Flow Task\tb_edi_kams_send.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\TB_EDI_KAMS_SEND.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="244,171" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="106.5,144.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Data Flow Task\TB_EDI_KAMS_SEND"
+          TopLeft="79.0000017881393,9.99999989668526" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="72.5,78.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\tb_edi_kams_send"
+          TopLeft="361.5,243.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="174.500001788139,51.9999998966853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.5000017881393,26.5000001033147"
+              Start="0,0"
+              End="-21.5000017881393,19.0000001033147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.25000005165737" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.25000005165737"
+                    Point2="0,13.2500000516574"
+                    Point3="-4,13.2500000516574" />
+                  <mssgle:LineSegment
+                    End="-17.5000017881393,13.2500000516574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5000017881393,13.2500000516574"
+                    Point2="-21.5000017881393,13.2500000516574"
+                    Point3="-21.5000017881393,17.2500000516574" />
+                  <mssgle:LineSegment
+                    End="-21.5000017881393,19.0000001033147" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="154.5,120.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="114.5,228.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="156,186.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,42"
+              Start="0,0"
+              End="45,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="41,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,21"
+                    Point2="45,21"
+                    Point3="45,25" />
+                  <mssgle:LineSegment
+                    End="45,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
+          TopLeft="287.5,249.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74,15"
+              Start="0,0"
+              End="66.5,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33,0"
+                    Point2="37,0"
+                    Point3="37,4" />
+                  <mssgle:LineSegment
+                    End="37,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,11"
+                    Point2="37,15"
+                    Point3="41,15" />
+                  <mssgle:LineSegment
+                    End="66.5,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TB_EDI_KAMS_SEND">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\tb_edi_kams_send">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

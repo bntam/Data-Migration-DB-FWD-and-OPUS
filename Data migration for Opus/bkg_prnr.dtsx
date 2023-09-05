@@ -11,28 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_prnr"
   DTS:PackageType="5"
-  DTS:VersionBuild="143"
-  DTS:VersionGUID="{CE5B9F31-8E18-405C-8F38-2A9D4DB31C47}">
+  DTS:VersionBuild="145"
+  DTS:VersionGUID="{DF14CA08-8B92-4B3C-8787-A192F847D691}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{AD39138E-6A09-4E4E-8A27-5B1276D53AAC}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Application Name=SSIS-TB_INTG_BL-{AD39138E-6A09-4E4E-8A27-5B1276D53AAC}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHYej54Uowj4v2Qa1Lt0LPzX0QDlZXwMltrEA9Df9STAAAAAAOgAAAAAIAACAAAAAef8xjGMCp4Oi3i3/nzLUtnTbXNXZEYv++C/igsjL8BCAAAABdbkgt0HLp/666v3A1Fg+gF9xhr/wa1HRsjUyMHLtz2kAAAADL1dGXthcadjRwaL+DpoOgUQSYIufVrELOtMlBe+gcW6XNRfrgB6yheHw1gjbH+9hK8F/T6TezteHwPRPMi+90</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ODBC fwd]"
       DTS:CreationName="ODBC"
@@ -44,7 +27,24 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACu1P3r/oh1Ut3TRSZ8YYmn7iZrMecxFgcJtHHZMfouyAAAAAAOgAAAAAIAACAAAAA9URlXifFDTMMC1aKgPCM6hoQ9YL/VRy3D6nuj0VTUzSAAAABBhSLrQoDEp0EPkIJ1vx8plwhdm79JHSTuNNnYQhyCkkAAAADh146fZgmi0BPiDMJT0loT6w3KjoDrmccYbPmBL37tlMgqueI5EqPIf1cbLO8QWqfU+np/xwgNShZYJCvXo3uI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD0hvTT0wZMObZl5eKtl9NYpeYNB6lKYDaa4Wx/TvzF4wAAAAAOgAAAAAIAACAAAAAflIz0KbEXYUsvSvNYd57xYQH0rcLKzy241VVy2pRpsSAAAAAEeLtosFE4/gjdC1EgSxlE/A6lOcDIfgzYBj2YlpPyNEAAAAD3AXxpmuoyburKE6mdKYMVRwZMM+yL/tRNgIQ2jyeMeIXgGGAhfBA6gAEZKhMEaTuhwEIynWm7R8HYZ698eGpc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AD39138E-6A09-4E4E-8A27-5B1276D53AAC}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{AD39138E-6A09-4E4E-8A27-5B1276D53AAC}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACi/mf8vIJqaVfwej+G7iY1Fpy7LDbWd/Ir07NTnEJ8bQAAAAAOgAAAAAIAACAAAAA6w8KdEnm36KX8ck73Y2rhm2aVvw1Dz3VjrtouDzXj7SAAAADWB2JCmI0lkmXsZJ6Qh1Oug060LoIuTsdFdBLUyBINzkAAAACfDTU1OQSv0zCRUgPRQY5M11J/9i1eyZvWv26pra3vtjl78Z6ZU7iHwH23JYAtWu1gW51DwxcPpPviLxL0saBt</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,11 +57,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;">
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB7F4/l2TkyoILt0l1icHEZ3wrf3HDMNqJsRIbfUerJzAAAAAAOgAAAAAIAACAAAACJZSopo1fg4x4hBSJGmMz8XUmo0aQqG7NemRkRlbKPByAAAAAHmxqqqAH61I/5TMWmTGvW7zOH0PG/IMmRsTSINCtQJUAAAADADfKsdvEslBHoHbL+huzfk5UlKCbh8WUW9WDey7Z7mz38Oe7+e6F9RFOpWwwgTI+bSr+xFb9YNaX4BsqS3kIp</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAKCXONFyFfQo36dRg6Z3/tY0x34DA8qzUIZjBGuChUfgAAAAAOgAAAAAIAACAAAAClBL3Pleq4HRzcDl64NNoYVQO8qy1F/vb6Hya31aj62iAAAAAKRB9C4fMJpVrBY4NR6fxaG7F5MbSqvSNuM51YyF16lUAAAAAYCVwKPhEQPm8GqmIr54RoQ8z1noiLQVHMhnZ3vdIY2/nj6aZMFO3BDa9jydmmX3zT0I/liwfRtfFXhAgnIlPY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3008,8 +3008,8 @@ WHERE BL_TRDP_TP_CD NOT IN ('A01','I01','L01','P01','P03','S02','S03')</property
               <connections>
                 <connection
                   refId="Package\Data Flow Task\TB_BL_PRNR.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3447,7 +3447,7 @@ WHERE BL_TRDP_TP_CD NOT IN ('A01','I01','L01','P01','P03','S02','S03')</property
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="244,172" />
       </GraphLayout>
@@ -3746,6 +3746,14 @@ WHERE BL_TRDP_TP_CD NOT IN ('A01','I01','L01','P01','P03','S02','S03')</property
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TB_BL_PRNR">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\bkg_prnr">
     <Properties>
       <Property>
@@ -3768,14 +3776,6 @@ WHERE BL_TRDP_TP_CD NOT IN ('A01','I01','L01','P01','P03','S02','S03')</property
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TB_BL_PRNR">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

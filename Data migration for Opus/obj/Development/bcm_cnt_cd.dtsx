@@ -11,28 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bcm_cnt_cd"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{A23D7361-23E2-4A72-AF56-3A48D9D2C494}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{2BEDDA6D-9C29-4FE6-AAC8-BA421C5CDC0D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{4EFA7636-4718-4255-810E-B2867968254C}"
-      DTS:ObjectName="10.0.68.204.fwdaif.sa">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Application Name=SSIS-bcm_cnt_cd-{4EFA7636-4718-4255-810E-B2867968254C}10.0.68.204.fwdaif.sa;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1VcdypbCv1umUEPsQpPYHf4mTqXisTug9J33z2A88fAAAAAAOgAAAAAIAACAAAAB5MRwzbLO1J0wMIvCHW8+OSlxdRauUSQvvaE20QXSe/SAAAACklYHfuQb5mwIXD7Z/8cdkc4dNnz7Wya6lIVpYSA5OV0AAAAB1Ftf7Sp+P9+8kXoDNMB5Bo34ADsh59Y9zcwdO5MKz0klZmk3mkFyxmDzv5u4e9caute8T5QAZpYaZaQ0tPVj0</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ODBC fwd]"
       DTS:CreationName="ODBC"
@@ -44,7 +27,24 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZWH6EqBJbssz4CsyGschDLorOy+iBPGcqCZbzl98e/wAAAAAOgAAAAAIAACAAAAAd0fDI+sT+1FBNED9zxs/Wf0OzC24R6P7OxM89EtmkXiAAAAAPV/rE18/1NRrhqy5gwmk7DKHlXO8h3gh+3rDqcRBDF0AAAABLG/KdQVTHBvtYW2VbOncjzaj2rf3pV4bRPkiaW/GV2z0USkhVIOPkrB1t3DXdxb2PK5q5tjAbVKXl5Nq82YLg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3YWDeQ4hbBqlktQL2vvc4H/FH39mIVV4TBmwRbCCQAwAAAAAOgAAAAAIAACAAAAC7gmcEUtoxuQqwG0LLRm3NDmotgW5nCwQV9aLoIqI4CyAAAADHCkfdovWNRRQaSHAo7TAwykrEmgpVdKlC/mW3hz+iCEAAAACtZC7dLyfaa/SqsoXaERtnOmgGiTWQIUeuutKH41XDfVf+TnCy+gOz2ZXxFoJPprIh2CLgrBroiuhOljdXsjfY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODBC opus]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4EFA7636-4718-4255-810E-B2867968254C}"
+      DTS:ObjectName="ODBC opus">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-bcm_cnt_cd-{4EFA7636-4718-4255-810E-B2867968254C}10.0.68.204.fwdaif.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADV3fatjahvooI7PsvNVq8O2uXJ/rVwxqoJFYxG3B0mfwAAAAAOgAAAAAIAACAAAACUHksN0oAXU+k6VveKQlMpaqcQDtHpMKQd+AJnSEdbeSAAAAASfwF6N008/a5Du749rmXeZ6dKbw9eAjPDPGWdwbxMZEAAAACFCDGHtNUbOTJF+e6x0wqqbIrrZm83Fg09NPifbun8x0rHirSmS7Qg+mYBr/rR+0V3wmXSm+i313mcZsEf/SwN</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9zgp5IKRN0eaIL5ZNiY7BQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9gqzbp+NrUiAO3i84HV8CSdpPY27feVOTB0i8DRQ7MwAAAAAOgAAAAAIAACAAAACyUXi7dE5m2xDEBhLXqyaMDNf4ZJaPsZ12fHaTBjnOhyAAAABSZVxzQTlC7V1D4YJhNe6d2P5gxNBgxwGSGEnJ7Ony3EAAAAAar+/Razu5C8KpiCACxAo5wSCmhwhu8z6Yi7YAFWpzSw6SdACVhFk8zf/20a4fdZ6yxGOoh40BJF6ZtpRvsSUD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAl0/WdO3Aocc0w4k5TmGRMcDigrhKBBOUwCBWbhRJSSAAAAAAOgAAAAAIAACAAAADBX3Fr5q4k785WVsXWJPOzFdj0dPIQKpBQnVuR/YORySAAAACargyouglvIdDdexBQKXPh4FQ5u+FJLNkmRwmj0maBa0AAAAD0ct7EqmMj+w28HkYsCRfimc5MMbj+C2bpEH71PVL6IxsoDbECaG63MxVEhDHucM7PjqrwnbFJYVxTEsfHF5dC</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2865,8 +2865,8 @@ FROM TB_CNT</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\TB_CNT.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.68.204.fwdaif.sa]"
+                  connectionManagerID="Package.ConnectionManagers[ODBC opus]"
+                  connectionManagerRefId="Package.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3235,9 +3235,9 @@ FROM TB_CNT</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="244,172" />
+          TopLeft="243,171" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3247,39 +3247,39 @@ FROM TB_CNT</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\Data Flow Task\TB_CNT"
           TopLeft="221.318181818182,13.8636363636364" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\Data Flow Task\OLE DB Command"
           TopLeft="514,471" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\Data Flow Task\Merge Join"
           TopLeft="337,233" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\Data Flow Task\fwd_bcm_cnt_cd"
           TopLeft="502,81" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\Data Flow Task\Sort"
           TopLeft="222,88" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="178,164" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\Data Flow Task\Sort 1"
           TopLeft="483,161" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\Data Flow Task\Conditional Split"
           TopLeft="355,325" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\Data Flow Task\bcm_cnt_cd"
           TopLeft="678.5,340.5" />
         <EdgeLayout
