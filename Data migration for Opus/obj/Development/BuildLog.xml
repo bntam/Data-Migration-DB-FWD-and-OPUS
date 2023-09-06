@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-09-05T08:44:52.5664287Z</LastWriteTime>
+    <LastWriteTime>2023-09-06T05:49:28.1684725Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -222,11 +222,6 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>tb_edi_isf_hdr.dtsx</Name>
-      <LastWriteTime>2023-08-31T06:50:22.7577615Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>tb_edi_isf_cntr.dtsx</Name>
       <LastWriteTime>2023-08-31T07:10:52.2798342Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
@@ -298,12 +293,37 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>tb_frt_edi_temp.dtsx</Name>
-      <LastWriteTime>2023-09-05T08:35:21.7826769Z</LastWriteTime>
+      <LastWriteTime>2023-09-06T05:43:29.941922Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>vis_usr_trd_prnr.dtsx</Name>
       <LastWriteTime>2023-09-05T08:44:49.9189024Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>adm_alt_mst.dtsx</Name>
+      <LastWriteTime>2023-09-06T03:58:08.9966704Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bkg_dat_cng_his.dtsx</Name>
+      <LastWriteTime>2023-09-06T04:06:26.7049Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>1_tb_intg_bl_edi_temp.dtsx</Name>
+      <LastWriteTime>2023-09-06T05:34:54.0582453Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>1_tb_edi_isf_hdr.dtsx</Name>
+      <LastWriteTime>2023-08-31T06:50:22.7577615Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>tb_edi_bl_sts.dtsx</Name>
+      <LastWriteTime>2023-09-06T05:49:26.1206189Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
