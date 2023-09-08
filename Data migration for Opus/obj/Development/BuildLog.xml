@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-09-08T02:12:53.8926475Z</LastWriteTime>
+    <LastWriteTime>2023-09-08T06:42:26.965328Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -278,7 +278,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>tb_edi_si.dtsx</Name>
-      <LastWriteTime>2023-09-05T07:37:26.5810776Z</LastWriteTime>
+      <LastWriteTime>2023-09-08T02:23:56.9632914Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -374,6 +374,56 @@
     <ProjectBuildItemInfo>
       <Name>tb_edi_cstms_vsl.dtsx</Name>
       <LastWriteTime>2023-09-08T02:12:51.7258169Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>adm_usr_eml_stup.dtsx</Name>
+      <LastWriteTime>2023-09-08T02:32:42.3623543Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_chg.dtsx</Name>
+      <LastWriteTime>2023-09-08T02:40:26.1272697Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_pay_dtl.dtsx</Name>
+      <LastWriteTime>2023-09-08T03:49:51.9064158Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_dps_dtl.dtsx</Name>
+      <LastWriteTime>2023-09-08T04:04:29.35392Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_pay_dtl_his.dtsx</Name>
+      <LastWriteTime>2023-09-08T04:24:55.4069235Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_dps_dtl_his.dtsx</Name>
+      <LastWriteTime>2023-09-08T04:29:25.6217972Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_pay_mst_his.dtsx</Name>
+      <LastWriteTime>2023-09-08T05:51:06.3337741Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_dps_mst_his.dtsx</Name>
+      <LastWriteTime>2023-09-08T06:22:46.7400105Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_pay_mst.dtsx</Name>
+      <LastWriteTime>2023-09-08T06:35:03.6487151Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>acc_dps_mst.dtsx</Name>
+      <LastWriteTime>2023-09-08T06:42:24.6574519Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
