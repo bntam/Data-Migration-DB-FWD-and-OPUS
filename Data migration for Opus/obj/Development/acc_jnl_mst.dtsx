@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="acc_jnl_mst"
   DTS:PackageType="5"
-  DTS:VersionBuild="128"
-  DTS:VersionGUID="{1350DB9A-4AED-4178-9959-DE002E07FFC4}">
+  DTS:VersionBuild="130"
+  DTS:VersionGUID="{4E78FDAC-36AF-4A8D-9706-11A00AD3FDB4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABn7+CLov8WzzHfmLyt6oyXReydjs4fP1oHExhmZgYKRwAAAAAOgAAAAAIAACAAAAChRInGBIj7Ue1VRhLdB0GQdsRn5HA13Ww0Q7tAmFI3ASAAAADPwLwLMsnfgNB6eZLIh+A3HXVvt6DB40hG5g1sO+ERHEAAAADgEuM9VJb9jMEn/G0np0umIQ/L0ziaM3dBcmHYKhXp0c8IFPtlKGRcQ3oNn86hVGRNR6++pwxOxcEuy0wPy0iZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC90XklwYU8KO93P8AqLVMhFL22SdkEjqsLe4jwd/X92wAAAAAOgAAAAAIAACAAAACA4I9K0T6a47gVGWep3jdOF+PIXt/Gkpd3NKf/xR6IBSAAAAA6SKE04x3xD2QjM0Q5F0Ji1b2qc3weGmnajVm/4NKyPUAAAACb+XgJ0/0zWaiWUYMo6Ubk76cJdPWbj21di8iI7xRPwbRMB69j2cVpqZFXculFOa72QCqYsy3JKrhJXvtG94zi</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyAcuXy9xlt9WO6wCIqC2+BwIuC/59mpZ0PQGyMqqiZwAAAAAOgAAAAAIAACAAAAD4tfYqlfQFCPmoOztXnv1dD1BFMbkLPxdNYwEz22UyOyAAAACfbMXx0ii+JUKL4Ly7gcG5U+CI60hxBdpyVXIW9dNlwkAAAADCC9Ueid7uhfcctjEr+sYn2EM9QGLKo9nTf72Op6NUZgrzpwfBCeIIESVXU887Z1snboejRpvqUaDOsoPscC1r</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAeqrvbnBmbaaO8+5K3JYm+YZidAxUJrw8N7OHmsdiUwAAAAAOgAAAAAIAACAAAAD9WVAg/GaoJ0wZXpwM6+yoMniDBn32NSKEBPgxaX5WsCAAAACMylXSAhXyQfmetIhllVFjXfT5AWSdCfQ0u+WK3NKsWEAAAADjAwfk5j3rH4lL5mg0I8695yhBAHYnZS4ZLcVkcGFJ2fw0uVv98a65w4nTm1re7kBTElcFII9i+zT0BPMxogFx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAhl8gb2tCuaSgGXXbohNy4p6KWEpI7GkpW11o/oWU1ggAAAAAOgAAAAAIAACAAAABhvUNLs8bb140s9NPxArrN6joOxDBB1jKAwZYO9+szCSAAAACpFT93W7//tCdjwFMcC29GyluwXbXEk4mEhewzRIWtyUAAAADcVI8ET1GSFeRAmB7Ibn8w97nywAHk2IpxTi1PV504WvjEHqIUhNES408GDsblcKXFVTzmTDT5tojhBMjvqhcS</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBjj0Yfb4zjR5P2CFkwvMT8hsZ6hlDlc3/MPhep/mJWAAAAAAOgAAAAAIAACAAAADRoPP6YeftM+AfTaNjyh2jkTN6HDRVUkk5FBThwRECySAAAACOljOV75NPeqvjmQ+dNSoQALKS4vdCACEsKLPXHalWk0AAAADP2F47zCrRIE+gSLDKnR+uUO7MaDXcd1fMkR91Z1M5fSIvPU67oM+VJZjuFq3sen8f5YxC/N2fOivZe9XqyUHF</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -434,7 +434,7 @@
                     <inputColumn
                       refId="Package\Data Flow Task\acc_jnl_mst.Inputs[ODBC Destination Input].Columns[blck_usr_id]"
                       cachedDataType="wstr"
-                      cachedLength="1"
+                      cachedLength="20"
                       cachedName="blck_usr_id"
                       externalMetadataColumnId="Package\Data Flow Task\acc_jnl_mst.Inputs[ODBC Destination Input].ExternalColumns[blck_usr_id]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[blck_usr_id]" />
@@ -1231,7 +1231,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="1"
+                      length="20"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[blck_usr_id]"
                       name="blck_usr_id"
                       truncationRowDisposition="FailComponent">
@@ -1794,7 +1794,7 @@ and jnl_id= ?</property>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[blck_usr_id]"
                       cachedDataType="wstr"
-                      cachedLength="1"
+                      cachedLength="20"
                       cachedName="blck_usr_id"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[blck_usr_id]">
                       <properties>
@@ -2132,7 +2132,7 @@ and jnl_id= ?</property>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[blck_usr_id]"
                       dataType="wstr"
-                      length="1"
+                      length="20"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[blck_usr_id]"
                       name="blck_usr_id">
                       <properties>
@@ -2174,30 +2174,31 @@ and jnl_id= ?</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT			
-	SLIP_NO	AS	jnl_id
-,	POST_DT	AS	pst_dt
-,	G_DEBIT	AS	dr_amt
-,	G_CREDIT	AS	cr_amt
-,	CURR_CD	AS	curr_cd
-,	RMK	AS	jnl_rmk
-,	DELT_FLG	AS	delt_flg
-,	P_OFC_CD	AS	ofc_cd
-,	RGST_USRID	AS	cre_usr_id
-,	RGST_TMS	AS	cre_dt
-,	MODI_USRID	AS	upd_usr_id
-,	MODI_TMS	AS	upd_dt
-,	LEFT(RESERVE_FIELD01,8)	AS	rvs_dt
-,	LEFT(BLOCK_DT,8)	AS	blck_dt
-,	BLOCK_YN	AS	blck_flg
-,	VCHR_NO	AS	vchr_no
-,	LEFT(VCHR_TP_CD,6)	AS	vchr_tp_cd
+	MST.SLIP_NO	AS	jnl_id
+,	MST.POST_DT	AS	pst_dt
+,	MST.G_DEBIT	AS	dr_amt
+,	MST.G_CREDIT	AS	cr_amt
+,	MST.CURR_CD	AS	curr_cd
+,	MST.RMK	AS	jnl_rmk
+,	MST.DELT_FLG	AS	delt_flg
+,	MST.P_OFC_CD	AS	ofc_cd
+,	MST.RGST_USRID	AS	cre_usr_id
+,	MST.RGST_TMS	AS	cre_dt
+,	MST.MODI_USRID	AS	upd_usr_id
+,	MST.MODI_TMS	AS	upd_dt
+,	LEFT(MST.RESERVE_FIELD01,8)	AS	rvs_dt
+,	LEFT(MST.BLOCK_DT,8)	AS	blck_dt
+,	MST.BLOCK_YN	AS	blck_flg
+,	MST.VCHR_NO	AS	vchr_no
+,	LEFT(MST.VCHR_TP_CD,6)	AS	vchr_tp_cd
 , 'CLT' AS co_cd			
 , NULL AS jnl_amt			
 , '' AS pty_nm			
 , '' AS usr_nm			
 , '' AS tp_cd			
-, '' AS blck_usr_id			
-FROM	TB_SLIP_MST</property>
+, BLCK.RGST_USRID AS blck_usr_id			
+FROM	TB_SLIP_MST	MST	
+LEFT JOIN TB_SLIP_MST_BLCK BLCK ON MST.SLIP_NO = BLCK.SLIP_NO AND MST.P_OFC_CD = BLCK.P_OFC_CD</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -2609,7 +2610,7 @@ FROM	TB_SLIP_MST</property>
                       refId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Output].ExternalColumns[blck_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="1"
+                      length="12"
                       name="blck_usr_id" />
                   </externalMetadataColumns>
                 </output>
@@ -2768,7 +2769,7 @@ FROM	TB_SLIP_MST</property>
                       refId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Error Output].Columns[blck_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="1"
+                      length="12"
                       lineageId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Error Output].Columns[blck_usr_id]"
                       name="blck_usr_id" />
                     <outputColumn
@@ -2844,6 +2845,10 @@ FROM	TB_SLIP_MST</property>
           Id="Package\Data Flow Task\OLE DB Command"
           TopLeft="106.5,264.5" />
         <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="77.5,73.5" />
+        <NodeLayout
           Size="152,42"
           Id="Package\Data Flow Task\TB_SLIP_MST"
           TopLeft="79.0000017881393,9.99999989668526" />
@@ -2855,78 +2860,6 @@ FROM	TB_SLIP_MST</property>
           Size="137,42"
           Id="Package\Data Flow Task\acc_jnl_mst"
           TopLeft="354.5,256.5" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="77.5,73.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="79.0000017881393,30.9999998966853">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-1.50000178813929,63.5000001033147"
-              Start="0,0"
-              End="-9.00000178813929,63.5000001033147">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-20.0000017881393,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.0000017881393,0"
-                    Point2="-24.0000017881393,0"
-                    Point3="-24.0000017881393,4" />
-                  <mssgle:LineSegment
-                    End="-24.0000017881393,59.5000001033147" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.0000017881393,59.5000001033147"
-                    Point2="-24.0000017881393,63.5000001033147"
-                    Point3="-20.0000017881393,63.5000001033147" />
-                  <mssgle:LineSegment
-                    End="-9.00000178813929,63.5000001033147" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="158,115.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19,28"
-              Start="0,0"
-              End="19,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10"
-                    Point2="0,14"
-                    Point3="4,14" />
-                  <mssgle:LineSegment
-                    End="15,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15,14"
-                    Point2="19,14"
-                    Point3="19,18" />
-                  <mssgle:LineSegment
-                    End="19,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
           TopLeft="177,185.5">
@@ -2953,6 +2886,40 @@ FROM	TB_SLIP_MST</property>
                     Point3="16,43.5" />
                   <mssgle:LineSegment
                     End="16,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="79.0000017881393,30.9999998966853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1.50000178813929,63.5000001033147"
+              Start="0,0"
+              End="-9.00000178813929,63.5000001033147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-20.0000017881393,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.0000017881393,0"
+                    Point2="-24.0000017881393,0"
+                    Point3="-24.0000017881393,4" />
+                  <mssgle:LineSegment
+                    End="-24.0000017881393,59.5000001033147" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.0000017881393,59.5000001033147"
+                    Point2="-24.0000017881393,63.5000001033147"
+                    Point3="-20.0000017881393,63.5000001033147" />
+                  <mssgle:LineSegment
+                    End="-9.00000178813929,63.5000001033147" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2995,9 +2962,51 @@ FROM	TB_SLIP_MST</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="158,115.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,28"
+              Start="0,0"
+              End="19,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="4,14" />
+                  <mssgle:LineSegment
+                    End="15,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,14"
+                    Point2="19,14"
+                    Point3="19,18" />
+                  <mssgle:LineSegment
+                    End="19,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TB_SLIP_MST">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\acc_jnl_mst">
     <Properties>
@@ -3008,14 +3017,6 @@ FROM	TB_SLIP_MST</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TB_SLIP_MST">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
