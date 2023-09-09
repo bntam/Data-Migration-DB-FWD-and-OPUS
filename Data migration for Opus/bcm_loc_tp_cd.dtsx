@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bcm_loc_tp_cd"
   DTS:PackageType="5"
-  DTS:VersionBuild="130"
-  DTS:VersionGUID="{F7789BE9-F0DC-46F5-8BCA-CC76E09A3833}">
+  DTS:VersionBuild="131"
+  DTS:VersionGUID="{35BF202C-78A0-43E1-A2B9-206F98573374}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZhGJRh6jVIl7e0IMl10WRDUNmEaeigFjwZJKhACCntAAAAAAOgAAAAAIAACAAAAAbaS1xLNc+zLa+5gptXh2hFYuAu+pMyEsMnRJIANs6fyAAAAAxgwwu77uavPHk56YMJwfbW7bvwdPzynHZNse+ReKEaUAAAACwk5xgr16dPqVQKsVeOL+tcHfEQfcqXXrE4jlVRhjTb6wkKKak93CVJrj7XpEsJbxnwCik85OJhszgOxsEpr8X</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB38xpfMt3DD6xfF/SMiw8FsI6bZLEVN9TpDHhojGj7hAAAAAAOgAAAAAIAACAAAABJmjiPJ6MFfwdcUY9gDhzGpN/w7yiTPD71eYXMRxeDMyAAAABZ74DvU+s9Q3wsSm2Qr6QbrEyv0bZImQzfY7q2UXGr5EAAAABRlc/3nipJJW5gbLzUOarW7wD3stAIDzgHZ9hdS0KO9m8A79fSwlZtnMCEyrkZcSfHKyna9zTxc67/NrC5cgyq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACcXnvm/lpVDwxUHW+h/aPGaTwAa6JgWmLUWSCMIvpPhAAAAAAOgAAAAAIAACAAAAB1UfoJVs+uxwqq1mcDn2I/Lj5re3oDa5CcCUYJYzLiTyAAAACpUX/L58hiz6WLb57Ksz2O67E30EGb5jsSshkHGdc6jEAAAACBklHK/FO7Wm6Az0U60Pil9XwWjuIuJGnGM/65MYVBRfdhrUvie7NkWHtDX2aycsoBrpLbGApp58VolO3qkRnj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAApVfIiMbNQrgUbaPJ5q+3+bN/7ei4mfKuXTMBziX/yRQAAAAAOgAAAAAIAACAAAADiNUI0v5h6JNWeVG4ufsXk/UczvpoyTlNr1SjiFOXx0iAAAADMQPuB26ENMFJZQSNzID8lxm7CGJABIPGwIINlhJ7WS0AAAAB4zJvS39IKclYM2ssyykbeLXf6JXiRgatITjDpz3UjhOrHfz/dRVJYZY/8WpC7B5tUZTGVelSncQD9OS4mElLu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAc4N/b0cWu/sDVz03JvNaphGVnxPuMMyfTZMs2qSBDtQAAAAAOgAAAAAIAACAAAABlH7HEXqbSaWJDDKu/urXado0D0l0bEno8vLRi4GgLYSAAAAAVmW/N9YQXTLzucK+rKNqUwyfkNi9JNJRIPtOdx6ZeyEAAAACMkI4+Bc6WH9CKAhBlNUiUDfDt0JEiavOylVF+u0GyEuGoDWqcJU5Nxkcn9SxP7jHguB3Lb2ngMShPF6tWi2O8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABCKRAI6asvmqM72Xv/YjK6z6oxox1Pyarkka9kRaPP/gAAAAAOgAAAAAIAACAAAABBUXKbwXDAepOh2bANyh41I/dS3qpje9dSNdLjlxakbyAAAAB+M/L41dpfJUvz1RWy8gAo8JlXM6cwNyRHGBZutJNv3kAAAAAqBK9aInWF2uvFMpvrm9/XTGfjEv9zXnJ8DAVy7+QFNWI3bb7KBmfA6psz3If99ROUzxGaVh8ARX85OZMunWsr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -677,13 +677,6 @@ and loc_tp_cd = ?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].Columns[cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="cre_usr_id"
-                      externalMetadataColumnId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].Columns[loc_cd]"
                       cachedDataType="wstr"
                       cachedLength="5"
@@ -699,6 +692,14 @@ and loc_tp_cd = ?</property>
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[loc_tp_cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[co_cd]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">

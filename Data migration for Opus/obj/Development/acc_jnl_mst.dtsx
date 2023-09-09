@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="acc_jnl_mst"
   DTS:PackageType="5"
-  DTS:VersionBuild="130"
-  DTS:VersionGUID="{4E78FDAC-36AF-4A8D-9706-11A00AD3FDB4}">
+  DTS:VersionBuild="131"
+  DTS:VersionGUID="{16DCC706-8640-406C-A0F0-CF1EBBD5A4D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC90XklwYU8KO93P8AqLVMhFL22SdkEjqsLe4jwd/X92wAAAAAOgAAAAAIAACAAAACA4I9K0T6a47gVGWep3jdOF+PIXt/Gkpd3NKf/xR6IBSAAAAA6SKE04x3xD2QjM0Q5F0Ji1b2qc3weGmnajVm/4NKyPUAAAACb+XgJ0/0zWaiWUYMo6Ubk76cJdPWbj21di8iI7xRPwbRMB69j2cVpqZFXculFOa72QCqYsy3JKrhJXvtG94zi</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAL1MB1e1KOyv6ubgd5ze+KflwaZsYsx6RgEiRWDouJewAAAAAOgAAAAAIAACAAAABKVqxAVAbfgnmNclQ7oktZc6zK6uhnjNQjNbI/z11aXiAAAAD5ocrwowE3mFQROinfSvNROYk5twliIsE5qLXy799ud0AAAAAiQHUYltUSq1AJ13h487NI6Vd0RJZiKXx+X5LLJ37oYTBXPVx5ST/61UcizZ1CSWQBZHA1MnNhoYlqAtnV7cwS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAeqrvbnBmbaaO8+5K3JYm+YZidAxUJrw8N7OHmsdiUwAAAAAOgAAAAAIAACAAAAD9WVAg/GaoJ0wZXpwM6+yoMniDBn32NSKEBPgxaX5WsCAAAACMylXSAhXyQfmetIhllVFjXfT5AWSdCfQ0u+WK3NKsWEAAAADjAwfk5j3rH4lL5mg0I8695yhBAHYnZS4ZLcVkcGFJ2fw0uVv98a65w4nTm1re7kBTElcFII9i+zT0BPMxogFx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADboTIU+O8h2Tkv8FLZwr+mOaosvlstqTqhaB+PlhLlMgAAAAAOgAAAAAIAACAAAAC1NIK1+plrIZ0m5L6dgnPYbvRKMS4Bu+fFY2207RqRsCAAAACuCluHnyPhgmCiWNLFh0hxmj9sHQ3zmvClNVZbGkarWUAAAADhfNgEI5o8rWDDiIHK/pi9MmiIpU8putzSE+Dp+ss1qIKvGUGUkMKBB30AFVxoI9K8xxoCOdtaG794iYw+ep8a</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABBjj0Yfb4zjR5P2CFkwvMT8hsZ6hlDlc3/MPhep/mJWAAAAAAOgAAAAAIAACAAAADRoPP6YeftM+AfTaNjyh2jkTN6HDRVUkk5FBThwRECySAAAACOljOV75NPeqvjmQ+dNSoQALKS4vdCACEsKLPXHalWk0AAAADP2F47zCrRIE+gSLDKnR+uUO7MaDXcd1fMkR91Z1M5fSIvPU67oM+VJZjuFq3sen8f5YxC/N2fOivZe9XqyUHF</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD7mU2RtsLXlPLJ5HQuNpmrs7r8J2opVLjcmJIDV99LrAAAAAAOgAAAAAIAACAAAACY6N36C2FhFE/addLtVEi34h3h5v2rs4d54sT4weXQ5CAAAABVxTPUukheWrF6EYWzAA1Q7mVngeEwjaCJNjzlDGA/0kAAAADp3AlypEm7W0oaBCTw/WosenMXQ6MXBO3mh12t8rUuLILBFDbVsQCp+X+9imh/sdKA937GQiC3p1yVY5B8wGjV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -749,7 +749,7 @@
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[blck_usr_id]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="1"
+                      cachedLength="50"
                       cachedName="blck_usr_id"
                       lineageId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Output].Columns[blck_usr_id]" />
                   </inputColumns>
@@ -2475,7 +2475,7 @@ LEFT JOIN TB_SLIP_MST_BLCK BLCK ON MST.SLIP_NO = BLCK.SLIP_NO AND MST.P_OFC_CD =
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Output].ExternalColumns[blck_usr_id]"
-                      length="1"
+                      length="50"
                       lineageId="Package\Data Flow Task\TB_SLIP_MST.Outputs[OLE DB Source Output].Columns[blck_usr_id]"
                       name="blck_usr_id"
                       truncationRowDisposition="FailComponent" />

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="gl_cd_his"
   DTS:PackageType="5"
-  DTS:VersionBuild="120"
-  DTS:VersionGUID="{DD626DE2-EA90-4F27-A55B-D90DFFCAB6F6}">
+  DTS:VersionBuild="121"
+  DTS:VersionGUID="{2C3D1DAE-4CCD-4E03-94BC-712B6CBC18F4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACeut8fdyy+CSd1nWd5BxQH6VIydL5tT9WTc4FH6D0I8QAAAAAOgAAAAAIAACAAAABf8KWc8gF89gRAG/i6F1qpoA02vwHkRbS1tJtk8+H3NyAAAACb7O70XjQvZZukJ+l1RnRajQ7TILaQkp7UGk/e3pLDfUAAAABSZTa1bUU62Uzw10nbIZi0th2nwFrRB84yzWqCelMPbn8cQcEki0KVo75+wO9kz4SZymzJdTqceaaZE3q/Wu7y</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADgSLgW4io84EFQUxRhQxdTFICFpYEIBan9nrZcVQ0jKQAAAAAOgAAAAAIAACAAAADvLXBQmhxRHg69qR8ZZDqQKuVZRL6sq4Gm+m4HEIS5CiAAAAC/WCZI1Ebm0qBIXkkZRyb7vbz/adxgbTYHye+immyaU0AAAAD/orqHpVlBYGoPcDJ81/hwrs7dLsJ4SuTMaC6HCmkAkYyW/DQFBS6CBFTTE2JbEwiAB+uMUVw/p7pEI9gYqYyi</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADCT5oT6RF13Az/T7f0BO3PE2rREZvVfPV+RsOc1G1ipQAAAAAOgAAAAAIAACAAAAACl8EH/Oo5wKw+GnfUVQfzzo7C7zW1cQ/p08eE72EfZyAAAACH0/eWU0mQekpPNC9YTWdE9EuYHaV13PySEVFhP4TQh0AAAADoPF6qsErji6u1mWSeT3cmMI6tguHVjWcuCx9cAMkxoH8Ys/JyrwfTImj9YaM5mk+Z1prvFhtYVNPrEkV0sBDO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA0vpiiZI0Gj0aSCp5giWJ1Jh+TsLmmzKsnyskJz12HqAAAAAAOgAAAAAIAACAAAAD+8Zd4hl3GzLSJQCr3m6+LCBekpGAWvGtSszIBZN+HASAAAADxGVUmdVnfUjq4LMjOujAyWuoSbU0tgsTDwTHPNZA83UAAAAAt2D2bUOqohu3YBdXqs63opa6NgSVAJcgLNwbIPadwpTyMmeJHaa7Wg8twD7NH0R6H1iv6L66cWzRvBl1CC43e</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABouLRaujrhXRDaUw9TVY+XfU2f6GgJ6dvs9IJZJv4y7wAAAAAOgAAAAAIAACAAAABYgznZJOAyVGQ4NyaccbcBf2LUDrQJsCr8Mynj89PwTCAAAACPnSAcnlTgOus7IsL2Pl+/3GfxtySH5rOqJDRlKs5LaUAAAACS8xuKv8ckIzOk7aekx3a3UJyVnOHLr29PeAeUpakOBKjzOSjoGxpR2zpzXhdKuiCvboqCVJDyExloMBBisvwT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrDGxHDpJUE2b5wdUvRx/pgtBvKglZITgCIaFq1I8L4QAAAAAOgAAAAAIAACAAAAC4jCrYwhPnq15H0jbo73Fq+8i3oz2Llj/7cGK5q+RCyCAAAAAnL6P/nxdKyx/Ipu2xpU8cTggsKYQrvmovrKzAE/8hjkAAAACuysmLCzQC4VFzAB11/PdlULgODx+YfCgXmv0g7itdLkNIOQdAoXhY2JbwLKLXjocjGbnY91C5JnoWmTEowN2u</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -398,7 +398,6 @@
                       cachedDataType="numeric"
                       cachedName="Data Conversion.his_seq"
                       cachedPrecision="12"
-                      cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Data Flow Task\acc_gl_cd_his.Inputs[ODBC Destination Input].ExternalColumns[his_seq]"
                       lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Data Conversion.his_seq]" />
                     <inputColumn
@@ -1286,7 +1285,7 @@ AND his_seq = ?</property>
                   dataType="System.String"
                   description="The name of the table to be fetched."
                   expressionType="Notify"
-                  name="TableName">"us_fwd"."bkg_bl"</property>
+                  name="TableName">"us_fwd"."acc_gl_cd"</property>
                 <property
                   dataType="System.String"
                   description="The SQL command to be executed."
@@ -1343,7 +1342,7 @@ acc_gl_cd_his</property>
                   description="The mode used to access the database."
                   expressionType="Notify"
                   name="AccessMode"
-                  typeConverter="AccessMode">1</property>
+                  typeConverter="AccessMode">0</property>
               </properties>
               <connections>
                 <connection
@@ -1375,12 +1374,115 @@ acc_gl_cd_his</property>
                       lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_cd]"
                       name="gl_cd" />
                     <outputColumn
-                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[his_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[his_seq]"
-                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[his_seq]"
-                      name="his_seq"
-                      precision="9" />
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_tp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_tp_cd]"
+                      length="3"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_tp_cd]"
+                      name="gl_tp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_rmk]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_rmk]"
+                      length="500"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_rmk]"
+                      name="gl_rmk" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_grp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_grp_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_grp_cd]"
+                      name="gl_grp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_sub_val]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_sub_val]"
+                      length="250"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_sub_val]"
+                      name="gl_sub_val" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[acct_gl_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[acct_gl_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[acct_gl_cd]"
+                      name="acct_gl_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[ggl_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[ggl_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[ggl_cd]"
+                      name="ggl_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pay_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pay_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pay_flg]"
+                      name="pay_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[dps_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[dps_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[dps_flg]"
+                      name="dps_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[use_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[use_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[use_flg]"
+                      name="use_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[blck_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[blck_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[blck_flg]"
+                      name="blck_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pty_tp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pty_tp_cd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pty_tp_cd]"
+                      name="pty_tp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[delt_flg]"
+                      name="delt_flg" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1395,10 +1497,83 @@ acc_gl_cd_his</property>
                       length="20"
                       name="gl_cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[his_seq]"
-                      dataType="numeric"
-                      name="his_seq"
-                      precision="9" />
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_tp_cd]"
+                      dataType="wstr"
+                      length="3"
+                      name="gl_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_rmk]"
+                      dataType="wstr"
+                      length="500"
+                      name="gl_rmk" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_grp_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="gl_grp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_sub_val]"
+                      dataType="wstr"
+                      length="250"
+                      name="gl_sub_val" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[acct_gl_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="acct_gl_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[ggl_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="ggl_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pay_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="pay_flg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[dps_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="dps_flg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[blck_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="blck_flg" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pty_tp_cd]"
+                      dataType="wstr"
+                      length="1"
+                      name="pty_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="delt_flg" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1421,12 +1596,115 @@ acc_gl_cd_his</property>
                       lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_cd]"
                       name="gl_cd" />
                     <outputColumn
-                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[his_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[his_seq]"
-                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[his_seq]"
-                      name="his_seq"
-                      precision="9" />
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_tp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_tp_cd]"
+                      length="3"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_tp_cd]"
+                      name="gl_tp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_rmk]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_rmk]"
+                      length="500"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_rmk]"
+                      name="gl_rmk" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_grp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_grp_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_grp_cd]"
+                      name="gl_grp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_sub_val]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[gl_sub_val]"
+                      length="250"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[gl_sub_val]"
+                      name="gl_sub_val" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[acct_gl_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[acct_gl_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[acct_gl_cd]"
+                      name="acct_gl_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[ggl_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[ggl_cd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[ggl_cd]"
+                      name="ggl_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[pay_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pay_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[pay_flg]"
+                      name="pay_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[dps_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[dps_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[dps_flg]"
+                      name="dps_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[use_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[use_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[use_flg]"
+                      name="use_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[blck_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[blck_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[blck_flg]"
+                      name="blck_flg" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[pty_tp_cd]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[pty_tp_cd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[pty_tp_cd]"
+                      name="pty_tp_cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[delt_flg]"
+                      name="delt_flg" />
                     <outputColumn
                       refId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1456,11 +1734,11 @@ acc_gl_cd_his</property>
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">1</property>
+                  typeConverter="JoinType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">3</property>
+                  name="NumKeyColumns">2</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the null values are treated as equal values."
@@ -1613,13 +1891,6 @@ acc_gl_cd_his</property>
                       cachedName="gl_cd"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[his_seq]"
-                      cachedDataType="numeric"
-                      cachedName="his_seq"
-                      cachedPrecision="9"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_seq]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1873,8 +2144,7 @@ acc_gl_cd_his</property>
                       dataType="numeric"
                       lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Data Conversion.his_seq]"
                       name="Data Conversion.his_seq"
-                      precision="12"
-                      sortKeyPosition="3">
+                      precision="12">
                       <properties>
                         <property
                           containsID="true"
@@ -1924,17 +2194,17 @@ acc_gl_cd_his</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
                   deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
+                  name="Multicast Output 3"
                   synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
                   dangling="true"
                   deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
+                  name="Multicast Output 2"
                   synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
@@ -1998,11 +2268,11 @@ acc_gl_cd_his</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[his_seq]"
-                      cachedDataType="numeric"
-                      cachedName="his_seq"
-                      cachedPrecision="9"
-                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[his_seq]">
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_usr_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2011,7 +2281,260 @@ acc_gl_cd_his</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[gl_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="gl_tp_cd"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_tp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[gl_rmk]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="gl_rmk"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_rmk]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[gl_grp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="gl_grp_cd"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_grp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[gl_sub_val]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="gl_sub_val"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_sub_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[acct_gl_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="acct_gl_cd"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[acct_gl_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[ggl_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ggl_cd"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[ggl_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[pay_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="pay_flg"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pay_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[dps_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="dps_flg"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[dps_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="use_flg"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[blck_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="blck_flg"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[blck_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[pty_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="pty_tp_cd"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pty_tp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[delt_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2055,18 +2578,225 @@ acc_gl_cd_his</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_seq]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_seq]"
-                      name="his_seq"
-                      precision="9"
-                      sortKeyPosition="3">
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[his_seq]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_tp_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_tp_cd]"
+                      name="gl_tp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_tp_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_rmk]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_rmk]"
+                      name="gl_rmk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_rmk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_grp_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_grp_cd]"
+                      name="gl_grp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_grp_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_sub_val]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[gl_sub_val]"
+                      name="gl_sub_val">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[gl_sub_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acct_gl_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[acct_gl_cd]"
+                      name="acct_gl_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[acct_gl_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ggl_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ggl_cd]"
+                      name="ggl_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[ggl_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pay_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pay_flg]"
+                      name="pay_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pay_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dps_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dps_flg]"
+                      name="dps_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[dps_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      name="use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[blck_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[blck_flg]"
+                      name="blck_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[blck_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pty_tp_cd]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pty_tp_cd]"
+                      name="pty_tp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[pty_tp_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      name="delt_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\fwd_acc_gl_cd_his.Outputs[ODBC Source Output].Columns[delt_flg]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3286,10 +4016,10 @@ from tb_gl_cd_his</property>
               name="Multicast Output 1"
               startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
+              refId="Package\Data Flow Task.Paths[Multicast Output 3]"
               endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
-              name="Multicast Output 2"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
+              name="Multicast Output 3"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]" />
             <path
               refId="Package\Data Flow Task.Paths[ODBC Source Output]"
               endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
@@ -3344,111 +4074,29 @@ from tb_gl_cd_his</property>
           Id="Package\Data Flow Task\TB_GL_CD_HIS"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="80,137" />
+          Size="108,42"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="108,237" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Flow Task\fwd_acc_gl_cd_his"
+          TopLeft="530.666666799121,4.19999983469646" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="133,355" />
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="80,137" />
+        <NodeLayout
           Size="149,42"
           Id="Package\Data Flow Task\acc_gl_cd_his"
-          TopLeft="374.999980529151,552.383335728513" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Data Flow Task\fwd_acc_gl_cd_his"
-          TopLeft="529.666666799121,3.19999983469646" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="159.75000089407,51.9999998966853">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,85.0000001033147"
-              Start="0,0"
-              End="0,77.5000001033147">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,77.5000001033147" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="582.5,156.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="108,237" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="161.25,179">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="133,355" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="162,279">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="32.5,76"
-              Start="0,0"
-              End="32.5,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34"
-                    Point2="0,38"
-                    Point3="4,38" />
-                  <mssgle:LineSegment
-                    End="28.5,38" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28.5,38"
-                    Point2="32.5,38"
-                    Point3="32.5,42" />
-                  <mssgle:LineSegment
-                    End="32.5,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="573.999980529151,354.383335728513" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Multicast Output 1]"
           TopLeft="213.666666666667,355">
@@ -3484,31 +4132,113 @@ from tb_gl_cd_his</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[ODBC Source Output]"
-          TopLeft="615.666666799121,45.1999998346965">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="161.25,179">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16.333333200879,111.300000165304"
+              EndConnector="0,58"
               Start="0,0"
-              End="16.333333200879,103.800000165304">
+              End="0,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.6500000826518" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.6500000826518"
-                    Point2="0,55.6500000826518"
-                    Point3="4,55.6500000826518" />
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="162,279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32.5,76"
+              Start="0,0"
+              End="32.5,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="12.333333200879,55.6500000826518" />
+                    End="0,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="12.333333200879,55.6500000826518"
-                    Point2="16.333333200879,55.6500000826518"
-                    Point3="16.333333200879,59.6500000826518" />
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="4,38" />
                   <mssgle:LineSegment
-                    End="16.333333200879,103.800000165304" />
+                    End="28.5,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.5,38"
+                    Point2="32.5,38"
+                    Point3="32.5,42" />
+                  <mssgle:LineSegment
+                    End="32.5,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="159.75000089407,51.9999998966853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85.0000001033147"
+              Start="0,0"
+              End="0,77.5000001033147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.5000001033147" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="531.5,119.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ODBC Source Output]"
+          TopLeft="616.666666799121,46.1999998346965">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.666666799121,73.3000001653035"
+              Start="0,0"
+              End="-35.666666799121,65.8000001653035">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.6500000826518" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.6500000826518"
+                    Point2="0,36.6500000826518"
+                    Point3="-4,36.6500000826518" />
+                  <mssgle:LineSegment
+                    End="-31.666666799121,36.6500000826518" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.666666799121,36.6500000826518"
+                    Point2="-35.666666799121,36.6500000826518"
+                    Point3="-35.666666799121,40.6500000826518" />
+                  <mssgle:LineSegment
+                    End="-35.666666799121,65.8000001653035" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3520,33 +4250,21 @@ from tb_gl_cd_his</property>
         <NodeLayout
           Size="133,42"
           Id="Package\Data Flow Task\Merge Join"
-          TopLeft="369,443" />
+          TopLeft="401.5,360.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
-          TopLeft="194.5,397">
+          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
+          TopLeft="256,378.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="241,46"
+              EndConnector="145.5,0"
               Start="0,0"
-              End="241,38.5">
+              End="138,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="237,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="237,23"
-                    Point2="241,23"
-                    Point3="241,27" />
-                  <mssgle:LineSegment
-                    End="241,38.5" />
+                    End="138,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3557,30 +4275,30 @@ from tb_gl_cd_his</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="632,198.5">
+          TopLeft="581,161.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-175.666666666667,244.5"
+              EndConnector="-113,199"
               Start="0,0"
-              End="-175.666666666667,237">
+              End="-113,191.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,140.956166419019" />
+                    End="0,95.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,140.956166419019"
-                    Point2="0,144.956166419019"
-                    Point3="-4,144.956166419019" />
+                    Point1="0,95.5"
+                    Point2="0,99.5"
+                    Point3="-4,99.5" />
                   <mssgle:LineSegment
-                    End="-171.666666666667,144.956166419019" />
+                    End="-109,99.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-171.666666666667,144.956166419019"
-                    Point2="-175.666666666667,144.956166419019"
-                    Point3="-175.666666666667,148.956166419019" />
+                    Point1="-109,99.5"
+                    Point2="-113,99.5"
+                    Point3="-113,103.5" />
                   <mssgle:LineSegment
-                    End="-175.666666666667,237" />
+                    End="-113,191.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3591,30 +4309,18 @@ from tb_gl_cd_his</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="435.5,485">
+          TopLeft="534.5,378.441667864256">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13.999980529151,67.383335728513"
+              EndConnector="39.499980529151,0"
               Start="0,0"
-              End="13.999980529151,59.883335728513">
+              End="31.999980529151,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.6916678642565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.6916678642565"
-                    Point2="0,33.6916678642565"
-                    Point3="4,33.6916678642565" />
-                  <mssgle:LineSegment
-                    End="9.999980529151,33.6916678642565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.999980529151,33.6916678642565"
-                    Point2="13.999980529151,33.6916678642565"
-                    Point3="13.999980529151,37.6916678642565" />
-                  <mssgle:LineSegment
-                    End="13.999980529151,59.883335728513" />
+                    End="31.999980529151,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

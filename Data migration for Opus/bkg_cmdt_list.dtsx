@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_cmdt_list"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{D2668279-F17E-46D3-8FE7-1CA51A8E9243}">
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{70693FCD-0501-452A-8C6E-8BB30D93CB6D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADnQWj368e/UMzxQGyCFAoT54E/97uqIdm2cQ9ROzzHsgAAAAAOgAAAAAIAACAAAAChJ6wtrzVXf3NtvWTkgTViHiqnfnC91rarbaqgFZBkaiAAAADmYvWaNTyQG5M3krerdDQ8DRdwXhw1bLNywtLVEwLM1UAAAABXzm4VOz7VzxTPn/eMIb3lj8ZjTtiqi26BfkoGikS5RVF37ni+FomNobeg2JBDBEmd85meeoYp2WhIY9xAbIWs</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAEbg3jyZOMEkFFn0IWvQUCZ0N04eh/CMMVvIyLMZCGvQAAAAAOgAAAAAIAACAAAAB5ZDKZI/WJ4qko8qf6ZbpPyELQM4V+Sa+7nRmnVqUgMCAAAAAiHDnz/It5YEomcwvztHRnF5jkv9zfb4pC+UCDdQe010AAAABNsaguq+0jPVFcW55B0HElMDyn+94m3HfbBHRNhyiSRw+rQhtnu1d2vq2/mnbf+xeQPMlkiEyk0OQEBVB3hx1E</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALKcBn2x4SnMhF8cDnq3DPhvV8pKci3Cm1y32/nHI9kgAAAAAOgAAAAAIAACAAAADsw8b6YTf/13dSYKKOnvmmXyLjVLmSTmDOqDPZLe0G8SAAAABK40+Rj/RdB0gBZLc2+hyMCrYKPtUeKxvgTa5lfKXan0AAAAA8/e5R3f28S523gtT0L52wVfgHBrqRLZhGQq7NqTUwPt/uZR0YLQzXcIFYkidGt16CWDzUwOmYVJko61K9qn6k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADn6MzgkRKnUw48IXM3incMdC2uuG+kme9jUfVHWBtPJQAAAAAOgAAAAAIAACAAAAAIC1IcZlm6TxcW49b7ri0Oj/4A+/Z86yrqLG2oWVWcICAAAAD6QoQ/WGQX2hpkdj36/+buYHqdXbricZRWzsGYYcnWeUAAAADd+LJvDDb1BOzzF461hre5mV+LK+CfTrGepVPEmsXCAO1Ea+kaH0Gn+bN2qLZ7OSlf2pG4P/v8ohMjIq8CbO0Q</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQJlPjRSjCslgWJYMV1Yb3TBihT+tuC9oXnIsfGLh/dwAAAAAOgAAAAAIAACAAAAD6afZ5W0vjXoQO6TcM2c50Acg4dUoquumM2TxEiY+QniAAAACzKC8k9PrE0EvpgaFL986qQqm8F7lV/ev6Z6Q5MmEo3UAAAABfqkpjRHWwnFRis0JFvAClJAa3wf66TuTzUFUvg0DcEN95pVerLeo6apmXjkdAHeWkhyxYmckw0/qMoRHO0eUy</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVXQfOCBrE97aZyOl50ttfZWuMV9GIoYaqY+C+jm2s2wAAAAAOgAAAAAIAACAAAABJbUxoMgXu0ojVkJvcEKCYPjjSb7YU6mCMl/WumGUwnSAAAABmrRUlelxt4cT9GDD/8gckJ9QPb0aG0Ecz/A+hlrOoDUAAAAAT9GyLHo6YL+QTcJPAlXTw7u4apPSAxisPD/iAsk5qw7D844/ZGiKvyGYLv+FgWdgIp62RHhZWFGYntgSJdRrs</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -280,7 +280,7 @@
                       cachedLength="12"
                       cachedName="cre_usr_id"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
@@ -288,33 +288,33 @@
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[co_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cre_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="cre_dt"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_dt]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="upd_usr_id"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_usr_id]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[upd_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="upd_dt"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_dt]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[delt_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="delt_flg"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[delt_flg]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[delt_flg]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cntr_seq]"
                       cachedDataType="numeric"
@@ -322,7 +322,7 @@
                       cachedPrecision="12"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cntr_seq]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cntr_seq]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cntr_seq]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[intg_rlt_no]"
                       cachedDataType="wstr"
@@ -330,7 +330,7 @@
                       cachedName="intg_rlt_no"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[intg_rlt_no]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[intg_rlt_no]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[intg_rlt_no]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cmdt_seq]"
                       cachedDataType="numeric"
@@ -338,28 +338,28 @@
                       cachedPrecision="18"
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cmdt_seq]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_seq]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_seq]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[hs_grp_cd]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="hs_grp_cd"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[hs_grp_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[hs_grp_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[hs_grp_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[pck_qty]"
                       cachedDataType="numeric"
                       cachedName="pck_qty"
                       cachedPrecision="7"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[pck_qty]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_qty]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pck_qty]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[pck_ut_cd]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="pck_ut_cd"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[pck_ut_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_ut_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pck_ut_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[wgt_kgs_val]"
                       cachedDataType="numeric"
@@ -367,7 +367,7 @@
                       cachedPrecision="15"
                       cachedScale="3"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[wgt_kgs_val]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_kgs_val]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[wgt_kgs_val]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[meas_cbm_val]"
                       cachedDataType="numeric"
@@ -375,63 +375,63 @@
                       cachedPrecision="16"
                       cachedScale="6"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[meas_cbm_val]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cbm_val]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[meas_cbm_val]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cmdt_rmk]"
                       cachedDataType="wstr"
                       cachedLength="500"
                       cachedName="cmdt_rmk"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cmdt_rmk]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_rmk]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_rmk]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cmdt_nm]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="cmdt_nm"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cmdt_nm]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_nm]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_nm]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[dg_tp_cd]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="dg_tp_cd"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[dg_tp_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_tp_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_tp_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[dg_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="dg_cd"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[dg_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[cmdt_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="cmdt_cd"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[cmdt_cd]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_cd]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[inr_pck_qty]"
                       cachedDataType="numeric"
                       cachedName="inr_pck_qty"
                       cachedPrecision="7"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[inr_pck_qty]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[inr_pck_qty]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[inr_pck_qty]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[ea_val]"
                       cachedDataType="numeric"
                       cachedName="ea_val"
                       cachedPrecision="7"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[ea_val]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ea_val]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ea_val]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[ttl_qty]"
                       cachedDataType="numeric"
                       cachedName="ttl_qty"
                       cachedPrecision="7"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[ttl_qty]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ttl_qty]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ttl_qty]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[wgt_lbs_val]"
                       cachedDataType="numeric"
@@ -439,7 +439,7 @@
                       cachedPrecision="15"
                       cachedScale="3"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[wgt_lbs_val]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_lbs_val]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[wgt_lbs_val]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[meas_cft_val]"
                       cachedDataType="numeric"
@@ -447,14 +447,14 @@
                       cachedPrecision="16"
                       cachedScale="6"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[meas_cft_val]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cft_val]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[meas_cft_val]" />
                     <inputColumn
                       refId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].Columns[dg_cntc_nm]"
                       cachedDataType="wstr"
                       cachedLength="24"
                       cachedName="dg_cntc_nm"
                       externalMetadataColumnId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input].ExternalColumns[dg_cntc_nm]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cntc_nm]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_cntc_nm]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1518,1245 +1518,6 @@ AND	cntr_seq = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\fwd_bkg_cmdt_list"
-              componentClassID="Microsoft.SSISODBCSrc"
-              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="ODBC Source"
-              name="fwd_bkg_cmdt_list"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="The name of the table to be fetched."
-                  expressionType="Notify"
-                  name="TableName">"us_fwd"."bkg_cmdt_list"</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
-	co_cd
-	,cnt_cd
-	,cnt_nm
-	,use_flg
-	,curr_cd
-	,conti_cd
-	,cnt_desc
-	,delt_flg
-	,cre_usr_id
-	,cre_dt
-	,upd_usr_id
-	,upd_dt
-FROM
-	bcm_cnt_cd</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specify the number of rows fetched per batch."
-                  expressionType="Notify"
-                  name="BatchSize">1000</property>
-                <property
-                  dataType="System.Int32"
-                  description="Determines the chunk size allocation for LOB columns"
-                  expressionType="Notify"
-                  name="LobChunkSize">32768</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
-                  expressionType="Notify"
-                  name="ExposeCharColumnsAsUnicode">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
-                  expressionType="Notify"
-                  name="StatementTimeout">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="The code page to use when code page information is unavailable from the data source."
-                  expressionType="Notify"
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Int32"
-                  description="The method used for fetching data."
-                  expressionType="Notify"
-                  name="FetchMethod">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="The ODBC C data type for binding numeric data."
-                  expressionType="Notify"
-                  name="BindNumericAs">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
-                  expressionType="Notify"
-                  name="BindCharColumnsAs">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="The mode used to access the database."
-                  expressionType="Notify"
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Connections[ODBCConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ODBC fwd]"
-                  connectionManagerRefId="Package.ConnectionManagers[ODBC fwd]"
-                  description="The ODBC runtime connection used to access the database."
-                  name="ODBCConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output]"
-                  errorRowDisposition="FailComponent"
-                  name="ODBC Source Output"
-                  truncationRowDisposition="FailComponent">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[co_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[co_cd]"
-                      name="co_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[delt_flg]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
-                      length="1"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[delt_flg]"
-                      name="delt_flg" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_usr_id]"
-                      name="cre_usr_id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp2"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_dt]"
-                      name="cre_dt"
-                      scale="6" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_usr_id]"
-                      name="upd_usr_id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp2"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_dt]"
-                      name="upd_dt"
-                      scale="6" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cntr_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cntr_seq]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cntr_seq]"
-                      name="cntr_seq"
-                      precision="12" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[intg_rlt_no]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[intg_rlt_no]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[intg_rlt_no]"
-                      name="intg_rlt_no" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_seq]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_seq]"
-                      name="cmdt_seq"
-                      precision="12" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_nm]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_nm]"
-                      length="100"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_nm]"
-                      name="cmdt_nm" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_cd]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_cd]"
-                      name="cmdt_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[hs_grp_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[hs_grp_cd]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[hs_grp_cd]"
-                      name="hs_grp_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_qty]"
-                      name="pck_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[inr_pck_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[inr_pck_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[inr_pck_qty]"
-                      name="inr_pck_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_kgs_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_kgs_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_kgs_val]"
-                      name="wgt_kgs_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_lbs_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_lbs_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_lbs_val]"
-                      name="wgt_lbs_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cbm_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cbm_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cbm_val]"
-                      name="meas_cbm_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cft_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cft_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cft_val]"
-                      name="meas_cft_val"
-                      precision="16"
-                      scale="6" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_rmk]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_rmk]"
-                      length="500"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_rmk]"
-                      name="cmdt_rmk" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_tp_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_tp_cd]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_tp_cd]"
-                      name="dg_tp_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cd]"
-                      length="15"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cd]"
-                      name="dg_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cntc_nm]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cntc_nm]"
-                      length="40"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cntc_nm]"
-                      name="dg_cntc_nm" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ea_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ea_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ea_val]"
-                      name="ea_val"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ttl_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ttl_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ttl_qty]"
-                      name="ttl_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_ut_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_ut_cd]"
-                      length="3"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_ut_cd]"
-                      name="pck_ut_cd" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      dataType="wstr"
-                      length="20"
-                      name="co_cd" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
-                      dataType="wstr"
-                      length="1"
-                      name="delt_flg" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="cre_usr_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      name="cre_dt" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="upd_usr_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      name="upd_dt" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cntr_seq]"
-                      dataType="numeric"
-                      name="cntr_seq"
-                      precision="12" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[intg_rlt_no]"
-                      dataType="wstr"
-                      length="20"
-                      name="intg_rlt_no" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_seq]"
-                      dataType="numeric"
-                      name="cmdt_seq"
-                      precision="12" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_nm]"
-                      dataType="wstr"
-                      length="100"
-                      name="cmdt_nm" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_cd]"
-                      dataType="wstr"
-                      length="10"
-                      name="cmdt_cd" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[hs_grp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      name="hs_grp_cd" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_qty]"
-                      dataType="numeric"
-                      name="pck_qty"
-                      precision="10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[inr_pck_qty]"
-                      dataType="numeric"
-                      name="inr_pck_qty"
-                      precision="10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_kgs_val]"
-                      dataType="numeric"
-                      name="wgt_kgs_val"
-                      precision="14"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_lbs_val]"
-                      dataType="numeric"
-                      name="wgt_lbs_val"
-                      precision="14"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cbm_val]"
-                      dataType="numeric"
-                      name="meas_cbm_val"
-                      precision="14"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cft_val]"
-                      dataType="numeric"
-                      name="meas_cft_val"
-                      precision="16"
-                      scale="6" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_rmk]"
-                      dataType="wstr"
-                      length="500"
-                      name="cmdt_rmk" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_tp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      name="dg_tp_cd" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cd]"
-                      dataType="wstr"
-                      length="15"
-                      name="dg_cd" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cntc_nm]"
-                      dataType="wstr"
-                      length="40"
-                      name="dg_cntc_nm" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ea_val]"
-                      dataType="numeric"
-                      name="ea_val"
-                      precision="10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ttl_qty]"
-                      dataType="numeric"
-                      name="ttl_qty"
-                      precision="10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_ut_cd]"
-                      dataType="wstr"
-                      length="3"
-                      name="pck_ut_cd" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output]"
-                  isErrorOut="true"
-                  name="ODBC Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[co_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[co_cd]"
-                      name="co_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[delt_flg]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[delt_flg]"
-                      length="1"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[delt_flg]"
-                      name="delt_flg" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
-                      name="cre_usr_id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cre_dt]"
-                      name="cre_dt" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
-                      name="upd_usr_id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[upd_dt]"
-                      name="upd_dt" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cntr_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cntr_seq]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cntr_seq]"
-                      name="cntr_seq"
-                      precision="12" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[intg_rlt_no]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[intg_rlt_no]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[intg_rlt_no]"
-                      name="intg_rlt_no" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_seq]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_seq]"
-                      name="cmdt_seq"
-                      precision="12" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_nm]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_nm]"
-                      length="100"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_nm]"
-                      name="cmdt_nm" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_cd]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_cd]"
-                      name="cmdt_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[hs_grp_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[hs_grp_cd]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[hs_grp_cd]"
-                      name="hs_grp_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[pck_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[pck_qty]"
-                      name="pck_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[inr_pck_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[inr_pck_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[inr_pck_qty]"
-                      name="inr_pck_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[wgt_kgs_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_kgs_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[wgt_kgs_val]"
-                      name="wgt_kgs_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[wgt_lbs_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[wgt_lbs_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[wgt_lbs_val]"
-                      name="wgt_lbs_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[meas_cbm_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cbm_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[meas_cbm_val]"
-                      name="meas_cbm_val"
-                      precision="14"
-                      scale="3" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[meas_cft_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[meas_cft_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[meas_cft_val]"
-                      name="meas_cft_val"
-                      precision="16"
-                      scale="6" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_rmk]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[cmdt_rmk]"
-                      length="500"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[cmdt_rmk]"
-                      name="cmdt_rmk" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_tp_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_tp_cd]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_tp_cd]"
-                      name="dg_tp_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cd]"
-                      length="15"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_cd]"
-                      name="dg_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_cntc_nm]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[dg_cntc_nm]"
-                      length="40"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[dg_cntc_nm]"
-                      name="dg_cntc_nm" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ea_val]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ea_val]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ea_val]"
-                      name="ea_val"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ttl_qty]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[ttl_qty]"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ttl_qty]"
-                      name="ttl_qty"
-                      precision="10" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[pck_ut_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].ExternalColumns[pck_ut_cd]"
-                      length="3"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[pck_ut_cd]"
-                      name="pck_ut_cd" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">4</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="co_cd"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[co_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cntr_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cntr_seq"
-                      cachedPrecision="12"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cntr_seq]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[intg_rlt_no]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="intg_rlt_no"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[intg_rlt_no]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cmdt_seq"
-                      cachedPrecision="18"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_seq]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="cre_usr_id"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cre_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cre_dt]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[upd_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="upd_usr_id"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[upd_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[upd_dt]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[delt_flg]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="delt_flg"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[delt_flg]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[hs_grp_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="hs_grp_cd"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[hs_grp_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[pck_qty]"
-                      cachedDataType="numeric"
-                      cachedName="pck_qty"
-                      cachedPrecision="7"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pck_qty]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[pck_ut_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="pck_ut_cd"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[pck_ut_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[wgt_kgs_val]"
-                      cachedDataType="numeric"
-                      cachedName="wgt_kgs_val"
-                      cachedPrecision="15"
-                      cachedScale="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[wgt_kgs_val]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[meas_cbm_val]"
-                      cachedDataType="numeric"
-                      cachedName="meas_cbm_val"
-                      cachedPrecision="16"
-                      cachedScale="6"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[meas_cbm_val]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_rmk]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="cmdt_rmk"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_rmk]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="cmdt_nm"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_nm]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_tp_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="dg_tp_cd"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_tp_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="dg_cd"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="cmdt_cd"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[cmdt_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[inr_pck_qty]"
-                      cachedDataType="numeric"
-                      cachedName="inr_pck_qty"
-                      cachedPrecision="7"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[inr_pck_qty]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[ea_val]"
-                      cachedDataType="numeric"
-                      cachedName="ea_val"
-                      cachedPrecision="7"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ea_val]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[ttl_qty]"
-                      cachedDataType="numeric"
-                      cachedName="ttl_qty"
-                      cachedPrecision="7"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[ttl_qty]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[wgt_lbs_val]"
-                      cachedDataType="numeric"
-                      cachedName="wgt_lbs_val"
-                      cachedPrecision="15"
-                      cachedScale="3"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[wgt_lbs_val]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[meas_cft_val]"
-                      cachedDataType="numeric"
-                      cachedName="meas_cft_val"
-                      cachedPrecision="16"
-                      cachedScale="6"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[meas_cft_val]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_cntc_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="24"
-                      cachedName="dg_cntc_nm"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[dg_cntc_nm]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[co_cd]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[cntr_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cntr_seq"
-                      cachedPrecision="12"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cntr_seq]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[intg_rlt_no]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="intg_rlt_no"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[intg_rlt_no]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[cmdt_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cmdt_seq"
-                      cachedPrecision="12"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_seq]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cre_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[co_cd]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[co_cd]"
-                      name="co_cd"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[co_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cre_dt]"
-                      name="cre_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cre_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[upd_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[upd_dt]"
-                      name="upd_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[upd_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[delt_flg]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[delt_flg]"
-                      name="delt_flg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[delt_flg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cntr_seq]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cntr_seq]"
-                      name="cntr_seq"
-                      precision="12"
-                      sortKeyPosition="4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cntr_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[intg_rlt_no]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[intg_rlt_no]"
-                      name="intg_rlt_no"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[intg_rlt_no]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_seq]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_seq]"
-                      name="cmdt_seq"
-                      precision="18"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[hs_grp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[hs_grp_cd]"
-                      name="hs_grp_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[hs_grp_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_qty]"
-                      name="pck_qty"
-                      precision="7">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[pck_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_ut_cd]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[pck_ut_cd]"
-                      name="pck_ut_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[pck_ut_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_kgs_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_kgs_val]"
-                      name="wgt_kgs_val"
-                      precision="15"
-                      scale="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[wgt_kgs_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cbm_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cbm_val]"
-                      name="meas_cbm_val"
-                      precision="16"
-                      scale="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[meas_cbm_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_rmk]"
-                      dataType="wstr"
-                      length="500"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_rmk]"
-                      name="cmdt_rmk">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_rmk]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_nm]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_nm]"
-                      name="cmdt_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_nm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_tp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_tp_cd]"
-                      name="dg_tp_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_tp_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cd]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cd]"
-                      name="dg_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_cd]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[cmdt_cd]"
-                      name="cmdt_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[cmdt_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[inr_pck_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[inr_pck_qty]"
-                      name="inr_pck_qty"
-                      precision="7">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[inr_pck_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ea_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ea_val]"
-                      name="ea_val"
-                      precision="7">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[ea_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ttl_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[ttl_qty]"
-                      name="ttl_qty"
-                      precision="7">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[ttl_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_lbs_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[wgt_lbs_val]"
-                      name="wgt_lbs_val"
-                      precision="15"
-                      scale="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[wgt_lbs_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cft_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[meas_cft_val]"
-                      name="meas_cft_val"
-                      precision="16"
-                      scale="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[meas_cft_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cntc_nm]"
-                      dataType="wstr"
-                      length="24"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[dg_cntc_nm]"
-                      name="dg_cntc_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[dg_cntc_nm]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Multicast"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -3578,831 +2339,6 @@ FROM
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[co_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[delt_flg]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="delt_flg"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[delt_flg]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="cre_usr_id"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_usr_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cre_dt]"
-                      cachedDataType="dbTimeStamp2"
-                      cachedName="cre_dt"
-                      cachedScale="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_dt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[upd_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="upd_usr_id"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_usr_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[upd_dt]"
-                      cachedDataType="dbTimeStamp2"
-                      cachedName="upd_dt"
-                      cachedScale="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_dt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cntr_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cntr_seq"
-                      cachedPrecision="12"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cntr_seq]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[intg_rlt_no]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="intg_rlt_no"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[intg_rlt_no]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cmdt_seq]"
-                      cachedDataType="numeric"
-                      cachedName="cmdt_seq"
-                      cachedPrecision="12"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_seq]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cmdt_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="cmdt_nm"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_nm]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cmdt_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="cmdt_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[hs_grp_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="hs_grp_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[hs_grp_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[pck_qty]"
-                      cachedDataType="numeric"
-                      cachedName="pck_qty"
-                      cachedPrecision="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_qty]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[inr_pck_qty]"
-                      cachedDataType="numeric"
-                      cachedName="inr_pck_qty"
-                      cachedPrecision="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[inr_pck_qty]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[wgt_kgs_val]"
-                      cachedDataType="numeric"
-                      cachedName="wgt_kgs_val"
-                      cachedPrecision="14"
-                      cachedScale="3"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_kgs_val]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[wgt_lbs_val]"
-                      cachedDataType="numeric"
-                      cachedName="wgt_lbs_val"
-                      cachedPrecision="14"
-                      cachedScale="3"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_lbs_val]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[meas_cbm_val]"
-                      cachedDataType="numeric"
-                      cachedName="meas_cbm_val"
-                      cachedPrecision="14"
-                      cachedScale="3"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cbm_val]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[meas_cft_val]"
-                      cachedDataType="numeric"
-                      cachedName="meas_cft_val"
-                      cachedPrecision="16"
-                      cachedScale="6"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cft_val]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[cmdt_rmk]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="cmdt_rmk"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_rmk]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[dg_tp_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="dg_tp_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_tp_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[dg_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="dg_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[dg_cntc_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="dg_cntc_nm"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cntc_nm]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[ea_val]"
-                      cachedDataType="numeric"
-                      cachedName="ea_val"
-                      cachedPrecision="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ea_val]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[ttl_qty]"
-                      cachedDataType="numeric"
-                      cachedName="ttl_qty"
-                      cachedPrecision="10"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ttl_qty]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[pck_ut_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="pck_ut_cd"
-                      lineageId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_ut_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[co_cd]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[co_cd]"
-                      name="co_cd"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[co_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[delt_flg]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[delt_flg]"
-                      name="delt_flg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[delt_flg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp2"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt"
-                      scale="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cre_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp2"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt"
-                      scale="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[upd_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cntr_seq]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cntr_seq]"
-                      name="cntr_seq"
-                      precision="12"
-                      sortKeyPosition="4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cntr_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[intg_rlt_no]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[intg_rlt_no]"
-                      name="intg_rlt_no"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[intg_rlt_no]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_seq]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_seq]"
-                      name="cmdt_seq"
-                      precision="12"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_nm]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_nm]"
-                      name="cmdt_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_nm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_cd]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_cd]"
-                      name="cmdt_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[hs_grp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[hs_grp_cd]"
-                      name="hs_grp_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[hs_grp_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[pck_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[pck_qty]"
-                      name="pck_qty"
-                      precision="10">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[inr_pck_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[inr_pck_qty]"
-                      name="inr_pck_qty"
-                      precision="10">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[inr_pck_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[wgt_kgs_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[wgt_kgs_val]"
-                      name="wgt_kgs_val"
-                      precision="14"
-                      scale="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_kgs_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[wgt_lbs_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[wgt_lbs_val]"
-                      name="wgt_lbs_val"
-                      precision="14"
-                      scale="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[wgt_lbs_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[meas_cbm_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[meas_cbm_val]"
-                      name="meas_cbm_val"
-                      precision="14"
-                      scale="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cbm_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[meas_cft_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[meas_cft_val]"
-                      name="meas_cft_val"
-                      precision="16"
-                      scale="6">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[meas_cft_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_rmk]"
-                      dataType="wstr"
-                      length="500"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[cmdt_rmk]"
-                      name="cmdt_rmk">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[cmdt_rmk]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_tp_cd]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_tp_cd]"
-                      name="dg_tp_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_tp_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_cd]"
-                      dataType="wstr"
-                      length="15"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_cd]"
-                      name="dg_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_cntc_nm]"
-                      dataType="wstr"
-                      length="40"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[dg_cntc_nm]"
-                      name="dg_cntc_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[dg_cntc_nm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[ea_val]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[ea_val]"
-                      name="ea_val"
-                      precision="10">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ea_val]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[ttl_qty]"
-                      dataType="numeric"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[ttl_qty]"
-                      name="ttl_qty"
-                      precision="10">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[ttl_qty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[pck_ut_cd]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[pck_ut_cd]"
-                      name="pck_ut_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output].Columns[pck_ut_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\TB_SHP_CMDT"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -4427,36 +2363,37 @@ FROM
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT			
-	SHP_CMDT_SEQ	AS	cntr_seq
-,	INTG_BL_SEQ	AS	intg_rlt_no
-,CASE WHEN TRIM(SHP_CMDT_CD) = '' THEN '0'
-    WHEN ISNUMERIC(SHP_CMDT_CD) = 0 THEN '0'         
-    ELSE SHP_CMDT_CD	 END	AS	cmdt_seq
-,	HS_GRP_CD	AS	hs_grp_cd
-,	PCK_QTY	AS	pck_qty
-,	PCK_UT_CD	AS	pck_ut_cd
-,	WGT	AS	wgt_kgs_val
-,	MEAS	AS	meas_cbm_val
-,	RMK	AS	cmdt_rmk
-,	RGST_USRID	AS	cre_usr_id
-,	RGST_OFC_CD	AS	co_cd
-,	RGST_TMS	AS	cre_dt
-,	MODI_USRID	AS	upd_usr_id
-,	MODI_TMS	AS	upd_dt
-,	DELT_FLG	AS	delt_flg
-,	LEFT(SHP_CMDT_NM,100)	AS	cmdt_nm
-,	DG_CD_TP	AS	dg_tp_cd
-,	LEFT(DG_CD,15)	AS	dg_cd
-,	LEFT(COALESCE(CMDT_CD, ''),10)	AS	cmdt_cd
-,	PCK_INR_QTY	AS	inr_pck_qty
-,	EA_CNT	AS	ea_val
-,	TTL_QTY	AS	ttl_qty
-,	LBS_WGT	AS	wgt_lbs_val
-,	CFT_MEAS	AS	meas_cft_val
-,	DG_CNTC_NM	AS	dg_cntc_nm
-FROM			
-	TB_SHP_CMDT</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+  SHP_CMDT_SEQ AS cntr_seq, 
+  INTG_BL_SEQ AS intg_rlt_no, 
+  CASE WHEN TRIM(SHP_CMDT_CD) = '' THEN '0' WHEN ISNUMERIC(SHP_CMDT_CD) = 0 THEN '0' ELSE SHP_CMDT_CD END AS cmdt_seq, 
+  HS_GRP_CD AS hs_grp_cd, 
+  PCK_QTY AS pck_qty, 
+  PCK_UT_CD AS pck_ut_cd, 
+  WGT AS wgt_kgs_val, 
+  MEAS AS meas_cbm_val, 
+  RMK AS cmdt_rmk, 
+  RGST_USRID AS cre_usr_id, 
+  RGST_OFC_CD AS co_cd, 
+  RGST_TMS AS cre_dt, 
+  MODI_USRID AS upd_usr_id, 
+  MODI_TMS AS upd_dt, 
+  DELT_FLG AS delt_flg, 
+  LEFT(SHP_CMDT_NM, 100) AS cmdt_nm, 
+  DG_CD_TP AS dg_tp_cd, 
+  LEFT(DG_CD, 15) AS dg_cd, 
+  LEFT(
+    COALESCE(CMDT_CD, ''), 
+    10
+  ) AS cmdt_cd, 
+  PCK_INR_QTY AS inr_pck_qty, 
+  EA_CNT AS ea_val, 
+  TTL_QTY AS ttl_qty, 
+  LBS_WGT AS wgt_lbs_val, 
+  CFT_MEAS AS meas_cft_val, 
+  DG_CNTC_NM AS dg_cntc_nm 
+FROM 
+  TB_SHP_CMDT</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5099,25 +3036,10 @@ FROM
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Merge Join Output]"
+              refId="Package\Data Flow Task.Paths[OLE DB Command Output]"
               endId="Package\Data Flow Task\bkg_cmdt_list.Inputs[ODBC Destination Input]"
-              name="Merge Join Output"
-              startId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
-              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
-              name="Multicast Output 2"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\Data Flow Task.Paths[ODBC Source Output]"
-              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
-              name="ODBC Source Output"
-              startId="Package\Data Flow Task\fwd_bkg_cmdt_list.Outputs[ODBC Source Output]" />
+              name="OLE DB Command Output"
+              startId="Package\Data Flow Task\DELETE.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
@@ -5125,14 +3047,9 @@ FROM
               startId="Package\Data Flow Task\TB_SHP_CMDT.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              endId="Package\Data Flow Task\DELETE.Inputs[OLE DB Command Input]"
               name="Sort Output"
               startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output1]"
-              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5161,27 +3078,49 @@ FROM
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="107.999995927016,162.366667913331" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="342.999987781048,83.1666670454873" />
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\Data Flow Task\fwd_bkg_cmdt_list"
-          TopLeft="317.000007351239,15.1333328098721" />
-        <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="77.9999971191089,89.5666673347686" />
         <NodeLayout
-          Size="154.4,41.6"
+          Size="154,42"
           Id="Package\Data Flow Task\TB_SHP_CMDT"
           TopLeft="107.984852988311,11.2636363429734" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="107.999995927016,162.366667913331" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Data Flow Task\DELETE"
+          TopLeft="290.499996721745,162.600002396901" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow Task\bkg_cmdt_list"
+          TopLeft="344.166652990713,261.666668657197" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="156.399996523063,131.166667334769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.2000005785623"
+              Start="0,0"
+              End="0,23.7000005785623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.7000005785623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="185.184852988311,52.8636363429735">
@@ -5217,143 +3156,19 @@ FROM
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[ODBC Source Output]"
-          TopLeft="397.599997566143,56.7333328098721">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.4333342356152"
-              Start="0,0"
-              End="0,18.9333342356152">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.9333342356152" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="156.399996523063,131.166667334769">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.2000005785623"
-              Start="0,0"
-              End="0,23.7000005785623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.7000005785623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="101.666662626797,227.933335144785" />
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="159.033329276906,203.966667913331">
+          TopLeft="205.999995927016,183.483335155116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23.9666672314537"
+              EndConnector="84.5000007947287,0"
               Start="0,0"
-              End="0,16.4666672314537">
+              End="77.0000007947287,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4666672314537" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\Data Flow Task\DELETE"
-          TopLeft="82.4999967217447,301.600002396901" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
-          TopLeft="161.266662626797,269.533335144785">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19.1666659050519,32.0666672521166"
-              Start="0,0"
-              End="-19.1666659050519,24.5666672521166">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.0333336260583" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.0333336260583"
-                    Point2="0,16.0333336260583"
-                    Point3="-4,16.0333336260583" />
-                  <mssgle:LineSegment
-                    End="-15.1666659050519,16.0333336260583" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.1666659050519,16.0333336260583"
-                    Point2="-19.1666659050519,16.0333336260583"
-                    Point3="-19.1666659050519,20.0333336260583" />
-                  <mssgle:LineSegment
-                    End="-19.1666659050519,24.5666672521166" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="364.999985496204,167.333334421582" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
-          TopLeft="220.866662626797,248.733335144785">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="144.133322869407,-60.600000723203"
-              Start="0,0"
-              End="136.633322869407,-60.600000723203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="68.0666614347036,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.0666614347036,0"
-                    Point2="72.0666614347036,0"
-                    Point3="72.0666614347036,-4" />
-                  <mssgle:LineSegment
-                    End="72.0666614347036,-56.600000723203" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.0666614347036,-56.600000723203"
-                    Point2="72.0666614347036,-60.600000723203"
-                    Point3="76.0666614347036,-60.600000723203" />
-                  <mssgle:LineSegment
-                    End="136.633322869407,-60.600000723203" />
+                    End="77.0000007947287,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5363,69 +3178,31 @@ FROM
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="396.199987781048,124.766667045487">
+          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
+          TopLeft="349.999996721745,204.600002396901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="33.5999977151558,42.5666673760944"
+              EndConnector="67.1666562689683,57.066666260296"
               Start="0,0"
-              End="33.5999977151558,35.0666673760944">
+              End="67.1666562689683,49.566666260296">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2833336880472" />
+                    End="0,24.533333130148" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.2833336880472"
-                    Point2="0,21.2833336880472"
-                    Point3="4,21.2833336880472" />
+                    Point1="0,24.533333130148"
+                    Point2="0,28.533333130148"
+                    Point3="4,28.533333130148" />
                   <mssgle:LineSegment
-                    End="29.5999977151558,21.2833336880472" />
+                    End="63.1666562689683,28.533333130148" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.5999977151558,21.2833336880472"
-                    Point2="33.5999977151558,21.2833336880472"
-                    Point3="33.5999977151558,25.2833336880472" />
+                    Point1="63.1666562689683,28.533333130148"
+                    Point2="67.1666562689683,28.533333130148"
+                    Point3="67.1666562689683,32.533333130148" />
                   <mssgle:LineSegment
-                    End="33.5999977151558,35.0666673760944" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Data Flow Task\bkg_cmdt_list"
-          TopLeft="344.166652990713,261.666668657197" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="429.799985496204,208.933334421582">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.4333325054913,52.7333342356152"
-              Start="0,0"
-              End="-14.4333325054913,45.2333342356152">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.3666671178076" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.3666671178076"
-                    Point2="0,26.3666671178076"
-                    Point3="-4,26.3666671178076" />
-                  <mssgle:LineSegment
-                    End="-10.4333325054913,26.3666671178076" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.4333325054913,26.3666671178076"
-                    Point2="-14.4333325054913,26.3666671178076"
-                    Point3="-14.4333325054913,30.3666671178076" />
-                  <mssgle:LineSegment
-                    End="-14.4333325054913,45.2333342356152" />
+                    End="67.1666562689683,49.566666260296" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5442,19 +3219,6 @@ FROM
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\fwd_bkg_cmdt_list">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
