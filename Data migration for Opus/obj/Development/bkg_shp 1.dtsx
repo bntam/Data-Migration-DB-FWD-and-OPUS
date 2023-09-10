@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ADMIN-PC"
   DTS:CreatorName="ADMIN-PC\Admin"
-  DTS:DTSID="{28C71F3C-8401-44F4-858D-21377DBF7D51}"
+  DTS:DTSID="{3644B5BB-2828-46DF-B256-CB67BFBC5F04}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="bkg_shp"
   DTS:PackageType="5"
-  DTS:VersionBuild="109"
-  DTS:VersionGUID="{80E33B23-F419-4C7A-BADF-05DE618B1905}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{EF43D15A-6E18-4415-8407-684AEC57394A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAKhObTm/wSnx7MgEjt8z3yVHnUUq3DTyz+duv6i54kRAAAAAAOgAAAAAIAACAAAAD5yQjBCUuyUw24nqGpHr8w+dP2SByK5uPW48363YGsNyAAAAC75i5Yz0JtauYx28+732O3lP5BjE6NH8J3QEb1VhBjVkAAAACaS39RVU4HOcI5L4LaPg16azdOh4tyKrncddTZUHjygSBHaCyW70bghd3sxafbx3W73a4yA8/yeSuTeABRkFwP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD/YrPv0pBVEotrrOGnZMf3BL3TfbqgdVY6z5cI+hz2lgAAAAAOgAAAAAIAACAAAAD+YfrwAeUCe6Rvdux5Zur/gvy4J0J/BSUv4YesqyRs1yAAAAACddHL+gfoFz3OUtXGjFR48aFm20D4KWAcKbbRaTkqJEAAAADcM0H6yDr/bg5WqxywhD7GorqYQST64p21x6YLvSztAFa2Cmy/e9MUw1I7Z9I8rM2lPKZS5Ew7ati/SQyo0VX+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAHfeHFGQaZhTWGbaeKYK5I7ZnVDzjpXUknKuQg2fby5gAAAAAOgAAAAAIAACAAAAClm3Ad4k+SP20MQWQ21Ui54F04fZ/yy1xLwz/FudUJCiAAAAA2W870UL70E51v9YyaK3926O5ub3nQoAlnw1dMukbpDUAAAADwnlF6LKQhheUGc90qdzsufo18ji8J001MpsTcTFVoZl57745Yw1nYezTs+lUY0cgNLyh+ZUcscpDYRpJ+LxuA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD7ddId9CpWbILYxXaIFZ/XOjRYsq3OVZBTMtSMgaG+twAAAAAOgAAAAAIAACAAAACp3I8abu8eEoKASooi0liBSMBPRXAnaVb2M4+07mzZrSAAAACq2JdQDBI5gmimLDya2LIIOUfRzaNdDKIx5BVC8GJLAkAAAAAmg9zSQkyF8Dwln/blFBNKgUVTA34IZELj/sAKEIdQCAvdtFKsbJcT1b26rsu4YjJzL+/wKBRGqfHYClXk7472</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFp4pPSRlYO7jDTRCK11XBTQx9FJ/S+XbqJLecJOX5ggAAAAAOgAAAAAIAACAAAAD0izF43KgAHJAKrigL2SejwBLXmfC3+tY/CJtUl6d30yAAAAAZfoEQupIv43goilXOrQeu9ndfzhtKSaPXrD3cD3SuMUAAAAD+Iyb3lIoc8kiOlkUjdtmIMVWdBEbAwC/LjsAWrxqeD11cCxEhNedIOkfPAH3n7yXbygVXTIZpR3m9ZJRyS5ul</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABbA81Z0EeF/Tc+IRsPIRZJraRtJ7pz1ShiIgXpEcN4QwAAAAAOgAAAAAIAACAAAADF+AYV/VWU9jXCNGIAXQXsQXMe5dMpl81jhyIPt539zCAAAAC6i+/s2dCgo2MRPuNfSbfm2iHNhbIFWiDqV0E6OjMVOUAAAAAsYAVdQ9Wtp23ZLt50oZ0AsTrpgAxOcBDNDeXc/tphOAoCireXms7MncrrQvahTUKS1Afcdla2ZMvO59ITcY4y</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>

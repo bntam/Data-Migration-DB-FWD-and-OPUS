@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="acc_inv_pay_his"
   DTS:PackageType="5"
-  DTS:VersionBuild="134"
-  DTS:VersionGUID="{6C6BB81D-849B-4738-B449-D79E11DB1CEC}">
+  DTS:VersionBuild="138"
+  DTS:VersionGUID="{3ECBE98F-B357-48F9-9A9F-4549BAF64BF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2j2lOUt2fdhCFBuOgHBouleJ/3RvtRxytUEmE5ijkNAAAAAAOgAAAAAIAACAAAAC0snL9H7Yde98IsxKPHh8Atm5Wi5yvnKzLQYJ0XNxggCAAAAA4e0nMPRkIyV0gL14CaKGylYWLPg7YrsdZfJXKEWROVUAAAACLE5CadXH4/6jxM9g7DvbEUZXw4WgBXxKmfeVGpWjjJ5HAV7CMYkt+h5+WdVNvjWirjMizgsKs0YDzANjnw95Y</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAR8IWk3xD892CFfZYm99id7G0XtL5BZ9bzo8mUeR8sbgAAAAAOgAAAAAIAACAAAAD+yglvaaEaSSKJQVhHgH5vNK0Vfw3eaIBnX51WrIVlviAAAACROWinM+6HE4DhQ6ld2k6aIfN1t18CQXkiGoila+T010AAAAAhbHDqHF+FdpULelHPKp1/s+lkuZeztIa3bts1p02J3RTA+TUtPImipEHZMGEjduaponq0toLqJ66KbWbVVDq9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3KL0aZgLNMZ3MZysJgn6QjL7wOlxJ3kpACcHCo8JR3wAAAAAOgAAAAAIAACAAAACt8Z13em6i9SxTAgY2SHDbaAvlwI3V3Np9dA4hhTr8UyAAAAA5bE3eaHwfNLEFAEP4KdtqhC5xVTCVwVXH0RgW+4rFp0AAAACdpZ35JsKm7o7xxN5WoVPktrAKA6Zs0XjRK8IZrbIopVh3o1roKOu78JxnSU9aiifDQyB9BrMF5iH3sp2fcmHi</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/WqkXj+QaBNCviIa42usAFSQJB3U0nkxHG21bp7JnQwAAAAAOgAAAAAIAACAAAACH4rCbwv7lKA9o0J30TPzdUbzWUWMFgHiWsSnTRuCqgyAAAAAFb5VeSCBj4RwufxMZQ+RZ5vFdUYl3lIPMOGwep9QJx0AAAACwXx16NH/MXfoOnJ7K3XCC106i1blOB1075zM00jCEbwggpKojkHBU82Yu4tGJRXShdJ7Tla9Sq5SJTVPtL0vT</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACYSQrMAZF1o35HPN+SKmFFJqWXCUHX2azebZfOeQDtEwAAAAAOgAAAAAIAACAAAAAa/n/WCeAFjofhRnwQlvK/qjV8MAHvUfys0cTa8zYQ7iAAAABCoe4RoFtBx1Fd1lEJtz833v4aQcJzCNxyntTJBe29wkAAAAA5wkz8eS4IBz5SaNmGTYlVaWybduwMopGYS+S2jysYbA6+c7B1fcf3hFkKwt/nGypgW/Va9DEY59bRZwvUolKL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAiKxGdgAxUkrHvXnC6V87V64OnGDhW6LPPl9uKDPm7bgAAAAAOgAAAAAIAACAAAADpLUwhknNV5L1zq1hC8gtJM7EqnP+DM5sNUcJ8D6CbESAAAABSJ+ptRvfrrRw5O6B3K2FqRhlnCjPb39/hamEiqOfmSEAAAACvxsawa+Jo0VDJrVGGNv1XtWv0VVe1dkaZ/7uXW5rFNvmuqGsqn0H1GufKBrnxLVUtfjpsVj2YFYv3AMzhJWOW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -381,9 +381,9 @@
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Data Conversion.tax_inv_no]" />
                     <inputColumn
                       refId="Package\Data Flow Task\acc_inv_pay_his.Inputs[ODBC Destination Input].Columns[his_id]"
-                      cachedDataType="numeric"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="his_id"
-                      cachedPrecision="3"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Data Flow Task\acc_inv_pay_his.Inputs[ODBC Destination Input].ExternalColumns[his_id]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_id]" />
@@ -1498,12 +1498,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
-                      dataType="numeric"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+                      length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
                       name="his_id"
-                      precision="3"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2238,7 +2238,7 @@
 acc_inv_pay_his	
 WHERE	
 co_cd = ?	
-AND his_id = ?</property>
+AND his_id = CAST (? AS varchar(20))</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2270,9 +2270,9 @@ AND his_id = ?</property>
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[his_id]"
-                      cachedDataType="numeric"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="his_id"
-                      cachedPrecision="3"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_id]" />
@@ -2615,9 +2615,9 @@ AND his_id = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[his_id]"
-                      cachedDataType="numeric"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="his_id"
-                      cachedPrecision="3"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]">
                       <properties>
                         <property
@@ -3396,10 +3396,10 @@ AND his_id = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_id]"
-                      dataType="numeric"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[his_id]"
                       name="his_id"
-                      precision="3"
                       sortKeyPosition="2">
                       <properties>
                         <property
@@ -3889,7 +3889,7 @@ AND his_id = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT			
 	COALESCE(TRIM(INV_SEQ),'')	AS	inv_id
-,	COALESCE(MODI_SEQ,'')	AS	his_id
+,	cast(COALESCE(MODI_SEQ,'')as varchar(20))	AS	his_id
 ,	INV_NO	AS	inv_no
 ,	INV_SUM_AMT	AS	inv_amt
 ,	INV_POST_DT	AS	pst_dt
@@ -4518,9 +4518,10 @@ TB_INV_HIS_MST</property>
                       name="tax_inv_no" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\TB_INV_HIS_MST.Outputs[OLE DB Source Output].ExternalColumns[his_id]"
-                      dataType="numeric"
-                      name="his_id"
-                      precision="3" />
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="his_id" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\TB_INV_HIS_MST.Outputs[OLE DB Source Output].ExternalColumns[inv_no]"
                       codePage="949"
@@ -4675,10 +4676,11 @@ TB_INV_HIS_MST</property>
                       name="inv_id" />
                     <outputColumn
                       refId="Package\Data Flow Task\TB_INV_HIS_MST.Outputs[OLE DB Source Error Output].Columns[his_id]"
-                      dataType="numeric"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
                       lineageId="Package\Data Flow Task\TB_INV_HIS_MST.Outputs[OLE DB Source Error Output].Columns[his_id]"
-                      name="his_id"
-                      precision="3" />
+                      name="his_id" />
                     <outputColumn
                       refId="Package\Data Flow Task\TB_INV_HIS_MST.Outputs[OLE DB Source Error Output].Columns[inv_no]"
                       codePage="949"
@@ -4998,21 +5000,59 @@ TB_INV_HIS_MST</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="124.5,174.5" />
-        <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="94.5,100.5" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Data Flow Task\acc_inv_pay_his"
-          TopLeft="537.5,229.5" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\TB_INV_HIS_MST"
           TopLeft="79.0000017881393,9.99999989668526" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="252.5,257.5" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="124.5,174.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task\acc_inv_pay_his"
+          TopLeft="570.5,228.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="174,216.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165,41"
+              Start="0,0"
+              End="165,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="161,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161,20.5"
+                    Point2="165,20.5"
+                    Point3="165,24.5" />
+                  <mssgle:LineSegment
+                    End="165,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="164.500001788139,51.9999998966853">
@@ -5069,70 +5109,32 @@ TB_INV_HIS_MST</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="252.5,257.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
           TopLeft="425.5,278.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="112,-28"
+              EndConnector="145,-29"
               Start="0,0"
-              End="104.5,-28">
+              End="137.5,-29">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52,0" />
+                    End="68.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="52,0"
-                    Point2="56,0"
-                    Point3="56,-4" />
+                    Point1="68.5,0"
+                    Point2="72.5,0"
+                    Point3="72.5,-4" />
                   <mssgle:LineSegment
-                    End="56,-24" />
+                    End="72.5,-25" />
                   <mssgle:CubicBezierSegment
-                    Point1="56,-24"
-                    Point2="56,-28"
-                    Point3="60,-28" />
+                    Point1="72.5,-25"
+                    Point2="72.5,-29"
+                    Point3="76.5,-29" />
                   <mssgle:LineSegment
-                    End="104.5,-28" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="174,216.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="165,41"
-              Start="0,0"
-              End="165,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="161,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161,20.5"
-                    Point2="165,20.5"
-                    Point3="165,24.5" />
-                  <mssgle:LineSegment
-                    End="165,33.5" />
+                    End="137.5,-29" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5145,6 +5147,14 @@ TB_INV_HIS_MST</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TB_INV_HIS_MST">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\acc_inv_pay_his">
     <Properties>
       <Property>
@@ -5154,14 +5164,6 @@ TB_INV_HIS_MST</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TB_INV_HIS_MST">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

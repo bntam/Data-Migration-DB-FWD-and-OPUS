@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-09-09T15:31:29.1860158Z</LastWriteTime>
+    <LastWriteTime>2023-09-10T03:49:14.2266271Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -14,11 +14,6 @@
     <ProjectBuildItemInfo>
       <Name>bcm_cnt_cd.dtsx</Name>
       <LastWriteTime>2023-08-31T03:35:49.367382Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>bkg_shp.dtsx</Name>
-      <LastWriteTime>2023-08-31T03:34:24.6458178Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -333,7 +328,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>acc_inv_pay_his.dtsx</Name>
-      <LastWriteTime>2023-09-06T09:53:35.6499634Z</LastWriteTime>
+      <LastWriteTime>2023-09-09T16:15:35.3982857Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -428,7 +423,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>1_ALL.dtsx</Name>
-      <LastWriteTime>2023-09-09T15:34:27.6393485Z</LastWriteTime>
+      <LastWriteTime>2023-09-10T07:22:07.0061105Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>bkg_shp.dtsx</Name>
+      <LastWriteTime>2023-09-10T03:49:14.0412781Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
