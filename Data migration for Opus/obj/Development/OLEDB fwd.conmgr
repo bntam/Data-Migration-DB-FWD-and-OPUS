@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB fwd"
+  DTS:DTSID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo4Uj2Edz8ke9NM3KOayICgAAAAACAAAAAAAQZgAAAAEAACAAAADBEBCF0NUs2FcV4d/Wz291o+L8tjmnoeQ1VqIByYiYgQAAAAAOgAAAAAIAACAAAACVL8PonekR5W9zGjBwKrDnZhWm6clXZop5DliZTwrEnYAAAAB4w9u716E5pzZ+6Lvpinsz7QXo5miz5BKNS6PkHFdnGIF1qs8rIyH529D+6l+tsXhfH+t4qCn0a1srRMPfbj0nZduNv8xWnwkPSG3/bpVhn/h67VdR8xmJUFknCYP5M/pujvDfuFOe2sKrxrM5fLyaVAptUQT4eHG5UBsQn1Fg9UAAAABHjJFcIEDGg3EMYwTAdLRRZ5rx7pU5Dlm02uq5FrfkNShXTNUsdPEg0zdjKsTOM5V9UXOBCzEiJiOe0kIIiG/U</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
