@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-09-27T06:50:11.0282661Z</LastWriteTime>
+    <LastWriteTime>2023-09-28T09:15:40.3378658Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>1_ALL.dtsx</Name>
-      <LastWriteTime>2023-09-27T09:41:01.0642496Z</LastWriteTime>
+      <LastWriteTime>2023-09-29T09:05:24.7322458Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Package1.dtsx</Name>
+      <LastWriteTime>2023-09-29T09:03:28.3426336Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

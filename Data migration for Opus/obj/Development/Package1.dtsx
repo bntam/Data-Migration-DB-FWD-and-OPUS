@@ -1,0 +1,1897 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/28/2023 2:59:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DLAP-0178"
+  DTS:CreatorName="DLAP-0178\admin"
+  DTS:DTSID="{CCC477F5-71F1-4C52-B4D9-EA26A45882A8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{C8BBA881-9186-496C-9823-B6E3E94D64CC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\acc_ar_ap_dc_inv_if"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6CE3ABB9-2EB6-401E-9905-EA963D8B55CF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="acc_ar_ap_dc_inv_if"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="bkg_air_prn_rt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."bkg_air_prn_rt"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[bl_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="bl_no"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[bl_no]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[air_prn_rt_seq]"
+                      cachedDataType="numeric"
+                      cachedName="air_prn_rt_seq"
+                      cachedPrecision="12"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[air_prn_rt_seq]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[air_prn_rt_seq]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[frt_term_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="frt_term_cd"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[frt_term_cd]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[frt_term_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[aply_ut_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="aply_ut_cd"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[aply_ut_cd]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[aply_ut_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[qty_val]"
+                      cachedDataType="numeric"
+                      cachedName="qty_val"
+                      cachedPrecision="7"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[qty_val]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[qty_val]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[ut_rt]"
+                      cachedDataType="numeric"
+                      cachedName="ut_rt"
+                      cachedPrecision="16"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[ut_rt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ut_rt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[ttl_amt]"
+                      cachedDataType="numeric"
+                      cachedName="ttl_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[ttl_amt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ttl_amt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].Columns[rt_curr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="rt_curr_cd"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[rt_curr_cd]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[rt_curr_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      name="air_prn_rt_seq"
+                      precision="12" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
+                      dataType="wstr"
+                      length="20"
+                      name="bl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[air_prn_rt_tp_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="air_prn_rt_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[air_prn_rt_itm_nm]"
+                      dataType="wstr"
+                      length="20"
+                      name="air_prn_rt_itm_nm" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[frt_term_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="frt_term_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[aply_ut_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="aply_ut_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[ttl_amt]"
+                      dataType="numeric"
+                      name="ttl_amt"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[due_to_dp_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="due_to_dp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[rt_curr_cd]"
+                      dataType="wstr"
+                      length="3"
+                      name="rt_curr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[ut_rt]"
+                      dataType="numeric"
+                      name="ut_rt"
+                      precision="13"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input].ExternalColumns[qty_val]"
+                      dataType="numeric"
+                      name="qty_val"
+                      precision="17"
+                      scale="6" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_ar_ap_dc_inv_if\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[bl_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="bl_no"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[bl_no]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[air_prn_rt_seq]"
+                      cachedDataType="numeric"
+                      cachedName="air_prn_rt_seq"
+                      cachedPrecision="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[air_prn_rt_seq]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[frt_term_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="frt_term_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[frt_term_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[aply_ut_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="aply_ut_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[aply_ut_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[qty_val]"
+                      cachedDataType="numeric"
+                      cachedName="qty_val"
+                      cachedPrecision="7"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[qty_val]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[ut_rt]"
+                      cachedDataType="numeric"
+                      cachedName="ut_rt"
+                      cachedPrecision="16"
+                      cachedScale="4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ut_rt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[ttl_amt]"
+                      cachedDataType="numeric"
+                      cachedName="ttl_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ttl_amt]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input].Columns[rt_curr_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="rt_curr_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[rt_curr_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
+                      name="bl_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[bl_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[air_prn_rt_seq]"
+                      name="air_prn_rt_seq"
+                      precision="12"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[air_prn_rt_seq]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[frt_term_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[frt_term_cd]"
+                      name="frt_term_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[frt_term_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[aply_ut_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[aply_ut_cd]"
+                      name="aply_ut_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[aply_ut_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[qty_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[qty_val]"
+                      name="qty_val"
+                      precision="7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[qty_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ut_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ut_rt]"
+                      name="ut_rt"
+                      precision="16"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ut_rt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ttl_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ttl_amt]"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ttl_amt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[rt_curr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[rt_curr_cd]"
+                      name="rt_curr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[rt_curr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_ar_ap_dc_inv_if\DELETE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DELETE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	bkg_air_prn_rt
+WHERE	co_cd = ?
+AND	bl_no = ?
+AND	air_prn_rt_seq = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_ar_ap_dc_inv_if\DELETE.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].Columns[bl_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="bl_no"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[bl_no]" />
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].Columns[air_prn_rt_seq]"
+                      cachedDataType="numeric"
+                      cachedName="air_prn_rt_seq"
+                      cachedPrecision="12"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[air_prn_rt_seq]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="numeric"
+                      name="Param_2"
+                      precision="39">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_ar_ap_dc_inv_if\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[bl_no]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="bl_no"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[air_prn_rt_seq]"
+                      cachedDataType="numeric"
+                      cachedName="air_prn_rt_seq"
+                      cachedPrecision="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[air_prn_rt_seq]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[frt_term_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="frt_term_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[frt_term_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[aply_ut_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="aply_ut_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[aply_ut_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[qty_val]"
+                      cachedDataType="numeric"
+                      cachedName="qty_val"
+                      cachedPrecision="7"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[qty_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[ut_rt]"
+                      cachedDataType="numeric"
+                      cachedName="ut_rt"
+                      cachedPrecision="16"
+                      cachedScale="4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ut_rt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[ttl_amt]"
+                      cachedDataType="numeric"
+                      cachedName="ttl_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ttl_amt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input].Columns[rt_curr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="rt_curr_cd"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[rt_curr_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      name="co_cd"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[bl_no]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[bl_no]"
+                      name="bl_no"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[air_prn_rt_seq]"
+                      name="air_prn_rt_seq"
+                      precision="12"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[air_prn_rt_seq]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[frt_term_cd]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[frt_term_cd]"
+                      name="frt_term_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[frt_term_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[aply_ut_cd]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[aply_ut_cd]"
+                      name="aply_ut_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[aply_ut_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[qty_val]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[qty_val]"
+                      name="qty_val"
+                      precision="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[qty_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ut_rt]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ut_rt]"
+                      name="ut_rt"
+                      precision="16"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ut_rt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ttl_amt]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[ttl_amt]"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[ttl_amt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[rt_curr_cd]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output].Columns[rt_curr_cd]"
+                      name="rt_curr_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output].Columns[rt_curr_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_AIR_FRT_CD"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT	
+	FRT.INTG_BL_SEQ	AS	bl_no
+,	FRT.AIR_FRT_SEQ	AS	air_prn_rt_seq
+,	FRT.AIR_FRT_TERM_CD	AS	frt_term_cd
+,	FRT.AIR_APLY_UT_CD	AS	aply_ut_cd
+,	FRT.AIR_PCE_QTY	AS	qty_val
+,	FRT.AIR_RU	AS	ut_rt
+,	FRT.AIR_AMT	AS	ttl_amt
+,	FRT.RGST_USRID	AS	cre_usr_id
+,	'CLT'	AS	co_cd
+,	FRT.RGST_TMS	AS	cre_dt
+,	FRT.MODI_USRID	AS	upd_usr_id
+,	FRT.MODI_TMS	AS	upd_dt
+,	BL.CURR_CD AS rt_curr_cd
+FROM	TB_AIR_FRT_CD FRT
+LEFT JOIN TB_INTG_BL BL
+ON (FRT.INTG_BL_SEQ = BL.INTG_BL_SEQ)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::bkg_bl</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Connections[OleDbConnection]"
+                  connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      length="3"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[bl_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
+                      length="20"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[bl_no]"
+                      name="bl_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[air_prn_rt_seq]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[air_prn_rt_seq]"
+                      name="air_prn_rt_seq"
+                      precision="12"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[frt_term_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[frt_term_cd]"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[frt_term_cd]"
+                      name="frt_term_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[aply_ut_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[aply_ut_cd]"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[aply_ut_cd]"
+                      name="aply_ut_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[qty_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[qty_val]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[qty_val]"
+                      name="qty_val"
+                      precision="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ut_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[ut_rt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ut_rt]"
+                      name="ut_rt"
+                      precision="16"
+                      scale="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ttl_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[ttl_amt]"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[ttl_amt]"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[rt_curr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[rt_curr_cd]"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].Columns[rt_curr_cd]"
+                      name="rt_curr_cd"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="bl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      name="air_prn_rt_seq"
+                      precision="12" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[frt_term_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="frt_term_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[aply_ut_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="aply_ut_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[qty_val]"
+                      dataType="numeric"
+                      name="qty_val"
+                      precision="7" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[ut_rt]"
+                      dataType="numeric"
+                      name="ut_rt"
+                      precision="16"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[ttl_amt]"
+                      dataType="numeric"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output].ExternalColumns[rt_curr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="rt_curr_cd" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[bl_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[bl_no]"
+                      name="bl_no" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[air_prn_rt_seq]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[air_prn_rt_seq]"
+                      name="air_prn_rt_seq"
+                      precision="12" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[frt_term_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[frt_term_cd]"
+                      name="frt_term_cd" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[aply_ut_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[aply_ut_cd]"
+                      name="aply_ut_cd" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[qty_val]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[qty_val]"
+                      name="qty_val"
+                      precision="7" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ut_rt]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ut_rt]"
+                      name="ut_rt"
+                      precision="16"
+                      scale="4" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ttl_amt]"
+                      dataType="numeric"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ttl_amt]"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      name="co_cd" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[rt_curr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[rt_curr_cd]"
+                      name="rt_curr_cd" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\acc_ar_ap_dc_inv_if.Paths[Data Conversion Output]"
+              endId="Package\acc_ar_ap_dc_inv_if\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\acc_ar_ap_dc_inv_if.Paths[OLE DB Command Output]"
+              endId="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\acc_ar_ap_dc_inv_if\DELETE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\acc_ar_ap_dc_inv_if.Paths[OLE DB Source Output]"
+              endId="Package\acc_ar_ap_dc_inv_if\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\acc_ar_ap_dc_inv_if.Paths[Sort Output]"
+              endId="Package\acc_ar_ap_dc_inv_if\DELETE.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\acc_ar_ap_dc_inv_if\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if"
+          TopLeft="182.999992946783,147.633334462907" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\acc_ar_ap_dc_inv_if">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if\Data Conversion"
+          TopLeft="237.166657461061,171.900001322428" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD"
+          TopLeft="223.333324458865,98.8000007851919" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if\Sort"
+          TopLeft="267.166656268968,239.500001859665" />
+        <EdgeLayout
+          Id="Package\acc_ar_ap_dc_inv_if.Paths[OLE DB Source Output]"
+          TopLeft="304.133324458865,140.400000785192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.0333330021963,31.5000005372361"
+              Start="0,0"
+              End="11.0333330021963,24.0000005372361">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.750000268618" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.750000268618"
+                    Point2="0,15.750000268618"
+                    Point3="4,15.750000268618" />
+                  <mssgle:LineSegment
+                    End="7.03333300219634,15.750000268618" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.03333300219634,15.750000268618"
+                    Point2="11.0333330021963,15.750000268618"
+                    Point3="11.0333330021963,19.750000268618" />
+                  <mssgle:LineSegment
+                    End="11.0333330021963,24.0000005372361" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\acc_ar_ap_dc_inv_if.Paths[Data Conversion Output]"
+          TopLeft="315.566656865015,213.500001322428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.000000537237"
+              Start="0,0"
+              End="0,18.500000537237">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.500000537237" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if\DELETE"
+          TopLeft="387.999984800816,238.633335186111" />
+        <EdgeLayout
+          Id="Package\acc_ar_ap_dc_inv_if.Paths[Sort Output]"
+          TopLeft="364.766656268968,259.866668522888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.2333285318482,0"
+              Start="0,0"
+              End="15.7333285318482,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="15.7333285318482,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt"
+          TopLeft="547.99997963508,239.166668285264" />
+        <EdgeLayout
+          Id="Package\acc_ar_ap_dc_inv_if.Paths[OLE DB Command Output]"
+          TopLeft="507.199984800816,259.700001735687">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.7999948342643,0"
+              Start="0,0"
+              End="33.2999948342643,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.2999948342643,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\acc_ar_ap_dc_inv_if\TB_AIR_FRT_CD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\acc_ar_ap_dc_inv_if\bkg_air_prn_rt">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
