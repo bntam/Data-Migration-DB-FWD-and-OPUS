@@ -2,18 +2,53 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2023-10-04T00:09:34.9555978Z</LastWriteTime>
+    <LastWriteTime>2023-10-16T07:35:25.2079966Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>1_ALL.dtsx</Name>
-      <LastWriteTime>2023-10-11T10:47:12.0741864Z</LastWriteTime>
+      <Name>ADM.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:23:14.189137Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Package1.dtsx</Name>
-      <LastWriteTime>2023-10-11T10:44:00.3087556Z</LastWriteTime>
+      <Name>BCM.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:35:25.1946682Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ACC.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:20:01.1934561Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>BKG.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:38:22.0336242Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>EDI.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:01:31.0910273Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>VIS.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:42:52.5878871Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>IVT.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:41:37.724549Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CMM.dtsx</Name>
+      <LastWriteTime>2023-10-16T07:39:56.4730112Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Z_TEST.dtsx</Name>
+      <LastWriteTime>2023-10-16T06:52:18.9792543Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
