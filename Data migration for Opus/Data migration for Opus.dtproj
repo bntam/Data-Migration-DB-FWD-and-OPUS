@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ADMIN-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARS/styMbZkuU2E2ewxHLDwAAAAACAAAAAAAQZgAAAAEAACAAAABv0fMH7MtX+O6L099JaJX67mWLd+uOnfq1xXNXI+4mhAAAAAAOgAAAAAIAACAAAACf2mrsDjll8iQRJBiw4zVUq1HDeYO+ybxHMm4qRg4Ch5AAAADbMTYu44lAKsYC/TKjGWUI7FLBViHBtcl0efJ4OBUN/83u7UczA/x88Ti/G+Dy9rCjDndCATx2gLfAYqCPN8MJt6qFlJvoM+qFscgRrTLNmcvROM5pKnEv3sl0Lxqt8tWg/hN2XZSewVL46nXVROXiUMFV0gSfBVl9YpBt+774UA8nt0yecRAPtpQ6wSWJ5ClAAAAAfdfvxsLiW1qpugzZV3yDNUCdAf6iH7e/uLWSQrnaMg1lYfx/mJdgb7AOE2icIYTt4FaJ7UPryJU8d6Gw6GZZpQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARS/styMbZkuU2E2ewxHLDwAAAAACAAAAAAAQZgAAAAEAACAAAACmfQezwW7TEXDn7jBuU1shYuExvC0C5TqmMFeajj2RHQAAAAAOgAAAAAIAACAAAACYjk7mbHPhxMxmarDdsAhOqc4xJ5Ay+FuHcCRMWGZBYJAAAACyFjJdM73yHoJfFwAw4SqFuk9sboX84ERocdYRQvp5yRgGkCp9vHmAXrrU5FzWLzVM3JTHEpGv3on6opn30+lv9Lhjpzf7gI+DnJijcJHdw6opImDe377b0ay1sm94zSZz2tX6ROyxE/rr7lUPQUQjMxcQ/mhm1Bn0iIhsx8N10QFXCCNRq+YeUQI8DPHBYWJAAAAA5AS/tHDi48f8GXg/cQEHTopNpxXo9C8rbRnuMqippCc1sZjTCmKm0w4nIIi8fOPHV4U1xH80/PbdA5aPxD6e8g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -73,7 +73,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_migrate;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -325,7 +325,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_migrate;Provider=PGNP.1;Persist Security Info=True;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -385,7 +385,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">us_fwd_dev</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">us_fwd_migrate</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -473,10 +473,10 @@
                 <SSIS:Property SSIS:Name="Name">BCM</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">498</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">506</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{62D43CA4-2A3C-40D2-B5D7-4DF4FC694902}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C97F5326-D5CE-4F97-81FC-F2F639BEE194}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -507,10 +507,10 @@
                 <SSIS:Property SSIS:Name="Name">1_ALL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">496</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">502</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{75E8321C-E352-43C2-BA51-4D13B0CFEC7E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3FCAC0DB-4A46-4A08-B199-B06AFBF85DDB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

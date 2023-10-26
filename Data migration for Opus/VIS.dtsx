@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="502"
-  DTS:VersionGUID="{A6072558-1B63-401D-AA13-BA54F6545924}">
+  DTS:VersionBuild="503"
+  DTS:VersionGUID="{D58E3DBB-ECB2-4068-83E6-73DC212B54E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
 ,	DELT_FLG	AS	delt_flg
-, 'OPUS' AS co_cd
+, 'CLT' AS co_cd
 FROM			
 	VIS_ROLE
 </DTS:VariableValue>
@@ -50,7 +50,7 @@ FROM
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
-SELECT 'OPUS' AS	co_cd
+SELECT 'CLT' AS	co_cd
 	, USRID	AS	usr_id
 	, TRDP_CD	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
@@ -88,7 +88,7 @@ SELECT
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
-, 'OPUS' AS co_cd
+, 'CLT' AS co_cd
 FROM			
 	VIS_USR
 </DTS:VariableValue>
@@ -7503,7 +7503,7 @@ AND TRD_PRNR_CD = ?	</property>
           Id="Package\vis_usr + vis_usr_role"
           TopLeft="6.92857142857142,149.107142857143" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="153.6,41.6"
           Id="Package\vis_usr_trd_prnr"
           TopLeft="24.75,26.5" />
         <NodeLayout

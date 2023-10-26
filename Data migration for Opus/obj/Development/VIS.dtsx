@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="501"
-  DTS:VersionGUID="{2F4ED9CE-7073-4705-9601-8A93BA5FCB7B}">
+  DTS:VersionBuild="503"
+  DTS:VersionGUID="{D58E3DBB-ECB2-4068-83E6-73DC212B54E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
 ,	DELT_FLG	AS	delt_flg
-, 'OPUS' AS co_cd
+, 'CLT' AS co_cd
 FROM			
 	VIS_ROLE
 </DTS:VariableValue>
@@ -50,7 +50,7 @@ FROM
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
-SELECT 'OPUS' AS	co_cd
+SELECT 'CLT' AS	co_cd
 	, USRID	AS	usr_id
 	, TRDP_CD	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
@@ -88,7 +88,7 @@ SELECT
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
-, 'OPUS' AS co_cd
+, 'CLT' AS co_cd
 FROM			
 	VIS_USR
 </DTS:VariableValue>
@@ -7499,43 +7499,43 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="184.8,41.6"
+          Size="179.2,41.6"
           Id="Package\vis_usr + vis_usr_role"
           TopLeft="6.92857142857142,149.107142857143" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="153.6,41.6"
           Id="Package\vis_usr_trd_prnr"
           TopLeft="24.75,26.5" />
         <NodeLayout
-          Size="116.8,41.6"
+          Size="114.4,41.6"
           Id="Package\vis_role"
           TopLeft="20.8571428571428,83.8928571428571" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="79.3571428571428,125.892857142857">
+          TopLeft="78.0571428571428,125.492857142857">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.0714285714286,23.2142857142856"
+              EndConnector="18.4714285714286,23.6142857142859"
               Start="0,0"
-              End="20.0714285714286,15.7142857142856">
+              End="18.4714285714286,16.1142857142859">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.60714285714278" />
+                    End="0,7.80714285714295" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,7.60714285714278"
-                    Point2="0,11.6071428571428"
-                    Point3="4,11.6071428571428" />
+                    Point1="0,7.80714285714295"
+                    Point2="0,11.8071428571429"
+                    Point3="4,11.8071428571429" />
                   <mssgle:LineSegment
-                    End="16.0714285714286,11.6071428571428" />
+                    End="14.4714285714286,11.8071428571429" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.0714285714286,11.6071428571428"
-                    Point2="20.0714285714286,11.6071428571428"
-                    Point3="20.0714285714286,15.6071428571428" />
+                    Point1="14.4714285714286,11.8071428571429"
+                    Point2="18.4714285714286,11.8071428571429"
+                    Point3="18.4714285714286,15.8071428571429" />
                   <mssgle:LineSegment
-                    End="20.0714285714286,15.7142857142856" />
+                    End="18.4714285714286,16.1142857142859" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7549,8 +7549,8 @@ AND TRD_PRNR_CD = ?	</property>
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="199.2,208.8"
-          Size="199.2,252"
+          PanelSize="199.2,245.6"
+          Size="199.2,288.8"
           Id="ec485993-ffe5-404f-a7f4-35c3ff539617"
           TopLeft="591.222199384813,115.240733780394">
           <GroupLayout.ChildrenIds>
