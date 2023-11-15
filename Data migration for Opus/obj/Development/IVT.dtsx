@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IVT"
   DTS:PackageType="5"
-  DTS:VersionBuild="499"
-  DTS:VersionGUID="{887DCE22-3EFD-4AA3-81C6-17DD10D93620}">
+  DTS:VersionBuild="500"
+  DTS:VersionGUID="{C949F23D-A856-43B9-AA5B-31479078BE92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -206,7 +206,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{20506538-9D59-4A24-A01F-C3FBBB702A44}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_loc_id&#xA;&#x9;,&#x9;LEFT(ITM_DESC,4000)&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_wh_loc_id&#xA;&#x9;,&#x9;LEFT(ITM_DESC,4000)&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_rcv_shp_itm">
@@ -220,7 +220,7 @@ SELECT
 	,	ITM_INR_QTY	AS	itm_inr_qty
 	,	ITM_CTN_QTY	AS	itm_qty
 	,	ITM_EA_QTY	AS	itm_ea_qty
-	,	ITM_LOC_ID	AS	itm_loc_id
+	,	ITM_LOC_ID	AS	itm_wh_loc_id
 	,	LEFT(ITM_DESC,4000)	AS	itm_desc
 	,	ITM_PO_NO	AS	itm_po_no
 	,	ITM_LEN	AS	itm_len_val
@@ -13104,13 +13104,6 @@ FROM
                       cachedName="itm_ea_qty"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_ea_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[itm_loc_id]"
-                      cachedCodepage="949"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="itm_loc_id"
-                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_loc_id]" />
-                    <inputColumn
                       refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[itm_desc]"
                       cachedDataType="wstr"
                       cachedLength="4000"
@@ -13196,6 +13189,13 @@ FROM
                       cachedPrecision="18"
                       cachedScale="5"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_vol_cft_val]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[itm_wh_loc_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="itm_wh_loc_id"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -13430,27 +13430,6 @@ FROM
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_ea_qty]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_loc_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_loc_id]"
-                      name="itm_loc_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_loc_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -13739,6 +13718,27 @@ FROM
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_wh_loc_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_wh_loc_id]"
+                      name="itm_wh_loc_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -13847,38 +13847,38 @@ FROM
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[file_no]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.file_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="file_no"
+                      cachedName="Data Conversion.file_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[file_no]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[file_no]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.file_no]" />
                     <inputColumn
                       refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[cust_itm_id]"
                       cachedDataType="wstr"
@@ -13888,141 +13888,141 @@ FROM
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[cust_itm_id]"
                       lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cust_itm_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_ut_cd]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_ut_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="itm_ut_cd"
+                      cachedName="Data Conversion.itm_ut_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_ut_cd]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ut_cd]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ut_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_inr_qty]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_inr_qty]"
                       cachedDataType="numeric"
-                      cachedName="itm_inr_qty"
+                      cachedName="Data Conversion.itm_inr_qty"
                       cachedPrecision="10"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_inr_qty]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_inr_qty]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_inr_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_qty]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_qty]"
                       cachedDataType="numeric"
-                      cachedName="itm_qty"
+                      cachedName="Data Conversion.itm_qty"
                       cachedPrecision="10"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_qty]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_qty]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_ea_qty]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_ea_qty]"
                       cachedDataType="numeric"
-                      cachedName="itm_ea_qty"
+                      cachedName="Data Conversion.itm_ea_qty"
                       cachedPrecision="10"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_ea_qty]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ea_qty]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ea_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_loc_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="itm_loc_id"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_loc_id]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_loc_id]" />
-                    <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_desc]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_desc]"
                       cachedDataType="wstr"
                       cachedLength="4000"
-                      cachedName="itm_desc"
+                      cachedName="Data Conversion.itm_desc"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_desc]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_desc]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_desc]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_po_no]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_po_no]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="itm_po_no"
+                      cachedName="Data Conversion.itm_po_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_po_no]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_po_no]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_po_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_len_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_len_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_len_val"
+                      cachedName="Data Conversion.itm_len_val"
                       cachedPrecision="9"
                       cachedScale="2"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_len_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_len_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_len_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_wdt_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_wdt_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_wdt_val"
+                      cachedName="Data Conversion.itm_wdt_val"
                       cachedPrecision="9"
                       cachedScale="2"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_wdt_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wdt_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_wdt_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_hgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_hgt_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_hgt_val"
+                      cachedName="Data Conversion.itm_hgt_val"
                       cachedPrecision="9"
                       cachedScale="2"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_hgt_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_hgt_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_hgt_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_dim_wgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_dim_wgt_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_dim_wgt_val"
+                      cachedName="Data Conversion.itm_dim_wgt_val"
                       cachedPrecision="18"
                       cachedScale="3"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_dim_wgt_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_act_wgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_act_wgt_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_act_wgt_val"
+                      cachedName="Data Conversion.itm_act_wgt_val"
                       cachedPrecision="18"
                       cachedScale="3"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_act_wgt_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_vol_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_vol_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_vol_val"
+                      cachedName="Data Conversion.itm_vol_val"
                       cachedPrecision="18"
                       cachedScale="5"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_vol_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_bgn_bal_qty]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_bgn_bal_qty]"
                       cachedDataType="numeric"
-                      cachedName="itm_bgn_bal_qty"
+                      cachedName="Data Conversion.itm_bgn_bal_qty"
                       cachedPrecision="10"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_bgn_bal_qty]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_bgn_bal_qty]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_bgn_bal_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_endg_bal_qty]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_endg_bal_qty]"
                       cachedDataType="numeric"
-                      cachedName="itm_endg_bal_qty"
+                      cachedName="Data Conversion.itm_endg_bal_qty"
                       cachedPrecision="10"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_endg_bal_qty]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_endg_bal_qty]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_endg_bal_qty]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_dim_wgt_lbs_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_dim_wgt_lbs_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_dim_wgt_lbs_val"
+                      cachedName="Data Conversion.itm_dim_wgt_lbs_val"
                       cachedPrecision="18"
                       cachedScale="3"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_dim_wgt_lbs_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_lbs_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_lbs_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_act_wgt_lbs_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_act_wgt_lbs_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_act_wgt_lbs_val"
+                      cachedName="Data Conversion.itm_act_wgt_lbs_val"
                       cachedPrecision="18"
                       cachedScale="3"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_act_wgt_lbs_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_lbs_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_lbs_val]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_vol_cft_val]"
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_vol_cft_val]"
                       cachedDataType="numeric"
-                      cachedName="itm_vol_cft_val"
+                      cachedName="Data Conversion.itm_vol_cft_val"
                       cachedPrecision="18"
                       cachedScale="5"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_vol_cft_val]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_cft_val]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_cft_val]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[itm_wh_loc_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="itm_wh_loc_id"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_wh_loc_id]"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wh_loc_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -14046,11 +14046,6 @@ FROM
                       dataType="wstr"
                       length="20"
                       name="itm_ut_cd" />
-                    <externalMetadataColumn
-                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_loc_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="itm_loc_id" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
                       dataType="wstr"
@@ -14158,6 +14153,21 @@ FROM
                       name="itm_vol_cft_val"
                       precision="16"
                       scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_wh_loc_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="itm_wh_loc_id" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="itm_id" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="delt_flg" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -14208,7 +14218,7 @@ FROM
 	us_fwd.IVT_RCV_SHP_ITM
 WHERE	
 	cust_itm_id = ? AND
-	itm_loc_id = ? AND
+	itm_wh_loc_id = ? AND
 	itm_ut_cd = ? AND
 	FILE_NO = ? AND
 	CO_CD = ?</property>
@@ -14242,27 +14252,19 @@ WHERE
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cust_itm_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[itm_loc_id]"
+                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[Data Conversion.itm_ut_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="itm_loc_id"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_loc_id]" />
-                    <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[itm_ut_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="itm_ut_cd"
+                      cachedName="Data Conversion.itm_ut_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ut_cd]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ut_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[file_no]"
+                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[Data Conversion.file_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="file_no"
+                      cachedName="Data Conversion.file_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[file_no]" />
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.file_no]" />
                     <inputColumn
                       refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[co_cd]"
                       cachedDataType="wstr"
@@ -14271,6 +14273,14 @@ WHERE
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].Columns[itm_wh_loc_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="itm_wh_loc_id"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wh_loc_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -14573,23 +14583,6 @@ WHERE
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Inputs[Sort Input].Columns[itm_loc_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="itm_loc_id"
-                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_loc_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\ivt_rcv_shp_itm\Sort.Inputs[Sort Input].Columns[itm_desc]"
                       cachedDataType="wstr"
                       cachedLength="4000"
@@ -14819,6 +14812,23 @@ WHERE
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Inputs[Sort Input].Columns[itm_wh_loc_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="itm_wh_loc_id"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_wh_loc_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -14845,11 +14855,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -14859,10 +14869,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -14872,11 +14882,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -14886,10 +14896,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -14899,11 +14909,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[file_no]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.file_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[file_no]"
-                      name="file_no">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.file_no]"
+                      name="Data Conversion.file_no">
                       <properties>
                         <property
                           containsID="true"
@@ -14928,11 +14938,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ut_cd]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ut_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ut_cd]"
-                      name="itm_ut_cd">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ut_cd]"
+                      name="Data Conversion.itm_ut_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -14942,10 +14952,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_inr_qty]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_inr_qty]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_inr_qty]"
-                      name="itm_inr_qty"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_inr_qty]"
+                      name="Data Conversion.itm_inr_qty"
                       precision="10">
                       <properties>
                         <property
@@ -14956,10 +14966,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_qty]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_qty]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_qty]"
-                      name="itm_qty"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_qty]"
+                      name="Data Conversion.itm_qty"
                       precision="10">
                       <properties>
                         <property
@@ -14970,10 +14980,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ea_qty]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ea_qty]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_ea_qty]"
-                      name="itm_ea_qty"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_ea_qty]"
+                      name="Data Conversion.itm_ea_qty"
                       precision="10">
                       <properties>
                         <property
@@ -14984,26 +14994,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_loc_id]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_loc_id]"
-                      name="itm_loc_id"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_loc_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_desc]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_desc]"
                       dataType="wstr"
                       length="4000"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_desc]"
-                      name="itm_desc">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_desc]"
+                      name="Data Conversion.itm_desc">
                       <properties>
                         <property
                           containsID="true"
@@ -15013,11 +15008,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_po_no]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_po_no]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_po_no]"
-                      name="itm_po_no">
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_po_no]"
+                      name="Data Conversion.itm_po_no">
                       <properties>
                         <property
                           containsID="true"
@@ -15027,10 +15022,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_len_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_len_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_len_val]"
-                      name="itm_len_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_len_val]"
+                      name="Data Conversion.itm_len_val"
                       precision="9"
                       scale="2">
                       <properties>
@@ -15042,10 +15037,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wdt_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_wdt_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wdt_val]"
-                      name="itm_wdt_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_wdt_val]"
+                      name="Data Conversion.itm_wdt_val"
                       precision="9"
                       scale="2">
                       <properties>
@@ -15057,10 +15052,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_hgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_hgt_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_hgt_val]"
-                      name="itm_hgt_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_hgt_val]"
+                      name="Data Conversion.itm_hgt_val"
                       precision="9"
                       scale="2">
                       <properties>
@@ -15072,10 +15067,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_val]"
-                      name="itm_dim_wgt_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_val]"
+                      name="Data Conversion.itm_dim_wgt_val"
                       precision="18"
                       scale="3">
                       <properties>
@@ -15087,10 +15082,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_val]"
-                      name="itm_act_wgt_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_val]"
+                      name="Data Conversion.itm_act_wgt_val"
                       precision="18"
                       scale="3">
                       <properties>
@@ -15102,10 +15097,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_val]"
-                      name="itm_vol_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_val]"
+                      name="Data Conversion.itm_vol_val"
                       precision="18"
                       scale="5">
                       <properties>
@@ -15117,10 +15112,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_bgn_bal_qty]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_bgn_bal_qty]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_bgn_bal_qty]"
-                      name="itm_bgn_bal_qty"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_bgn_bal_qty]"
+                      name="Data Conversion.itm_bgn_bal_qty"
                       precision="10">
                       <properties>
                         <property
@@ -15131,10 +15126,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_endg_bal_qty]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_endg_bal_qty]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_endg_bal_qty]"
-                      name="itm_endg_bal_qty"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_endg_bal_qty]"
+                      name="Data Conversion.itm_endg_bal_qty"
                       precision="10">
                       <properties>
                         <property
@@ -15145,10 +15140,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_lbs_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_lbs_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_dim_wgt_lbs_val]"
-                      name="itm_dim_wgt_lbs_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_dim_wgt_lbs_val]"
+                      name="Data Conversion.itm_dim_wgt_lbs_val"
                       precision="18"
                       scale="3">
                       <properties>
@@ -15160,10 +15155,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_lbs_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_lbs_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_act_wgt_lbs_val]"
-                      name="itm_act_wgt_lbs_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_act_wgt_lbs_val]"
+                      name="Data Conversion.itm_act_wgt_lbs_val"
                       precision="18"
                       scale="3">
                       <properties>
@@ -15175,10 +15170,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_cft_val]"
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_cft_val]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_vol_cft_val]"
-                      name="itm_vol_cft_val"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_vol_cft_val]"
+                      name="Data Conversion.itm_vol_cft_val"
                       precision="18"
                       scale="5">
                       <properties>
@@ -15187,6 +15182,21 @@ WHERE
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_vol_cft_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wh_loc_id]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wh_loc_id]"
+                      name="itm_wh_loc_id"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_wh_loc_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -15394,17 +15404,6 @@ FROM
                       name="itm_ea_qty"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_loc_id]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_loc_id]"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_loc_id]"
-                      name="itm_loc_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_desc]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -15542,6 +15541,17 @@ FROM
                       precision="18"
                       scale="5"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_wh_loc_id]"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]"
+                      name="itm_wh_loc_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -15601,12 +15611,6 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_ea_qty]"
                       dataType="i8"
                       name="itm_ea_qty" />
-                    <externalMetadataColumn
-                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_loc_id]"
-                      codePage="949"
-                      dataType="str"
-                      length="20"
-                      name="itm_loc_id" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_desc]"
                       dataType="wstr"
@@ -15680,6 +15684,12 @@ FROM
                       name="itm_vol_cft_val"
                       precision="18"
                       scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_wh_loc_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="itm_wh_loc_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -15731,12 +15741,12 @@ FROM
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_ea_qty]"
                       name="itm_ea_qty" />
                     <outputColumn
-                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_loc_id]"
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_wh_loc_id]"
                       codePage="949"
                       dataType="str"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_loc_id]"
-                      name="itm_loc_id" />
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_wh_loc_id]"
+                      name="itm_wh_loc_id" />
                     <outputColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_desc]"
                       dataType="wstr"
@@ -17831,31 +17841,31 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\mdm_wh"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\ivt_cntc_pson"
           TopLeft="13.2461167648635,70.7818610923803" />
         <NodeLayout
-          Size="110.4,41.6"
+          Size="110,42"
           Id="Package\ivt_loc"
           TopLeft="11.2461167648635,132.78186109238" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_rcv_shp"
           TopLeft="8.24611676486347,199.78186109238" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm"
           TopLeft="171.246116764863,9.78186109238027" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\ivt_doc_mst"
           TopLeft="182.246116764863,69.7818610923803" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\ivt_doc_dtl"
           TopLeft="184.246116764863,141.78186109238" />
         <EdgeLayout
@@ -17885,8 +17895,8 @@ WHERE
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="352.8,256"
-          Size="352.8,299.2"
+          PanelSize="353,256"
+          Size="353,299"
           Id="e3c19fcd-ee0a-4e9d-8dda-d1359c54191e"
           TopLeft="471.166660143269,65.4666573958921">
           <GroupLayout.ChildrenIds>
@@ -18613,23 +18623,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_rcv_shp_itm\Sort"
           TopLeft="245.500009139378,201.166665805711" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
           TopLeft="626.500009139378,200.166665805711" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="189,42"
           Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
           TopLeft="195,59" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_rcv_shp_itm\OLE DB Command"
           TopLeft="391.500009139378,203.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_rcv_shp_itm\Data Conversion"
           TopLeft="215.500009139378,128.166665805711" />
         <EdgeLayout
@@ -18728,6 +18738,19 @@ WHERE
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

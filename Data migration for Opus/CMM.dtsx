@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CMM"
   DTS:PackageType="5"
-  DTS:VersionBuild="499"
-  DTS:VersionGUID="{42E600C0-B60C-4690-9E4A-97F6EC35A3D8}">
+  DTS:VersionBuild="500"
+  DTS:VersionGUID="{FC1B9397-F953-4F5D-B280-1C6938F94F8C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -2144,7 +2144,7 @@ AND his_id = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\cmm_eml_prn_his"
           TopLeft="5.5,5.5" />
         <GroupLayout
@@ -2152,8 +2152,8 @@ AND his_id = ?</property>
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="174.4,102.4"
-          Size="174.4,145.6"
+          PanelSize="174,103"
+          Size="174,146"
           Id="8957267a-32f5-4232-a83f-f402030233e4"
           TopLeft="541.214035095013,168.543217983459">
           <GroupLayout.ChildrenIds>
@@ -2169,23 +2169,23 @@ AND his_id = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\cmm_eml_prn_his\Sort"
           TopLeft="248.833332008785,256.766667892668" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\cmm_eml_prn_his\DELETE"
           TopLeft="387.999993145466,258.500001239777" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\cmm_eml_prn_his\TB_RD_HIS"
           TopLeft="210,97" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\cmm_eml_prn_his\Data Conversion"
           TopLeft="215.5,179.633333946334" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="169,42"
           Id="Package\cmm_eml_prn_his\cmm_eml_prn_his"
           TopLeft="572.1666536861,257.300000991822" />
         <EdgeLayout
@@ -2246,18 +2246,18 @@ AND his_id = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\cmm_eml_prn_his.Paths[OLE DB Command Output]"
-          TopLeft="507.199993145466,278.700001115799">
+          TopLeft="506.999993145466,278.9000011158">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.9666605406339,0"
+              EndConnector="65.1666605406339,0"
               Start="0,0"
-              End="57.4666605406339,0">
+              End="57.6666605406339,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.4666605406339,0" />
+                    End="57.6666605406339,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
