@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ADM"
   DTS:PackageType="5"
-  DTS:VersionBuild="504"
-  DTS:VersionGUID="{730C9717-FDE4-4D14-B818-2588DECE11B0}">
+  DTS:VersionBuild="516"
+  DTS:VersionGUID="{31E1BEAC-D026-4397-82A8-41AF17B942B5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
   case when USE_FLG = '0' then 'N' when USE_FLG = '1' then 'Y' ELSE '' end AS use_flg, 
   EML_CC AS alt_eml_addr_desc, 
   RGST_USRID AS cre_usr_id, 
-'OPUS' AS co_cd, 
+'CLT' AS co_cd, 
   RGST_TMS AS cre_dt, 
   MODI_USRID AS upd_usr_id, 
   MODI_TMS AS upd_dt, 
@@ -81,7 +81,7 @@ SELECT
 , '' AS role_tp_cd
 , 'N' AS is_hard_role
 , NULL AS ord_no
-, 'OPUS' AS co_cd
+, 'CLT' AS co_cd
 , '' AS uq_flg
 , '0' AS prnt_role_id
 FROM	TB_ROLE
@@ -113,12 +113,59 @@ AS        rpt_tp_cd
 ,        RGST_TMS        AS        cre_dt
 ,        MODI_USRID as upd_usr_id
 , MODI_TMS AS        upd_dt
-,'OPUS'	AS	co_cd
+,'CLT'	AS	co_cd
 , '' AS ofc_cd
 , CONCAT('RPT', ROW_NUMBER() OVER (ORDER BY newId())) as rpt_id
 FROM                
         TB_RPT
  ORDER BY RGST_TMS, MRD_KEY
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AFCEA514-71D3-437C-822E-9270B66A3936}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;SELECT &#xA;&#x9;&quot;+ @[$Project::co_cd] +&quot; AS co_cd,&#xA;&#x9;seq_type AS opt_key_cd,&#xA;&#x9;cofig_name AS opt_desc,&#xA;&#x9;pre_fix AS opt_val,&#xA;&#x9;&quot;+ @[$Project::user_id] +&quot; AS cre_usr_id,&#xA;&#x9;&quot;+ @[$Project::user_id] +&quot; AS upd_usr_id,&#xA;&#x9;GETDATE() AS cre_dt,&#xA;&#x9;GETDATE() AS upd_dt&#xA;FROM &#xA;(&#xA;&#x9;SELECT &#xA;&#x9;seq_type &#xA;&#x9;,'SYSTEM OFFICE' AS cofig_name&#xA;&#x9;,pre_fix&#xA;  FROM&#xA;       TB_SEQ             &#xA;    WHERE SEQ_TYPE = 'SYS_OFC_CD'&#xA;UNION ALL    &#xA;SELECT &#xA;&#x9;seq_type &#xA;&#x9;,'ACCOUNTING BEGINNING DATE' AS cofig_name&#xA;&#x9;,CASE WHEN IsNull(pre_fix, '') != '' THEN convert(varchar, CONVERT(DATETIME , CONCAT(pre_fix,'01'), 103), 101) ELSE '' END AS pre_fix&#xA;  FROM&#xA;       TB_SEQ             &#xA;    WHERE SEQ_TYPE = 'BEG_YYYYMM'    &#xA;UNION ALL    &#xA;SELECT &#xA;&#x9;seq_type &#xA;&#x9;,'YEAR CLEAR MONTH' AS cofig_name&#xA;&#x9;,pre_fix&#xA;  FROM&#xA;       TB_SEQ             &#xA;    WHERE SEQ_TYPE = 'YEAR_CLS_MM' &#xA;) A&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="adm_sys_opt">
+      <DTS:VariableValue
+        DTS:DataType="8">
+SELECT 
+	'CLT' AS co_cd,
+	seq_type AS opt_key_cd,
+	cofig_name AS opt_desc,
+	pre_fix AS opt_val,
+	'admin' AS cre_usr_id,
+	'admin' AS upd_usr_id,
+	GETDATE() AS cre_dt,
+	GETDATE() AS upd_dt
+FROM 
+(
+	SELECT 
+	seq_type 
+	,'SYSTEM OFFICE' AS cofig_name
+	,pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'SYS_OFC_CD'
+UNION ALL    
+SELECT 
+	seq_type 
+	,'ACCOUNTING BEGINNING DATE' AS cofig_name
+	,CASE WHEN IsNull(pre_fix, '') != '' THEN convert(varchar, CONVERT(DATETIME , CONCAT(pre_fix,'01'), 103), 101) ELSE '' END AS pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'BEG_YYYYMM'    
+UNION ALL    
+SELECT 
+	seq_type 
+	,'YEAR CLEAR MONTH' AS cofig_name
+	,pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'YEAR_CLS_MM' 
+) A
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -147,8 +194,8 @@ CASE
 		ELSE use_flg
 	END AS	act_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
-'OPUS' as acss_co_cd,
+'CLT' as co_cd,
+'CLT' as acss_co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -180,7 +227,7 @@ SELECT
   RGST_USRID AS cre_usr_id, 
   MODI_TMS AS upd_dt, 
   MODI_USRID AS upd_usr_id, 
-  'OPUS' AS co_cd, 
+  'CLT' AS co_cd, 
   COALESCE(RGST_USRID,'') AS usr_id, 
   '' AS scrn_id, 
   '' AS trsp_mod_cd 
@@ -192,7 +239,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{A2D08D08-0391-4039-8511-858730CEBB74}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;select&#xA;substring(ip_seq, 1, 3) as ip_addr_seq,&#xA;ip_addr,&#xA;fr_date as exp_fm_dt,&#xA;to_date as exp_to_dt,&#xA;usrid as usr_id,&#xA;rgst_usrid as cre_usr_id,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt&#xA;from tb_ip_addr&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;select&#xA;substring(ip_seq, 1, 3) as ip_addr_seq,&#xA;ip_addr,&#xA;CASE WHEN IsNull(fr_date, '') != ''  THEN replace(convert(varchar, CONVERT(DATETIME , fr_date, 103), 104),'.','') ELSE '' END AS exp_fm_dt,&#xA;CASE WHEN IsNull(to_date, '') != '' THEN replace(convert(varchar, CONVERT(DATETIME , to_date, 103), 104),'.','') ELSE '' END AS exp_to_dt,&#xA;usrid as usr_id,&#xA;rgst_usrid as cre_usr_id,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt&#xA;from tb_ip_addr&#xA;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="adm_usr_ip_addr">
@@ -201,15 +248,16 @@ FROM
 select
 substring(ip_seq, 1, 3) as ip_addr_seq,
 ip_addr,
-fr_date as exp_fm_dt,
-to_date as exp_to_dt,
+CASE WHEN IsNull(fr_date, '') != ''  THEN replace(convert(varchar, CONVERT(DATETIME , fr_date, 103), 104),'.','') ELSE '' END AS exp_fm_dt,
+CASE WHEN IsNull(to_date, '') != '' THEN replace(convert(varchar, CONVERT(DATETIME , to_date, 103), 104),'.','') ELSE '' END AS exp_to_dt,
 usrid as usr_id,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'CLT' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt
 from tb_ip_addr
+
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -240,7 +288,7 @@ end AS cre_dt
 end AS upd_dt
 ,'admin' AS cre_usr_id
 ,'admin' AS upd_usr_id
-,'OPUS' AS co_cd
+,'CLT' AS co_cd
 FROM			
 	TB_SHT_HDR_INFO		
 ORDER BY USR_ID, SCRN_ID
@@ -6124,6 +6172,1220 @@ and rpt_id = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\adm_sys_opt"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1C1EE7ED-61B8-466F-B014-1CBFF08642AF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="adm_sys_opt"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\adm_sys_opt\adm_sys_opt"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="adm_sys_opt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."adm_sys_opt"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\adm_sys_opt\adm_sys_opt.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[opt_key_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="opt_key_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_key_cd]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_key_cd]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[opt_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="opt_desc"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_desc]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_desc]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].Columns[opt_val]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="opt_val"
+                      externalMetadataColumnId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_val]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_val]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_key_cd]"
+                      dataType="wstr"
+                      length="30"
+                      name="opt_key_cd" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_desc]"
+                      dataType="wstr"
+                      length="4000"
+                      name="opt_desc" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      name="opt_ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input].ExternalColumns[opt_val]"
+                      dataType="wstr"
+                      length="250"
+                      name="opt_val" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_sys_opt\adm_sys_opt.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\adm_sys_opt.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\adm_sys_opt.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\adm_sys_opt.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\adm_sys_opt\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[opt_key_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="opt_key_cd"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_key_cd]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[opt_desc]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="opt_desc"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_desc]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[opt_val]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="opt_val"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_val]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_key_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_key_cd]"
+                      name="opt_key_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_key_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="25"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_desc]"
+                      name="opt_desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_desc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_val]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_val]"
+                      name="opt_val"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\adm_sys_opt\DELETE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DELETE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM us_fwd.adm_sys_opt
+WHERE co_cd = ?
+AND opt_key_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\adm_sys_opt\DELETE.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].Columns[opt_key_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="opt_key_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_key_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\adm_sys_opt\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\adm_sys_opt\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="co_cd"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[opt_key_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="opt_key_cd"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_key_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[opt_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="opt_desc"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_desc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\adm_sys_opt\Sort.Inputs[Sort Input].Columns[opt_val]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="opt_val"
+                      lineageId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_sys_opt\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      name="co_cd"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_key_cd]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_key_cd]"
+                      name="opt_key_cd"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_key_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_desc]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_desc]"
+                      name="opt_desc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_desc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_val]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\adm_sys_opt\Sort.Outputs[Sort Output].Columns[opt_val]"
+                      name="opt_val">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output].Columns[opt_val]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\adm_sys_opt\TB_SEQ"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_SEQ"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	'OPUS' AS co_cd,
+	seq_type AS opt_key_cd,
+	cofig_name AS opt_desc,
+	pre_fix AS opt_val,
+	'admin' AS cre_usr_id,
+	'admin' AS upd_usr_id,
+	GETDATE() AS cre_dt,
+	GETDATE() AS upd_dt
+FROM 
+(
+	SELECT 
+	seq_type 
+	,'SYSTEM OFFICE' AS cofig_name
+	,pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'SYS_OFC_CD'
+UNION ALL    
+SELECT 
+	seq_type 
+	,'ACCOUNTING BEGINNING DATE' AS cofig_name
+	,CASE WHEN pre_fix != null or pre_fix != '' THEN convert(varchar, CONVERT(DATETIME , CONCAT(pre_fix,'01'), 103), 101) ELSE '' END AS pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'BEG_YYYYMM'    
+UNION ALL    
+SELECT 
+	seq_type 
+	,'YEAR CLEAR MONTH' AS cofig_name
+	,pre_fix
+  FROM
+       TB_SEQ             
+    WHERE SEQ_TYPE = 'YEAR_CLS_MM' 
+) A</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::adm_sys_opt</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\adm_sys_opt\TB_SEQ.Connections[OleDbConnection]"
+                  connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="5"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="5"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      length="3"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_key_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_key_cd]"
+                      length="50"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_key_cd]"
+                      name="opt_key_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_desc]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_desc]"
+                      length="25"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_desc]"
+                      name="opt_desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_val]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_val]"
+                      length="30"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[opt_val]"
+                      name="opt_val"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_key_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      name="opt_key_cd" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_desc]"
+                      codePage="949"
+                      dataType="str"
+                      length="25"
+                      name="opt_desc" />
+                    <externalMetadataColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_val]"
+                      codePage="949"
+                      dataType="str"
+                      length="30"
+                      name="opt_val" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      name="co_cd" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_key_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_key_cd]"
+                      name="opt_key_cd" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_desc]"
+                      codePage="949"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_desc]"
+                      name="opt_desc" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_val]"
+                      codePage="949"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[opt_val]"
+                      name="opt_val" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\adm_sys_opt.Paths[Data Conversion Output]"
+              endId="Package\adm_sys_opt\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\adm_sys_opt\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\adm_sys_opt.Paths[OLE DB Command Output]"
+              endId="Package\adm_sys_opt\adm_sys_opt.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\adm_sys_opt\DELETE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\adm_sys_opt.Paths[OLE DB Source Output]"
+              endId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\adm_sys_opt.Paths[Sort Output]"
+              endId="Package\adm_sys_opt\DELETE.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\adm_sys_opt\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\adm_usr_dept_team"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -11505,40 +12767,41 @@ WHERE
                       cachedName="Data Conversion.co_cd"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.co_cd]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.co_cd]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_usr_id]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_dt]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_usr_id]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_dt]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="Data Conversion.usr_id"
+                      cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[usr_id]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.usr_id]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_id]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.ip_addr]"
                       cachedDataType="wstr"
@@ -11546,7 +12809,7 @@ WHERE
                       cachedName="Data Conversion.ip_addr"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[ip_addr]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.ip_addr]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.ip_addr_seq]"
                       cachedDataType="wstr"
@@ -11554,21 +12817,21 @@ WHERE
                       cachedName="Data Conversion.ip_addr_seq"
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[ip_addr_seq]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr_seq]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.ip_addr_seq]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.exp_fm_dt]"
                       cachedDataType="wstr"
                       cachedLength="8"
                       cachedName="Data Conversion.exp_fm_dt"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[exp_fm_dt]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_fm_dt]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.exp_fm_dt]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].Columns[Data Conversion.exp_to_dt]"
                       cachedDataType="wstr"
                       cachedLength="8"
                       cachedName="Data Conversion.exp_to_dt"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input].ExternalColumns[exp_to_dt]"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_to_dt]" />
+                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.exp_to_dt]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -11671,7 +12934,7 @@ WHERE
                       refId="Package\adm_usr_ip_addr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -11709,14 +12972,14 @@ WHERE
                       refId="Package\adm_usr_ip_addr\Data Conversion.Inputs[Data Conversion Input].Columns[exp_fm_dt]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="8"
+                      cachedLength="8000"
                       cachedName="exp_fm_dt"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[exp_fm_dt]" />
                     <inputColumn
                       refId="Package\adm_usr_ip_addr\Data Conversion.Inputs[Data Conversion Input].Columns[exp_to_dt]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="8"
+                      cachedLength="8000"
                       cachedName="exp_to_dt"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[exp_to_dt]" />
                     <inputColumn
@@ -12132,629 +13395,6 @@ AND co_cd = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr"
-              componentClassID="Microsoft.SSISODBCSrc"
-              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="ODBC Source"
-              name="fwd_adm_usr_ip_addr"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="The name of the table to be fetched."
-                  expressionType="Notify"
-                  name="TableName">"us_fwd"."adm_usr_ip_addr"</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
-usr_id
-,ip_addr
-,ip_addr_seq
-,co_cd
-FROM
-adm_usr_ip_addr</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specify the number of rows fetched per batch."
-                  expressionType="Notify"
-                  name="BatchSize">1000</property>
-                <property
-                  dataType="System.Int32"
-                  description="Determines the chunk size allocation for LOB columns"
-                  expressionType="Notify"
-                  name="LobChunkSize">32768</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
-                  expressionType="Notify"
-                  name="ExposeCharColumnsAsUnicode">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
-                  expressionType="Notify"
-                  name="StatementTimeout">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="The code page to use when code page information is unavailable from the data source."
-                  expressionType="Notify"
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Int32"
-                  description="The method used for fetching data."
-                  expressionType="Notify"
-                  name="FetchMethod">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="The ODBC C data type for binding numeric data."
-                  expressionType="Notify"
-                  name="BindNumericAs">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
-                  expressionType="Notify"
-                  name="BindCharColumnsAs">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="The mode used to access the database."
-                  expressionType="Notify"
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Connections[ODBCConnection]"
-                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
-                  description="The ODBC runtime connection used to access the database."
-                  name="ODBCConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output]"
-                  errorRowDisposition="FailComponent"
-                  name="ODBC Source Output"
-                  truncationRowDisposition="FailComponent">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[co_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[co_cd]"
-                      name="co_cd" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[usr_id]"
-                      name="usr_id" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr]"
-                      length="100"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr]"
-                      name="ip_addr" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr_seq]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr_seq]"
-                      name="ip_addr_seq"
-                      precision="3" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[exp_fm_dt]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_fm_dt]"
-                      length="14"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[exp_fm_dt]"
-                      name="exp_fm_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[exp_to_dt]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_to_dt]"
-                      length="14"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[exp_to_dt]"
-                      name="exp_to_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[cre_dt]"
-                      name="cre_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[cre_usr_id]"
-                      name="cre_usr_id" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[upd_dt]"
-                      name="upd_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[upd_usr_id]"
-                      name="upd_usr_id" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      dataType="wstr"
-                      length="20"
-                      name="co_cd" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="usr_id" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr]"
-                      dataType="wstr"
-                      length="100"
-                      name="ip_addr" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr_seq]"
-                      dataType="numeric"
-                      name="ip_addr_seq"
-                      precision="3" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_fm_dt]"
-                      dataType="wstr"
-                      length="14"
-                      name="exp_fm_dt" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_to_dt]"
-                      dataType="wstr"
-                      length="14"
-                      name="exp_to_dt" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      name="cre_dt" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="cre_usr_id" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      name="upd_dt" />
-                    <externalMetadataColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      name="upd_usr_id" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output]"
-                  isErrorOut="true"
-                  name="ODBC Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[co_cd]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[co_cd]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[co_cd]"
-                      name="co_cd" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[usr_id]"
-                      name="usr_id" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ip_addr]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr]"
-                      length="100"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ip_addr]"
-                      name="ip_addr" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ip_addr_seq]"
-                      dataType="numeric"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[ip_addr_seq]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ip_addr_seq]"
-                      name="ip_addr_seq"
-                      precision="3" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[exp_fm_dt]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_fm_dt]"
-                      length="14"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[exp_fm_dt]"
-                      name="exp_fm_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[exp_to_dt]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[exp_to_dt]"
-                      length="14"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[exp_to_dt]"
-                      name="exp_to_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_dt]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[cre_dt]"
-                      name="cre_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[cre_usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[cre_usr_id]"
-                      name="cre_usr_id" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_dt]"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[upd_dt]"
-                      name="upd_dt" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].ExternalColumns[upd_usr_id]"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[upd_usr_id]"
-                      name="upd_usr_id" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\adm_usr_ip_addr\Merge Join 1"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Data Conversion.co_cd"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.co_cd]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.ip_addr_seq]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="Data Conversion.ip_addr_seq"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.ip_addr_seq]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.ip_addr]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Data Conversion.ip_addr"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.ip_addr]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="Data Conversion.usr_id"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_id]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="Data Conversion.cre_usr_id"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Data Conversion.cre_dt"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="Data Conversion.upd_usr_id"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Data Conversion.upd_dt"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.exp_fm_dt]"
-                      cachedDataType="wstr"
-                      cachedLength="8"
-                      cachedName="Data Conversion.exp_fm_dt"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.exp_fm_dt]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.exp_to_dt]"
-                      cachedDataType="wstr"
-                      cachedLength="8"
-                      cachedName="Data Conversion.exp_to_dt"
-                      lineageId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output].Columns[Data Conversion.exp_to_dt]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[co_cd]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input].Columns[usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="usr_id"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[usr_id]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input].Columns[ip_addr]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="ip_addr"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr]" />
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input].Columns[ip_addr_seq]"
-                      cachedDataType="numeric"
-                      cachedName="ip_addr_seq"
-                      cachedPrecision="3"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr_seq]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_usr_id]"
-                      name="Data Conversion.cre_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.co_cd]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.co_cd]"
-                      name="Data Conversion.co_cd"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.co_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.cre_dt]"
-                      name="Data Conversion.cre_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_usr_id]"
-                      name="Data Conversion.upd_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.upd_dt]"
-                      name="Data Conversion.upd_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr_seq]"
-                      dataType="wstr"
-                      length="6"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr_seq]"
-                      name="Data Conversion.ip_addr_seq"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.ip_addr_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.ip_addr]"
-                      name="Data Conversion.ip_addr"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.ip_addr]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_fm_dt]"
-                      dataType="wstr"
-                      length="8"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_fm_dt]"
-                      name="Data Conversion.exp_fm_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.exp_fm_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_to_dt]"
-                      dataType="wstr"
-                      length="8"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.exp_to_dt]"
-                      name="Data Conversion.exp_to_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.exp_to_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output].Columns[Data Conversion.usr_id]"
-                      name="Data Conversion.usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\adm_usr_ip_addr\Multicast 1"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast 1">
-              <inputs>
-                <input
-                  refId="Package\adm_usr_ip_addr\Multicast 1.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\adm_usr_ip_addr\Multicast 1.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\adm_usr_ip_addr\Multicast 1.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\adm_usr_ip_addr\Multicast 1.Outputs[Multicast Output 2]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\adm_usr_ip_addr\Multicast 1.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\adm_usr_ip_addr\Multicast 1.Outputs[Multicast Output 3]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\adm_usr_ip_addr\Multicast 1.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\adm_usr_ip_addr\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -13103,172 +13743,6 @@ adm_usr_ip_addr</property>
               </outputs>
             </component>
             <component
-              refId="Package\adm_usr_ip_addr\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[co_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input].Columns[usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="usr_id"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[usr_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input].Columns[ip_addr]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="ip_addr"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input].Columns[ip_addr_seq]"
-                      cachedDataType="numeric"
-                      cachedName="ip_addr_seq"
-                      cachedPrecision="3"
-                      lineageId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr_seq]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[co_cd]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[co_cd]"
-                      name="co_cd"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[co_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[usr_id]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[usr_id]"
-                      name="usr_id"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr]"
-                      name="ip_addr"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr_seq]"
-                      dataType="numeric"
-                      lineageId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output].Columns[ip_addr_seq]"
-                      name="ip_addr_seq"
-                      precision="3"
-                      sortKeyPosition="4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output].Columns[ip_addr_seq]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\adm_usr_ip_addr\TB_IP_ADDR"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -13347,7 +13821,7 @@ adm_usr_ip_addr</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -13409,7 +13883,7 @@ adm_usr_ip_addr</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[exp_fm_dt]"
-                      length="8"
+                      length="8000"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[exp_fm_dt]"
                       name="exp_fm_dt"
                       truncationRowDisposition="FailComponent" />
@@ -13420,7 +13894,7 @@ adm_usr_ip_addr</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[exp_to_dt]"
-                      length="8"
+                      length="8000"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[exp_to_dt]"
                       name="exp_to_dt"
                       truncationRowDisposition="FailComponent" />
@@ -13448,7 +13922,7 @@ adm_usr_ip_addr</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -13480,13 +13954,13 @@ adm_usr_ip_addr</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[exp_fm_dt]"
                       codePage="949"
                       dataType="str"
-                      length="8"
+                      length="8000"
                       name="exp_fm_dt" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[exp_to_dt]"
                       codePage="949"
                       dataType="str"
-                      length="8"
+                      length="8000"
                       name="exp_to_dt" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[usr_id]"
@@ -13519,14 +13993,14 @@ adm_usr_ip_addr</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[exp_fm_dt]"
                       codePage="949"
                       dataType="str"
-                      length="8"
+                      length="8000"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[exp_fm_dt]"
                       name="exp_fm_dt" />
                     <outputColumn
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[exp_to_dt]"
                       codePage="949"
                       dataType="str"
-                      length="8"
+                      length="8000"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[exp_to_dt]"
                       name="exp_to_dt" />
                     <outputColumn
@@ -13547,7 +14021,7 @@ adm_usr_ip_addr</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -13592,25 +14066,10 @@ adm_usr_ip_addr</property>
               name="Data Conversion Output"
               startId="Package\adm_usr_ip_addr\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\adm_usr_ip_addr.Paths[Merge Join Output]"
+              refId="Package\adm_usr_ip_addr.Paths[OLE DB Command Output]"
               endId="Package\adm_usr_ip_addr\adm_usr_ip_addr.Inputs[ODBC Destination Input]"
-              name="Merge Join Output"
-              startId="Package\adm_usr_ip_addr\Merge Join 1.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\adm_usr_ip_addr.Paths[Multicast Output 1]"
-              endId="Package\adm_usr_ip_addr\DELETE.Inputs[OLE DB Command Input]"
-              name="Multicast Output 1"
-              startId="Package\adm_usr_ip_addr\Multicast 1.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\adm_usr_ip_addr.Paths[Multicast Output 2]"
-              endId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Left Input]"
-              name="Multicast Output 2"
-              startId="Package\adm_usr_ip_addr\Multicast 1.Outputs[Multicast Output 2]" />
-            <path
-              refId="Package\adm_usr_ip_addr.Paths[ODBC Source Output]"
-              endId="Package\adm_usr_ip_addr\Sort 1.Inputs[Sort Input]"
-              name="ODBC Source Output"
-              startId="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr.Outputs[ODBC Source Output]" />
+              name="OLE DB Command Output"
+              startId="Package\adm_usr_ip_addr\DELETE.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\adm_usr_ip_addr.Paths[OLE DB Source Output]"
               endId="Package\adm_usr_ip_addr\Data Conversion.Inputs[Data Conversion Input]"
@@ -13618,14 +14077,9 @@ adm_usr_ip_addr</property>
               startId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\adm_usr_ip_addr.Paths[Sort Output]"
-              endId="Package\adm_usr_ip_addr\Multicast 1.Inputs[Multicast Input 1]"
+              endId="Package\adm_usr_ip_addr\DELETE.Inputs[OLE DB Command Input]"
               name="Sort Output"
               startId="Package\adm_usr_ip_addr\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\adm_usr_ip_addr.Paths[Sort Output1]"
-              endId="Package\adm_usr_ip_addr\Merge Join 1.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\adm_usr_ip_addr\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -14993,7 +15447,7 @@ and cfg_no = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
           Size="142.4,41.6"
           Id="Package\adm_alt_mst"
@@ -15022,6 +15476,10 @@ and cfg_no = ?</property>
           Size="174.4,41.6"
           Id="Package\adm_usr_dept_team"
           TopLeft="194.69999165535,122.240742690711" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\adm_sys_opt"
+          TopLeft="389.033304391968,10.8333337190416" />
         <GroupLayout
           Text="ADM"
           ParentId="Package"
@@ -15039,6 +15497,7 @@ and cfg_no = ?</property>
             <s:String>Package\adm_usr_ip_addr</s:String>
             <s:String>Package\adm_usr_tbl_cfg</s:String>
             <s:String>Package\adm_usr_dept_team</s:String>
+            <s:String>Package\adm_sys_opt</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
@@ -15048,7 +15507,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_alt_mst">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172.8,41.6"
           Id="Package\adm_alt_mst\OLE DB Command"
@@ -15100,7 +15559,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15134,7 +15595,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15168,7 +15631,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15202,7 +15667,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15233,7 +15700,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_role">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\adm_role\Data Conversion"
@@ -15285,7 +15752,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15307,7 +15776,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15341,7 +15812,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15363,7 +15836,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15394,7 +15869,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_rpt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="121.6,41.6"
           Id="Package\adm_rpt\DELETE"
@@ -15446,7 +15921,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15468,7 +15945,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15490,7 +15969,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15512,7 +15993,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15543,7 +16026,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_usr_dept_team">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="148,41.6"
           Id="Package\adm_usr_dept_team\adm_usr_team"
@@ -15623,7 +16106,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15645,7 +16130,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15667,7 +16154,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15689,7 +16178,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15711,7 +16202,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15733,7 +16226,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15755,7 +16250,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15789,7 +16286,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15823,7 +16322,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15845,7 +16346,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15867,7 +16370,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15937,7 +16442,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_usr_eml_stup">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\adm_usr_eml_stup\TB_EML_CTNT"
@@ -15989,7 +16494,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16023,7 +16530,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16057,7 +16566,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16079,7 +16590,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16110,15 +16623,11 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_usr_ip_addr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\adm_usr_ip_addr\Merge Join 1"
-          TopLeft="375,454" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\adm_usr_ip_addr\DELETE"
-          TopLeft="325.374989693364,215.816667536232" />
+          TopLeft="258.374989693364,269.816667536232" />
         <NodeLayout
           Size="99.2,41.6"
           Id="Package\adm_usr_ip_addr\Sort"
@@ -16128,93 +16637,13 @@ and cfg_no = ?</property>
           Id="Package\adm_usr_ip_addr\TB_IP_ADDR"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="132,41.6"
-          Id="Package\adm_usr_ip_addr\Multicast 1"
-          TopLeft="119,348" />
-        <NodeLayout
-          Size="108,41.6"
-          Id="Package\adm_usr_ip_addr\Sort 1"
-          TopLeft="579,188" />
-        <NodeLayout
           Size="160.8,41.6"
           Id="Package\adm_usr_ip_addr\Data Conversion"
           TopLeft="73,126" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\adm_usr_ip_addr\adm_usr_ip_addr"
-          TopLeft="374.999980529151,552.383335728513" />
-        <NodeLayout
-          Size="188,41.6"
-          Id="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr"
-          TopLeft="529.666666799121,3.19999983469646" />
-        <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[Sort Output1]"
-          TopLeft="633,230">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-164.666666666667,224"
-              Start="0,0"
-              End="-164.666666666667,216.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,128.902506963788" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,128.902506963788"
-                    Point2="0,132.902506963788"
-                    Point3="-4,132.902506963788" />
-                  <mssgle:LineSegment
-                    End="-160.666666666667,132.902506963788" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-160.666666666667,132.902506963788"
-                    Point2="-164.666666666667,132.902506963788"
-                    Point3="-164.666666666667,136.902506963788" />
-                  <mssgle:LineSegment
-                    End="-164.666666666667,216.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[Sort Output]"
-          TopLeft="150.5,284">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="34.5,64"
-              Start="0,0"
-              End="34.5,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28"
-                    Point2="0,32"
-                    Point3="4,32" />
-                  <mssgle:LineSegment
-                    End="30.5,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="30.5,32"
-                    Point2="34.5,32"
-                    Point3="34.5,36" />
-                  <mssgle:LineSegment
-                    End="34.5,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="438.999980529151,257.383335728513" />
         <EdgeLayout
           Id="Package\adm_usr_ip_addr.Paths[OLE DB Source Output]"
           TopLeft="153.00000089407,51.9999998966853">
@@ -16238,142 +16667,6 @@ and cfg_no = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[ODBC Source Output]"
-          TopLeft="623.666666799121,45.1999998346965">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.333333200879,142.800000165304"
-              Start="0,0"
-              End="9.333333200879,135.300000165304">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.4000000826518" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67.4000000826518"
-                    Point2="0,71.4000000826518"
-                    Point3="4,71.4000000826518" />
-                  <mssgle:LineSegment
-                    End="5.333333200879,71.4000000826518" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.333333200879,71.4000000826518"
-                    Point2="9.333333200879,71.4000000826518"
-                    Point3="9.333333200879,75.4000000826518" />
-                  <mssgle:LineSegment
-                    End="9.333333200879,135.300000165304" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[Multicast Output 2]"
-          TopLeft="185,390">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="261,64"
-              Start="0,0"
-              End="261,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28"
-                    Point2="0,32"
-                    Point3="4,32" />
-                  <mssgle:LineSegment
-                    End="257,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="257,32"
-                    Point2="261,32"
-                    Point3="261,36" />
-                  <mssgle:LineSegment
-                    End="261,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[Multicast Output 1]"
-          TopLeft="205.666666666667,348">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="184.708323026697,-90.183332463768"
-              Start="0,0"
-              End="184.708323026697,-82.683332463768">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-32.7213569313546" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-32.7213569313546"
-                    Point2="0,-36.7213569313546"
-                    Point3="4,-36.7213569313546" />
-                  <mssgle:LineSegment
-                    End="180.708323026697,-36.7213569313546" />
-                  <mssgle:CubicBezierSegment
-                    Point1="180.708323026697,-36.7213569313546"
-                    Point2="184.708323026697,-36.7213569313546"
-                    Point3="184.708323026697,-40.7213569313546" />
-                  <mssgle:LineSegment
-                    End="184.708323026697,-82.683332463768" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\adm_usr_ip_addr.Paths[Merge Join Output]"
-          TopLeft="446,496">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11.499980529151,56.383335728513"
-              Start="0,0"
-              End="11.499980529151,48.883335728513">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.1916678642565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.1916678642565"
-                    Point2="0,28.1916678642565"
-                    Point3="4,28.1916678642565" />
-                  <mssgle:LineSegment
-                    End="7.499980529151,28.1916678642565" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.499980529151,28.1916678642565"
-                    Point2="11.499980529151,28.1916678642565"
-                    Point3="11.499980529151,32.1916678642565" />
-                  <mssgle:LineSegment
-                    End="11.499980529151,48.883335728513" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\adm_usr_ip_addr.Paths[Data Conversion Output]"
           TopLeft="152,168">
           <EdgeLayout.Curve>
@@ -16387,6 +16680,74 @@ and cfg_no = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_usr_ip_addr.Paths[Sort Output]"
+          TopLeft="200.2,262.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.174989693364,27.816667536232"
+              Start="0,0"
+              End="50.674989693364,27.816667536232">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.087494846682,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.087494846682,0"
+                    Point2="29.087494846682,0"
+                    Point3="29.087494846682,4" />
+                  <mssgle:LineSegment
+                    End="29.087494846682,23.816667536232" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.087494846682,23.816667536232"
+                    Point2="29.087494846682,27.816667536232"
+                    Point3="33.087494846682,27.816667536232" />
+                  <mssgle:LineSegment
+                    End="50.674989693364,27.816667536232" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_usr_ip_addr.Paths[OLE DB Command Output]"
+          TopLeft="387.974989693364,290.616667536232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.024990835787,-12.433331807719"
+              Start="0,0"
+              End="43.524990835787,-12.433331807719">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.5124954178935,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.5124954178935,0"
+                    Point2="25.5124954178935,0"
+                    Point3="25.5124954178935,-4" />
+                  <mssgle:LineSegment
+                    End="25.5124954178935,-8.43333180771901" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.5124954178935,-8.43333180771901"
+                    Point2="25.5124954178935,-12.433331807719"
+                    Point3="29.5124954178935,-12.433331807719" />
+                  <mssgle:LineSegment
+                    End="43.524990835787,-12.433331807719" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16419,24 +16780,11 @@ and cfg_no = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\adm_usr_ip_addr\fwd_adm_usr_ip_addr">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\adm_usr_tbl_cfg">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172.8,41.6"
           Id="Package\adm_usr_tbl_cfg\OLE DB Command"
@@ -16488,7 +16836,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16510,7 +16860,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16532,7 +16884,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16554,7 +16908,9 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16578,6 +16934,154 @@ and cfg_no = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\adm_sys_opt">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\adm_sys_opt\Sort"
+          TopLeft="103.333329227236,191.833334814178" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\adm_sys_opt\Data Conversion"
+          TopLeft="63.3333308166928,121.633334256279" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\adm_sys_opt\TB_SEQ"
+          TopLeft="63.6666639182312,48.5333337190416" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\adm_sys_opt\DELETE"
+          TopLeft="261.666656268969,185.766668099298" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\adm_sys_opt\adm_sys_opt"
+          TopLeft="476.666648917729,189.766667892669" />
+        <EdgeLayout
+          Id="Package\adm_sys_opt.Paths[OLE DB Source Output]"
+          TopLeft="123.266663918231,90.1333337190416">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.0666668984616,31.500000537237"
+              Start="0,0"
+              End="18.0666668984616,24.000000537237">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.7500002686185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.7500002686185"
+                    Point2="0,15.7500002686185"
+                    Point3="4,15.7500002686185" />
+                  <mssgle:LineSegment
+                    End="14.0666668984616,15.7500002686185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.0666668984616,15.7500002686185"
+                    Point2="18.0666668984616,15.7500002686185"
+                    Point3="18.0666668984616,19.7500002686185" />
+                  <mssgle:LineSegment
+                    End="18.0666668984616,24.000000537237" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_sys_opt.Paths[Data Conversion Output]"
+          TopLeft="141.333330816693,163.233334256279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.7999984105433,28.6000005578993"
+              Start="0,0"
+              End="10.7999984105433,21.1000005578993">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.3000002789497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.3000002789497"
+                    Point2="0,14.3000002789497"
+                    Point3="4,14.3000002789497" />
+                  <mssgle:LineSegment
+                    End="6.79999841054325,14.3000002789497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.79999841054325,14.3000002789497"
+                    Point2="10.7999984105433,14.3000002789497"
+                    Point3="10.7999984105433,18.3000002789497" />
+                  <mssgle:LineSegment
+                    End="10.7999984105433,21.1000005578993" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_sys_opt.Paths[Sort Output]"
+          TopLeft="200.933329227236,209.600001456738">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.733327041733,0"
+              Start="0,0"
+              End="53.233327041733,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.233327041733,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_sys_opt.Paths[OLE DB Command Output]"
+          TopLeft="380.866656268969,208.566667995983">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.79999264876,0"
+              Start="0,0"
+              End="88.29999264876,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="88.29999264876,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\adm_sys_opt\TB_SEQ">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

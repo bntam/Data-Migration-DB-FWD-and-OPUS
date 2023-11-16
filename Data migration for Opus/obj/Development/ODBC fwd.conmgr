@@ -5,10 +5,10 @@
   DTS:CreationName="ODBC">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_migrate;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+      DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
       <DTS:Password
         DTS:Name="pwd"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAADMOhNG+OLfE+pgXFNB5LdnfFw0u9IYGDwecYPZPK+7UAAAAAAOgAAAAAIAACAAAACoNNfhXLlp8dHt8gMwaC6TvHP1XmmtWhvJiFY6bT3tQnAAAADvqZpDwccYQJzkg5qx+0489bOwmBqdT7zwA+cSdFzU3antmd/CRUDd2342AJB+vBDIX+8BcDKH4rcZRvDW1Ls6d2PUjfWVK6pCReBVcH8pQoLNtlnnOTQ6x+nDwjPBmIWD+mxTkk6akIncH3k/YObIQAAAAH2Uuz1CguLjfwBU4NYaUuRwK8zZ9FMGoYWtwNUNItz7fjuPFzAHlal/auCJM9qFH3S6SluGhPaX6RQMzMge/m8=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARS/styMbZkuU2E2ewxHLDwAAAAACAAAAAAAQZgAAAAEAACAAAAB9Ja8ajmZdE6eAZ6EGaEXc29OmzTVSBY1ffa7KGIQt/gAAAAAOgAAAAAIAACAAAABxvW4aokUOe9xNLpgwn7IXHRP5vWW+Zep929VJ+WPwP3AAAACm0AwKV5jgTqparfSAbwStg08Run81bwv+lonAGKUAFVXzJkODeUMN93Omb+2cwfn/BcgJ3KNe6idQppSdtAR69+CvwSC2NsybkXIpR7xPgV7yzE6bX+DT94q2DzKuqGsx5WcsBlH7KUKfFhZzJA2KQAAAAJ8glJSU8QX25t7CcetOCRsZ8H5KtG9vCCG/kPt7kL3vrLC3fALkybFnwCWqJ8FP9WuQLvyxc5HnkCS7PTRD5u8=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
