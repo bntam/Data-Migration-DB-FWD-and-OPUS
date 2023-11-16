@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ADM"
   DTS:PackageType="5"
-  DTS:VersionBuild="516"
-  DTS:VersionGUID="{31E1BEAC-D026-4397-82A8-41AF17B942B5}">
+  DTS:VersionBuild="518"
+  DTS:VersionGUID="{03219BFC-D512-417F-8873-6DBBEF773BC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -8271,6 +8271,192 @@ SELECT
               </outputs>
             </component>
             <component
+              refId="Package\adm_usr_dept_team\adm_usr_role"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="adm_usr_role"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."adm_usr_role"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\adm_usr_dept_team\adm_usr_role.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Data Conversion.usr_id"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[usr_id]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.role_id]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Data Conversion.role_id"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[role_id]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.role_id]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Data Conversion.cre_usr_id"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Data Conversion.cre_dt"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Data Conversion.upd_usr_id"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Data Conversion.upd_dt"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].Columns[Data Conversion.co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Data Conversion.co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[role_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="role_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_usr_dept_team\adm_usr_role.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_usr_dept_team\adm_usr_role.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_usr_dept_team\adm_usr_role.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_usr_dept_team\adm_usr_role.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\adm_usr_dept_team\adm_usr_team"
               componentClassID="Microsoft.SSISODBCDst"
               contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -8481,7 +8667,7 @@ SELECT
                       refId="Package\adm_usr_dept_team\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -8614,7 +8800,7 @@ SELECT
                       refId="Package\adm_usr_dept_team\Data Conversion.Inputs[Data Conversion Input].Columns[acss_co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="acss_co_cd"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[acss_co_cd]" />
                   </inputColumns>
@@ -9647,6 +9833,144 @@ AND acss_co_cd = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\adm_usr_dept_team\DELETE 4"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DELETE 4"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM us_fwd.adm_usr_role
+WHERE co_cd = ?
+AND usr_id = ?
+AND role_id = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\adm_usr_dept_team\DELETE 4.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].Columns[Data Conversion.co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Data Conversion.co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.co_cd]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].Columns[Data Conversion.usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Data Conversion.usr_id"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_id]" />
+                    <inputColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].Columns[Data Conversion.role_id]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Data Conversion.role_id"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\adm_usr_dept_team\Sort.Outputs[Sort Output].Columns[Data Conversion.role_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="nText"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\adm_usr_dept_team\Multicast"
               componentClassID="Microsoft.Multicast"
               contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -9690,9 +10014,16 @@ AND acss_co_cd = ?</property>
                 </output>
                 <output
                   refId="Package\adm_usr_dept_team\Multicast.Outputs[Multicast Output 5]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 5"
+                  synchronousInputId="Package\adm_usr_dept_team\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\adm_usr_dept_team\Multicast.Outputs[Multicast Output 6]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 6"
                   synchronousInputId="Package\adm_usr_dept_team\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
@@ -10498,7 +10829,7 @@ AND acss_co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -10711,7 +11042,7 @@ AND acss_co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[acss_co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[acss_co_cd]"
                       name="acss_co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -10728,7 +11059,7 @@ AND acss_co_cd = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -10841,7 +11172,7 @@ AND acss_co_cd = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[acss_co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="acss_co_cd" />
                   </externalMetadataColumns>
                 </output>
@@ -10930,14 +11261,14 @@ AND acss_co_cd = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[acss_co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[acss_co_cd]"
                       name="acss_co_cd" />
                     <outputColumn
@@ -11042,6 +11373,11 @@ AND acss_co_cd = ?</property>
               name="Multicast Output 4"
               startId="Package\adm_usr_dept_team\Multicast.Outputs[Multicast Output 4]" />
             <path
+              refId="Package\adm_usr_dept_team.Paths[Multicast Output 5]"
+              endId="Package\adm_usr_dept_team\DELETE 4.Inputs[OLE DB Command Input]"
+              name="Multicast Output 5"
+              startId="Package\adm_usr_dept_team\Multicast.Outputs[Multicast Output 5]" />
+            <path
               refId="Package\adm_usr_dept_team.Paths[OLE DB Command Output]"
               endId="Package\adm_usr_dept_team\adm_usr.Inputs[ODBC Destination Input]"
               name="OLE DB Command Output"
@@ -11061,6 +11397,11 @@ AND acss_co_cd = ?</property>
               endId="Package\adm_usr_dept_team\adm_usr_co.Inputs[ODBC Destination Input]"
               name="OLE DB Command Output"
               startId="Package\adm_usr_dept_team\DELETE 3.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\adm_usr_dept_team.Paths[OLE DB Command Output4]"
+              endId="Package\adm_usr_dept_team\adm_usr_role.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\adm_usr_dept_team\DELETE 4.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\adm_usr_dept_team.Paths[OLE DB Source Output]"
               endId="Package\adm_usr_dept_team\Data Conversion.Inputs[Data Conversion Input]"
@@ -15700,7 +16041,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_role">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\adm_role\Data Conversion"
@@ -15752,9 +16093,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15776,9 +16115,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15812,9 +16149,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15836,9 +16171,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16026,7 +16359,7 @@ and cfg_no = ?</property>
     design-time-name="Package\adm_usr_dept_team">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="148,41.6"
           Id="Package\adm_usr_dept_team\adm_usr_team"
@@ -16106,9 +16439,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16130,9 +16461,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16154,9 +16483,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16178,9 +16505,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16202,9 +16527,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16226,9 +16549,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16250,9 +16571,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16286,9 +16605,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16322,9 +16639,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16346,9 +16661,7 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16370,9 +16683,83 @@ and cfg_no = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\adm_usr_dept_team\adm_usr_role"
+          TopLeft="604.5,193.9" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\adm_usr_dept_team\DELETE 4"
+          TopLeft="407.5,229.653051643192" />
+        <EdgeLayout
+          Id="Package\adm_usr_dept_team.Paths[Multicast Output 5]"
+          TopLeft="288.633333333333,294.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="182.466666666667,-23.2469483568075"
+              Start="0,0"
+              End="182.466666666667,-15.7469483568075">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-5.48352330317447" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-5.48352330317447"
+                    Point2="0,-9.48352330317447"
+                    Point3="4,-9.48352330317447" />
+                  <mssgle:LineSegment
+                    End="178.466666666667,-9.48352330317447" />
+                  <mssgle:CubicBezierSegment
+                    Point1="178.466666666667,-9.48352330317447"
+                    Point2="182.466666666667,-9.48352330317447"
+                    Point3="182.466666666667,-13.4835233031745" />
+                  <mssgle:LineSegment
+                    End="182.466666666667,-15.7469483568075" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_usr_dept_team.Paths[OLE DB Command Output4]"
+          TopLeft="534.7,250.453051643192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.8,-35.7530516431925"
+              Start="0,0"
+              End="62.3,-35.7530516431925">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.9,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.9,0"
+                    Point2="34.9,0"
+                    Point3="34.9,-4" />
+                  <mssgle:LineSegment
+                    End="34.9,-31.7530516431925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.9,-31.7530516431925"
+                    Point2="34.9,-35.7530516431925"
+                    Point3="38.9,-35.7530516431925" />
+                  <mssgle:LineSegment
+                    End="62.3,-35.7530516431925" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16641,7 +17028,7 @@ and cfg_no = ?</property>
           Id="Package\adm_usr_ip_addr\Data Conversion"
           TopLeft="73,126" />
         <NodeLayout
-          Size="164.8,41.6"
+          Size="159.2,41.6"
           Id="Package\adm_usr_ip_addr\adm_usr_ip_addr"
           TopLeft="438.999980529151,257.383335728513" />
         <EdgeLayout
@@ -17082,6 +17469,19 @@ and cfg_no = ?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\adm_usr_dept_team\adm_usr_role">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
