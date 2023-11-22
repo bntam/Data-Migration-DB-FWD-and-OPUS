@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IVT"
   DTS:PackageType="5"
-  DTS:VersionBuild="500"
-  DTS:VersionGUID="{C949F23D-A856-43B9-AA5B-31479078BE92}">
+  DTS:VersionBuild="502"
+  DTS:VersionGUID="{131C763D-3DA8-4DE2-904B-EF9454BC0C7E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -20,7 +20,7 @@
       DTS:CreationName=""
       DTS:DTSID="{B4190A5B-9CC5-4E3D-87AB-833767446F96}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;CNTC_PSON_SEQ&#x9;AS&#x9;cntc_pson_seq&#xA;&#x9;,&#x9;LEFT(CNTC_PSON_NM,50)&#x9;AS&#x9;cntc_pson_nm&#xA;&#x9;,&#x9;LEFT(CNTC_PSON_EML_ADDR,400)&#x9;AS&#x9;cntc_pson_eml_addr&#xA;&#x9;,&#x9;CNTC_PSON_PHN_NO&#x9;AS&#x9;cntc_pson_phn_no&#xA;&#x9;,&#x9;CNTC_PSON_FAX_NO&#x9;AS&#x9;cntc_pson_fax_no&#xA;&#x9;,&#x9;LEFT(CNTC_PSON_RMK,500)&#x9;AS&#x9;cntc_pson_rmk&#xA;&#x9;,&#x9;RCV_EML_FLG&#x9;AS&#x9;rcv_eml_flg&#xA;&#x9;,&#x9;REP_FLG&#x9;AS&#x9;rep_flg&#xA;&#x9;,&#x9;DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_CNTC_PSON&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;CNTC_PSON_SEQ&#x9;AS&#x9;cntc_pson_seq&#xA;&#x9;,&#x9;CNTC_PSON_NM&#x9;AS&#x9;cntc_pson_nm&#xA;&#x9;,&#x9;CNTC_PSON_EML_ADDR&#x9;AS&#x9;cntc_pson_eml_addr&#xA;&#x9;,&#x9;CNTC_PSON_PHN_NO&#x9;AS&#x9;cntc_pson_phn_no&#xA;&#x9;,&#x9;CNTC_PSON_FAX_NO&#x9;AS&#x9;cntc_pson_fax_no&#xA;&#x9;,&#x9;CNTC_PSON_RMK&#x9;AS&#x9;cntc_pson_rmk&#xA;&#x9;,&#x9;RCV_EML_FLG&#x9;AS&#x9;rcv_eml_flg&#xA;&#x9;,&#x9;REP_FLG&#x9;AS&#x9;rep_flg&#xA;&#x9;,&#x9;DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_CNTC_PSON&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_cntc_pson">
@@ -29,11 +29,11 @@
 SELECT				
 		WH_CD	AS	wh_cd
 	,	CNTC_PSON_SEQ	AS	cntc_pson_seq
-	,	LEFT(CNTC_PSON_NM,50)	AS	cntc_pson_nm
-	,	LEFT(CNTC_PSON_EML_ADDR,400)	AS	cntc_pson_eml_addr
+	,	CNTC_PSON_NM	AS	cntc_pson_nm
+	,	CNTC_PSON_EML_ADDR	AS	cntc_pson_eml_addr
 	,	CNTC_PSON_PHN_NO	AS	cntc_pson_phn_no
 	,	CNTC_PSON_FAX_NO	AS	cntc_pson_fax_no
-	,	LEFT(CNTC_PSON_RMK,500)	AS	cntc_pson_rmk
+	,	CNTC_PSON_RMK	AS	cntc_pson_rmk
 	,	RCV_EML_FLG	AS	rcv_eml_flg
 	,	REP_FLG	AS	rep_flg
 	,	DELT_FLG	AS	delt_flg
@@ -77,7 +77,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{8939CE30-0332-49F0-8F7D-5F1A6741D8F1}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WM_DOC_SEQ&#x9;AS&#x9;doc_seq&#xA;&#x9;,&#x9;DOC_REF_NO&#x9;AS&#x9;doc_ref_no&#xA;&#x9;,&#x9;OFC_CD&#x9;AS&#x9;ofc_cd&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;STS_CD&#x9;AS&#x9;sts_cd&#xA;&#x9;,&#x9;LEFT(MBL_NO,20)&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;LEFT(HBL_NO,20)&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;CUST_NM&#x9;AS&#x9;cust_nm&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;LEFT(CMDT_CD,10)&#x9;AS&#x9;cmdt_cd&#xA;&#x9;,&#x9;LEFT(CMDT_NM,100)&#x9;AS&#x9;cmdt_nm&#xA;&#x9;,&#x9;LOC_NM&#x9;AS&#x9;loc_nm&#xA;&#x9;,&#x9;CNTR_INFO&#x9;AS&#x9;cntr_rmk&#xA;&#x9;,&#x9;POST_DT&#x9;AS&#x9;pst_dt&#xA;&#x9;,&#x9;INT_MEMO&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;EXT_MEMO&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;SLS_USRID&#x9;AS&#x9;sls_usr_id&#xA;&#x9;,&#x9;SLS_OFC_CD&#x9;AS&#x9;sls_ofc_cd&#xA;&#x9;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;,&#x9;CURR_CD&#x9;AS&#x9;curr_cd&#xA;&#x9;,&#x9;ISSUED_BY&#x9;AS&#x9;iss_by_id&#xA;&#x9;,&#x9;AR_CHK&#x9;AS&#x9;ar_flg&#xA;&#x9;,&#x9;AP_CHK&#x9;AS&#x9;ap_flg&#xA;&#x9;,&#x9;DC_CHK&#x9;AS&#x9;dc_flg&#xA;&#x9;,&#x9;CTRB_OFC_CD&#x9;AS&#x9;ctrb_ofc_cd&#xA;&#x9;,&#x9;CTRB_DEPT_CD&#x9;AS&#x9;ctrb_dept_cd&#xA;&#x9;,&#x9;CTRB_RATIO_YN&#x9;AS&#x9;ctrb_rto_flg&#xA;&#x9;,&#x9;CTRB_MGN&#x9;AS&#x9;cm_val&#xA;&#x9;,&#x9;SYS_CD&#x9;AS&#x9;sys_no&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;TB_WM_DOC_MST&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WM_DOC_SEQ&#x9;AS&#x9;doc_seq&#xA;&#x9;,&#x9;DOC_REF_NO&#x9;AS&#x9;doc_ref_no&#xA;&#x9;,&#x9;OFC_CD&#x9;AS&#x9;ofc_cd&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;STS_CD&#x9;AS&#x9;sts_cd&#xA;&#x9;,&#x9;MBL_NO&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;HBL_NO&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;CUST_NM&#x9;AS&#x9;cust_nm&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;CMDT_CD&#x9;AS&#x9;cmdt_cd&#xA;&#x9;,&#x9;CMDT_NM&#x9;AS&#x9;cmdt_nm&#xA;&#x9;,&#x9;LOC_NM&#x9;AS&#x9;loc_nm&#xA;&#x9;,&#x9;CNTR_INFO&#x9;AS&#x9;cntr_rmk&#xA;&#x9;,&#x9;POST_DT&#x9;AS&#x9;pst_dt&#xA;&#x9;,&#x9;INT_MEMO&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;EXT_MEMO&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;SLS_USRID&#x9;AS&#x9;sls_usr_id&#xA;&#x9;,&#x9;SLS_OFC_CD&#x9;AS&#x9;sls_ofc_cd&#xA;&#x9;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;,&#x9;CURR_CD&#x9;AS&#x9;curr_cd&#xA;&#x9;,&#x9;ISSUED_BY&#x9;AS&#x9;iss_by_id&#xA;&#x9;,&#x9;AR_CHK&#x9;AS&#x9;ar_flg&#xA;&#x9;,&#x9;AP_CHK&#x9;AS&#x9;ap_flg&#xA;&#x9;,&#x9;DC_CHK&#x9;AS&#x9;dc_flg&#xA;&#x9;,&#x9;CTRB_OFC_CD&#x9;AS&#x9;ctrb_ofc_cd&#xA;&#x9;,&#x9;CTRB_DEPT_CD&#x9;AS&#x9;ctrb_dept_cd&#xA;&#x9;,&#x9;CTRB_RATIO_YN&#x9;AS&#x9;ctrb_rto_flg&#xA;&#x9;,&#x9;CTRB_MGN&#x9;AS&#x9;cm_val&#xA;&#x9;,&#x9;SYS_CD&#x9;AS&#x9;sys_no&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;TB_WM_DOC_MST&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_doc_mst">
@@ -89,13 +89,13 @@ SELECT
 	,	OFC_CD	AS	ofc_cd
 	,	WH_CD	AS	wh_cd
 	,	STS_CD	AS	sts_cd
-	,	LEFT(MBL_NO,20)	AS	mst_bl_no
-	,	LEFT(HBL_NO,20)	AS	hus_bl_no
+	,	MBL_NO	AS	mst_bl_no
+	,	HBL_NO	AS	hus_bl_no
 	,	CUST_CD	AS	cust_cd
 	,	CUST_NM	AS	cust_nm
 	,	CUST_REF_NO	AS	cust_ref_no
-	,	LEFT(CMDT_CD,10)	AS	cmdt_cd
-	,	LEFT(CMDT_NM,100)	AS	cmdt_nm
+	,	CMDT_CD	AS	cmdt_cd
+	,	CMDT_NM	AS	cmdt_nm
 	,	LOC_NM	AS	loc_nm
 	,	CNTR_INFO	AS	cntr_rmk
 	,	POST_DT	AS	pst_dt
@@ -128,7 +128,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{7BB07A75-E5CB-431B-B588-898F2A3D1841}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;LOC_ID&#x9;AS&#x9;loc_id&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;LOC_CD&#x9;AS&#x9;loc_cd&#xA;&#x9;,&#x9;LOC_LINE_NO&#x9;AS&#x9;loc_line_no&#xA;&#x9;,&#x9;LOC_ROW_NO&#x9;AS&#x9;loc_row_no&#xA;&#x9;,&#x9;LOC_FLR_NO&#x9;AS&#x9;loc_flr_no&#xA;&#x9;,&#x9;LEFT(LOC_TP_CD,8)&#x9;AS&#x9;loc_tp_cd&#xA;&#x9;,&#x9;LOC_SPC_TP_CD&#x9;AS&#x9;loc_spc_tp_cd&#xA;&#x9;,&#x9;LOC_MAX_VOL&#x9;AS&#x9;loc_max_vol_val&#xA;&#x9;,&#x9;LOC_MAX_WGT&#x9;AS&#x9;loc_max_wgt_val&#xA;&#x9;,&#x9;USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;LOC_RMK&#x9;AS&#x9;loc_rmk&#xA;&#x9;,&#x9;LOC_MAX_VOL_CFT&#x9;AS&#x9;loc_max_vol_cft_val&#xA;&#x9;,&#x9;LOC_MAX_WGT_LBS&#x9;AS&#x9;loc_max_wgt_lbs_val&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_LOC&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;LOC_ID&#x9;AS&#x9;loc_id&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;LOC_CD&#x9;AS&#x9;loc_cd&#xA;&#x9;,&#x9;LOC_LINE_NO&#x9;AS&#x9;loc_line_no&#xA;&#x9;,&#x9;LOC_ROW_NO&#x9;AS&#x9;loc_row_no&#xA;&#x9;,&#x9;LOC_FLR_NO&#x9;AS&#x9;loc_flr_no&#xA;&#x9;,&#x9;LOC_TP_CD&#x9;AS&#x9;loc_tp_cd&#xA;&#x9;,&#x9;LOC_SPC_TP_CD&#x9;AS&#x9;loc_spc_tp_cd&#xA;&#x9;,&#x9;LOC_MAX_VOL&#x9;AS&#x9;loc_max_vol_val&#xA;&#x9;,&#x9;LOC_MAX_WGT&#x9;AS&#x9;loc_max_wgt_val&#xA;&#x9;,&#x9;USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;LOC_RMK&#x9;AS&#x9;loc_rmk&#xA;&#x9;,&#x9;LOC_MAX_VOL_CFT&#x9;AS&#x9;loc_max_vol_cft_val&#xA;&#x9;,&#x9;LOC_MAX_WGT_LBS&#x9;AS&#x9;loc_max_wgt_lbs_val&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_LOC&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_loc">
@@ -141,7 +141,7 @@ SELECT
 	,	LOC_LINE_NO	AS	loc_line_no
 	,	LOC_ROW_NO	AS	loc_row_no
 	,	LOC_FLR_NO	AS	loc_flr_no
-	,	LEFT(LOC_TP_CD,8)	AS	loc_tp_cd
+	,	LOC_TP_CD	AS	loc_tp_cd
 	,	LOC_SPC_TP_CD	AS	loc_spc_tp_cd
 	,	LOC_MAX_VOL	AS	loc_max_vol_val
 	,	LOC_MAX_WGT	AS	loc_max_wgt_val
@@ -162,7 +162,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{18A4C035-F5A0-4043-BE36-4FCA0B2ACE0F}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;RCV_SHP_TP_CD&#x9;AS&#x9;rcv_shp_tp_cd&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;SPLR_RCVR_CD&#x9;AS&#x9;splr_rcvr_cd&#xA;&#x9;,&#x9;TRKR_CD&#x9;AS&#x9;trkr_cd&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;LEFT(INTER_RMK,4000)&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;LEFT(XTER_RMK,4000)&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;RCV_SHP_FLG&#x9;AS&#x9;rcv_shp_flg&#xA;&#x9;,&#x9;OPR_CD&#x9;AS&#x9;opr_cd&#xA;&#x9;,&#x9;BKG_DT&#x9;AS&#x9;bkg_dt&#xA;&#x9;,&#x9;ESTM_RCV_DT&#x9;AS&#x9;estm_rcv_dt&#xA;&#x9;,&#x9;RCV_SHP_DT&#x9;AS&#x9;rcv_shp_dt&#xA;&#x9;,&#x9;PLT_NO&#x9;AS&#x9;plt_no&#xA;&#x9;,&#x9;CNTR_NO&#x9;AS&#x9;cntr_no&#xA;&#x9;,&#x9;MST_BL_NO&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;HUS_BL_NO&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;CUST_OFC_CD&#x9;AS&#x9;cust_ofc_cd&#xA;&#x9;,&#x9;SPLR_RCVR_OFC_CD&#x9;AS&#x9;splr_rcvr_ofc_cd&#xA;&#x9;,&#x9;TRKR_OFC_CD&#x9;AS&#x9;trkr_ofc_cd&#xA;&#x9;,&#x9;OPR_OFC_CD&#x9;AS&#x9;opr_ofc_cd&#xA;&#x9;,&#x9;LEN_UT_CD&#x9;AS&#x9;len_ut_cd&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;RCV_SHP_TP_CD&#x9;AS&#x9;rcv_shp_tp_cd&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;SPLR_RCVR_CD&#x9;AS&#x9;splr_rcvr_cd&#xA;&#x9;,&#x9;TRKR_CD&#x9;AS&#x9;trkr_cd&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;INTER_RMK&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;XTER_RMK&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;RCV_SHP_FLG&#x9;AS&#x9;rcv_shp_flg&#xA;&#x9;,&#x9;OPR_CD&#x9;AS&#x9;opr_cd&#xA;&#x9;,&#x9;BKG_DT&#x9;AS&#x9;bkg_dt&#xA;&#x9;,&#x9;ESTM_RCV_DT&#x9;AS&#x9;estm_rcv_dt&#xA;&#x9;,&#x9;RCV_SHP_DT&#x9;AS&#x9;rcv_shp_dt&#xA;&#x9;,&#x9;PLT_NO&#x9;AS&#x9;plt_no&#xA;&#x9;,&#x9;CNTR_NO&#x9;AS&#x9;cntr_no&#xA;&#x9;,&#x9;MST_BL_NO&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;HUS_BL_NO&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;CUST_OFC_CD&#x9;AS&#x9;cust_ofc_cd&#xA;&#x9;,&#x9;SPLR_RCVR_OFC_CD&#x9;AS&#x9;splr_rcvr_ofc_cd&#xA;&#x9;,&#x9;TRKR_OFC_CD&#x9;AS&#x9;trkr_ofc_cd&#xA;&#x9;,&#x9;OPR_OFC_CD&#x9;AS&#x9;opr_ofc_cd&#xA;&#x9;,&#x9;LEN_UT_CD&#x9;AS&#x9;len_ut_cd&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_rcv_shp">
@@ -177,8 +177,8 @@ SELECT
 	,	SPLR_RCVR_CD	AS	splr_rcvr_cd
 	,	TRKR_CD	AS	trkr_cd
 	,	CUST_REF_NO	AS	cust_ref_no
-	,	LEFT(INTER_RMK,4000)	AS	inter_rmk
-	,	LEFT(XTER_RMK,4000)	AS	xter_rmk
+	,	INTER_RMK	AS	inter_rmk
+	,	XTER_RMK	AS	xter_rmk
 	,	RCV_SHP_FLG	AS	rcv_shp_flg
 	,	OPR_CD	AS	opr_cd
 	,	BKG_DT	AS	bkg_dt
@@ -206,7 +206,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{20506538-9D59-4A24-A01F-C3FBBB702A44}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_wh_loc_id&#xA;&#x9;,&#x9;LEFT(ITM_DESC,4000)&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_wh_loc_id&#xA;&#x9;,&#x9;ITM_DESC&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_rcv_shp_itm">
@@ -221,7 +221,7 @@ SELECT
 	,	ITM_CTN_QTY	AS	itm_qty
 	,	ITM_EA_QTY	AS	itm_ea_qty
 	,	ITM_LOC_ID	AS	itm_wh_loc_id
-	,	LEFT(ITM_DESC,4000)	AS	itm_desc
+	,	ITM_DESC	AS	itm_desc
 	,	ITM_PO_NO	AS	itm_po_no
 	,	ITM_LEN	AS	itm_len_val
 	,	ITM_WDT	AS	itm_wdt_val
@@ -246,7 +246,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{A2062F2F-E40B-4B49-B489-E79AC92F35DD}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;, LEFT(WH_NM,50)&#x9;AS&#x9;wh_nm&#xA;&#x9;, LEFT(WH_ALS_NM,50)&#x9;AS&#x9;wh_als_nm&#xA;&#x9;, LEFT(WH_ADDR,500)&#x9;AS&#x9;wh_addr&#xA;&#x9;, LEFT(WH_CTY_NM,50)&#x9;AS&#x9;wh_cty_nm&#xA;&#x9;, WH_STE_CD&#x9;AS&#x9;wh_ste_cd&#xA;&#x9;, WH_ZIP_CD&#x9;AS&#x9;wh_zip_cd&#xA;&#x9;, WH_PHN_NO&#x9;AS&#x9;wh_phn_no&#xA;&#x9;, WH_FAX_NO&#x9;AS&#x9;wh_fax_no&#xA;&#x9;, LEFT(WH_RMK,500)&#x9;AS&#x9;wh_rmk&#xA;&#x9;, USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;, CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;, CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;, UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, &quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;WHM_WH&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;, WH_NM&#x9;AS&#x9;wh_nm&#xA;&#x9;, WH_ALS_NM&#x9;AS&#x9;wh_als_nm&#xA;&#x9;, WH_ADDR&#x9;AS&#x9;wh_addr&#xA;&#x9;, WH_CTY_NM&#x9;AS&#x9;wh_cty_nm&#xA;&#x9;, WH_STE_CD&#x9;AS&#x9;wh_ste_cd&#xA;&#x9;, WH_ZIP_CD&#x9;AS&#x9;wh_zip_cd&#xA;&#x9;, WH_PHN_NO&#x9;AS&#x9;wh_phn_no&#xA;&#x9;, WH_FAX_NO&#x9;AS&#x9;wh_fax_no&#xA;&#x9;, WH_RMK&#x9;AS&#x9;wh_rmk&#xA;&#x9;, USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;, CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;, CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;, UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, &quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;WHM_WH&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="mdm_wh">
@@ -254,15 +254,15 @@ FROM
         DTS:DataType="8">
 SELECT			
 	WH_CD	AS	wh_cd
-	, LEFT(WH_NM,50)	AS	wh_nm
-	, LEFT(WH_ALS_NM,50)	AS	wh_als_nm
-	, LEFT(WH_ADDR,500)	AS	wh_addr
-	, LEFT(WH_CTY_NM,50)	AS	wh_cty_nm
+	, WH_NM	AS	wh_nm
+	, WH_ALS_NM	AS	wh_als_nm
+	, WH_ADDR	AS	wh_addr
+	, WH_CTY_NM	AS	wh_cty_nm
 	, WH_STE_CD	AS	wh_ste_cd
 	, WH_ZIP_CD	AS	wh_zip_cd
 	, WH_PHN_NO	AS	wh_phn_no
 	, WH_FAX_NO	AS	wh_fax_no
-	, LEFT(WH_RMK,500)	AS	wh_rmk
+	, WH_RMK	AS	wh_rmk
 	, USE_FLG	AS	use_flg
 	, CRE_DT	AS	cre_dt
 	, CRE_USR_ID	AS	cre_usr_id
@@ -3856,7 +3856,7 @@ FROM
                       refId="Package\ivt_doc_mst\Data Conversion.Inputs[Data Conversion Input].Columns[cmdt_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="200"
+                      cachedLength="300"
                       cachedName="cmdt_nm"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[cmdt_nm]" />
                     <inputColumn
@@ -6885,7 +6885,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[cmdt_nm]"
-                      length="200"
+                      length="300"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[cmdt_nm]"
                       name="cmdt_nm"
                       truncationRowDisposition="FailComponent" />
@@ -7195,7 +7195,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[cmdt_nm]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       name="cmdt_nm" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[loc_nm]"
@@ -7397,7 +7397,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[cmdt_nm]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[cmdt_nm]"
                       name="cmdt_nm" />
                     <outputColumn
@@ -17841,31 +17841,31 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="124,42"
+          Size="124,41.6"
           Id="Package\mdm_wh"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="146,42"
+          Size="145.6,41.6"
           Id="Package\ivt_cntc_pson"
           TopLeft="13.2461167648635,70.7818610923803" />
         <NodeLayout
-          Size="110,42"
+          Size="110.4,41.6"
           Id="Package\ivt_loc"
           TopLeft="11.2461167648635,132.78186109238" />
         <NodeLayout
-          Size="135,42"
+          Size="135.2,41.6"
           Id="Package\ivt_rcv_shp"
           TopLeft="8.24611676486347,199.78186109238" />
         <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\ivt_rcv_shp_itm"
           TopLeft="171.246116764863,9.78186109238027" />
         <NodeLayout
-          Size="138,42"
+          Size="137.6,41.6"
           Id="Package\ivt_doc_mst"
           TopLeft="182.246116764863,69.7818610923803" />
         <NodeLayout
-          Size="132,42"
+          Size="132,41.6"
           Id="Package\ivt_doc_dtl"
           TopLeft="184.246116764863,141.78186109238" />
         <EdgeLayout
@@ -17895,8 +17895,8 @@ WHERE
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="353,256"
-          Size="353,299"
+          PanelSize="352.8,256"
+          Size="352.8,299.2"
           Id="e3c19fcd-ee0a-4e9d-8dda-d1359c54191e"
           TopLeft="471.166660143269,65.4666573958921">
           <GroupLayout.ChildrenIds>
@@ -18623,69 +18623,25 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99,42"
+          Size="99.2,41.6"
           Id="Package\ivt_rcv_shp_itm\Sort"
           TopLeft="245.500009139378,201.166665805711" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
-          TopLeft="626.500009139378,200.166665805711" />
-        <NodeLayout
-          Size="189,42"
+          Size="188.8,41.6"
           Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
           TopLeft="195,59" />
         <NodeLayout
-          Size="173,42"
+          Size="155.2,41.6"
+          Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
+          TopLeft="626.500009139378,200.166665805711" />
+        <NodeLayout
+          Size="172.8,41.6"
           Id="Package\ivt_rcv_shp_itm\OLE DB Command"
           TopLeft="391.500009139378,203.166665805711" />
         <NodeLayout
-          Size="161,42"
+          Size="160.8,41.6"
           Id="Package\ivt_rcv_shp_itm\Data Conversion"
           TopLeft="215.500009139378,128.166665805711" />
-        <EdgeLayout
-          Id="Package\ivt_rcv_shp_itm.Paths[OLE DB Command Output]"
-          TopLeft="564.500009139378,222.666665805711">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62,0"
-              Start="0,0"
-              End="54.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ivt_rcv_shp_itm.Paths[Data Conversion Output]"
-          TopLeft="295.500009139378,170.166665805711">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\ivt_rcv_shp_itm.Paths[Sort Output]"
           TopLeft="344.500009139378,223.166665805711">
@@ -18730,17 +18686,53 @@ WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ivt_rcv_shp_itm.Paths[OLE DB Command Output]"
+          TopLeft="564.500009139378,222.666665805711">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62,0"
+              Start="0,0"
+              End="54.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ivt_rcv_shp_itm.Paths[Data Conversion Output]"
+          TopLeft="295.500009139378,170.166665805711">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm">
     <Properties>
@@ -18751,6 +18743,14 @@ WHERE
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

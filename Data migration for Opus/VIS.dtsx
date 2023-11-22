@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="503"
-  DTS:VersionGUID="{D58E3DBB-ECB2-4068-83E6-73DC212B54E3}">
+  DTS:VersionBuild="505"
+  DTS:VersionGUID="{FB1BBF99-D9E4-4349-AE10-E645E508572F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
 ,	DELT_FLG	AS	delt_flg
-, 'CLT' AS co_cd
+, 'OPUS' AS co_cd
 FROM			
 	VIS_ROLE
 </DTS:VariableValue>
@@ -50,7 +50,7 @@ FROM
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
-SELECT 'CLT' AS	co_cd
+SELECT 'OPUS' AS	co_cd
 	, USRID	AS	usr_id
 	, TRDP_CD	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
@@ -66,7 +66,7 @@ FROM VIS_USR_TRDP
       DTS:CreationName=""
       DTS:DTSID="{DEDDCC61-3F90-4899-A5F0-4CC09313C042}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;USRID&#x9;AS&#x9;usr_id&#xA;,&#x9;ROLE_CD&#x9;&#x9;role_cd&#xA;,&#x9;LEFT(USR_NM,100)&#x9;AS&#x9;usr_nm&#xA;,&#x9;LEFT(EML,100)&#x9;AS&#x9;eml_addr&#xA;,&#x9;LEFT(PHN,30)&#x9;AS&#x9;phn_no&#xA;,&#x9;PWD&#x9;AS&#x9;usr_pwd&#xA;,&#x9;CASE&#xA;    WHEN USE_FLG = 'N' THEN 'Y'    &#xA;    WHEN USE_FLG = 'Y' THEN 'N'&#xA;    ELSE 'N'&#xA;&#x9;END&#x9;AS&#x9;delt_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;VIS_USR&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;USRID&#x9;AS&#x9;usr_id&#xA;,&#x9;ROLE_CD&#x9;&#x9;role_cd&#xA;,&#x9;USR_NM&#x9;AS&#x9;usr_nm&#xA;,&#x9;EML&#x9;AS&#x9;eml_addr&#xA;,&#x9;PHN&#x9;AS&#x9;phn_no&#xA;,&#x9;PWD&#x9;AS&#x9;usr_pwd&#xA;,&#x9;CASE&#xA;    WHEN USE_FLG = 'N' THEN 'Y'    &#xA;    WHEN USE_FLG = 'Y' THEN 'N'&#xA;    ELSE 'N'&#xA;&#x9;END&#x9;AS&#x9;delt_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;VIS_USR&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="vis_usr_vis_usr_role">
@@ -75,9 +75,9 @@ FROM VIS_USR_TRDP
 SELECT			
 	USRID	AS	usr_id
 ,	ROLE_CD		role_cd
-,	LEFT(USR_NM,100)	AS	usr_nm
-,	LEFT(EML,100)	AS	eml_addr
-,	LEFT(PHN,30)	AS	phn_no
+,	USR_NM	AS	usr_nm
+,	EML	AS	eml_addr
+,	PHN	AS	phn_no
 ,	PWD	AS	usr_pwd
 ,	CASE
     WHEN USE_FLG = 'N' THEN 'Y'    
@@ -88,7 +88,7 @@ SELECT
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
-, 'CLT' AS co_cd
+, 'OPUS' AS co_cd
 FROM			
 	VIS_USR
 </DTS:VariableValue>
@@ -2399,21 +2399,21 @@ WHERE
                       refId="Package\vis_usr + vis_usr_role\Data Conversion.Inputs[Data Conversion Input].Columns[usr_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="200"
+                      cachedLength="300"
                       cachedName="usr_nm"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[usr_nm]" />
                     <inputColumn
                       refId="Package\vis_usr + vis_usr_role\Data Conversion.Inputs[Data Conversion Input].Columns[eml_addr]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="200"
+                      cachedLength="300"
                       cachedName="eml_addr"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[eml_addr]" />
                     <inputColumn
                       refId="Package\vis_usr + vis_usr_role\Data Conversion.Inputs[Data Conversion Input].Columns[phn_no]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="300"
                       cachedName="phn_no"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[phn_no]" />
                     <inputColumn
@@ -5467,7 +5467,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[usr_nm]"
-                      length="200"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[usr_nm]"
                       name="usr_nm"
                       truncationRowDisposition="FailComponent" />
@@ -5478,7 +5478,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[eml_addr]"
-                      length="200"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[eml_addr]"
                       name="eml_addr"
                       truncationRowDisposition="FailComponent" />
@@ -5489,7 +5489,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[phn_no]"
-                      length="60"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[phn_no]"
                       name="phn_no"
                       truncationRowDisposition="FailComponent" />
@@ -5555,19 +5555,19 @@ FROM
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[usr_nm]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       name="usr_nm" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[eml_addr]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       name="eml_addr" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[phn_no]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="300"
                       name="phn_no" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[usr_pwd]"
@@ -5600,21 +5600,21 @@ FROM
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[usr_nm]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[usr_nm]"
                       name="usr_nm" />
                     <outputColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[eml_addr]"
                       codePage="949"
                       dataType="str"
-                      length="200"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[eml_addr]"
                       name="eml_addr" />
                     <outputColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[phn_no]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="300"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[phn_no]"
                       name="phn_no" />
                     <outputColumn
