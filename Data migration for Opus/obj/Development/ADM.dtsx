@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ADM"
   DTS:PackageType="5"
-  DTS:VersionBuild="532"
-  DTS:VersionGUID="{EE1E2BC8-0CC3-4644-9312-E434EAD885A2}">
+  DTS:VersionBuild="534"
+  DTS:VersionGUID="{C644AC11-68D4-43A0-9D77-5D2E9636CD4B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -58,7 +58,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{20A76FA0-010A-4A93-A225-51868DF14E0A}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;ROLE_CD&#x9;AS&#x9;role_id&#xA;,&#x9;ROLE_NM&#x9;AS&#x9;role_nm&#xA;,&#x9;ROLE_DESC&#x9;AS&#x9;role_desc&#xA;,&#x9;case when&#xA;                USE_FLG = 'Y' then 'A'&#xA;                when &#xA;                USE_FLG  = 'N' then 'I' &#xA;                ELSE ''&#xA;    end&#x9;AS&#x9;role_sts_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;, '' AS role_tp_cd&#xA;, 'N' AS is_hard_role&#xA;, NULL AS ord_no&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;, '' AS uq_flg&#xA;, '0' AS prnt_role_id&#xA;FROM&#x9;TB_ROLE&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;ROLE_CD&#x9;AS&#x9;role_id&#xA;,&#x9;ROLE_NM&#x9;AS&#x9;role_nm&#xA;,&#x9;ROLE_DESC&#x9;AS&#x9;role_desc&#xA;,&#x9;case when&#xA;                USE_FLG = 'Y' then 'A'&#xA;                when &#xA;                USE_FLG  = 'N' then 'I' &#xA;                ELSE ''&#xA;    end&#x9;AS&#x9;role_sts_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;, '' AS role_tp_cd&#xA;, 'N' AS is_hard_role&#xA;, NULL AS ord_no&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;&#xA;, '0' AS prnt_role_id&#xA;FROM&#x9;TB_ROLE&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="adm_role">
@@ -82,7 +82,7 @@ SELECT
 , 'N' AS is_hard_role
 , NULL AS ord_no
 , 'OPUS' AS co_cd
-, '' AS uq_flg
+
 , '0' AS prnt_role_id
 FROM	TB_ROLE
 </DTS:VariableValue>
@@ -2972,12 +2972,12 @@ WHERE
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
                       refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
@@ -2987,24 +2987,24 @@ WHERE
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
                       refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[role_id]"
                       cachedDataType="wstr"
@@ -3014,60 +3014,53 @@ WHERE
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[role_id]"
                       lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_id]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[role_nm]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.role_nm]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="role_nm"
+                      cachedName="Data Conversion.role_nm"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[role_nm]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_nm]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_nm]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[role_desc]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.role_desc]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="role_desc"
+                      cachedName="Data Conversion.role_desc"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[role_desc]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_desc]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_desc]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[role_sts_flg]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.role_sts_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="role_sts_flg"
+                      cachedName="Data Conversion.role_sts_flg"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[role_sts_flg]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_sts_flg]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_sts_flg]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[role_tp_cd]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.role_tp_cd]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="role_tp_cd"
+                      cachedName="Data Conversion.role_tp_cd"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[role_tp_cd]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_tp_cd]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_tp_cd]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[is_hard_role]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.is_hard_role]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="is_hard_role"
+                      cachedName="Data Conversion.is_hard_role"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[is_hard_role]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[is_hard_role]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.is_hard_role]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[ord_no]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.ord_no]"
                       cachedDataType="i4"
-                      cachedName="ord_no"
+                      cachedName="Data Conversion.ord_no"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[ord_no]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[ord_no]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.ord_no]" />
                     <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[uq_flg]"
+                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[Data Conversion.prnt_role_id]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="uq_flg"
-                      externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[uq_flg]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[uq_flg]" />
-                    <inputColumn
-                      refId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].Columns[prnt_role_id]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="prnt_role_id"
+                      cachedName="Data Conversion.prnt_role_id"
                       externalMetadataColumnId="Package\adm_role\adm_role.Inputs[ODBC Destination Input].ExternalColumns[prnt_role_id]"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[prnt_role_id]" />
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.prnt_role_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3255,13 +3248,6 @@ WHERE
                       cachedDataType="i4"
                       cachedName="ord_no"
                       lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[ord_no]" />
-                    <inputColumn
-                      refId="Package\adm_role\Data Conversion.Inputs[Data Conversion Input].Columns[uq_flg]"
-                      cachedCodepage="949"
-                      cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="uq_flg"
-                      lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[uq_flg]" />
                     <inputColumn
                       refId="Package\adm_role\Data Conversion.Inputs[Data Conversion Input].Columns[prnt_role_id]"
                       cachedCodepage="949"
@@ -3523,27 +3509,6 @@ WHERE
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[ord_no]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_role\Data Conversion.Outputs[Data Conversion Output].Columns[uq_flg]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="1"
-                      lineageId="Package\adm_role\Data Conversion.Outputs[Data Conversion Output].Columns[uq_flg]"
-                      name="uq_flg"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[uq_flg]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -4061,23 +4026,6 @@ and role_id= ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\adm_role\Sort.Inputs[Sort Input].Columns[uq_flg]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="uq_flg"
-                      lineageId="Package\adm_role\Data Conversion.Outputs[Data Conversion Output].Columns[uq_flg]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\adm_role\Sort.Inputs[Sort Input].Columns[prnt_role_id]"
                       cachedDataType="wstr"
                       cachedLength="1"
@@ -4105,11 +4053,11 @@ and role_id= ?</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -4134,10 +4082,10 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -4147,11 +4095,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -4161,10 +4109,10 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -4189,11 +4137,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_nm]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_nm]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_nm]"
-                      name="role_nm">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_nm]"
+                      name="Data Conversion.role_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -4203,11 +4151,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_desc]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_desc]"
                       dataType="wstr"
                       length="200"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_desc]"
-                      name="role_desc">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_desc]"
+                      name="Data Conversion.role_desc">
                       <properties>
                         <property
                           containsID="true"
@@ -4217,11 +4165,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_sts_flg]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_sts_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_sts_flg]"
-                      name="role_sts_flg">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_sts_flg]"
+                      name="Data Conversion.role_sts_flg">
                       <properties>
                         <property
                           containsID="true"
@@ -4231,11 +4179,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_tp_cd]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_tp_cd]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[role_tp_cd]"
-                      name="role_tp_cd">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.role_tp_cd]"
+                      name="Data Conversion.role_tp_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -4245,11 +4193,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[is_hard_role]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.is_hard_role]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[is_hard_role]"
-                      name="is_hard_role">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.is_hard_role]"
+                      name="Data Conversion.is_hard_role">
                       <properties>
                         <property
                           containsID="true"
@@ -4259,10 +4207,10 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[ord_no]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.ord_no]"
                       dataType="i4"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[ord_no]"
-                      name="ord_no">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.ord_no]"
+                      name="Data Conversion.ord_no">
                       <properties>
                         <property
                           containsID="true"
@@ -4272,25 +4220,11 @@ and role_id= ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[uq_flg]"
+                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.prnt_role_id]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[uq_flg]"
-                      name="uq_flg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\adm_role\Data Conversion.Outputs[Data Conversion Output].Columns[uq_flg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\adm_role\Sort.Outputs[Sort Output].Columns[prnt_role_id]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[prnt_role_id]"
-                      name="prnt_role_id">
+                      lineageId="Package\adm_role\Sort.Outputs[Sort Output].Columns[Data Conversion.prnt_role_id]"
+                      name="Data Conversion.prnt_role_id">
                       <properties>
                         <property
                           containsID="true"
@@ -4491,17 +4425,6 @@ and role_id= ?</property>
                       name="ord_no"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[uq_flg]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[uq_flg]"
-                      length="1"
-                      lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[uq_flg]"
-                      name="uq_flg"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[prnt_role_id]"
                       codePage="949"
                       dataType="str"
@@ -4580,12 +4503,6 @@ and role_id= ?</property>
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[ord_no]"
                       dataType="i4"
                       name="ord_no" />
-                    <externalMetadataColumn
-                      refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[uq_flg]"
-                      codePage="949"
-                      dataType="str"
-                      length="1"
-                      name="uq_flg" />
                     <externalMetadataColumn
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[prnt_role_id]"
                       codePage="949"
@@ -4676,13 +4593,6 @@ and role_id= ?</property>
                       dataType="dbTimeStamp"
                       lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
                       name="upd_dt" />
-                    <outputColumn
-                      refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[uq_flg]"
-                      codePage="949"
-                      dataType="str"
-                      length="1"
-                      lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[uq_flg]"
-                      name="uq_flg" />
                     <outputColumn
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[prnt_role_id]"
                       codePage="949"
@@ -15914,35 +15824,35 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\adm_alt_mst"
           TopLeft="16.5,5.5" />
         <NodeLayout
-          Size="124.8,41.6"
+          Size="125,42"
           Id="Package\adm_role"
           TopLeft="20.5,63.4629629706159" />
         <NodeLayout
-          Size="116.8,41.6"
+          Size="117,42"
           Id="Package\adm_rpt"
           TopLeft="20.5,120.5" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\adm_usr_eml_stup"
           TopLeft="17.5,176.5" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\adm_usr_ip_addr"
           TopLeft="193.166659646564,6.89999822298682" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\adm_usr_tbl_cfg"
           TopLeft="192.166659646564,61.8999982229868" />
         <NodeLayout
-          Size="173.6,41.6"
+          Size="174,42"
           Id="Package\adm_usr_dept_team"
           TopLeft="194.69999165535,122.240742690711" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\adm_sys_opt"
           TopLeft="388.199971091748,10.8333337190416" />
         <GroupLayout
@@ -15950,8 +15860,8 @@ and cfg_no = ?</property>
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="749.6,443.2"
-          Size="749.6,486.4"
+          PanelSize="750,443"
+          Size="750,486"
           Id="fc38d0b6-2ec1-4660-a5a1-2851908cc72f"
           TopLeft="348.27776475306,161.611108133351">
           <GroupLayout.ChildrenIds>
@@ -16159,27 +16069,27 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_role\Data Conversion"
           TopLeft="61.5,82.5" />
         <NodeLayout
-          Size="128.8,41.6"
+          Size="129,42"
           Id="Package\adm_role\TB_ROLE"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\adm_role\OLE DB Command"
           TopLeft="273.5,224.5" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\adm_role\OLE DB Command 1"
           TopLeft="302,146" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_role\Sort"
           TopLeft="93.5,161.5" />
         <NodeLayout
-          Size="124.8,41.6"
+          Size="125,42"
           Id="Package\adm_role\adm_role"
           TopLeft="573.5,245.5" />
         <EdgeLayout
