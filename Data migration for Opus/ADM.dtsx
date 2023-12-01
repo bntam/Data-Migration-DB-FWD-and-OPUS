@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ADM"
   DTS:PackageType="5"
-  DTS:VersionBuild="534"
-  DTS:VersionGUID="{C644AC11-68D4-43A0-9D77-5D2E9636CD4B}">
+  DTS:VersionBuild="536"
+  DTS:VersionGUID="{6F44790A-EB74-43D5-9F84-2A49932CDE3C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -16069,18 +16069,6 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161,42"
-          Id="Package\adm_role\Data Conversion"
-          TopLeft="61.5,82.5" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\adm_role\TB_ROLE"
-          TopLeft="79.0000017881393,9.99999989668526" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\adm_role\OLE DB Command"
-          TopLeft="273.5,224.5" />
-        <NodeLayout
           Size="173,42"
           Id="Package\adm_role\OLE DB Command 1"
           TopLeft="302,146" />
@@ -16089,31 +16077,21 @@ and cfg_no = ?</property>
           Id="Package\adm_role\Sort"
           TopLeft="93.5,161.5" />
         <NodeLayout
+          Size="129,42"
+          Id="Package\adm_role\TB_ROLE"
+          TopLeft="79.0000017881393,9.99999989668526" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\adm_role\Data Conversion"
+          TopLeft="61.5,82.5" />
+        <NodeLayout
           Size="125,42"
           Id="Package\adm_role\adm_role"
           TopLeft="573.5,245.5" />
-        <EdgeLayout
-          Id="Package\adm_role.Paths[Data Conversion Output]"
-          TopLeft="142.5,124.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\adm_role\OLE DB Command"
+          TopLeft="273.5,224.5" />
         <EdgeLayout
           Id="Package\adm_role.Paths[Sort Output]"
           TopLeft="192.7,182.3">
@@ -16230,6 +16208,28 @@ and cfg_no = ?</property>
                     Point3="67.5999999999999,21" />
                   <mssgle:LineSegment
                     End="119.7,21" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\adm_role.Paths[Data Conversion Output]"
+          TopLeft="142.5,124.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16417,23 +16417,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_sys_opt\TB_SEQ"
           TopLeft="63.6666639182312,48.5333337190416" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_sys_opt\DELETE"
           TopLeft="261.666656268969,185.766668099298" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\adm_sys_opt\Sort"
           TopLeft="103.333329227236,191.833334814178" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\adm_sys_opt\adm_sys_opt"
           TopLeft="476.666648917729,189.766667892669" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\adm_sys_opt\Data Conversion"
           TopLeft="63.3333308166928,121.633334256279" />
         <EdgeLayout
