@@ -5,10 +5,10 @@
   DTS:CreationName="ODBC">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_migrate;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+      DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
       <DTS:Password
         DTS:Name="pwd"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAABa74qc4MlsUR6DORLaaVk1jlJDs+S3rnn54UxPkX+eAAAAAAOgAAAAAIAACAAAAAzA8d4AHDt3NjZW67RepvJQrZwsBYXuDD2l3Aolil1UXAAAAA+0n5+S/FK46hzPBQTk5y5wDj87wWCQRuJgWWtiAya7ROIm2kpOIlG9H19k597xHQqhTVCZ4D3fCtxg7Vm5Tdk4njtl5QsH8Du7GEnvWlScujcpYhRSGUjmtQGHAkamF9b9d0EDQh2hZqaOhwgHfxKQAAAAL4/RkiIqyo+cvOLFbvZo1ilVviWS6jzVcqo8M+HlICr7xvp64+jmj/9fuihk9DaeH5Ljo/FJl1J7BfeB14AqEw=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAC3ycGl/8Ai+arRdPq5/0PTCMidl6l0XX/Pvr2bsoNQYQAAAAAOgAAAAAIAACAAAACuT/6TSunKiT5QZbe+JKnubLwPKkOVdQNncOd9/sXdnnAAAACd54Dv/sT/HQlkcmZE5tsUQkmEdn52XDzc7qVW6NKSaSpsxA1dhGplIWCRdYCL8UkF8x8BpqsKgdWPZGMT1N0dInFPayMcQXLhYsw+IGwJ9MXoGYdHuCBVX3jYB9RiZqpYIrF6xN/hPvD8Zh27bfSKQAAAAJoeiQh+Wt5JWpPw7rCW4ddgQsbMgtBgkmZ9OvOf2jF4a7/QsOmJKOiBUQ5BrPoacmrfGelj5lp0/FuM2Y2SQ8E=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

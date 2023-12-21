@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="BCM"
   DTS:PackageType="5"
-  DTS:VersionBuild="528"
-  DTS:VersionGUID="{684AB432-FE6D-42E3-A6BB-79F46248296C}">
+  DTS:VersionBuild="529"
+  DTS:VersionGUID="{A63D515E-FAD5-4966-9F0E-0EF7BA197A7F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -34,7 +34,7 @@ cmdt_nm as cmdt_nm,
 uppr_cmdt_cd as uppr_cmdt_cd,
 descr as cmdt_desc,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -62,7 +62,7 @@ cstms_cntr_cd as locl_cstms_cntr_cd,
 descr as cntr_tp_sz_desc,
 use_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -94,7 +94,7 @@ SELECT
 ,	CURR_CD		AS	curr_cd
 ,	CONTI_CD	AS	conti_cd
 ,	RGST_USRID	AS	cre_usr_id
-,	'OPUS'	AS	co_cd
+,	'TAM'	AS	co_cd
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
@@ -121,7 +121,7 @@ prnt_conti_cd,
 descr as conti_desc,
 use_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -150,7 +150,7 @@ SELECT
 ,	MODI_TMS	AS	upd_dt
 ,	CAST('1900-01-01' AS DATE) AS curr_eff_dt
 ,	CAST('9999-01-01' AS DATE) AS curr_exp_dt
-, 	'OPUS' AS co_cd
+, 	'TAM' AS co_cd
 FROM	TB_COM_CD_DTL		
 WHERE	com_cd = 'C010'
 </DTS:VariableValue>
@@ -176,7 +176,7 @@ xch_rt,
 aply_fm_dt,
 aply_to_dt,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -212,7 +212,7 @@ xch_rt,
 aply_fm_dt,
 aply_to_dt,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_ofc_cd,
@@ -250,7 +250,7 @@ iata_loc_cd,
 un_loc_cd,
 cbsa_loc_cd,
 dock_rcpt_rmk,
-'OPUS' as co_cd
+'TAM' as co_cd
 from tb_loc
 </DTS:VariableValue>
     </DTS:Variable>
@@ -267,7 +267,7 @@ from tb_loc
 SELECT	
 	LOC_CD AS loc_cd
 ,	LOWER(LOC_TP_CD) AS loc_tp_cd
-, 'OPUS' AS co_cd
+, 'TAM' AS co_cd
 , 'admin' AS cre_usr_id
 , getdate() AS cre_dt
 , 'admin' AS upd_usr_id
@@ -299,7 +299,7 @@ use_flg,
 finc_ofc_cd,
 sls_ofc_cd,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -408,6 +408,32 @@ from tb_ofc
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{DC2F1B01-548D-4A05-A7B3-F13E65AC7EF5}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#xA;&quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;,CONCAT('MISC',CONVERT(varchar,RGST_TMS,112), RIGHT('00000000' + CAST(ROW_NUMBER() OVER (ORDER BY RGST_TMS, RGST_OFC_CD, OTH_TP) AS VARCHAR), 8)) AS&#x9;misc_seq&#xA;,&#x9;OTH_TP&#x9;AS&#x9;misc_tp_cd&#xA;,&#x9;RMK&#x9;AS&#x9;misc_desc&#xA;,&#x9;OTH_PRFX&#x9;AS&#x9;misc_pfx_cd&#xA;,&#x9;OTH_NO&#x9;AS&#x9;misc_no&#xA;,&#x9;USE_FLG&#x9;AS&#x9;use_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_OFC_CD&#x9;AS&#x9;ofc_cd&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;FROM&#x9;TB_OTH_CD&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="bcm_ofc_misc_clss_cd">
+      <DTS:VariableValue
+        DTS:DataType="8">
+SELECT	
+'TAM' AS co_cd
+,CONCAT('MISC',CONVERT(varchar,RGST_TMS,112), RIGHT('00000000' + CAST(ROW_NUMBER() OVER (ORDER BY RGST_TMS, RGST_OFC_CD, OTH_TP) AS VARCHAR), 8)) AS	misc_seq
+,	OTH_TP	AS	misc_tp_cd
+,	RMK	AS	misc_desc
+,	OTH_PRFX	AS	misc_pfx_cd
+,	OTH_NO	AS	misc_no
+,	USE_FLG	AS	use_flg
+,	RGST_USRID	AS	cre_usr_id
+,	RGST_OFC_CD	AS	ofc_cd
+,	RGST_TMS	AS	cre_dt
+,	MODI_USRID	AS	upd_usr_id
+,	MODI_TMS	AS	upd_dt
+FROM	TB_OTH_CD
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{62E5B404-F803-4AE0-A318-F5C0E0F0A000}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'OQTTN' as pfx_cd ,&#xA;&#x9;sea_quo_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;sea_quo_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'AQTTN' as pfx_cd ,&#xA;&#x9;air_quo_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;air_quo_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'IQTTN' as pfx_cd ,&#xA;&#x9;'' as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;0 as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'SHPID' as pfx_cd ,&#xA;&#x9;'' as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;0 as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'OEHBL' as pfx_cd ,&#xA;&#x9;oe_hbl_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;oe_hbl_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'AEHAW' as pfx_cd ,&#xA;&#x9;ae_awb_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;ae_awb_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'OEBKG' as pfx_cd ,&#xA;&#x9;oe_ref_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;oe_ref_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'OIBKG' as pfx_cd ,&#xA;&#x9;oi_ref_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;oi_ref_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'AEBKG' as pfx_cd ,&#xA;&#x9;ae_ref_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;ae_ref_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'AIBKG' as pfx_cd ,&#xA;&#x9;ai_ref_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;ai_ref_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'INVNO' as pfx_cd ,&#xA;&#x9;inv_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;inv_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'CRDRN' as pfx_cd ,&#xA;&#x9;crdr_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;crdr_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'PAYSN' as pfx_cd ,&#xA;&#x9;'' as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;0 as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'DPSSN' as pfx_cd ,&#xA;&#x9;'' as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;0 as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'WHDOC' as pfx_cd ,&#xA;&#x9;wm_doc_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;wm_doc_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'CLPNO' as pfx_cd ,&#xA;&#x9;clp_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;clp_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'WHRCT' as pfx_cd ,&#xA;&#x9;wh_rcpt_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;wh_rcpt_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'WHRCV' as pfx_cd ,&#xA;&#x9;wh_rcv_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;wh_rcv_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'WHSHP' as pfx_cd ,&#xA;&#x9;wh_shp_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;wh_shp_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#x9;&#xA;union all&#x9;&#xA;select&#x9;&#xA;&#x9;&quot;+@[$Project::co_cd]+&quot; as co_cd,&#xA;&#x9;ofc_cd as ofc_cd,&#xA;&#x9;'TRKNO' as pfx_cd ,&#xA;&#x9;trk_prfx as pfx_val ,&#xA;&#x9;'Y' as yrmon_flg ,&#xA;&#x9;'6' as sfx_len ,&#xA;&#x9;trk_seq_no as seq_no ,&#xA;&#x9;rgst_usrid as cre_usr_id,&#xA;&#x9;rgst_tms as cre_dt,&#xA;&#x9;modi_usrid as upd_usr_id,&#xA;&#x9;modi_tms as upd_dt ,&#xA;&#x9;'1' as crnt_max_seq_no&#xA;from tb_ofc&#xA;&quot;"
@@ -417,7 +443,7 @@ from tb_ofc
       <DTS:VariableValue
         DTS:DataType="8">
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'OQTTN' as pfx_cd ,
 	sea_quo_prfx as pfx_val ,
@@ -432,7 +458,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'AQTTN' as pfx_cd ,
 	air_quo_prfx as pfx_val ,
@@ -447,7 +473,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'IQTTN' as pfx_cd ,
 	'' as pfx_val ,
@@ -462,7 +488,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'SHPID' as pfx_cd ,
 	'' as pfx_val ,
@@ -477,7 +503,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'OEHBL' as pfx_cd ,
 	oe_hbl_prfx as pfx_val ,
@@ -492,7 +518,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'AEHAW' as pfx_cd ,
 	ae_awb_prfx as pfx_val ,
@@ -507,7 +533,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'OEBKG' as pfx_cd ,
 	oe_ref_prfx as pfx_val ,
@@ -522,7 +548,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'OIBKG' as pfx_cd ,
 	oi_ref_prfx as pfx_val ,
@@ -537,7 +563,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'AEBKG' as pfx_cd ,
 	ae_ref_prfx as pfx_val ,
@@ -552,7 +578,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'AIBKG' as pfx_cd ,
 	ai_ref_prfx as pfx_val ,
@@ -567,7 +593,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'INVNO' as pfx_cd ,
 	inv_prfx as pfx_val ,
@@ -582,7 +608,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'CRDRN' as pfx_cd ,
 	crdr_prfx as pfx_val ,
@@ -597,7 +623,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'PAYSN' as pfx_cd ,
 	'' as pfx_val ,
@@ -612,7 +638,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'DPSSN' as pfx_cd ,
 	'' as pfx_val ,
@@ -627,7 +653,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHDOC' as pfx_cd ,
 	wm_doc_prfx as pfx_val ,
@@ -642,7 +668,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'CLPNO' as pfx_cd ,
 	clp_prfx as pfx_val ,
@@ -657,7 +683,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHRCT' as pfx_cd ,
 	wh_rcpt_prfx as pfx_val ,
@@ -672,7 +698,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHRCV' as pfx_cd ,
 	wh_rcv_prfx as pfx_val ,
@@ -687,7 +713,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHSHP' as pfx_cd ,
 	wh_shp_prfx as pfx_val ,
@@ -702,7 +728,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	ofc_cd as ofc_cd,
 	'TRKNO' as pfx_cd ,
 	trk_prfx as pfx_val ,
@@ -734,7 +760,7 @@ cstms_pck_cd_val as kr_cstms_cd,
 pck_nm,
 descr as pck_desc,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -760,7 +786,7 @@ STATE_CD	AS	ste_cd
 ,RMK	AS	ste_desc
 ,CNT_CD	AS	cnt_cd
 ,RGST_USRID	AS	cre_usr_id
-,'OPUS'	AS	co_cd
+,'TAM'	AS	co_cd
 ,RGST_TMS	AS	cre_dt
 ,MODI_USRID	AS	upd_usr_id
 ,MODI_TMS	AS	upd_dt
@@ -796,7 +822,7 @@ shrt_nm,
 sls_usrid as sls_usr_id,
 delt_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -860,7 +886,7 @@ acct_dpsr_nm,
 bank_cd,
 acct_desc,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -890,7 +916,7 @@ select
 	tta.trdp_add_addr as addr_fmt_desc,
 	tta.rmk as addr_rmk,
 	tta.rgst_usrid as cre_usr_id,
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	tta.rgst_tms as cre_dt,
 	tta.modi_usrid as upd_usr_id,
 	tta.modi_tms as upd_dt,
@@ -916,7 +942,7 @@ select
 	tt.lgl_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -942,7 +968,7 @@ select
 	tt.eng_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -968,7 +994,7 @@ select
 	tt.tax_iss_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -1019,7 +1045,7 @@ rate as chg_rt,
 ut_cd,
 valid_dt as vld_dt,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1046,7 +1072,7 @@ sls_his_flat_url as sls_his_file_url,
 sls_his_flat_nm as sls_his_file_nm,
 sls_his_ctnt,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1074,7 +1100,7 @@ pic_eml as eml_addr,
 pic_desc as cntc_desc,
 rep_flg as re_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'TAM' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1108,7 +1134,7 @@ from tb_trdp_cntc_pson
 	rlt_prnr_tp_cd,
 	COALESCE(delt_flg,'N') AS delt_flg,
 	rgst_usrid as cre_usr_id,
-	'OPUS' as co_cd,
+	'TAM' as co_cd,
 	rgst_tms as cre_dt,
 	modi_usrid as upd_usr_id,
 	modi_ofc_cd,
@@ -1134,7 +1160,7 @@ SELECT
 ,DESCR	AS	vsl_desc
 ,LNR_TRDP_CD	AS	lnr_trdp_cd
 ,RGST_USRID	AS	cre_usr_id
-,'OPUS' AS	co_cd
+,'TAM' AS	co_cd
 ,RGST_TMS	AS	cre_dt
 ,MODI_USRID	AS	upd_usr_id
 ,MODI_TMS	AS	upd_dt
@@ -32191,6 +32217,1593 @@ AND	OFC_CD = ? </property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\bcm_ofc_misc_clss_cd"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{a996214c-d653-4954-9428-c4a56cba3670}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="bcm_ofc_misc_clss_cd"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="bcm_ofc_misc_clss_cd"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."bcm_ofc_misc_clss_cd"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[misc_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_seq"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_seq]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_seq]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[misc_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_tp_cd"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_tp_cd]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_tp_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[misc_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_desc"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_desc]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_desc]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[misc_pfx_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_pfx_cd"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_pfx_cd]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_pfx_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[misc_no]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_no"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_no]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_no]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="use_flg"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[ofc_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_seq]"
+                      dataType="wstr"
+                      length="20"
+                      name="misc_seq" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_tp_cd]"
+                      dataType="wstr"
+                      length="10"
+                      name="misc_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_desc]"
+                      dataType="wstr"
+                      length="100"
+                      name="misc_desc" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_pfx_cd]"
+                      dataType="wstr"
+                      length="10"
+                      name="misc_pfx_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[misc_no]"
+                      dataType="wstr"
+                      length="10"
+                      name="misc_no" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_ofc_misc_clss_cd\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[misc_seq]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="misc_seq"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_seq]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[misc_tp_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="misc_tp_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_tp_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[misc_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_desc"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_desc]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[misc_pfx_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="misc_pfx_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_pfx_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[misc_no]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="misc_no"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_no]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[use_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="use_flg"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[ofc_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[ofc_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_seq]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_seq]"
+                      name="misc_seq"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_seq]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_tp_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_tp_cd]"
+                      name="misc_tp_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_tp_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_desc]"
+                      name="misc_desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_desc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_pfx_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_pfx_cd]"
+                      name="misc_pfx_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_pfx_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_no]"
+                      name="misc_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
+                      name="use_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_ofc_misc_clss_cd\DELETE"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DELETE"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM us_fwd.bcm_ofc_misc_clss_cd
+WHERE 1=1
+AND co_cd = ?
+AND ofc_cd = ?
+AND misc_seq = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_ofc_misc_clss_cd\DELETE.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].Columns[ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[ofc_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].Columns[misc_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_seq"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_seq]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="nText"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_ofc_misc_clss_cd\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[misc_seq]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_seq"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_seq]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[misc_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_tp_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_tp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[misc_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="misc_desc"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_desc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[misc_pfx_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_pfx_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_pfx_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[misc_no]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="misc_no"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_no]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="use_flg"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      name="co_cd"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_seq]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_seq]"
+                      name="misc_seq"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_seq]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_tp_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_tp_cd]"
+                      name="misc_tp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_tp_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_desc]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_desc]"
+                      name="misc_desc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_desc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_pfx_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_pfx_cd]"
+                      name="misc_pfx_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_pfx_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_no]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[misc_no]"
+                      name="misc_no">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[misc_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      name="use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_OTH_CD"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT	
+'TAM' AS co_cd
+,CONCAT('MISC',CONVERT(varchar,RGST_TMS,112), RIGHT('00000000' + CAST(ROW_NUMBER() OVER (ORDER BY RGST_TMS, RGST_OFC_CD, OTH_TP) AS VARCHAR), 8)) AS	misc_seq
+,	OTH_TP	AS	misc_tp_cd
+,	RMK	AS	misc_desc
+,	OTH_PRFX	AS	misc_pfx_cd
+,	OTH_NO	AS	misc_no
+,	USE_FLG	AS	use_flg
+,	RGST_USRID	AS	cre_usr_id
+,	RGST_OFC_CD	AS	ofc_cd
+,	RGST_TMS	AS	cre_dt
+,	MODI_USRID	AS	upd_usr_id
+,	MODI_TMS	AS	upd_dt
+FROM	TB_OTH_CD</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::bcm_ofc_misc_clss_cd</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Connections[OleDbConnection]"
+                  connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      length="3"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_seq]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_seq]"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_seq]"
+                      name="misc_seq"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_tp_cd]"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_tp_cd]"
+                      name="misc_tp_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_desc]"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_desc]"
+                      name="misc_desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_pfx_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_pfx_cd]"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_pfx_cd]"
+                      name="misc_pfx_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_no]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_no]"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[misc_no]"
+                      name="misc_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
+                      length="1"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[use_flg]"
+                      name="use_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[ofc_cd]"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_seq]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      name="misc_seq" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="misc_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_desc]"
+                      dataType="wstr"
+                      length="50"
+                      name="misc_desc" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_pfx_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="misc_pfx_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="misc_no" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="ofc_cd" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      name="co_cd" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_seq]"
+                      codePage="949"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_seq]"
+                      name="misc_seq" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_tp_cd]"
+                      name="misc_tp_cd" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_desc]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_desc]"
+                      name="misc_desc" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_pfx_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_pfx_cd]"
+                      name="misc_pfx_cd" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[misc_no]"
+                      name="misc_no" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[use_flg]"
+                      name="use_flg" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ofc_cd]"
+                      name="ofc_cd" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\bcm_ofc_misc_clss_cd.Paths[Data Conversion Output]"
+              endId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Command Output]"
+              endId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\bcm_ofc_misc_clss_cd\DELETE.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Source Output]"
+              endId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\bcm_ofc_misc_clss_cd.Paths[Sort Output]"
+              endId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\bcm_ofc_pfx"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -37949,7 +39562,7 @@ FROM TB_STATE</property>
                       refId="Package\bcm_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -42106,7 +43719,7 @@ AND sub_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -42759,7 +44372,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -43231,7 +44844,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -43857,7 +45470,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr_acct\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -44780,7 +46393,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -44891,7 +46504,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -44994,7 +46607,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -47856,7 +49469,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_chg\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -48908,7 +50521,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -49042,7 +50655,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -49166,7 +50779,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -51169,7 +52782,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc_pson\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -52502,7 +54115,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -52686,7 +54299,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -52846,7 +54459,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -56636,83 +58249,83 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="147.2,41.6"
+          Size="147,42"
           Id="Package\bcm_cmdt_cd"
           TopLeft="20.5,8.5" />
         <NodeLayout
-          Size="134.4,41.6"
+          Size="134,42"
           Id="Package\bcm_cnt_cd"
           TopLeft="20.5,62.5" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\bcm_cntr_tp_sz"
           TopLeft="19.5,123.5" />
         <NodeLayout
-          Size="147.2,41.6"
+          Size="147,42"
           Id="Package\bcm_conti_cd"
           TopLeft="20.5,183.5" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\bcm_finc_xch_rt"
           TopLeft="16.5,242.5" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_inv_xch_rt"
           TopLeft="18.5,302.5" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_loc_cd"
           TopLeft="391.499985098839,8.63333053694839" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="153,42"
           Id="Package\bcm_loc_tp_cd"
           TopLeft="387.499985098839,64.6333305369484" />
         <NodeLayout
-          Size="134.4,41.6"
+          Size="134,42"
           Id="Package\bcm_ofc_cd"
           TopLeft="548.785699384553,10.4904733940914" />
         <NodeLayout
-          Size="140.8,41.6"
+          Size="141,42"
           Id="Package\bcm_pck_cd"
           TopLeft="550.499985098839,62.4904733940914" />
         <NodeLayout
-          Size="118.4,41.6"
+          Size="118,42"
           Id="Package\bcm_ste"
           TopLeft="196.107142857143,10" />
         <NodeLayout
-          Size="144,41.6"
+          Size="144,42"
           Id="Package\bcm_trd_prnr"
           TopLeft="388.999985098839,129.883330536948" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\bcm_trd_prnr_acct"
           TopLeft="192.785714285714,64.5" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\bcm_trd_prnr_chg"
           TopLeft="195.928571428571,122.071428571428" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\bcm_trd_prnr_cntc"
           TopLeft="187.357142857143,185.5" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\bcm_trd_prnr_cntc_pson"
           TopLeft="180.440476306374,243.702380943771" />
         <NodeLayout
-          Size="136.8,43.2"
+          Size="137,43"
           Id="Package\bcm_vsl_cd"
           TopLeft="560.922604187851,186.490475279585" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_ofc_pfx"
           TopLeft="560.685792870137,125.433330020375" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\bcm_trd_prnr_addr"
           TopLeft="192.977474148219,302.68333143062" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\bcm_trd_prnr_rlt"
           TopLeft="394.399972879888,187.500000867845" />
         <EdgeLayout
@@ -56784,16 +58397,20 @@ FROM TB_VSL</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_curr"
           TopLeft="407.166650705868,245.633325577841" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\bcm_ofc_misc_clss_cd"
+          TopLeft="556,246" />
         <GroupLayout
           Text="BCM"
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="838.4,406.4"
-          Size="838.4,449.6"
+          PanelSize="838,407"
+          Size="838,450"
           Id="db7b0953-2f51-497d-a250-934f48aa78d3"
           TopLeft="499.821308140879,2475.2629634252">
           <GroupLayout.ChildrenIds>
@@ -56820,6 +58437,7 @@ FROM TB_VSL</property>
             <s:String>Package.PrecedenceConstraints[Constraint]</s:String>
             <s:String>Package.PrecedenceConstraints[Constraint 1]</s:String>
             <s:String>Package\bcm_curr</s:String>
+            <s:String>Package\bcm_ofc_misc_clss_cd</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
@@ -56829,7 +58447,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_cmdt_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\bcm_cmdt_cd\TB_CMDT_CD"
@@ -56885,7 +58503,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -56919,7 +58539,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -56941,7 +58563,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -56963,7 +58587,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -56997,7 +58623,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -57132,7 +58760,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57166,7 +58796,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57200,7 +58832,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57234,7 +58868,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57268,7 +58904,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57338,7 +58976,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -57382,7 +59022,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_cntr_tp_sz">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,41.6"
           Id="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ"
@@ -57438,7 +59078,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57460,7 +59102,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57494,7 +59138,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57528,7 +59174,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57562,7 +59210,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57584,7 +59234,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57606,7 +59258,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57640,7 +59294,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -57684,7 +59340,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_conti_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="99.2,41.6"
           Id="Package\bcm_conti_cd\Sort"
@@ -57752,7 +59408,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57786,7 +59444,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57820,7 +59480,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57854,7 +59516,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57888,7 +59552,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57922,7 +59588,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57944,7 +59612,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -57966,7 +59636,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58010,7 +59682,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_curr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="168,41.6"
           Id="Package\bcm_curr\TB_COM_CD_DTL"
@@ -58050,7 +59722,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58084,7 +59758,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58106,7 +59782,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58128,7 +59806,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58146,7 +59826,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_finc_xch_rt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="196,41.6"
           Id="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT"
@@ -58198,7 +59878,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58220,7 +59902,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58242,7 +59926,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58276,7 +59962,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58307,7 +59995,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_inv_xch_rt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\bcm_inv_xch_rt\Data Conversion"
@@ -58359,7 +60047,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58381,7 +60071,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58415,7 +60107,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58437,7 +60131,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58468,7 +60164,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_loc_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="121.6,41.6"
           Id="Package\bcm_loc_cd\TB_LOC"
@@ -58520,7 +60216,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58542,7 +60240,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58576,7 +60276,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58598,7 +60300,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58629,7 +60333,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_loc_tp_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="99.2,41.6"
           Id="Package\bcm_loc_tp_cd\Sort"
@@ -58669,7 +60373,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58703,7 +60409,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58725,7 +60433,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58747,7 +60457,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58778,7 +60490,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ofc_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="119.2,41.6"
           Id="Package\bcm_ofc_cd\DELETE"
@@ -58834,7 +60546,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58856,7 +60570,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58878,7 +60594,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58900,7 +60618,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58934,7 +60654,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58965,7 +60687,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ofc_pfx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\bcm_ofc_pfx\Sort"
@@ -59005,7 +60727,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59027,7 +60751,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59061,7 +60787,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59083,7 +60811,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59101,7 +60831,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_pck_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\bcm_pck_cd\DELETE"
@@ -59141,7 +60871,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59175,7 +60907,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59209,7 +60943,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59231,7 +60967,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59262,7 +61000,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ste">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\bcm_ste\TB_STATE"
@@ -59302,7 +61040,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59336,7 +61076,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59358,7 +61100,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59380,7 +61124,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59413,39 +61159,39 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.4,41.6"
+          Size="154,42"
           Id="Package\bcm_trd_prnr\bcm_trd_prnr_tp"
           TopLeft="661.5,418.500000103315" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_trd_prnr\Data Conversion"
           TopLeft="148.5,111.538341968912" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\bcm_trd_prnr\OLE DB Command"
           TopLeft="430.5,421.500000103315" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_trd_prnr\DELETE"
           TopLeft="591.041659472717,293.61666801148" />
         <NodeLayout
-          Size="196.8,41.6"
+          Size="197,42"
           Id="Package\bcm_trd_prnr\DELETE vis_usr_trd_prnr"
           TopLeft="449.5,202.480310880829" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\bcm_trd_prnr\Multicast 1"
           TopLeft="327,333.000000103315" />
         <NodeLayout
-          Size="128.8,41.6"
+          Size="129,42"
           Id="Package\bcm_trd_prnr\TB_TRDP"
           TopLeft="163.000001788139,27" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\bcm_trd_prnr\bcm_trd_prnr"
           TopLeft="816.499982615314,292.850002939304" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_trd_prnr\Sort"
           TopLeft="180.5,183.538341968912" />
         <EdgeLayout
@@ -59715,23 +61461,23 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164.8,41.6"
+          Size="165,42"
           Id="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT"
           TopLeft="83.0000017881394,14.9999998966853" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_trd_prnr_acct\Sort"
           TopLeft="98,209" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_trd_prnr_acct\Data Conversion"
           TopLeft="65,98" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_trd_prnr_acct\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\bcm_trd_prnr_acct\bcm_trd_prnr_acct"
           TopLeft="485.999980529151,280.383335728513" />
         <EdgeLayout
@@ -59874,7 +61620,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_addr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\bcm_trd_prnr_addr\bcm_trd_prnr_addr"
@@ -59926,7 +61672,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59960,7 +61708,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59988,7 +61738,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60010,7 +61762,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60030,23 +61784,23 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_trd_prnr_chg\Sort"
           TopLeft="100,222" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_trd_prnr_chg\Data Conversion"
           TopLeft="59,120" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182,42"
           Id="Package\bcm_trd_prnr_chg\TB_TRDP_CHARGE"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\bcm_trd_prnr_chg\bcm_trd_prnr_chg"
           TopLeft="523.999980529151,214.383335728513" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_trd_prnr_chg\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <EdgeLayout
@@ -60189,7 +61943,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_cntc">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="99.2,41.6"
           Id="Package\bcm_trd_prnr_cntc\Sort"
@@ -60229,7 +61983,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60251,7 +62007,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60273,7 +62031,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60295,7 +62055,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60328,23 +62090,23 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_trd_prnr_cntc_pson\Sort"
           TopLeft="152.5,177.5" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_trd_prnr_cntc_pson\Data Conversion"
           TopLeft="134.5,83.5" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_trd_prnr_cntc_pson\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="203.2,41.6"
+          Size="203,42"
           Id="Package\bcm_trd_prnr_cntc_pson\TB_TRDP_CNTC_PSON"
           TopLeft="83.0000017881394,13.9999998966852" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\bcm_trd_prnr_cntc_pson\bcm_trd_prnr_cntc_pson"
           TopLeft="509.999980529151,216.383335728513" />
         <EdgeLayout
@@ -60499,7 +62261,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_rlt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,41.6"
           Id="Package\bcm_trd_prnr_rlt\Data Conversion"
@@ -60539,7 +62301,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60561,7 +62325,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60583,7 +62349,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60617,7 +62385,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60648,7 +62418,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_vsl_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,41.6"
           Id="Package\bcm_vsl_cd\Data Conversion"
@@ -60700,7 +62470,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60734,7 +62506,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60768,7 +62542,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60790,7 +62566,9 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60814,6 +62592,154 @@ FROM TB_VSL</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\bcm_ofc_misc_clss_cd">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\bcm_ofc_misc_clss_cd\DELETE"
+          TopLeft="381.5,279.5" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd"
+          TopLeft="576.5,286.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\bcm_ofc_misc_clss_cd\Data Conversion"
+          TopLeft="212.5,185.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
+          TopLeft="229.999990860622,108.333334194289" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\bcm_ofc_misc_clss_cd\Sort"
+          TopLeft="237.5,260.5" />
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Source Output]"
+          TopLeft="301.999990860622,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.99999086062201,35.166665805711"
+              Start="0,0"
+              End="-8.99999086062201,27.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5833329028555"
+                    Point2="0,17.5833329028555"
+                    Point3="-4,17.5833329028555" />
+                  <mssgle:LineSegment
+                    End="-4.99999086062201,17.5833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.99999086062201,17.5833329028555"
+                    Point2="-8.99999086062201,17.5833329028555"
+                    Point3="-8.99999086062201,21.5833329028555" />
+                  <mssgle:LineSegment
+                    End="-8.99999086062201,27.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[Data Conversion Output]"
+          TopLeft="290,227.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[Sort Output]"
+          TopLeft="336.5,281.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,19"
+              Start="0,0"
+              End="37.5,19">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,15"
+                    Point2="22.5,19"
+                    Point3="26.5,19" />
+                  <mssgle:LineSegment
+                    End="37.5,19" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Command Output]"
+          TopLeft="503.5,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,0"
+              Start="0,0"
+              End="65.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

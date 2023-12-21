@@ -7,10 +7,10 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_migrate;Provider=PGNP.1;Persist Security Info=True;">
+      DTS:ConnectionString="Data Source=10.0.68.204;User ID=us_fwd_dev;Initial Catalog=us_fwd_dev;Provider=PGNP.1;Persist Security Info=True;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAAqFvNmZu6WzFtPBEg9Lxj6s5hRctucGYaimmBnavqBzAAAAAAOgAAAAAIAACAAAABR6FUc8t1BQblqWEhF+hMY2GgHFbzhoey/He6/zu4XaoAAAAChbVXTA0fO9miuN3wwSqu6UXX4kPfMmIOVGJ+c4yW8gv27X7oKCtQ+RxJ2PCKHb/cdvGnhB0WSpDOVkEGS3djGGmG5pvVXV5YRzcFh22TToKCFdFQQLBHN6QKe0tanTamZslGS/cbDssx2mxkZujqpZf2bUlREf1tTifjNV3TRg0AAAAB3Ib4hpsRoCqfPtaak8maRb5jb6aB1Ma0P8DFd5Pdn5soyQFw6gXmZQnkMYRBtn5LKOSyfUQDelS2REyyJA9qg</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAADhz2svC4eSg97JoUZVEnRMy+s+SeiNDROTMqi0+OpIIgAAAAAOgAAAAAIAACAAAAC6PjgtYoJKbPmsv06zlFZfvNmcd+U+ayD8wHTTErFPLoAAAABfosRUIR8IWrX/GpB7oQm9Thn1pl2yPXLzBNahBZy0cUOTKN5STaB/7StTaN72zF5d2Z6gwpLjKEBQ+FENoMCIEjxh4qNzyovwDMHbiC6QKGeZySQ6Gpml6BvOEP4vXnRZRUnPO6ZTQ707tRICdPpVFEJkaY67M1pobQzOTb0Cx0AAAAB3Xkn3UTeJ+JUVoO4hYQyEc2Ua1R7VRRk65+8W1otEXjhsqmAv9+eL6yLvJKa5wJZaINxAjNdJ53ngfHzbirnl</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
