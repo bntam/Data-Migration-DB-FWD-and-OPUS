@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="BCM"
   DTS:PackageType="5"
-  DTS:VersionBuild="529"
-  DTS:VersionGUID="{A63D515E-FAD5-4966-9F0E-0EF7BA197A7F}">
+  DTS:VersionBuild="533"
+  DTS:VersionGUID="{5F01C13C-F086-4C02-93F5-E972E720F8ED}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -49,7 +49,7 @@ from tb_cmdt_cd
       DTS:CreationName=""
       DTS:DTSID="{6A499254-F537-4240-9AF2-91D693452973}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;select cntr_tpsz_cd as cntr_tp_sz_cd,  &#xA;iso_cntr_cd,&#xA;ams_cntr_cd,&#xA;cstms_cntr_cd as locl_cstms_cntr_cd,&#xA;descr as cntr_tp_sz_desc,&#xA;use_flg,&#xA;rgst_usrid as cre_usr_id,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt,&#xA;delt_flg,&#xA;cntr_grp_cd,&#xA;teu as teu_qty,&#xA;cntr_tpsz_nm,&#xA;afr_cntr_tp_cd,&#xA;afr_cntr_sz_cd,&#xA;temp_flg,&#xA;vent_flg&#xA;from tb_cntr_tpsz&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;select cntr_tpsz_cd as cntr_tp_sz_cd,  &#xA;iso_cntr_cd,&#xA;ams_cntr_cd,&#xA;cstms_cntr_cd as locl_cstms_cntr_cd,&#xA;descr as cntr_tp_sz_desc,&#xA;use_flg,&#xA;rgst_usrid as cre_usr_id,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt,&#xA;delt_flg,&#xA;cntr_grp_cd,&#xA;teu as teu_qty,cntr_tpsz_cd as &#xA;cntr_tpsz_nm,&#xA;afr_cntr_tp_cd,&#xA;afr_cntr_sz_cd,&#xA;temp_flg,&#xA;vent_flg&#xA;from tb_cntr_tpsz&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="bcm_cntr_tp_sz">
@@ -68,7 +68,7 @@ modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
 delt_flg,
 cntr_grp_cd,
-teu as teu_qty,
+teu as teu_qty,cntr_tpsz_cd as 
 cntr_tpsz_nm,
 afr_cntr_tp_cd,
 afr_cntr_sz_cd,
@@ -3226,7 +3226,7 @@ AND co_cd = ?</property>
                     <externalMetadataColumn
                       refId="Package\bcm_cntr_tp_sz\bcm_cntr_tp_sz.Inputs[ODBC Destination Input].ExternalColumns[cntr_tp_sz_desc]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="cntr_tp_sz_desc" />
                     <externalMetadataColumn
                       refId="Package\bcm_cntr_tp_sz\bcm_cntr_tp_sz.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
@@ -3340,7 +3340,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_cntr_tp_sz\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -3406,7 +3406,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_cntr_tp_sz\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_tpsz_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="6"
                       cachedName="cntr_tpsz_nm"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[cntr_tpsz_nm]" />
                     <inputColumn
@@ -5786,7 +5786,7 @@ from bcm_cntr_tp_sz</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -5892,7 +5892,7 @@ from bcm_cntr_tp_sz</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_nm]"
-                      length="50"
+                      length="6"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[cntr_tpsz_nm]"
                       name="cntr_tpsz_nm"
                       truncationRowDisposition="FailComponent" />
@@ -5970,7 +5970,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -6026,7 +6026,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_nm]"
                       codePage="949"
                       dataType="str"
-                      length="50"
+                      length="6"
                       name="cntr_tpsz_nm" />
                     <externalMetadataColumn
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[afr_cntr_tp_cd]"
@@ -6111,7 +6111,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -6156,7 +6156,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_nm]"
                       codePage="949"
                       dataType="str"
-                      length="50"
+                      length="6"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_nm]"
                       name="cntr_tpsz_nm" />
                     <outputColumn
@@ -32331,7 +32331,7 @@ AND	OFC_CD = ? </property>
                     <inputColumn
                       refId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
@@ -32665,7 +32665,7 @@ AND	OFC_CD = ? </property>
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="3"
+                      length="20"
                       lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent">
@@ -32902,7 +32902,7 @@ AND misc_seq = ?</property>
                     <inputColumn
                       refId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
@@ -33086,7 +33086,7 @@ AND misc_seq = ?</property>
                     <inputColumn
                       refId="Package\bcm_ofc_misc_clss_cd\Sort.Inputs[Sort Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       lineageId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
                       <properties>
@@ -33286,7 +33286,7 @@ AND misc_seq = ?</property>
                     <outputColumn
                       refId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       dataType="wstr"
-                      length="3"
+                      length="20"
                       lineageId="Package\bcm_ofc_misc_clss_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       name="co_cd"
                       sortKeyPosition="1">
@@ -47071,7 +47071,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_addr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -48628,7 +48628,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -48857,7 +48857,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -49018,7 +49018,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -59022,41 +59022,41 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_cntr_tp_sz">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ"
-          TopLeft="48.000001788139,36.8000000619888" />
+          TopLeft="49.000001788139,36.8000000619888" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_cntr_tp_sz\Sort"
           TopLeft="80,261.800000165304" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\bcm_cntr_tp_sz\Sort 1"
           TopLeft="448,277.800000165304" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\bcm_cntr_tp_sz\Merge Join"
           TopLeft="285,508" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\bcm_cntr_tp_sz\Multicast"
           TopLeft="91,369.800000165304" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_cntr_tp_sz\Data Conversion"
           TopLeft="45,141.800000165304" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\bcm_cntr_tp_sz\bcm_cntr_tp_sz"
           TopLeft="269.999980529151,607.183335893816" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_cntr_tp_sz\DELETE"
           TopLeft="256.374989693364,239.616667701536" />
         <NodeLayout
-          Size="185.6,41.6"
+          Size="186,42"
           Id="Package\bcm_cntr_tp_sz\fwdd_bcm_cntr_tp_sz"
           TopLeft="462.666666799121,61" />
         <EdgeLayout
@@ -59078,14 +59078,12 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\bcm_cntr_tp_sz.Paths[OLE DB Source Output]"
-          TopLeft="127.75000089407,78.8000000619888">
+          TopLeft="128.25000089407,78.8000000619888">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -59102,9 +59100,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59138,9 +59134,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59174,9 +59168,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59210,9 +59202,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59234,9 +59224,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59258,9 +59246,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59294,9 +59280,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60684,6 +60668,154 @@ FROM TB_VSL</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\bcm_ofc_misc_clss_cd">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\bcm_ofc_misc_clss_cd\Sort"
+          TopLeft="237.5,260.5" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\bcm_ofc_misc_clss_cd\DELETE"
+          TopLeft="381.5,279.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
+          TopLeft="229.999990860622,108.333334194289" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\bcm_ofc_misc_clss_cd\Data Conversion"
+          TopLeft="212.5,185.5" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd"
+          TopLeft="576.5,286.5" />
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[Data Conversion Output]"
+          TopLeft="290,227.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[Sort Output]"
+          TopLeft="336.5,281.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,19"
+              Start="0,0"
+              End="37.5,19">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,15"
+                    Point2="22.5,19"
+                    Point3="26.5,19" />
+                  <mssgle:LineSegment
+                    End="37.5,19" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Source Output]"
+          TopLeft="301.999990860622,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.99999086062201,35.166665805711"
+              Start="0,0"
+              End="-8.99999086062201,27.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5833329028555"
+                    Point2="0,17.5833329028555"
+                    Point3="-4,17.5833329028555" />
+                  <mssgle:LineSegment
+                    End="-4.99999086062201,17.5833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.99999086062201,17.5833329028555"
+                    Point2="-8.99999086062201,17.5833329028555"
+                    Point3="-8.99999086062201,21.5833329028555" />
+                  <mssgle:LineSegment
+                    End="-8.99999086062201,27.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Command Output]"
+          TopLeft="503.5,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,0"
+              Start="0,0"
+              End="65.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\bcm_ofc_pfx">
     <LayoutInfo>
       <GraphLayout
@@ -61159,7 +61291,7 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154,42"
+          Size="160,42"
           Id="Package\bcm_trd_prnr\bcm_trd_prnr_tp"
           TopLeft="661.5,418.500000103315" />
         <NodeLayout
@@ -61187,7 +61319,7 @@ FROM TB_VSL</property>
           Id="Package\bcm_trd_prnr\TB_TRDP"
           TopLeft="163.000001788139,27" />
         <NodeLayout
-          Size="140,42"
+          Size="144,42"
           Id="Package\bcm_trd_prnr\bcm_trd_prnr"
           TopLeft="816.499982615314,292.850002939304" />
         <NodeLayout
@@ -61308,18 +61440,18 @@ FROM TB_VSL</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\bcm_trd_prnr.Paths[OLE DB Command Output1]"
-          TopLeft="720.641659472717,314.033335475392">
+          TopLeft="721.041659472717,314.233335475392">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="95.8583231425971,0"
+              EndConnector="95.458323142597,0"
               Start="0,0"
-              End="88.3583231425971,0">
+              End="87.958323142597,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="88.3583231425971,0" />
+                    End="87.958323142597,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -61330,18 +61462,18 @@ FROM TB_VSL</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\bcm_trd_prnr.Paths[OLE DB Command Output]"
-          TopLeft="603.3,440.800000103315">
+          TopLeft="603.5,441.000000103315">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.2,0"
+              EndConnector="58,0"
               Start="0,0"
-              End="50.7,0">
+              End="50.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.7,0" />
+                    End="50.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -61620,27 +61752,27 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_addr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\bcm_trd_prnr_addr\bcm_trd_prnr_addr"
           TopLeft="633.499988774459,271.900000909169" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_trd_prnr_addr\Data Conversion"
           TopLeft="324.5,182.5" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_trd_prnr_addr\Sort"
           TopLeft="289.5,252.5" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_trd_prnr_addr\DELETE"
           TopLeft="478.666660242611,271.100001157125" />
         <NodeLayout
-          Size="220,41.6"
+          Size="220,42"
           Id="Package\bcm_trd_prnr_addr\TB_TRDP_ADDR + TB_TRDP"
-          TopLeft="338.999998907249,120" />
+          TopLeft="338.999998907249,119" />
         <EdgeLayout
           Id="Package\bcm_trd_prnr_addr.Paths[Data Conversion Output]"
           TopLeft="402.5,224.1">
@@ -61672,9 +61804,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61708,39 +61838,35 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\bcm_trd_prnr_addr.Paths[OLE DB Source Output]"
-          TopLeft="448.999998907249,161.6">
+          TopLeft="448.999998907249,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.500001092751,41.7"
+              EndConnector="31.500001092751,42.5"
               Start="0,0"
-              End="24.000001092751,41.7">
+              End="24.000001092751,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.7" />
+                    End="0,38.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.7"
-                    Point2="0,41.7"
-                    Point3="4,41.7" />
+                    Point1="0,38.5"
+                    Point2="0,42.5"
+                    Point3="4,42.5" />
                   <mssgle:LineSegment
-                    End="24.000001092751,41.7" />
+                    End="24.000001092751,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61762,9 +61888,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62592,154 +62716,6 @@ FROM TB_VSL</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\bcm_ofc_misc_clss_cd">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="122,42"
-          Id="Package\bcm_ofc_misc_clss_cd\DELETE"
-          TopLeft="381.5,279.5" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd"
-          TopLeft="576.5,286.5" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\bcm_ofc_misc_clss_cd\Data Conversion"
-          TopLeft="212.5,185.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
-          TopLeft="229.999990860622,108.333334194289" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\bcm_ofc_misc_clss_cd\Sort"
-          TopLeft="237.5,260.5" />
-        <EdgeLayout
-          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Source Output]"
-          TopLeft="301.999990860622,150.333334194289">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.99999086062201,35.166665805711"
-              Start="0,0"
-              End="-8.99999086062201,27.666665805711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5833329028555"
-                    Point2="0,17.5833329028555"
-                    Point3="-4,17.5833329028555" />
-                  <mssgle:LineSegment
-                    End="-4.99999086062201,17.5833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.99999086062201,17.5833329028555"
-                    Point2="-8.99999086062201,17.5833329028555"
-                    Point3="-8.99999086062201,21.5833329028555" />
-                  <mssgle:LineSegment
-                    End="-8.99999086062201,27.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_ofc_misc_clss_cd.Paths[Data Conversion Output]"
-          TopLeft="290,227.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_ofc_misc_clss_cd.Paths[Sort Output]"
-          TopLeft="336.5,281.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="45,19"
-              Start="0,0"
-              End="37.5,19">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,15"
-                    Point2="22.5,19"
-                    Point3="26.5,19" />
-                  <mssgle:LineSegment
-                    End="37.5,19" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_ofc_misc_clss_cd.Paths[OLE DB Command Output]"
-          TopLeft="503.5,304">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73,0"
-              Start="0,0"
-              End="65.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="65.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
