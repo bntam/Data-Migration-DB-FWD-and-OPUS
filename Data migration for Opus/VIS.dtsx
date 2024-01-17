@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="505"
-  DTS:VersionGUID="{FB1BBF99-D9E4-4349-AE10-E645E508572F}">
+  DTS:VersionBuild="506"
+  DTS:VersionGUID="{1A79D23A-8888-4F34-AC5F-84F9160779C9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
 ,	DELT_FLG	AS	delt_flg
-, 'OPUS' AS co_cd
+, 'AIF' AS co_cd
 FROM			
 	VIS_ROLE
 </DTS:VariableValue>
@@ -50,7 +50,7 @@ FROM
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
-SELECT 'OPUS' AS	co_cd
+SELECT 'AIF' AS	co_cd
 	, USRID	AS	usr_id
 	, TRDP_CD	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
@@ -88,7 +88,7 @@ SELECT
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
-, 'OPUS' AS co_cd
+, 'AIF' AS co_cd
 FROM			
 	VIS_USR
 </DTS:VariableValue>
@@ -256,7 +256,7 @@ FROM
                       refId="Package\vis_role\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -1847,7 +1847,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -1936,7 +1936,7 @@ WHERE
                       refId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -2013,7 +2013,7 @@ WHERE
                       refId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_role\VIS_ROLE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -2354,7 +2354,7 @@ WHERE
                       refId="Package\vis_usr + vis_usr_role\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -5394,7 +5394,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -5517,7 +5517,7 @@ FROM
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -5635,7 +5635,7 @@ FROM
                       refId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_usr + vis_usr_role\VIS_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -6219,7 +6219,7 @@ FROM
                       refId="Package\vis_usr_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -7236,7 +7236,7 @@ AND TRD_PRNR_CD = ?	</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -7326,7 +7326,7 @@ AND TRD_PRNR_CD = ?	</property>
                       refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -7405,7 +7405,7 @@ AND TRD_PRNR_CD = ?	</property>
                       refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -7499,15 +7499,15 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="179.2,41.6"
+          Size="179,42"
           Id="Package\vis_usr + vis_usr_role"
           TopLeft="6.92857142857142,149.107142857143" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\vis_usr_trd_prnr"
           TopLeft="24.75,26.5" />
         <NodeLayout
-          Size="114.4,41.6"
+          Size="114,42"
           Id="Package\vis_role"
           TopLeft="20.8571428571428,83.8928571428571" />
         <EdgeLayout
@@ -7549,8 +7549,8 @@ AND TRD_PRNR_CD = ?	</property>
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="199.2,245.6"
-          Size="199.2,288.8"
+          PanelSize="199,246"
+          Size="199,289"
           Id="ec485993-ffe5-404f-a7f4-35c3ff539617"
           TopLeft="591.222199384813,115.240733780394">
           <GroupLayout.ChildrenIds>
@@ -7569,39 +7569,39 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\vis_role\Sort"
           TopLeft="67.1666642162536,162.366667913331" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\vis_role\Sort 1"
           TopLeft="334.5,69.5" />
         <NodeLayout
-          Size="116.8,41.6"
+          Size="117,42"
           Id="Package\vis_role\vis_role"
           TopLeft="526.499989469846,209.863497330485" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\vis_role\OLE DB Command"
           TopLeft="238.5,345.5" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\vis_role\fwd_vis_role"
           TopLeft="322.5,12.5" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\vis_role\Merge Join"
           TopLeft="227.5,151.5" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\vis_role\VIS_ROLE"
           TopLeft="107.984852988311,11.2636363429734" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\vis_role\Conditional Split"
           TopLeft="234.5,255.5" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\vis_role\Data Conversion"
           TopLeft="75.8333303199875,89.2666673760944" />
         <EdgeLayout
@@ -7923,59 +7923,59 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177.6,41.6"
+          Size="178,42"
           Id="Package\vis_usr + vis_usr_role\DELETE vis_usr_role"
           TopLeft="195.499992450078,326.90000245889" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\vis_usr + vis_usr_role\fwd_vis_usr_role"
           TopLeft="432.984840073972,16.1999986775716" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\vis_usr + vis_usr_role\Merge Join 1"
           TopLeft="424.666651202573,143.90000070254" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\vis_usr + vis_usr_role\Sort"
           TopLeft="90.4999966224036,142.433334421582" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\vis_usr + vis_usr_role\DELETE vis_usr"
           TopLeft="21.3333374725446,333.500001653036" />
         <NodeLayout
-          Size="134.4,41.6"
+          Size="134,42"
           Id="Package\vis_usr + vis_usr_role\vis_usr_role"
           TopLeft="445.499982515972,229.966668450568" />
         <NodeLayout
-          Size="111.2,41.6"
+          Size="111,42"
           Id="Package\vis_usr + vis_usr_role\vis_usr"
           TopLeft="282.166655672922,228.926118278006" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\vis_usr + vis_usr_role\Multicast"
           TopLeft="93.8333333995608,234.166667768691" />
         <NodeLayout
-          Size="134.4,41.6"
+          Size="134,42"
           Id="Package\vis_usr + vis_usr_role\fwd_vis_usr"
           TopLeft="278.666675541135,10.7999994421005" />
         <NodeLayout
-          Size="105.6,41.6"
+          Size="106,42"
           Id="Package\vis_usr + vis_usr_role\Sort 1"
           TopLeft="277.999990363916,80.5666670248244" />
         <NodeLayout
-          Size="105.6,41.6"
+          Size="106,42"
           Id="Package\vis_usr + vis_usr_role\Sort 2"
           TopLeft="454.666651202573,81.1000001239777" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\vis_usr + vis_usr_role\VIS_USR"
           TopLeft="107.984852988311,11.2636363429734" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\vis_usr + vis_usr_role\Data Conversion"
           TopLeft="77.9999971191089,78.3000005785624" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\vis_usr + vis_usr_role\Merge Join"
           TopLeft="255.499990065893,147.700000971158" />
         <EdgeLayout
@@ -8447,23 +8447,23 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\vis_usr_trd_prnr\Sort"
           TopLeft="123.5,161.5" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\vis_usr_trd_prnr\vis_usr_trd_prnr"
           TopLeft="377.5,232.5" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\vis_usr_trd_prnr\OLE DB Command"
           TopLeft="105.5,247.5" />
         <NodeLayout
-          Size="192,41.6"
+          Size="192,42"
           Id="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR"
           TopLeft="80.0000017881393,8.99999989668526" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\vis_usr_trd_prnr\Data Conversion"
           TopLeft="86.5,86.5" />
         <EdgeLayout

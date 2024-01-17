@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="BCM"
   DTS:PackageType="5"
-  DTS:VersionBuild="536"
-  DTS:VersionGUID="{C9BEDDC0-9EF1-449C-96A8-3004AE75B8EE}">
+  DTS:VersionBuild="537"
+  DTS:VersionGUID="{F86B729D-E425-41F2-8C79-18543681530F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -34,7 +34,7 @@ cmdt_nm as cmdt_nm,
 uppr_cmdt_cd as uppr_cmdt_cd,
 descr as cmdt_desc,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -62,7 +62,7 @@ cstms_cntr_cd as locl_cstms_cntr_cd,
 descr as cntr_tp_sz_desc,
 use_flg,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -94,7 +94,7 @@ SELECT
 ,	CURR_CD		AS	curr_cd
 ,	CONTI_CD	AS	conti_cd
 ,	RGST_USRID	AS	cre_usr_id
-,	'GPLW'	AS	co_cd
+,	'AIF'	AS	co_cd
 ,	RGST_TMS	AS	cre_dt
 ,	MODI_USRID	AS	upd_usr_id
 ,	MODI_TMS	AS	upd_dt
@@ -121,7 +121,7 @@ prnt_conti_cd,
 descr as conti_desc,
 use_flg,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -150,7 +150,7 @@ SELECT
 ,	MODI_TMS	AS	upd_dt
 ,	CAST('1900-01-01' AS DATE) AS curr_eff_dt
 ,	CAST('9999-01-01' AS DATE) AS curr_exp_dt
-, 	'GPLW' AS co_cd
+, 	'AIF' AS co_cd
 FROM	TB_COM_CD_DTL		
 WHERE	com_cd = 'C010'
 </DTS:VariableValue>
@@ -176,7 +176,7 @@ xch_rt,
 aply_fm_dt,
 aply_to_dt,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -212,7 +212,7 @@ xch_rt,
 aply_fm_dt,
 aply_to_dt,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_ofc_cd,
@@ -250,7 +250,7 @@ iata_loc_cd,
 un_loc_cd,
 cbsa_loc_cd,
 dock_rcpt_rmk,
-'GPLW' as co_cd
+'AIF' as co_cd
 from tb_loc
 </DTS:VariableValue>
     </DTS:Variable>
@@ -267,7 +267,7 @@ from tb_loc
 SELECT	
 	LOC_CD AS loc_cd
 ,	LOWER(LOC_TP_CD) AS loc_tp_cd
-, 'GPLW' AS co_cd
+, 'AIF' AS co_cd
 , 'admin' AS cre_usr_id
 , getdate() AS cre_dt
 , 'admin' AS upd_usr_id
@@ -299,7 +299,7 @@ use_flg,
 finc_ofc_cd,
 sls_ofc_cd,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -417,7 +417,7 @@ from tb_ofc
       <DTS:VariableValue
         DTS:DataType="8">
 SELECT	
-'GPLW' AS co_cd
+'AIF' AS co_cd
 ,CONCAT('MISC',CONVERT(varchar,RGST_TMS,112), RIGHT('00000000' + CAST(ROW_NUMBER() OVER (ORDER BY RGST_TMS, RGST_OFC_CD, OTH_TP) AS VARCHAR), 8)) AS	misc_seq
 ,	OTH_TP	AS	misc_tp_cd
 ,	RMK	AS	misc_desc
@@ -444,7 +444,7 @@ FROM	TB_OTH_CD
       <DTS:VariableValue
         DTS:DataType="8">
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'OQTTN' as pfx_cd ,
 	sea_quo_prfx as pfx_val ,
@@ -459,7 +459,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'AQTTN' as pfx_cd ,
 	air_quo_prfx as pfx_val ,
@@ -474,7 +474,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'IQTTN' as pfx_cd ,
 	'' as pfx_val ,
@@ -489,7 +489,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'SHPID' as pfx_cd ,
 	'' as pfx_val ,
@@ -504,7 +504,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'OEHBL' as pfx_cd ,
 	oe_hbl_prfx as pfx_val ,
@@ -519,7 +519,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'AEHAW' as pfx_cd ,
 	ae_awb_prfx as pfx_val ,
@@ -534,7 +534,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'OEBKG' as pfx_cd ,
 	oe_ref_prfx as pfx_val ,
@@ -549,7 +549,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'OIBKG' as pfx_cd ,
 	oi_ref_prfx as pfx_val ,
@@ -564,7 +564,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'AEBKG' as pfx_cd ,
 	ae_ref_prfx as pfx_val ,
@@ -579,7 +579,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'AIBKG' as pfx_cd ,
 	ai_ref_prfx as pfx_val ,
@@ -594,7 +594,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'INVNO' as pfx_cd ,
 	inv_prfx as pfx_val ,
@@ -609,7 +609,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'CRDRN' as pfx_cd ,
 	crdr_prfx as pfx_val ,
@@ -624,7 +624,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'PAYSN' as pfx_cd ,
 	'' as pfx_val ,
@@ -639,7 +639,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'DPSSN' as pfx_cd ,
 	'' as pfx_val ,
@@ -654,7 +654,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHDOC' as pfx_cd ,
 	wm_doc_prfx as pfx_val ,
@@ -669,7 +669,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'CLPNO' as pfx_cd ,
 	clp_prfx as pfx_val ,
@@ -684,7 +684,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHRCT' as pfx_cd ,
 	wh_rcpt_prfx as pfx_val ,
@@ -699,7 +699,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHRCV' as pfx_cd ,
 	wh_rcv_prfx as pfx_val ,
@@ -714,7 +714,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'WHSHP' as pfx_cd ,
 	wh_shp_prfx as pfx_val ,
@@ -729,7 +729,7 @@ select
 from tb_ofc	
 union all	
 select	
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	ofc_cd as ofc_cd,
 	'TRKNO' as pfx_cd ,
 	trk_prfx as pfx_val ,
@@ -761,7 +761,7 @@ cstms_pck_cd_val as kr_cstms_cd,
 pck_nm,
 descr as pck_desc,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -787,7 +787,7 @@ STATE_CD	AS	ste_cd
 ,RMK	AS	ste_desc
 ,CNT_CD	AS	cnt_cd
 ,RGST_USRID	AS	cre_usr_id
-,'GPLW'	AS	co_cd
+,'AIF'	AS	co_cd
 ,RGST_TMS	AS	cre_dt
 ,MODI_USRID	AS	upd_usr_id
 ,MODI_TMS	AS	upd_dt
@@ -823,7 +823,7 @@ shrt_nm,
 sls_usrid as sls_usr_id,
 delt_flg,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -887,7 +887,7 @@ acct_dpsr_nm,
 bank_cd,
 acct_desc,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -917,7 +917,7 @@ select
 	tta.trdp_add_addr as addr_fmt_desc,
 	tta.rmk as addr_rmk,
 	tta.rgst_usrid as cre_usr_id,
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	tta.rgst_tms as cre_dt,
 	tta.modi_usrid as upd_usr_id,
 	tta.modi_tms as upd_dt,
@@ -943,7 +943,7 @@ select
 	tt.lgl_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -969,7 +969,7 @@ select
 	tt.eng_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -995,7 +995,7 @@ select
 	tt.tax_iss_addr as addr_fmt_desc,
 	'' as addr_rmk,
 	tt.rgst_usrid as cre_usr_id,
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	tt.rgst_tms as cre_dt,
 	tt.modi_usrid as upd_usr_id,
 	tt.modi_tms as upd_dt,
@@ -1046,7 +1046,7 @@ rate as chg_rt,
 ut_cd,
 valid_dt as vld_dt,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1073,7 +1073,7 @@ sls_his_flat_url as sls_his_file_url,
 sls_his_flat_nm as sls_his_file_nm,
 sls_his_ctnt,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1101,7 +1101,7 @@ pic_eml as eml_addr,
 pic_desc as cntc_desc,
 rep_flg as re_flg,
 rgst_usrid as cre_usr_id,
-'GPLW' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -1135,7 +1135,7 @@ from tb_trdp_cntc_pson
 	rlt_prnr_tp_cd,
 	COALESCE(delt_flg,'N') AS delt_flg,
 	rgst_usrid as cre_usr_id,
-	'GPLW' as co_cd,
+	'AIF' as co_cd,
 	rgst_tms as cre_dt,
 	modi_usrid as upd_usr_id,
 	modi_ofc_cd,
@@ -1161,7 +1161,7 @@ SELECT
 ,DESCR	AS	vsl_desc
 ,LNR_TRDP_CD	AS	lnr_trdp_cd
 ,RGST_USRID	AS	cre_usr_id
-,'GPLW' AS	co_cd
+,'AIF' AS	co_cd
 ,RGST_TMS	AS	cre_dt
 ,MODI_USRID	AS	upd_usr_id
 ,MODI_TMS	AS	upd_dt
@@ -1483,7 +1483,7 @@ FROM TB_VSL
                       refId="Package\bcm_cmdt_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -2593,7 +2593,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -2737,7 +2737,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -2872,7 +2872,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cmdt_cd\TB_CMDT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -3341,7 +3341,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_cntr_tp_sz\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -5787,7 +5787,7 @@ from bcm_cntr_tp_sz</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -5971,7 +5971,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -6112,7 +6112,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cntr_tp_sz\TB_CNTR_TPSZ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -6695,7 +6695,7 @@ from bcm_cntr_tp_sz</property>
                       refId="Package\bcm_cnt_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
                       lineageId="Package\bcm_cnt_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
@@ -7412,7 +7412,7 @@ FROM
                       refId="Package\bcm_cnt_cd\Merge Join.Inputs[Merge Join Left Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
                       lineageId="Package\bcm_cnt_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
@@ -8161,7 +8161,7 @@ AND cnt_cd = ?</property>
                       refId="Package\bcm_cnt_cd\Sort.Inputs[Sort Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Output].Columns[co_cd]">
                       <properties>
@@ -8365,7 +8365,7 @@ AND cnt_cd = ?</property>
                       refId="Package\bcm_cnt_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cnt_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       name="co_cd"
                       sortKeyPosition="1">
@@ -9011,7 +9011,7 @@ FROM TB_CNT</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -9108,7 +9108,7 @@ FROM TB_CNT</property>
                       refId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -9188,7 +9188,7 @@ FROM TB_CNT</property>
                       refId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_cnt_cd\TB_CNT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -9568,7 +9568,7 @@ FROM TB_CNT</property>
                       refId="Package\bcm_conti_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -11319,7 +11319,7 @@ bcm_conti_cd</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -11441,7 +11441,7 @@ bcm_conti_cd</property>
                       refId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -11557,7 +11557,7 @@ bcm_conti_cd</property>
                       refId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_conti_cd\TB_CONTI.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -11921,7 +11921,7 @@ bcm_conti_cd</property>
                       refId="Package\bcm_curr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -12823,7 +12823,7 @@ WHERE	com_cd = 'C010'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -12936,7 +12936,7 @@ WHERE	com_cd = 'C010'</property>
                       refId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -13027,7 +13027,7 @@ WHERE	com_cd = 'C010'</property>
                       refId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_curr\TB_COM_CD_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -13461,7 +13461,7 @@ WHERE	com_cd = 'C010'</property>
                       refId="Package\bcm_finc_xch_rt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -14728,7 +14728,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -14904,7 +14904,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -15070,7 +15070,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -15529,7 +15529,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_inv_xch_rt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -16973,7 +16973,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -17182,7 +17182,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -17380,7 +17380,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_inv_xch_rt\TB_INV_XCRT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -17834,7 +17834,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_loc_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -19089,7 +19089,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -19265,7 +19265,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -19410,7 +19410,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -19739,7 +19739,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_loc_tp_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -20430,7 +20430,7 @@ and loc_tp_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -20498,7 +20498,7 @@ and loc_tp_cd = ?</property>
                       refId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -20558,7 +20558,7 @@ and loc_tp_cd = ?</property>
                       refId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -22395,7 +22395,7 @@ and loc_tp_cd = ?</property>
                       refId="Package\bcm_ofc_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -22834,7 +22834,7 @@ and loc_tp_cd = ?</property>
                     <inputColumn
                       refId="Package\bcm_ofc_cd\Data Conversion.Inputs[Data Conversion Input].Columns[dck_rcpt_rmk]"
                       cachedDataType="wstr"
-                      cachedLength="1000"
+                      cachedLength="2000"
                       cachedName="dck_rcpt_rmk"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].Columns[dck_rcpt_rmk]" />
                     <inputColumn
@@ -29546,7 +29546,7 @@ AND	OFC_CD = ? </property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -30249,7 +30249,7 @@ AND	OFC_CD = ? </property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[dck_rcpt_rmk]"
-                      length="1000"
+                      length="2000"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].Columns[dck_rcpt_rmk]"
                       name="dck_rcpt_rmk"
                       truncationRowDisposition="FailComponent" />
@@ -30763,7 +30763,7 @@ AND	OFC_CD = ? </property>
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -31136,7 +31136,7 @@ AND	OFC_CD = ? </property>
                     <externalMetadataColumn
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[dck_rcpt_rmk]"
                       dataType="wstr"
-                      length="1000"
+                      length="2000"
                       name="dck_rcpt_rmk" />
                     <externalMetadataColumn
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Output].ExternalColumns[xpt_pst_dt_cd]"
@@ -31501,7 +31501,7 @@ AND	OFC_CD = ? </property>
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -31857,7 +31857,7 @@ AND	OFC_CD = ? </property>
                     <outputColumn
                       refId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Error Output].Columns[dck_rcpt_rmk]"
                       dataType="wstr"
-                      length="1000"
+                      length="2000"
                       lineageId="Package\bcm_ofc_cd\TB_OFC_CD.Outputs[OLE DB Source Error Output].Columns[dck_rcpt_rmk]"
                       name="dck_rcpt_rmk" />
                     <outputColumn
@@ -32529,7 +32529,7 @@ AND	OFC_CD = ? </property>
                       refId="Package\bcm_ofc_misc_clss_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -33596,7 +33596,7 @@ FROM	TB_OTH_CD</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -33714,7 +33714,7 @@ FROM	TB_OTH_CD</property>
                       refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Output].ExternalColumns[misc_seq]"
@@ -33774,7 +33774,7 @@ FROM	TB_OTH_CD</property>
                       refId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -34182,7 +34182,7 @@ FROM	TB_OTH_CD</property>
                       refId="Package\bcm_ofc_pfx\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -35166,7 +35166,7 @@ AND	PFX_CD = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -35288,7 +35288,7 @@ AND	PFX_CD = ?</property>
                       refId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Output].ExternalColumns[ofc_cd]"
@@ -35356,7 +35356,7 @@ AND	PFX_CD = ?</property>
                       refId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ofc_pfx\TB_OFC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -35756,7 +35756,7 @@ AND	PFX_CD = ?</property>
                       refId="Package\bcm_pck_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -36717,7 +36717,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -36839,7 +36839,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -36955,7 +36955,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_pck_cd\TB_PCK_UT_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -37330,7 +37330,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_ste\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -38286,7 +38286,7 @@ FROM TB_STATE</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -38372,7 +38372,7 @@ FROM TB_STATE</property>
                       refId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -38446,7 +38446,7 @@ FROM TB_STATE</property>
                       refId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_ste\TB_STATE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -39702,7 +39702,7 @@ FROM TB_STATE</property>
                       refId="Package\bcm_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[eng_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="50"
                       cachedName="eng_nm"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[eng_nm]" />
                     <inputColumn
@@ -39765,7 +39765,7 @@ FROM TB_STATE</property>
                       refId="Package\bcm_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[shrt_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="50"
                       cachedName="shrt_nm"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[shrt_nm]" />
                     <inputColumn
@@ -43887,7 +43887,7 @@ AND sub_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[eng_nm]"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[eng_nm]"
                       name="eng_nm"
                       truncationRowDisposition="FailComponent" />
@@ -43986,7 +43986,7 @@ AND sub_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[shrt_nm]"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].Columns[shrt_nm]"
                       name="shrt_nm"
                       truncationRowDisposition="FailComponent" />
@@ -44505,7 +44505,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[eng_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       name="eng_nm" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[eng_addr]"
@@ -44559,7 +44559,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[shrt_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       name="shrt_nm" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[sls_usr_id]"
@@ -44849,7 +44849,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[eng_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[eng_nm]"
                       name="eng_nm" />
                     <outputColumn
@@ -44912,7 +44912,7 @@ AND sub_cd = ?</property>
                       refId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[shrt_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[shrt_nm]"
                       name="shrt_nm" />
                     <outputColumn
@@ -51240,7 +51240,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -52221,7 +52221,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -52341,7 +52341,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -52453,7 +52453,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -54915,7 +54915,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -54967,7 +54967,7 @@ AND co_cd = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\Data Conversion.Inputs[Data Conversion Input].Columns[rlt_trd_prnr_nm]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="60"
+                      cachedLength="50"
                       cachedName="rlt_trd_prnr_nm"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].Columns[rlt_trd_prnr_nm]" />
                     <inputColumn
@@ -56071,7 +56071,7 @@ AND rlt_seq = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -56155,7 +56155,7 @@ AND rlt_seq = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[rlt_trd_prnr_nm]"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].Columns[rlt_trd_prnr_nm]"
                       name="rlt_trd_prnr_nm"
                       truncationRowDisposition="FailComponent" />
@@ -56231,7 +56231,7 @@ AND rlt_seq = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -56275,7 +56275,7 @@ AND rlt_seq = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[rlt_trd_prnr_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       name="rlt_trd_prnr_nm" />
                     <externalMetadataColumn
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Output].ExternalColumns[cb_trdp_addr]"
@@ -56350,7 +56350,7 @@ AND rlt_seq = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Error Output].Columns[rlt_trd_prnr_nm]"
                       codePage="949"
                       dataType="str"
-                      length="60"
+                      length="50"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Error Output].Columns[rlt_trd_prnr_nm]"
                       name="rlt_trd_prnr_nm" />
                     <outputColumn
@@ -56378,7 +56378,7 @@ AND rlt_seq = ?</property>
                       refId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_trd_prnr_rlt\TB_TRDP_CB.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -56789,7 +56789,7 @@ AND rlt_seq = ?</property>
                       refId="Package\bcm_vsl_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -57947,7 +57947,7 @@ FROM TB_VSL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -58096,7 +58096,7 @@ FROM TB_VSL</property>
                       refId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -58216,7 +58216,7 @@ FROM TB_VSL</property>
                       refId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\bcm_vsl_cd\TB_VSL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -58355,7 +58355,7 @@ FROM TB_VSL</property>
         <NodeLayout
           Size="157,42"
           Id="Package\bcm_cntr_tp_sz"
-          TopLeft="19.5,123.5" />
+          TopLeft="18.5,122.5" />
         <NodeLayout
           Size="147,42"
           Id="Package\bcm_conti_cd"
@@ -58395,7 +58395,7 @@ FROM TB_VSL</property>
         <NodeLayout
           Size="171,42"
           Id="Package\bcm_trd_prnr_acct"
-          TopLeft="192.785714285714,64.5" />
+          TopLeft="192.785714285714,63.5" />
         <NodeLayout
           Size="168,42"
           Id="Package\bcm_trd_prnr_chg"
@@ -58543,29 +58543,29 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_cmdt_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152.8,41.6"
+          Size="153,42"
           Id="Package\bcm_cmdt_cd\TB_CMDT_CD"
           TopLeft="79.0000017881393,17.9999998966853" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_cmdt_cd\Data Conversion"
           TopLeft="60.5,86.5" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_cmdt_cd\Sort"
           TopLeft="106.5,159.5" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_cmdt_cd\DELETE"
           TopLeft="304.5,264.5" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\bcm_cmdt_cd\Multicast"
           TopLeft="132.5,263.5" />
         <NodeLayout
-          Size="147.2,41.6"
+          Size="147,42"
           Id="Package\bcm_cmdt_cd\bcm_cmdt_cd"
           TopLeft="544.5,265.5" />
         <EdgeLayout
@@ -58599,9 +58599,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58635,9 +58633,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58659,9 +58655,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58683,9 +58677,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58719,9 +58711,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -58754,39 +58744,39 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_cnt_cd\TB_CNT"
           TopLeft="221.318181818182,13.8636363636364" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\bcm_cnt_cd\OLE DB Command"
           TopLeft="514,471" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\bcm_cnt_cd\Merge Join"
           TopLeft="337,233" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_cnt_cd\fwd_bcm_cnt_cd"
           TopLeft="502,81" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_cnt_cd\Sort"
           TopLeft="222,88" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_cnt_cd\Data Conversion"
           TopLeft="178,164" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\bcm_cnt_cd\Sort 1"
           TopLeft="483,161" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\bcm_cnt_cd\Conditional Split"
           TopLeft="355,325" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_cnt_cd\bcm_cnt_cd"
           TopLeft="678.5,340.5" />
         <EdgeLayout
@@ -58856,9 +58846,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58892,9 +58880,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58928,9 +58914,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -58964,9 +58948,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59000,9 +58982,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59072,9 +59052,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59420,41 +59398,41 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_conti_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_conti_cd\Sort"
           TopLeft="108,243" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\bcm_conti_cd\TB_CONTI"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\bcm_conti_cd\Merge Join"
           TopLeft="386,460" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_conti_cd\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\bcm_conti_cd\fwd_bcm_conti_cd"
           TopLeft="529.666666799121,3.19999983469646" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\bcm_conti_cd\Sort 1"
           TopLeft="574,205" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_conti_cd\Data Conversion"
           TopLeft="77,131" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\bcm_conti_cd\Multicast"
           TopLeft="134,367" />
         <NodeLayout
-          Size="147.2,41.6"
+          Size="147,42"
           Id="Package\bcm_conti_cd\bcm_conti_cd"
           TopLeft="374.999980529151,552.383335728513" />
         <EdgeLayout
@@ -59488,9 +59466,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59524,9 +59500,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59560,9 +59534,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59596,9 +59568,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59632,9 +59602,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59668,9 +59636,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59692,9 +59658,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59716,9 +59680,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59762,25 +59724,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_curr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\bcm_curr\TB_COM_CD_DTL"
           TopLeft="60,60" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_curr\Data Conversion"
           TopLeft="66.333334492312,140.566667024825" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_curr\DELETE"
           TopLeft="244.666659547223,218.900001219114" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_curr\Sort"
           TopLeft="89.666665706369,205.900001115799" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_curr\bcm_curr"
           TopLeft="423.833320286539,212.500000929833" />
         <EdgeLayout
@@ -59802,9 +59764,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59838,9 +59798,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59862,9 +59820,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59886,9 +59842,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -59906,25 +59860,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_finc_xch_rt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196,41.6"
+          Size="196,42"
           Id="Package\bcm_finc_xch_rt\TB_FINC_PERF_XCRT"
           TopLeft="79.0000017881393,22.9999998966853" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_finc_xch_rt\DELETE"
           TopLeft="268.374989693364,333.816667536232" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_finc_xch_rt\Sort"
           TopLeft="138,261" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\bcm_finc_xch_rt\bcm_finc_xch_rt"
           TopLeft="442.999980529151,329.383335728513" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_finc_xch_rt\Data Conversion"
           TopLeft="90,146" />
         <EdgeLayout
@@ -59958,9 +59912,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -59982,9 +59934,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60006,9 +59956,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60042,9 +59990,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60075,25 +60021,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_inv_xch_rt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_inv_xch_rt\Data Conversion"
           TopLeft="70,115" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="153,42"
           Id="Package\bcm_inv_xch_rt\TB_INV_XCRT"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_inv_xch_rt\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_inv_xch_rt\Sort"
           TopLeft="107,232" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_inv_xch_rt\bcm_inv_xch_rt"
           TopLeft="491.999980529151,195.383335728513" />
         <EdgeLayout
@@ -60127,9 +60073,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60151,9 +60095,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60187,9 +60129,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60211,9 +60151,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60244,25 +60182,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_loc_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_loc_cd\TB_LOC"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_loc_cd\DELETE"
           TopLeft="336.374989693364,205.816667536232" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\bcm_loc_cd\Sort 1"
           TopLeft="74,244" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_loc_cd\Data Conversion"
           TopLeft="54,114" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_loc_cd\bcm_loc_cd"
           TopLeft="489.999980529151,230.383335728513" />
         <EdgeLayout
@@ -60296,9 +60234,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60320,9 +60256,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60356,9 +60290,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60380,9 +60312,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60413,25 +60343,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_loc_tp_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_loc_tp_cd\Sort"
           TopLeft="130.5,181.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_loc_tp_cd\Data Conversion"
           TopLeft="99.5,100.5" />
         <NodeLayout
-          Size="192.8,41.6"
+          Size="193,42"
           Id="Package\bcm_loc_tp_cd\TB_LOC_TP_CD_LIST"
           TopLeft="78.0000017881393,8.99999989668526" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\bcm_loc_tp_cd\DELETE"
           TopLeft="240.5,274.5" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="153,42"
           Id="Package\bcm_loc_tp_cd\bcm_loc_tp_cd"
           TopLeft="474.5,272.5" />
         <EdgeLayout
@@ -60453,9 +60383,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60489,9 +60417,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60513,9 +60439,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60537,9 +60461,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60570,29 +60492,29 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ofc_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_ofc_cd\DELETE"
           TopLeft="478.041650730703,224.883334354427" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\bcm_ofc_cd\DELETE BCM_OFC_PFX"
           TopLeft="233.833324260182,229.966668450568" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_ofc_cd\Sort"
           TopLeft="96.3333297239411,167.566667954657" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_ofc_cd\Data Conversion"
           TopLeft="79.5,81.5" />
         <NodeLayout
-          Size="144,41.6"
+          Size="144,42"
           Id="Package\bcm_ofc_cd\TB_OFC_CD"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_ofc_cd\bcm_ofc_cd"
           TopLeft="635.999974370005,223.383335521884" />
         <EdgeLayout
@@ -60626,9 +60548,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60650,9 +60570,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60674,9 +60592,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60698,9 +60614,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60734,9 +60648,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -60769,25 +60681,25 @@ FROM TB_VSL</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99,42"
-          Id="Package\bcm_ofc_misc_clss_cd\Sort"
-          TopLeft="237.5,260.5" />
-        <NodeLayout
           Size="122,42"
           Id="Package\bcm_ofc_misc_clss_cd\DELETE"
           TopLeft="381.5,279.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
-          TopLeft="229.999990860622,108.333334194289" />
         <NodeLayout
           Size="161,42"
           Id="Package\bcm_ofc_misc_clss_cd\Data Conversion"
           TopLeft="212.5,185.5" />
         <NodeLayout
+          Size="144,42"
+          Id="Package\bcm_ofc_misc_clss_cd\TB_OTH_CD"
+          TopLeft="229.999990860622,108.333334194289" />
+        <NodeLayout
           Size="192,42"
           Id="Package\bcm_ofc_misc_clss_cd\bcm_ofc_misc_clss_cd"
           TopLeft="576.5,286.5" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\bcm_ofc_misc_clss_cd\Sort"
+          TopLeft="237.5,260.5" />
         <EdgeLayout
           Id="Package\bcm_ofc_misc_clss_cd.Paths[Data Conversion Output]"
           TopLeft="290,227.5">
@@ -60928,25 +60840,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ofc_pfx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_ofc_pfx\Sort"
           TopLeft="252.99999910593,207.700001177787" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_ofc_pfx\DELETE"
           TopLeft="382.999993940194,210.300001198451" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_ofc_pfx\TB_OFC"
           TopLeft="228,58" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_ofc_pfx\Data Conversion"
           TopLeft="228.833334591653,127.63333363639" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\bcm_ofc_pfx\bcm_ofc_pfx"
           TopLeft="553.833321677314,209.96666762405" />
         <EdgeLayout
@@ -60968,9 +60880,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -60992,9 +60902,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61028,9 +60936,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61052,9 +60958,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -61072,25 +60976,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_pck_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_pck_cd\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_pck_cd\Sort"
           TopLeft="98,216" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_pck_cd\Data Conversion"
           TopLeft="68,113" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\bcm_pck_cd\TB_PCK_UT_CD"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="140.8,41.6"
+          Size="141,42"
           Id="Package\bcm_pck_cd\bcm_pck_cd"
           TopLeft="489.999980529151,199.383335728513" />
         <EdgeLayout
@@ -61112,9 +61016,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61148,9 +61050,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61184,9 +61084,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61208,9 +61106,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -61241,25 +61137,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_ste">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\bcm_ste\TB_STATE"
           TopLeft="76.833340154754,68.2999994421005" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_ste\Sort"
           TopLeft="84.9999990065895,203.866667810016" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_ste\Data Conversion"
           TopLeft="60,138.000000619888" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_ste\DELETE"
           TopLeft="305.333327637779,289.066667748027" />
         <NodeLayout
-          Size="118.4,41.6"
+          Size="118,42"
           Id="Package\bcm_ste\bcm_ste"
           TopLeft="529.333328333167,293.166667148802" />
         <EdgeLayout
@@ -61281,9 +61177,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61317,9 +61211,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61341,9 +61233,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61365,9 +61255,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -61700,7 +61588,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_acct">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165,42"
           Id="Package\bcm_trd_prnr_acct\TB_TRDP_ACCT"
@@ -61740,9 +61628,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61764,9 +61650,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61800,9 +61684,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -61836,9 +61718,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62023,7 +61903,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_chg">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="99,42"
           Id="Package\bcm_trd_prnr_chg\Sort"
@@ -62063,9 +61943,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62099,9 +61977,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62123,9 +61999,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62159,9 +62033,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62192,25 +62064,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_cntc">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\bcm_trd_prnr_cntc\Sort"
           TopLeft="117,218" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\bcm_trd_prnr_cntc\DELETE"
           TopLeft="325.374989693364,215.816667536232" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\bcm_trd_prnr_cntc\TB_TRDP_CNTC"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\bcm_trd_prnr_cntc\Data Conversion"
           TopLeft="84,109" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\bcm_trd_prnr_cntc\bcm_trd_prnr_cntc"
           TopLeft="521.999980529151,221.383335728513" />
         <EdgeLayout
@@ -62232,9 +62104,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62256,9 +62126,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62280,9 +62148,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62304,9 +62170,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62337,7 +62201,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_cntc_pson">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="98,42"
           Id="Package\bcm_trd_prnr_cntc_pson\Sort"
@@ -62389,9 +62253,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62425,9 +62287,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62461,9 +62321,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62485,9 +62343,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62518,25 +62374,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_trd_prnr_rlt">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_trd_prnr_rlt\Data Conversion"
           TopLeft="156.333328531847,157.700000971159" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_trd_prnr_rlt\DELETE"
           TopLeft="336.333320187198,234.30000181834" />
         <NodeLayout
-          Size="154.4,41.6"
+          Size="154,42"
           Id="Package\bcm_trd_prnr_rlt\bcm_trd_prnr_rlt"
           TopLeft="512.166647725635,230.500001549721" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_trd_prnr_rlt\Sort"
           TopLeft="177.999993145465,231.700001797677" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\bcm_trd_prnr_rlt\TB_TRDP_CB"
           TopLeft="144.166660937998,82.3333339876599" />
         <EdgeLayout
@@ -62558,9 +62414,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62582,9 +62436,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62606,9 +62458,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62642,9 +62492,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -62675,25 +62523,25 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_vsl_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\bcm_vsl_cd\Data Conversion"
           TopLeft="126.666661633386,95.3333340909746" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\bcm_vsl_cd\DELETE"
           TopLeft="294.666661236021,218.466669070456" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\bcm_vsl_cd\Sort"
           TopLeft="154.999993840854,160.333334607548" />
         <NodeLayout
-          Size="116.8,41.6"
+          Size="117,42"
           Id="Package\bcm_vsl_cd\TB_VSL"
           TopLeft="111.000005463759,19.7666657230589" />
         <NodeLayout
-          Size="136.8,41.6"
+          Size="137,42"
           Id="Package\bcm_vsl_cd\bcm_vsl_cd"
           TopLeft="438.5,155.5" />
         <EdgeLayout
@@ -62727,9 +62575,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62763,9 +62609,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62799,9 +62643,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -62823,9 +62665,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

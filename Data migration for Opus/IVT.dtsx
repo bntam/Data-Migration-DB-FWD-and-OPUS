@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IVT"
   DTS:PackageType="5"
-  DTS:VersionBuild="502"
-  DTS:VersionGUID="{131C763D-3DA8-4DE2-904B-EF9454BC0C7E}">
+  DTS:VersionBuild="503"
+  DTS:VersionGUID="{1174A2FF-FD6A-43C4-80C5-FCFD628AEC80}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -41,7 +41,7 @@ SELECT
 	,	CRE_USR_ID	AS	cre_usr_id
 	,	UPD_DT	AS	upd_dt
 	,	UPD_USR_ID	AS	upd_usr_id
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 FROM				
 		WHM_CNTC_PSON
 </DTS:VariableValue>
@@ -61,7 +61,7 @@ SELECT
 	,	FILE_NO	AS	file_no
 	,	SLS_OFC_CD	AS	sls_ofc_cd
 	,	RGST_USRID	AS	cre_usr_id
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 	,	RGST_TMS	AS	cre_dt
 	,	MODI_USRID	AS	upd_usr_id
 	,	MODI_TMS	AS	upd_dt
@@ -104,7 +104,7 @@ SELECT
 	,	SLS_USRID	AS	sls_usr_id
 	,	SLS_OFC_CD	AS	sls_ofc_cd
 	,	RGST_USRID	AS	cre_usr_id
-	,	'OPUS' AS	co_cd
+	,	'AIF' AS	co_cd
 	,	RGST_TMS	AS	cre_dt
 	,	MODI_USRID	AS	upd_usr_id
 	,	MODI_TMS	AS	upd_dt
@@ -153,7 +153,7 @@ SELECT
 	,	LOC_RMK	AS	loc_rmk
 	,	LOC_MAX_VOL_CFT	AS	loc_max_vol_cft_val
 	,	LOC_MAX_WGT_LBS	AS	loc_max_wgt_lbs_val
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 FROM				
 		WHM_LOC		
 </DTS:VariableValue>
@@ -170,7 +170,7 @@ FROM
         DTS:DataType="8">
 SELECT				
 		FILE_NO	AS	file_no
-	,	'OPUS' AS	co_cd
+	,	'AIF' AS	co_cd
 	,	WH_CD	AS	wh_cd
 	,	RCV_SHP_TP_CD	AS	rcv_shp_tp_cd
 	,	CUST_CD	AS	cust_cd
@@ -214,7 +214,7 @@ FROM
         DTS:DataType="8">
 SELECT				
 		FILE_NO	AS	file_no
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 	,	CUST_ITM_ID	AS	cust_itm_id
 	,	ITM_UT_CD	AS	itm_ut_cd
 	,	ITM_INR_QTY	AS	itm_inr_qty
@@ -268,7 +268,7 @@ SELECT
 	, CRE_USR_ID	AS	cre_usr_id
 	, UPD_DT	AS	upd_dt
 	, UPD_USR_ID	AS	upd_usr_id
-	, 'OPUS'	AS	co_cd
+	, 'AIF'	AS	co_cd
 FROM			
 	WHM_WH
 </DTS:VariableValue>
@@ -305,7 +305,7 @@ FROM
                       refId="Package\ivt_cntc_pson\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -957,7 +957,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -1113,7 +1113,7 @@ WHERE
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -1266,7 +1266,7 @@ WHERE
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -2150,7 +2150,7 @@ WHERE
                       refId="Package\ivt_doc_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -3396,7 +3396,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -3524,7 +3524,7 @@ FROM
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -3620,7 +3620,7 @@ FROM
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -3748,7 +3748,7 @@ FROM
                       refId="Package\ivt_doc_mst\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -6713,7 +6713,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -7103,7 +7103,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -7451,7 +7451,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -7635,7 +7635,7 @@ FROM
                       refId="Package\ivt_loc\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -9351,7 +9351,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -9550,7 +9550,7 @@ WHERE
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -9732,7 +9732,7 @@ WHERE
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -9853,7 +9853,7 @@ WHERE
                       refId="Package\ivt_rcv_shp\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -12292,7 +12292,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -12603,7 +12603,7 @@ FROM
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -12790,7 +12790,7 @@ FROM
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -13040,7 +13040,7 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -15299,7 +15299,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -15559,7 +15559,7 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -15708,7 +15708,7 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -15930,7 +15930,7 @@ FROM
                       refId="Package\mdm_wh\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -16589,7 +16589,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -16756,7 +16756,7 @@ WHERE
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -16922,7 +16922,7 @@ WHERE
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -17841,31 +17841,31 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\mdm_wh"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\ivt_cntc_pson"
           TopLeft="13.2461167648635,70.7818610923803" />
         <NodeLayout
-          Size="110.4,41.6"
+          Size="110,42"
           Id="Package\ivt_loc"
           TopLeft="11.2461167648635,132.78186109238" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_rcv_shp"
           TopLeft="8.24611676486347,199.78186109238" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm"
           TopLeft="171.246116764863,9.78186109238027" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\ivt_doc_mst"
           TopLeft="182.246116764863,69.7818610923803" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\ivt_doc_dtl"
           TopLeft="184.246116764863,141.78186109238" />
         <EdgeLayout
@@ -17895,8 +17895,8 @@ WHERE
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="352.8,256"
-          Size="352.8,299.2"
+          PanelSize="353,256"
+          Size="353,299"
           Id="e3c19fcd-ee0a-4e9d-8dda-d1359c54191e"
           TopLeft="471.166660143269,65.4666573958921">
           <GroupLayout.ChildrenIds>
@@ -17919,23 +17919,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\ivt_cntc_pson\ivt_cntc_pson"
           TopLeft="589.500009139378,231.166665805711" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\ivt_cntc_pson\IVT_CNTC_PSON"
           TopLeft="206,67" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_cntc_pson\Sort"
           TopLeft="255.500009139378,229.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_cntc_pson\Data Conversion"
           TopLeft="228.500009139378,154.166665805711" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_cntc_pson\DELETE"
           TopLeft="409.500009139378,230.166665805711" />
         <EdgeLayout
@@ -18055,23 +18055,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_doc_dtl\Sort"
           TopLeft="197.500009139378,197.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_doc_dtl\OLE DB Command"
           TopLeft="339.500009139378,196.166665805711" />
         <NodeLayout
-          Size="176,41.6"
+          Size="176,42"
           Id="Package\ivt_doc_dtl\TB_WM_DOC_DTL"
           TopLeft="147,42" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\ivt_doc_dtl\ivt_doc_dtl"
           TopLeft="550.500009139378,192.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_doc_dtl\Data Conversion"
           TopLeft="150.500009139378,120.166665805711" />
         <EdgeLayout
@@ -18191,23 +18191,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\ivt_doc_mst\ivt_doc_mst"
           TopLeft="603.500009139378,206.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_doc_mst\OLE DB Command"
           TopLeft="395.500009139378,209.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_doc_mst\Sort"
           TopLeft="241.500009139378,209.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_doc_mst\Data Conversion"
           TopLeft="224.500009139378,137.166665805711" />
         <NodeLayout
-          Size="177.6,41.6"
+          Size="178,42"
           Id="Package\ivt_doc_mst\TB_WM_DOC_MST"
           TopLeft="210,56" />
         <EdgeLayout
@@ -18327,23 +18327,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_loc\DELETE"
           TopLeft="344.500009139378,213.166665805711" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_loc\WHM_LOC"
           TopLeft="180,74" />
         <NodeLayout
-          Size="110.4,41.6"
+          Size="110,42"
           Id="Package\ivt_loc\ivt_loc"
           TopLeft="509.500009139378,214.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_loc\Data Conversion"
           TopLeft="185.500009139378,148.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_loc\Sort"
           TopLeft="214.500009139378,213.166665805711" />
         <EdgeLayout
@@ -18463,23 +18463,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_rcv_shp\Sort"
           TopLeft="238,228.166665805711" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\ivt_rcv_shp\WHM_RCV_SHP"
           TopLeft="203.499990860622,89" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_rcv_shp\DELETE"
           TopLeft="363,243.166665805711" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_rcv_shp\ivt_rcv_shp"
           TopLeft="583,246.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_rcv_shp\Data Conversion"
           TopLeft="196,154.166665805711" />
         <EdgeLayout
@@ -18623,23 +18623,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_rcv_shp_itm\Sort"
           TopLeft="245.500009139378,201.166665805711" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="189,42"
           Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
           TopLeft="195,59" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
           TopLeft="626.500009139378,200.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_rcv_shp_itm\OLE DB Command"
           TopLeft="391.500009139378,203.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_rcv_shp_itm\Data Conversion"
           TopLeft="215.500009139378,128.166665805711" />
         <EdgeLayout
@@ -18760,23 +18760,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\mdm_wh\mdm_wh"
           TopLeft="554,242.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\mdm_wh\Sort"
           TopLeft="234,240.166665805711" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\mdm_wh\DELETE"
           TopLeft="387,243.166665805711" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\mdm_wh\MDM_WH"
           TopLeft="203.499990860622,83" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\mdm_wh\Data Conversion"
           TopLeft="190,168.166665805711" />
         <EdgeLayout
