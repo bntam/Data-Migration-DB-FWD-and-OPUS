@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ADMIN-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAABA1wGtDFRAmWjZz+iH27X91UFW/nvFjCDa60uigAAACAAAAAAOgAAAAAIAACAAAADlxLF0C8M3yTOBkHufercKWevAWdQUXCs0FcHydh3Dn5AAAADkIgDxXemtm1PBC3cd4yPaHUmuG1j+9dosp6j940x3M+T17gCJsg9xywD2MtZVUcRx47mYthm/r3zqco3mM990qoD6riIgYJMJY7QBDajoHTbNiClrnvwPmRb70Q/b9biANNrS5IKvX/LmBJ6f3LUGzuf0FIZ+e7bb7GIXFOOEc/VE1HmHHpgwcfIWP3de+dJAAAAAKD9uzLSGvbgrJbRvcnmEUiuGYC+Kv4swszB9cf3hX4a/FsS4SMKV29fFb/4b+LdsUCmnUR8/kx2HJmRp/zBaaQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAAG5UvpvOqVpQfZArrKYmP95jiaU8VDRZvd4XuGJeUH+gAAAAAOgAAAAAIAACAAAAAsvJoUnCgm5F7h+Tjq2yvn3LRCdoepv5G+OLFPpw4aAZAAAADO6ieVVH52Tk/SAyUtN/NI8DoJg6D8SNcNgTPpD77NbiWEYJkNvPg5D7xEuNhH/hmVnm1TVnQoRAGW6IuTz54lQvB6amonrUgAdkccpo1BmVAglhqkoLldWnvF/1Q5NfJCVkJbuiCbosq6HMXcA5QFMmu1n1BNzfGvScBVa41pfmaWecQeBfzD7vjyZcThx41AAAAAwIcnJEuI/h1b2FZjvBFuN0dU+Q3EI5BFBBn0aqQANvN4iN6j9R/L+u6+wPNpsfODamrFNt9BrV6WCZVbeb7Kzg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -176,7 +176,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.68.204;User ID=sa;Initial Catalog=fwdaif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.94;User ID=opus_fms;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -236,7 +236,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">fwdaif</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">opusfms_aif</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -280,7 +280,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">10.0.68.204</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">10.0.0.94</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -295,7 +295,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">sa</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">opus_fms</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -473,10 +473,10 @@
                 <SSIS:Property SSIS:Name="Name">BCM</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">534</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">540</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{199FA627-AFD5-4DF4-93B9-20BEEB8B00C3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B92B019E-58E2-46CD-B01B-3B8971315791}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IVT"
   DTS:PackageType="5"
-  DTS:VersionBuild="502"
-  DTS:VersionGUID="{131C763D-3DA8-4DE2-904B-EF9454BC0C7E}">
+  DTS:VersionBuild="505"
+  DTS:VersionGUID="{7C526E58-9C83-4AC3-BFB7-C233AA81B2E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -41,7 +41,7 @@ SELECT
 	,	CRE_USR_ID	AS	cre_usr_id
 	,	UPD_DT	AS	upd_dt
 	,	UPD_USR_ID	AS	upd_usr_id
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 FROM				
 		WHM_CNTC_PSON
 </DTS:VariableValue>
@@ -61,7 +61,7 @@ SELECT
 	,	FILE_NO	AS	file_no
 	,	SLS_OFC_CD	AS	sls_ofc_cd
 	,	RGST_USRID	AS	cre_usr_id
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 	,	RGST_TMS	AS	cre_dt
 	,	MODI_USRID	AS	upd_usr_id
 	,	MODI_TMS	AS	upd_dt
@@ -104,7 +104,7 @@ SELECT
 	,	SLS_USRID	AS	sls_usr_id
 	,	SLS_OFC_CD	AS	sls_ofc_cd
 	,	RGST_USRID	AS	cre_usr_id
-	,	'OPUS' AS	co_cd
+	,	'AIF' AS	co_cd
 	,	RGST_TMS	AS	cre_dt
 	,	MODI_USRID	AS	upd_usr_id
 	,	MODI_TMS	AS	upd_dt
@@ -153,7 +153,7 @@ SELECT
 	,	LOC_RMK	AS	loc_rmk
 	,	LOC_MAX_VOL_CFT	AS	loc_max_vol_cft_val
 	,	LOC_MAX_WGT_LBS	AS	loc_max_wgt_lbs_val
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
 FROM				
 		WHM_LOC		
 </DTS:VariableValue>
@@ -162,7 +162,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{18A4C035-F5A0-4043-BE36-4FCA0B2ACE0F}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;RCV_SHP_TP_CD&#x9;AS&#x9;rcv_shp_tp_cd&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;SPLR_RCVR_CD&#x9;AS&#x9;splr_rcvr_cd&#xA;&#x9;,&#x9;TRKR_CD&#x9;AS&#x9;trkr_cd&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;INTER_RMK&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;XTER_RMK&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;RCV_SHP_FLG&#x9;AS&#x9;rcv_shp_flg&#xA;&#x9;,&#x9;OPR_CD&#x9;AS&#x9;opr_cd&#xA;&#x9;,&#x9;BKG_DT&#x9;AS&#x9;bkg_dt&#xA;&#x9;,&#x9;ESTM_RCV_DT&#x9;AS&#x9;estm_rcv_dt&#xA;&#x9;,&#x9;RCV_SHP_DT&#x9;AS&#x9;rcv_shp_dt&#xA;&#x9;,&#x9;PLT_NO&#x9;AS&#x9;plt_no&#xA;&#x9;,&#x9;CNTR_NO&#x9;AS&#x9;cntr_no&#xA;&#x9;,&#x9;MST_BL_NO&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;HUS_BL_NO&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;CUST_OFC_CD&#x9;AS&#x9;cust_ofc_cd&#xA;&#x9;,&#x9;SPLR_RCVR_OFC_CD&#x9;AS&#x9;splr_rcvr_ofc_cd&#xA;&#x9;,&#x9;TRKR_OFC_CD&#x9;AS&#x9;trkr_ofc_cd&#xA;&#x9;,&#x9;OPR_OFC_CD&#x9;AS&#x9;opr_ofc_cd&#xA;&#x9;,&#x9;LEN_UT_CD&#x9;AS&#x9;len_ut_cd&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;,&#x9;&quot;+ @[$Project::delt_flg]  +&quot; AS&#x9;delt_flg&#xA;&#x9;,&#x9;'' AS rcv_shp_id&#xA;&#x9;,&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,&#x9;RCV_SHP_TP_CD&#x9;AS&#x9;rcv_shp_tp_cd&#xA;&#x9;,&#x9;CUST_CD&#x9;AS&#x9;cust_cd&#xA;&#x9;,&#x9;SPLR_RCVR_CD&#x9;AS&#x9;splr_rcvr_cd&#xA;&#x9;,&#x9;TRKR_CD&#x9;AS&#x9;trkr_cd&#xA;&#x9;,&#x9;CUST_REF_NO&#x9;AS&#x9;cust_ref_no&#xA;&#x9;,&#x9;INTER_RMK&#x9;AS&#x9;inter_rmk&#xA;&#x9;,&#x9;XTER_RMK&#x9;AS&#x9;xter_rmk&#xA;&#x9;,&#x9;RCV_SHP_FLG&#x9;AS&#x9;rcv_shp_flg&#xA;&#x9;,&#x9;OPR_CD&#x9;AS&#x9;opr_cd&#xA;&#x9;,&#x9;BKG_DT&#x9;AS&#x9;bkg_dt&#xA;&#x9;,&#x9;ESTM_RCV_DT&#x9;AS&#x9;estm_rcv_dt&#xA;&#x9;,&#x9;RCV_SHP_DT&#x9;AS&#x9;rcv_shp_dt&#xA;&#x9;,&#x9;PLT_NO&#x9;AS&#x9;plt_no&#xA;&#x9;,&#x9;CNTR_NO&#x9;AS&#x9;cntr_no&#xA;&#x9;,&#x9;MST_BL_NO&#x9;AS&#x9;mst_bl_no&#xA;&#x9;,&#x9;HUS_BL_NO&#x9;AS&#x9;hus_bl_no&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;CUST_OFC_CD&#x9;AS&#x9;cust_ofc_cd&#xA;&#x9;,&#x9;SPLR_RCVR_OFC_CD&#x9;AS&#x9;splr_rcvr_ofc_cd&#xA;&#x9;,&#x9;TRKR_OFC_CD&#x9;AS&#x9;trkr_ofc_cd&#xA;&#x9;,&#x9;OPR_OFC_CD&#x9;AS&#x9;opr_ofc_cd&#xA;&#x9;,&#x9;LEN_UT_CD&#x9;AS&#x9;len_ut_cd&#xA;&#x9;,&#x9;CTRT_NO&#x9;AS&#x9;ctrt_no&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_rcv_shp">
@@ -170,7 +170,9 @@ FROM
         DTS:DataType="8">
 SELECT				
 		FILE_NO	AS	file_no
-	,	'OPUS' AS	co_cd
+	,	'AIF' AS	co_cd
+	,	'N' AS	delt_flg
+	,	'' AS rcv_shp_id
 	,	WH_CD	AS	wh_cd
 	,	RCV_SHP_TP_CD	AS	rcv_shp_tp_cd
 	,	CUST_CD	AS	cust_cd
@@ -206,7 +208,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{20506538-9D59-4A24-A01F-C3FBBB702A44}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_wh_loc_id&#xA;&#x9;,&#x9;ITM_DESC&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;FILE_NO&#x9;AS&#x9;file_no&#xA;&#x9;,&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;&#x9;,&#x9;&quot;+ @[$Project::delt_flg]  +&quot; AS&#x9;delt_flg&#xA;&#x9;,&#x9;'' AS itm_id&#xA;&#x9;,&#x9;CUST_ITM_ID&#x9;AS&#x9;cust_itm_id&#xA;&#x9;,&#x9;ITM_UT_CD&#x9;AS&#x9;itm_ut_cd&#xA;&#x9;,&#x9;ITM_INR_QTY&#x9;AS&#x9;itm_inr_qty&#xA;&#x9;,&#x9;ITM_CTN_QTY&#x9;AS&#x9;itm_qty&#xA;&#x9;,&#x9;ITM_EA_QTY&#x9;AS&#x9;itm_ea_qty&#xA;&#x9;,&#x9;ITM_LOC_ID&#x9;AS&#x9;itm_wh_loc_id&#xA;&#x9;,&#x9;ITM_DESC&#x9;AS&#x9;itm_desc&#xA;&#x9;,&#x9;ITM_PO_NO&#x9;AS&#x9;itm_po_no&#xA;&#x9;,&#x9;ITM_LEN&#x9;AS&#x9;itm_len_val&#xA;&#x9;,&#x9;ITM_WDT&#x9;AS&#x9;itm_wdt_val&#xA;&#x9;,&#x9;ITM_HGT&#x9;AS&#x9;itm_hgt_val&#xA;&#x9;,&#x9;ITM_DIM_WGT&#x9;AS&#x9;itm_dim_wgt_val&#xA;&#x9;,&#x9;ITM_ACT_WGT&#x9;AS&#x9;itm_act_wgt_val&#xA;&#x9;,&#x9;ITM_VOL&#x9;AS&#x9;itm_vol_val&#xA;&#x9;,&#x9;CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,&#x9;CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,&#x9;UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,&#x9;UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,&#x9;ITM_BGN_BAL_QTY&#x9;AS&#x9;itm_bgn_bal_qty&#xA;&#x9;,&#x9;ITM_ENDG_BAL_QTY&#x9;AS&#x9;itm_endg_bal_qty&#xA;&#x9;,&#x9;ITM_DIM_WGT_LBS&#x9;AS&#x9;itm_dim_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_ACT_WGT_LBS&#x9;AS&#x9;itm_act_wgt_lbs_val&#xA;&#x9;,&#x9;ITM_VOL_CFT&#x9;AS&#x9;itm_vol_cft_val&#xA;FROM&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;WHM_RCV_SHP_ITM&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ivt_rcv_shp_itm">
@@ -214,7 +216,9 @@ FROM
         DTS:DataType="8">
 SELECT				
 		FILE_NO	AS	file_no
-	,	'OPUS'	AS	co_cd
+	,	'AIF'	AS	co_cd
+	,	'N' AS	delt_flg
+	,	'' AS itm_id
 	,	CUST_ITM_ID	AS	cust_itm_id
 	,	ITM_UT_CD	AS	itm_ut_cd
 	,	ITM_INR_QTY	AS	itm_inr_qty
@@ -268,7 +272,7 @@ SELECT
 	, CRE_USR_ID	AS	cre_usr_id
 	, UPD_DT	AS	upd_dt
 	, UPD_USR_ID	AS	upd_usr_id
-	, 'OPUS'	AS	co_cd
+	, 'AIF'	AS	co_cd
 FROM			
 	WHM_WH
 </DTS:VariableValue>
@@ -305,7 +309,7 @@ FROM
                       refId="Package\ivt_cntc_pson\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -957,7 +961,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -1113,7 +1117,7 @@ WHERE
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -1266,7 +1270,7 @@ WHERE
                       refId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_cntc_pson\IVT_CNTC_PSON.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -2150,7 +2154,7 @@ WHERE
                       refId="Package\ivt_doc_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -3396,7 +3400,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -3524,7 +3528,7 @@ FROM
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -3620,7 +3624,7 @@ FROM
                       refId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_dtl\TB_WM_DOC_DTL.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -3748,7 +3752,7 @@ FROM
                       refId="Package\ivt_doc_mst\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -6713,7 +6717,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -7103,7 +7107,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -7451,7 +7455,7 @@ FROM
                       refId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_doc_mst\TB_WM_DOC_MST.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -7635,7 +7639,7 @@ FROM
                       refId="Package\ivt_loc\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -9351,7 +9355,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -9550,7 +9554,7 @@ WHERE
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -9732,7 +9736,7 @@ WHERE
                       refId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_loc\WHM_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -9853,7 +9857,7 @@ WHERE
                       refId="Package\ivt_rcv_shp\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -10044,6 +10048,20 @@ WHERE
                       cachedLength="10"
                       cachedName="ctrt_no"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[ctrt_no]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Inputs[Data Conversion Input].Columns[rcv_shp_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="rcv_shp_id"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Inputs[Data Conversion Input].Columns[delt_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[delt_flg]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -10662,6 +10680,48 @@ WHERE
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
+                      name="rcv_shp_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[delt_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -10890,38 +10950,38 @@ WHERE
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[wh_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="wh_cd"
+                      cachedName="Data Conversion.wh_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[wh_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[wh_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cd]" />
                     <inputColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[file_no]"
                       cachedDataType="wstr"
@@ -10931,159 +10991,173 @@ WHERE
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[file_no]"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[file_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[rcv_shp_tp_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_tp_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="rcv_shp_tp_cd"
+                      cachedName="Data Conversion.rcv_shp_tp_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_tp_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_tp_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_tp_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cust_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cust_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="cust_cd"
+                      cachedName="Data Conversion.cust_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cust_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[splr_rcvr_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.splr_rcvr_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="splr_rcvr_cd"
+                      cachedName="Data Conversion.splr_rcvr_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[splr_rcvr_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[trkr_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.trkr_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="trkr_cd"
+                      cachedName="Data Conversion.trkr_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[trkr_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cust_ref_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cust_ref_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="cust_ref_no"
+                      cachedName="Data Conversion.cust_ref_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cust_ref_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ref_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ref_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[inter_rmk]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.inter_rmk]"
                       cachedDataType="wstr"
                       cachedLength="4000"
-                      cachedName="inter_rmk"
+                      cachedName="Data Conversion.inter_rmk"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[inter_rmk]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[inter_rmk]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.inter_rmk]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[xter_rmk]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.xter_rmk]"
                       cachedDataType="wstr"
                       cachedLength="4000"
-                      cachedName="xter_rmk"
+                      cachedName="Data Conversion.xter_rmk"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[xter_rmk]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[xter_rmk]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.xter_rmk]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[rcv_shp_flg]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_flg]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="rcv_shp_flg"
+                      cachedName="Data Conversion.rcv_shp_flg"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_flg]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_flg]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[opr_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.opr_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="opr_cd"
+                      cachedName="Data Conversion.opr_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[opr_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[bkg_dt]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.bkg_dt]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="bkg_dt"
+                      cachedName="Data Conversion.bkg_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[bkg_dt]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[bkg_dt]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.bkg_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[estm_rcv_dt]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.estm_rcv_dt]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="estm_rcv_dt"
+                      cachedName="Data Conversion.estm_rcv_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[estm_rcv_dt]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[estm_rcv_dt]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.estm_rcv_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[rcv_shp_dt]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_dt]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="rcv_shp_dt"
+                      cachedName="Data Conversion.rcv_shp_dt"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_dt]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_dt]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_dt]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[plt_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.plt_no]"
                       cachedDataType="numeric"
-                      cachedName="plt_no"
+                      cachedName="Data Conversion.plt_no"
                       cachedPrecision="8"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[plt_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[plt_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.plt_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cntr_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cntr_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="cntr_no"
+                      cachedName="Data Conversion.cntr_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cntr_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cntr_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cntr_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[mst_bl_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.mst_bl_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="mst_bl_no"
+                      cachedName="Data Conversion.mst_bl_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[mst_bl_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[mst_bl_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.mst_bl_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[hus_bl_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.hus_bl_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="hus_bl_no"
+                      cachedName="Data Conversion.hus_bl_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[hus_bl_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[hus_bl_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.hus_bl_no]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[cust_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.cust_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="cust_ofc_cd"
+                      cachedName="Data Conversion.cust_ofc_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[cust_ofc_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ofc_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ofc_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[splr_rcvr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.splr_rcvr_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="splr_rcvr_ofc_cd"
+                      cachedName="Data Conversion.splr_rcvr_ofc_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[splr_rcvr_ofc_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_ofc_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_ofc_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[trkr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.trkr_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="trkr_ofc_cd"
+                      cachedName="Data Conversion.trkr_ofc_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[trkr_ofc_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_ofc_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_ofc_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[opr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.opr_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="opr_ofc_cd"
+                      cachedName="Data Conversion.opr_ofc_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[opr_ofc_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_ofc_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_ofc_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[len_ut_cd]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.len_ut_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="len_ut_cd"
+                      cachedName="Data Conversion.len_ut_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[len_ut_cd]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[len_ut_cd]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]" />
                     <inputColumn
-                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[ctrt_no]"
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.ctrt_no]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="ctrt_no"
+                      cachedName="Data Conversion.ctrt_no"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[ctrt_no]"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[ctrt_no]" />
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.ctrt_no]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Data Conversion.rcv_shp_id"
+                      externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_id]"
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Data Conversion.delt_flg"
+                      externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -11147,13 +11221,11 @@ WHERE
                       name="cust_ref_no" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[inter_rmk]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="inter_rmk" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[xter_rmk]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="xter_rmk" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_flg]"
@@ -11230,6 +11302,16 @@ WHERE
                       dataType="wstr"
                       length="20"
                       name="ctrt_no" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="rcv_shp_id" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="delt_flg" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -11772,6 +11854,40 @@ WHERE
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\Sort.Inputs[Sort Input].Columns[rcv_shp_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="rcv_shp_id"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp\Sort.Inputs[Sort Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -11798,11 +11914,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -11812,10 +11928,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -11825,11 +11941,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -11839,10 +11955,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -11852,11 +11968,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[wh_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[wh_cd]"
-                      name="wh_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cd]"
+                      name="Data Conversion.wh_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -11881,11 +11997,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_tp_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_tp_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_tp_cd]"
-                      name="rcv_shp_tp_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_tp_cd]"
+                      name="Data Conversion.rcv_shp_tp_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -11895,11 +12011,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_cd]"
-                      name="cust_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_cd]"
+                      name="Data Conversion.cust_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -11909,11 +12025,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_cd]"
-                      name="splr_rcvr_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_cd]"
+                      name="Data Conversion.splr_rcvr_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -11923,11 +12039,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_cd]"
-                      name="trkr_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_cd]"
+                      name="Data Conversion.trkr_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -11937,11 +12053,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ref_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ref_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ref_no]"
-                      name="cust_ref_no">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ref_no]"
+                      name="Data Conversion.cust_ref_no">
                       <properties>
                         <property
                           containsID="true"
@@ -11951,11 +12067,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[inter_rmk]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.inter_rmk]"
                       dataType="wstr"
                       length="4000"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[inter_rmk]"
-                      name="inter_rmk">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.inter_rmk]"
+                      name="Data Conversion.inter_rmk">
                       <properties>
                         <property
                           containsID="true"
@@ -11965,11 +12081,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[xter_rmk]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.xter_rmk]"
                       dataType="wstr"
                       length="4000"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[xter_rmk]"
-                      name="xter_rmk">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.xter_rmk]"
+                      name="Data Conversion.xter_rmk">
                       <properties>
                         <property
                           containsID="true"
@@ -11979,11 +12095,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_flg]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_flg]"
-                      name="rcv_shp_flg">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]"
+                      name="Data Conversion.rcv_shp_flg">
                       <properties>
                         <property
                           containsID="true"
@@ -11993,11 +12109,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_cd]"
-                      name="opr_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_cd]"
+                      name="Data Conversion.opr_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12007,11 +12123,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[bkg_dt]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.bkg_dt]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[bkg_dt]"
-                      name="bkg_dt">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.bkg_dt]"
+                      name="Data Conversion.bkg_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -12021,11 +12137,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[estm_rcv_dt]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.estm_rcv_dt]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[estm_rcv_dt]"
-                      name="estm_rcv_dt">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.estm_rcv_dt]"
+                      name="Data Conversion.estm_rcv_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -12035,11 +12151,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_dt]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_dt]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[rcv_shp_dt]"
-                      name="rcv_shp_dt">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_dt]"
+                      name="Data Conversion.rcv_shp_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -12049,10 +12165,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[plt_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.plt_no]"
                       dataType="numeric"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[plt_no]"
-                      name="plt_no"
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.plt_no]"
+                      name="Data Conversion.plt_no"
                       precision="8">
                       <properties>
                         <property
@@ -12063,11 +12179,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cntr_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cntr_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cntr_no]"
-                      name="cntr_no">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cntr_no]"
+                      name="Data Conversion.cntr_no">
                       <properties>
                         <property
                           containsID="true"
@@ -12077,11 +12193,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[mst_bl_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.mst_bl_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[mst_bl_no]"
-                      name="mst_bl_no">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.mst_bl_no]"
+                      name="Data Conversion.mst_bl_no">
                       <properties>
                         <property
                           containsID="true"
@@ -12091,11 +12207,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[hus_bl_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.hus_bl_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[hus_bl_no]"
-                      name="hus_bl_no">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.hus_bl_no]"
+                      name="Data Conversion.hus_bl_no">
                       <properties>
                         <property
                           containsID="true"
@@ -12105,11 +12221,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[cust_ofc_cd]"
-                      name="cust_ofc_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.cust_ofc_cd]"
+                      name="Data Conversion.cust_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12119,11 +12235,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[splr_rcvr_ofc_cd]"
-                      name="splr_rcvr_ofc_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.splr_rcvr_ofc_cd]"
+                      name="Data Conversion.splr_rcvr_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12133,11 +12249,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[trkr_ofc_cd]"
-                      name="trkr_ofc_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.trkr_ofc_cd]"
+                      name="Data Conversion.trkr_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12147,11 +12263,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[opr_ofc_cd]"
-                      name="opr_ofc_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.opr_ofc_cd]"
+                      name="Data Conversion.opr_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12161,11 +12277,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[len_ut_cd]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[len_ut_cd]"
-                      name="len_ut_cd">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]"
+                      name="Data Conversion.len_ut_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -12175,17 +12291,45 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[ctrt_no]"
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.ctrt_no]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[ctrt_no]"
-                      name="ctrt_no">
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.ctrt_no]"
+                      name="Data Conversion.ctrt_no">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[ctrt_no]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]"
+                      name="Data Conversion.rcv_shp_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      name="Data Conversion.delt_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -12292,7 +12436,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -12596,6 +12740,28 @@ FROM
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[ctrt_no]"
                       name="ctrt_no"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[rcv_shp_id]"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]"
+                      name="rcv_shp_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12603,7 +12769,7 @@ FROM
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -12765,6 +12931,18 @@ FROM
                       dataType="str"
                       length="10"
                       name="ctrt_no" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[rcv_shp_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="rcv_shp_id" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="delt_flg" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -12787,10 +12965,24 @@ FROM
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[wh_cd]"
                       name="wh_cd" />
                     <outputColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      name="delt_flg" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[rcv_shp_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[rcv_shp_id]"
+                      name="rcv_shp_id" />
+                    <outputColumn
                       refId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -13040,7 +13232,7 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -13196,6 +13388,20 @@ FROM
                       cachedLength="20"
                       cachedName="itm_wh_loc_id"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[delt_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[delt_flg]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Inputs[Data Conversion Input].Columns[itm_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="itm_id"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -13739,6 +13945,48 @@ FROM
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[delt_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_id]"
+                      name="itm_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -14023,6 +14271,20 @@ FROM
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_wh_loc_id]"
                       lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[itm_wh_loc_id]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Data Conversion.delt_flg"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]" />
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].Columns[Data Conversion.itm_id]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Data Conversion.itm_id"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_id]"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -14081,8 +14343,7 @@ FROM
                       precision="10" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_desc]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="itm_desc" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm.Inputs[ODBC Destination Input].ExternalColumns[itm_po_no]"
@@ -14829,6 +15090,40 @@ WHERE
                           name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Inputs[Sort Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Inputs[Sort Input].Columns[itm_id]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="itm_id"
+                      lineageId="Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -15199,6 +15494,34 @@ WHERE
                           name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_wh_loc_id]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      name="Data Conversion.delt_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_id]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\Sort.Outputs[Sort Output].Columns[Data Conversion.itm_id]"
+                      name="Data Conversion.itm_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ivt_rcv_shp_itm\Data Conversion.Outputs[Data Conversion Output].Columns[itm_id]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -15299,7 +15622,7 @@ FROM
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -15552,6 +15875,28 @@ FROM
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_wh_loc_id]"
                       name="itm_wh_loc_id"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_id]"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].Columns[itm_id]"
+                      name="itm_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -15559,7 +15904,7 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -15690,6 +16035,18 @@ FROM
                       dataType="str"
                       length="20"
                       name="itm_wh_loc_id" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="delt_flg" />
+                    <externalMetadataColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Output].ExternalColumns[itm_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="itm_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -15708,9 +16065,23 @@ FROM
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      name="delt_flg" />
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[itm_id]"
+                      name="itm_id" />
                     <outputColumn
                       refId="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM.Outputs[OLE DB Source Error Output].Columns[cust_itm_id]"
                       codePage="949"
@@ -15930,7 +16301,7 @@ FROM
                       refId="Package\mdm_wh\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -16589,7 +16960,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -16756,7 +17127,7 @@ WHERE
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -16922,7 +17293,7 @@ WHERE
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -17841,31 +18212,31 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\mdm_wh"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\ivt_cntc_pson"
           TopLeft="13.2461167648635,70.7818610923803" />
         <NodeLayout
-          Size="110.4,41.6"
+          Size="110,42"
           Id="Package\ivt_loc"
           TopLeft="11.2461167648635,132.78186109238" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_rcv_shp"
           TopLeft="8.24611676486347,199.78186109238" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm"
-          TopLeft="171.246116764863,9.78186109238027" />
+          TopLeft="171.246116764863,8.78186109238027" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\ivt_doc_mst"
           TopLeft="182.246116764863,69.7818610923803" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\ivt_doc_dtl"
           TopLeft="184.246116764863,141.78186109238" />
         <EdgeLayout
@@ -17895,8 +18266,8 @@ WHERE
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="352.8,256"
-          Size="352.8,299.2"
+          PanelSize="353,297"
+          Size="353,340"
           Id="e3c19fcd-ee0a-4e9d-8dda-d1359c54191e"
           TopLeft="471.166660143269,65.4666573958921">
           <GroupLayout.ChildrenIds>
@@ -17917,25 +18288,25 @@ WHERE
     design-time-name="Package\ivt_cntc_pson">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\ivt_cntc_pson\ivt_cntc_pson"
           TopLeft="589.500009139378,231.166665805711" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\ivt_cntc_pson\IVT_CNTC_PSON"
           TopLeft="206,67" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_cntc_pson\Sort"
           TopLeft="255.500009139378,229.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_cntc_pson\Data Conversion"
           TopLeft="228.500009139378,154.166665805711" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_cntc_pson\DELETE"
           TopLeft="409.500009139378,230.166665805711" />
         <EdgeLayout
@@ -17957,7 +18328,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17979,7 +18352,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18013,7 +18388,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18035,7 +18412,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18055,23 +18434,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_doc_dtl\Sort"
           TopLeft="197.500009139378,197.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_doc_dtl\OLE DB Command"
           TopLeft="339.500009139378,196.166665805711" />
         <NodeLayout
-          Size="176,41.6"
+          Size="176,42"
           Id="Package\ivt_doc_dtl\TB_WM_DOC_DTL"
           TopLeft="147,42" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\ivt_doc_dtl\ivt_doc_dtl"
           TopLeft="550.500009139378,192.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_doc_dtl\Data Conversion"
           TopLeft="150.500009139378,120.166665805711" />
         <EdgeLayout
@@ -18189,25 +18568,25 @@ WHERE
     design-time-name="Package\ivt_doc_mst">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\ivt_doc_mst\ivt_doc_mst"
           TopLeft="603.500009139378,206.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_doc_mst\OLE DB Command"
           TopLeft="395.500009139378,209.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_doc_mst\Sort"
           TopLeft="241.500009139378,209.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_doc_mst\Data Conversion"
           TopLeft="224.500009139378,137.166665805711" />
         <NodeLayout
-          Size="177.6,41.6"
+          Size="178,42"
           Id="Package\ivt_doc_mst\TB_WM_DOC_MST"
           TopLeft="210,56" />
         <EdgeLayout
@@ -18241,7 +18620,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18263,7 +18644,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18285,7 +18668,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18307,7 +18692,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18325,25 +18712,25 @@ WHERE
     design-time-name="Package\ivt_loc">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_loc\DELETE"
           TopLeft="344.500009139378,213.166665805711" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_loc\WHM_LOC"
           TopLeft="180,74" />
         <NodeLayout
-          Size="110.4,41.6"
+          Size="110,42"
           Id="Package\ivt_loc\ivt_loc"
           TopLeft="509.500009139378,214.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_loc\Data Conversion"
           TopLeft="185.500009139378,148.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_loc\Sort"
           TopLeft="214.500009139378,213.166665805711" />
         <EdgeLayout
@@ -18365,7 +18752,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18399,7 +18788,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18421,7 +18812,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18443,7 +18836,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18463,23 +18858,23 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_rcv_shp\Sort"
           TopLeft="238,228.166665805711" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\ivt_rcv_shp\WHM_RCV_SHP"
           TopLeft="203.499990860622,89" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\ivt_rcv_shp\DELETE"
           TopLeft="363,243.166665805711" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\ivt_rcv_shp\ivt_rcv_shp"
           TopLeft="583,246.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_rcv_shp\Data Conversion"
           TopLeft="196,154.166665805711" />
         <EdgeLayout
@@ -18617,29 +19012,42 @@ WHERE
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ivt_rcv_shp\ivt_rcv_shp">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\ivt_rcv_shp_itm">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\ivt_rcv_shp_itm\Sort"
           TopLeft="245.500009139378,201.166665805711" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="189,42"
           Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
           TopLeft="195,59" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155,42"
           Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
           TopLeft="626.500009139378,200.166665805711" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\ivt_rcv_shp_itm\OLE DB Command"
           TopLeft="391.500009139378,203.166665805711" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\ivt_rcv_shp_itm\Data Conversion"
           TopLeft="215.500009139378,128.166665805711" />
         <EdgeLayout
@@ -18758,25 +19166,25 @@ WHERE
     design-time-name="Package\mdm_wh">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\mdm_wh\mdm_wh"
           TopLeft="554,242.166665805711" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\mdm_wh\Sort"
           TopLeft="234,240.166665805711" />
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\mdm_wh\DELETE"
           TopLeft="387,243.166665805711" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\mdm_wh\MDM_WH"
           TopLeft="203.499990860622,83" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\mdm_wh\Data Conversion"
           TopLeft="190,168.166665805711" />
         <EdgeLayout
@@ -18798,7 +19206,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18820,7 +19230,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18842,7 +19254,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18876,7 +19290,9 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

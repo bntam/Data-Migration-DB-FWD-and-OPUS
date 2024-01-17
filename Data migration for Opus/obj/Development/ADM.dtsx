@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ADM"
   DTS:PackageType="5"
-  DTS:VersionBuild="536"
-  DTS:VersionGUID="{6F44790A-EB74-43D5-9F84-2A49932CDE3C}">
+  DTS:VersionBuild="537"
+  DTS:VersionGUID="{B7E2DB04-8C2A-44A1-BEBD-C615E4CAA997}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -35,7 +35,7 @@ SELECT
   case when USE_FLG = '0' then 'N' when USE_FLG = '1' then 'Y' ELSE '' end AS use_flg, 
   EML_CC AS alt_eml_addr_desc, 
   RGST_USRID AS cre_usr_id, 
-'OPUS' AS co_cd, 
+'AIF' AS co_cd, 
   RGST_TMS AS cre_dt, 
   MODI_USRID AS upd_usr_id, 
   MODI_TMS AS upd_dt, 
@@ -81,7 +81,7 @@ SELECT
 , '' AS role_tp_cd
 , 'N' AS is_hard_role
 , NULL AS ord_no
-, 'OPUS' AS co_cd
+, 'AIF' AS co_cd
 
 , '0' AS prnt_role_id
 FROM	TB_ROLE
@@ -113,7 +113,7 @@ AS        rpt_tp_cd
 ,        RGST_TMS        AS        cre_dt
 ,        MODI_USRID as upd_usr_id
 , MODI_TMS AS        upd_dt
-,'OPUS'	AS	co_cd
+,'AIF'	AS	co_cd
 , '' AS ofc_cd
 , CONCAT('RPT', ROW_NUMBER() OVER (ORDER BY newId())) as rpt_id
 FROM                
@@ -132,7 +132,7 @@ FROM
       <DTS:VariableValue
         DTS:DataType="8">
 SELECT 
-	'OPUS' AS co_cd,
+	'AIF' AS co_cd,
 	seq_type AS opt_key_cd,
 	cofig_name AS opt_desc,
 	pre_fix AS opt_val,
@@ -194,8 +194,8 @@ CASE
 		ELSE use_flg
 	END AS	act_flg,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
-'OPUS' as acss_co_cd,
+'AIF' as co_cd,
+'AIF' as acss_co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt,
@@ -227,7 +227,7 @@ SELECT
   RGST_USRID AS cre_usr_id, 
   MODI_TMS AS upd_dt, 
   MODI_USRID AS upd_usr_id, 
-  'OPUS' AS co_cd, 
+  'AIF' AS co_cd, 
   COALESCE(RGST_USRID,'') AS usr_id, 
   '' AS scrn_id, 
   '' AS trsp_mod_cd 
@@ -252,7 +252,7 @@ CASE WHEN IsNull(fr_date, '') != ''  THEN replace(convert(varchar, CONVERT(DATET
 CASE WHEN IsNull(to_date, '') != '' THEN replace(convert(varchar, CONVERT(DATETIME , to_date, 103), 104),'.','') ELSE '' END AS exp_to_dt,
 usrid as usr_id,
 rgst_usrid as cre_usr_id,
-'OPUS' as co_cd,
+'AIF' as co_cd,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
 modi_tms as upd_dt
@@ -288,7 +288,7 @@ end AS cre_dt
 end AS upd_dt
 ,'admin' AS cre_usr_id
 ,'admin' AS upd_usr_id
-,'OPUS' AS co_cd
+,'AIF' AS co_cd
 FROM			
 	TB_SHT_HDR_INFO		
 ORDER BY USR_ID, SCRN_ID
@@ -709,7 +709,7 @@ ORDER BY USR_ID, SCRN_ID
                       refId="Package\adm_alt_mst\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -2319,7 +2319,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -2560,7 +2560,7 @@ WHERE
                       refId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -2754,7 +2754,7 @@ WHERE
                       refId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_alt_mst\TB_ALT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -3182,7 +3182,7 @@ WHERE
                       refId="Package\adm_role\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -4317,7 +4317,7 @@ and role_id= ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -4448,7 +4448,7 @@ and role_id= ?</property>
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -4554,7 +4554,7 @@ and role_id= ?</property>
                       refId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_role\TB_ROLE.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -4932,7 +4932,7 @@ and role_id= ?</property>
                       refId="Package\adm_rpt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -5894,7 +5894,7 @@ and rpt_id = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -6017,7 +6017,7 @@ and rpt_id = ?</property>
                       refId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -6135,7 +6135,7 @@ and rpt_id = ?</property>
                       refId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_rpt\TB_RPT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -6461,7 +6461,7 @@ and rpt_id = ?</property>
                       refId="Package\adm_sys_opt\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -7233,7 +7233,7 @@ SELECT
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -7297,7 +7297,7 @@ SELECT
                       refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Output].ExternalColumns[opt_key_cd]"
@@ -7328,7 +7328,7 @@ SELECT
                       refId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_sys_opt\TB_SEQ.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -8701,7 +8701,7 @@ SELECT
                       refId="Package\adm_usr_dept_team\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -8834,7 +8834,7 @@ SELECT
                       refId="Package\adm_usr_dept_team\Data Conversion.Inputs[Data Conversion Input].Columns[acss_co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="acss_co_cd"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[acss_co_cd]" />
                   </inputColumns>
@@ -10863,7 +10863,7 @@ AND role_id = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -11076,7 +11076,7 @@ AND role_id = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[acss_co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].Columns[acss_co_cd]"
                       name="acss_co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -11093,7 +11093,7 @@ AND role_id = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -11206,7 +11206,7 @@ AND role_id = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Output].ExternalColumns[acss_co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="acss_co_cd" />
                   </externalMetadataColumns>
                 </output>
@@ -11295,14 +11295,14 @@ AND role_id = ?</property>
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
                       refId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[acss_co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_dept_team\TB_USR.Outputs[OLE DB Source Error Output].Columns[acss_co_cd]"
                       name="acss_co_cd" />
                     <outputColumn
@@ -11733,7 +11733,7 @@ AND role_id = ?</property>
                       refId="Package\adm_usr_eml_stup\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -12750,7 +12750,7 @@ WHERE
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -12869,7 +12869,7 @@ WHERE
                       refId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -12965,7 +12965,7 @@ WHERE
                       refId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_eml_stup\TB_EML_CTNT.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -13309,7 +13309,7 @@ WHERE
                       refId="Package\adm_usr_ip_addr\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -14196,7 +14196,7 @@ AND co_cd = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -14297,7 +14297,7 @@ AND co_cd = ?</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -14396,7 +14396,7 @@ AND co_cd = ?</property>
                       refId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_ip_addr\TB_IP_ADDR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -14714,7 +14714,7 @@ AND co_cd = ?</property>
                       refId="Package\adm_usr_tbl_cfg\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -15553,7 +15553,7 @@ and cfg_no = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -15652,7 +15652,7 @@ and cfg_no = ?</property>
                       refId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
@@ -15747,7 +15747,7 @@ and cfg_no = ?</property>
                       refId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -15884,23 +15884,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\adm_alt_mst\OLE DB Command"
           TopLeft="115.5,227.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_alt_mst\Data Conversion"
           TopLeft="68.5,86.5" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_alt_mst\TB_ALT"
           TopLeft="80.0000017881393,10.9999998966853" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_alt_mst\Sort"
           TopLeft="110.5,156.5" />
         <NodeLayout
-          Size="142.4,41.6"
+          Size="142,42"
           Id="Package\adm_alt_mst\adm_alt_mst"
           TopLeft="400.5,214.5" />
         <EdgeLayout
@@ -16268,23 +16268,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\adm_rpt\DELETE"
           TopLeft="183.5,257.5" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_rpt\Sort"
           TopLeft="94.5,163.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_rpt\Data Conversion"
           TopLeft="67.5,91.5" />
         <NodeLayout
-          Size="120.8,41.6"
+          Size="121,42"
           Id="Package\adm_rpt\TB_RPT"
           TopLeft="80.0000017881393,8.99999989668526" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_rpt\adm_rpt"
           TopLeft="429.5,259.5" />
         <EdgeLayout
@@ -16565,59 +16565,59 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="141.6,41.6"
+          Size="142,42"
           Id="Package\adm_usr_dept_team\adm_usr_role"
           TopLeft="604.5,193.9" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="127,42"
           Id="Package\adm_usr_dept_team\DELETE 3"
           TopLeft="186.5,465.5" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_usr_dept_team\TB_USR"
           TopLeft="194.500001788139,72" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\adm_usr_dept_team\Sort"
           TopLeft="202.5,212.5" />
         <NodeLayout
-          Size="148,41.6"
+          Size="148,42"
           Id="Package\adm_usr_dept_team\adm_usr_team"
           TopLeft="522.5,406.5" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="127,42"
           Id="Package\adm_usr_dept_team\DELETE 4"
           TopLeft="407.5,229.653051643192" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_usr_dept_team\Multicast"
           TopLeft="210.5,294.5" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\adm_usr_dept_team\Data Conversion"
           TopLeft="174.5,141.5" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="127,42"
           Id="Package\adm_usr_dept_team\DELETE 1"
           TopLeft="440.5,353.5" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\adm_usr_dept_team\adm_usr_co"
           TopLeft="369.5,469.5" />
         <NodeLayout
-          Size="144.8,41.6"
+          Size="145,42"
           Id="Package\adm_usr_dept_team\adm_usr_dept"
           TopLeft="618.5,352.5" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_usr_dept_team\DELETE"
           TopLeft="426.5,296.5" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\adm_usr_dept_team\adm_usr"
           TopLeft="578.5,294.5" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="127,42"
           Id="Package\adm_usr_dept_team\DELETE 2"
           TopLeft="292.5,404.5" />
         <EdgeLayout
@@ -17048,23 +17048,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\adm_usr_eml_stup\TB_EML_CTNT"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\adm_usr_eml_stup\OLE DB Command"
           TopLeft="117.5,239.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_usr_eml_stup\Data Conversion"
           TopLeft="81.5,82.5" />
         <NodeLayout
-          Size="172,41.6"
+          Size="172,42"
           Id="Package\adm_usr_eml_stup\adm_usr_eml_stup"
           TopLeft="362.5,248.5" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_usr_eml_stup\Sort"
           TopLeft="126.5,164.5" />
         <EdgeLayout
@@ -17221,23 +17221,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\adm_usr_ip_addr\DELETE"
           TopLeft="258.374989693364,269.816667536232" />
         <NodeLayout
-          Size="147.2,41.6"
+          Size="147,42"
           Id="Package\adm_usr_ip_addr\TB_IP_ADDR"
           TopLeft="79.0000017881393,9.99999989668526" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_usr_ip_addr\Data Conversion"
           TopLeft="73,126" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\adm_usr_ip_addr\adm_usr_ip_addr"
           TopLeft="438.999980529151,257.383335728513" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_usr_ip_addr\Sort"
           TopLeft="101,242" />
         <EdgeLayout
@@ -17382,23 +17382,23 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\adm_usr_tbl_cfg\OLE DB Command"
           TopLeft="192.5,253.5" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\adm_usr_tbl_cfg\Sort"
           TopLeft="116.5,171.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\adm_usr_tbl_cfg\Data Conversion"
           TopLeft="88.5,94.5" />
         <NodeLayout
-          Size="160,41.6"
+          Size="160,42"
           Id="Package\adm_usr_tbl_cfg\adm_usr_tbl_cfg"
           TopLeft="410.5,250.5" />
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183,42"
           Id="Package\adm_usr_tbl_cfg\TB_SHT_HDR_INFO"
           TopLeft="80.0000017881393,11.9999998966853" />
         <EdgeLayout

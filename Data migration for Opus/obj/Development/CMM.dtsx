@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CMM"
   DTS:PackageType="5"
-  DTS:VersionBuild="501"
-  DTS:VersionGUID="{7A8A2AF5-FBDC-4EE2-8451-559784C9535C}">
+  DTS:VersionBuild="502"
+  DTS:VersionGUID="{05E9C529-BCB3-4067-9CA9-3AD2EFFACDE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -28,7 +28,7 @@
         DTS:DataType="8">
 select * from (											
 	SELECT										
-	'OPUS' AS co_cd,	
+	'AIF' AS co_cd,	
 	LEFT(his_seq,20)									AS his_id,	
 	CASE WHEN his_type = 'O' THEN 'EX' WHEN his_type = 'E' THEN 'ES' ELSE his_type END									as mzd_cd,	
 	LEFT(his_call_view,300)									as doc_nm,	
@@ -522,7 +522,7 @@ WHERE 1=1
                       refId="Package\cmm_eml_prn_his\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="4"
+                      cachedLength="3"
                       cachedName="co_cd"
                       lineageId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
@@ -1715,7 +1715,7 @@ AND his_id = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      length="4"
+                      length="3"
                       lineageId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
@@ -1886,7 +1886,7 @@ AND his_id = ?</property>
                       refId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
@@ -1984,7 +1984,7 @@ AND his_id = ?</property>
                       refId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
-                      length="4"
+                      length="3"
                       lineageId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       name="co_cd" />
                     <outputColumn
@@ -2144,7 +2144,7 @@ AND his_id = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\cmm_eml_prn_his"
           TopLeft="5.5,5.5" />
         <GroupLayout
@@ -2152,8 +2152,8 @@ AND his_id = ?</property>
           ParentId="Package"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="174.4,103.2"
-          Size="174.4,145.6"
+          PanelSize="174,103"
+          Size="174,146"
           Id="8957267a-32f5-4232-a83f-f402030233e4"
           TopLeft="541.214035095013,168.543217983459">
           <GroupLayout.ChildrenIds>
@@ -2169,23 +2169,23 @@ AND his_id = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\cmm_eml_prn_his\Sort"
           TopLeft="248.833332008785,256.766667892668" />
         <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\cmm_eml_prn_his\DELETE"
           TopLeft="387.999993145466,258.500001239777" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\cmm_eml_prn_his\TB_RD_HIS"
           TopLeft="210,97" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\cmm_eml_prn_his\Data Conversion"
           TopLeft="215.5,179.633333946334" />
         <NodeLayout
-          Size="168.8,41.6"
+          Size="169,42"
           Id="Package\cmm_eml_prn_his\cmm_eml_prn_his"
           TopLeft="572.1666536861,257.300000991822" />
         <EdgeLayout
