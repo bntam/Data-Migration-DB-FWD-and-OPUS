@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="514"
-  DTS:VersionGUID="{D560A29D-02C8-4544-9BC4-94BF5AC5C331}">
+  DTS:VersionBuild="516"
+  DTS:VersionGUID="{F2024FAE-E664-4852-9537-E84F04FB6574}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,24 +44,24 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{2D7F8B56-65F3-4753-B486-178FC29C060E}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, '' AS trd_prnr_id&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, COALESCE(TRDP_CD,'')&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd&#xA;&#x9;, TRDP_TP_CD AS trd_prnr_tp_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;, MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, MODI_TMS&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, COALESCE(TRDP_CD,'') AS trd_prnr_id&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, COALESCE(TRDP_CD,'')&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd&#xA;&#x9;, TRDP_TP_CD AS trd_prnr_tp_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, COALESCE(RGST_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, COALESCE(RGST_TMS,GETDATE())&#x9;AS&#x9;cre_dt&#xA;&#x9;, COALESCE(MODI_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, COALESCE(MODI_TMS,GETDATE())&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
 SELECT 'AIF' AS	co_cd
-	, '' AS trd_prnr_id
+	, COALESCE(TRDP_CD,'') AS trd_prnr_id
 	, USRID	AS	usr_id
 	, COALESCE(TRDP_CD,'')	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
 	, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd
 	, TRDP_TP_CD AS trd_prnr_tp_cd
 	, DELT_FLG	AS	delt_flg
-	, RGST_USRID	AS	cre_usr_id
-	, RGST_TMS	AS	cre_dt
-	, MODI_USRID	AS	upd_usr_id
-	, MODI_TMS	AS	upd_dt
+	, COALESCE(RGST_USRID,'admin')	AS	cre_usr_id
+	, COALESCE(RGST_TMS,GETDATE())	AS	cre_dt
+	, COALESCE(MODI_USRID,'admin')	AS	upd_usr_id
+	, COALESCE(MODI_TMS,GETDATE())	AS	upd_dt
 FROM VIS_USR_TRDP
 </DTS:VariableValue>
     </DTS:Variable>
