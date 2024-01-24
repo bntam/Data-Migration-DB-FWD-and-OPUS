@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="506"
-  DTS:VersionGUID="{1A79D23A-8888-4F34-AC5F-84F9160779C9}">
+  DTS:VersionBuild="514"
+  DTS:VersionGUID="{D560A29D-02C8-4544-9BC4-94BF5AC5C331}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,16 +44,19 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{2D7F8B56-65F3-4753-B486-178FC29C060E}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, TRDP_CD&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;, MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, MODI_TMS&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, '' AS trd_prnr_id&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, COALESCE(TRDP_CD,'')&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd&#xA;&#x9;, TRDP_TP_CD AS trd_prnr_tp_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;, MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, MODI_TMS&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
 SELECT 'AIF' AS	co_cd
+	, '' AS trd_prnr_id
 	, USRID	AS	usr_id
-	, TRDP_CD	AS	trd_prnr_cd
+	, COALESCE(TRDP_CD,'')	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
+	, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd
+	, TRDP_TP_CD AS trd_prnr_tp_cd
 	, DELT_FLG	AS	delt_flg
 	, RGST_USRID	AS	cre_usr_id
 	, RGST_TMS	AS	cre_dt
@@ -66,7 +69,7 @@ FROM VIS_USR_TRDP
       DTS:CreationName=""
       DTS:DTSID="{DEDDCC61-3F90-4899-A5F0-4CC09313C042}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;USRID&#x9;AS&#x9;usr_id&#xA;,&#x9;ROLE_CD&#x9;&#x9;role_cd&#xA;,&#x9;USR_NM&#x9;AS&#x9;usr_nm&#xA;,&#x9;EML&#x9;AS&#x9;eml_addr&#xA;,&#x9;PHN&#x9;AS&#x9;phn_no&#xA;,&#x9;PWD&#x9;AS&#x9;usr_pwd&#xA;,&#x9;CASE&#xA;    WHEN USE_FLG = 'N' THEN 'Y'    &#xA;    WHEN USE_FLG = 'Y' THEN 'N'&#xA;    ELSE 'N'&#xA;&#x9;END&#x9;AS&#x9;delt_flg&#xA;,&#x9;RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;AS&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;AS&#x9;upd_dt&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;VIS_USR&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;USRID&#x9;AS&#x9;usr_id&#xA;,&#x9;ROLE_CD&#x9;&#x9;role_cd&#xA;,&#x9;USR_NM&#x9;AS&#x9;usr_nm&#xA;,&#x9;EML&#x9;AS&#x9;eml_addr&#xA;,&#x9;PHN&#x9;AS&#x9;phn_no&#xA;,&#x9;PWD&#x9;AS&#x9;usr_pwd&#xA;,&#x9;CASE&#xA;    WHEN USE_FLG = 'N' THEN 'Y'    &#xA;    WHEN USE_FLG = 'Y' THEN 'N'&#xA;    ELSE 'N'&#xA;&#x9;END&#x9;AS&#x9;delt_flg&#xA;,&#x9;COALESCE(RGST_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;cre_usr_id&#xA;,&#x9;COALESCE(RGST_TMS,GETDATE())&#x9;AS&#x9;cre_dt&#xA;,&#x9;COALESCE(MODI_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;upd_usr_id&#xA;,&#x9;COALESCE(MODI_TMS,GETDATE())&#x9;AS&#x9;upd_dt&#xA;, &quot;+ @[$Project::co_cd] +&quot; AS co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;VIS_USR&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="vis_usr_vis_usr_role">
@@ -84,10 +87,10 @@ SELECT
     WHEN USE_FLG = 'Y' THEN 'N'
     ELSE 'N'
 	END	AS	delt_flg
-,	RGST_USRID	AS	cre_usr_id
-,	RGST_TMS	AS	cre_dt
-,	MODI_USRID	AS	upd_usr_id
-,	MODI_TMS	AS	upd_dt
+,	COALESCE(RGST_USRID,'admin')	AS	cre_usr_id
+,	COALESCE(RGST_TMS,GETDATE())	AS	cre_dt
+,	COALESCE(MODI_USRID,'admin')	AS	upd_usr_id
+,	COALESCE(MODI_TMS,GETDATE())	AS	upd_dt
 , 'AIF' AS co_cd
 FROM			
 	VIS_USR
@@ -2243,6 +2246,11 @@ WHERE
                       dataType="wstr"
                       length="500"
                       name="ntc_role_alw_desc" />
+                    <externalMetadataColumn
+                      refId="Package\vis_role\vis_role.Inputs[ODBC Destination Input].ExternalColumns[role_tp_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="role_tp_cd" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6267,6 +6275,27 @@ FROM
                       cachedLength="20"
                       cachedName="opt_trd_prnr_cd"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_cd]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[trd_prnr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="trd_prnr_id"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_id]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[opt_trd_prnr_tp_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="opt_trd_prnr_tp_cd"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_tp_cd]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Inputs[Data Conversion Input].Columns[trd_prnr_tp_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="trd_prnr_tp_cd"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_tp_cd]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6459,6 +6488,69 @@ FROM
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]"
+                      name="trd_prnr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]"
+                      name="opt_trd_prnr_tp_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_tp_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]"
+                      name="trd_prnr_tp_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_tp_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -6805,6 +6897,57 @@ AND TRD_PRNR_CD = ?	</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[trd_prnr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="trd_prnr_id"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[opt_trd_prnr_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="opt_trd_prnr_tp_cd"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[trd_prnr_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="trd_prnr_tp_cd"
+                      lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6816,11 +6959,11 @@ AND TRD_PRNR_CD = ?	</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -6845,10 +6988,10 @@ AND TRD_PRNR_CD = ?	</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -6858,11 +7001,11 @@ AND TRD_PRNR_CD = ?	</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -6872,10 +7015,10 @@ AND TRD_PRNR_CD = ?	</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -6885,11 +7028,11 @@ AND TRD_PRNR_CD = ?	</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[delt_flg]"
-                      name="delt_flg">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      name="Data Conversion.delt_flg">
                       <properties>
                         <property
                           containsID="true"
@@ -6929,17 +7072,59 @@ AND TRD_PRNR_CD = ?	</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[opt_trd_prnr_cd]"
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[opt_trd_prnr_cd]"
-                      name="opt_trd_prnr_cd">
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_cd]"
+                      name="Data Conversion.opt_trd_prnr_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]"
+                      name="Data Conversion.trd_prnr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
+                      name="Data Conversion.opt_trd_prnr_tp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]"
+                      name="Data Conversion.trd_prnr_tp_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7020,12 +7205,12 @@ AND TRD_PRNR_CD = ?	</property>
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
@@ -7035,31 +7220,31 @@ AND TRD_PRNR_CD = ?	</property>
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[delt_flg]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.delt_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="delt_flg"
+                      cachedName="Data Conversion.delt_flg"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[delt_flg]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]" />
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[usr_id]"
                       cachedDataType="wstr"
@@ -7077,12 +7262,33 @@ AND TRD_PRNR_CD = ?	</property>
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_cd]"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[trd_prnr_cd]" />
                     <inputColumn
-                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[opt_trd_prnr_cd]"
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.opt_trd_prnr_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="opt_trd_prnr_cd"
+                      cachedName="Data Conversion.opt_trd_prnr_cd"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[opt_trd_prnr_cd]"
-                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[opt_trd_prnr_cd]" />
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_cd]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.trd_prnr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Data Conversion.trd_prnr_id"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_id]"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.trd_prnr_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Data Conversion.trd_prnr_tp_cd"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_tp_cd]"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]" />
+                    <inputColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Data Conversion.opt_trd_prnr_tp_cd"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[opt_trd_prnr_tp_cd]"
+                      lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7129,6 +7335,21 @@ AND TRD_PRNR_CD = ?	</property>
                       dataType="wstr"
                       length="1"
                       name="delt_flg" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="trd_prnr_id" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="trd_prnr_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[opt_trd_prnr_tp_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="opt_trd_prnr_tp_cd" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7313,6 +7534,39 @@ AND TRD_PRNR_CD = ?	</property>
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_cd]"
                       name="opt_trd_prnr_cd"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_id]"
+                      length="1"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_id]"
+                      name="trd_prnr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[opt_trd_prnr_tp_cd]"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[opt_trd_prnr_tp_cd]"
+                      name="opt_trd_prnr_tp_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_tp_cd]"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].Columns[trd_prnr_tp_cd]"
+                      name="trd_prnr_tp_cd"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7366,6 +7620,24 @@ AND TRD_PRNR_CD = ?	</property>
                       dataType="str"
                       length="20"
                       name="opt_trd_prnr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="trd_prnr_id" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[opt_trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="opt_trd_prnr_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="trd_prnr_tp_cd" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7380,6 +7652,13 @@ AND TRD_PRNR_CD = ?	</property>
                       length="12"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
                       name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[trd_prnr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[trd_prnr_id]"
+                      name="trd_prnr_id" />
                     <outputColumn
                       refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[usr_id]"
                       codePage="949"
@@ -7401,6 +7680,20 @@ AND TRD_PRNR_CD = ?	</property>
                       length="20"
                       lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[opt_trd_prnr_cd]"
                       name="opt_trd_prnr_cd" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[opt_trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[opt_trd_prnr_tp_cd]"
+                      name="opt_trd_prnr_tp_cd" />
+                    <outputColumn
+                      refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[trd_prnr_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[trd_prnr_tp_cd]"
+                      name="trd_prnr_tp_cd" />
                     <outputColumn
                       refId="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"

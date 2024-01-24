@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Z_TEST"
   DTS:PackageType="5"
-  DTS:VersionBuild="124"
-  DTS:VersionGUID="{6CA2D633-CE1D-4C2C-9AD0-590D69CF59F1}">
+  DTS:VersionBuild="128"
+  DTS:VersionGUID="{2878F626-ED97-4285-AB33-2B4A6151840F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\acc_cr_term_mst"
+      DTS:refId="Package\bcm_trk_tp_sz_cd"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{6CE3ABB9-2EB6-401E-9905-EA963D8B55CF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="acc_cr_term_mst"
+      DTS:ObjectName="bcm_trk_tp_sz_cd"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,11 +32,11 @@
           version="1">
           <components>
             <component
-              refId="Package\acc_cr_term_mst\acc_cr_term_mst"
+              refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd"
               componentClassID="Microsoft.SSISODBCDst"
               contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="ODBC Destination"
-              name="acc_cr_term_mst"
+              name="bcm_trk_tp_sz_cd"
               usesDispositions="true"
               version="1">
               <properties>
@@ -44,7 +44,7 @@
                   dataType="System.String"
                   description="The name of the table to be fetched."
                   expressionType="Notify"
-                  name="TableName">"us_fwd"."acc_cr_term_mst"</property>
+                  name="TableName">"us_fwd"."bcm_trk_tp_sz_cd"</property>
                 <property
                   dataType="System.Int32"
                   description="Specify the number of rows fetched per batch."
@@ -88,7 +88,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\acc_cr_term_mst\acc_cr_term_mst.Connections[ODBCConnection]"
+                  refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Connections[ODBCConnection]"
                   connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
                   description="The ODBC runtime connection used to access the database."
@@ -96,7 +96,7 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input]"
+                  refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
@@ -104,159 +104,163 @@
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="cre_usr_id"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[cre_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="cre_dt"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_dt]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="upd_usr_id"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[upd_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="upd_dt"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_dt]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[trk_tp_sz_cd]"
                       cachedDataType="wstr"
-                      cachedLength="17"
-                      cachedName="pay_term_mst_seq"
+                      cachedLength="5"
+                      cachedName="trk_tp_sz_cd"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_mst_seq]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_mst_seq]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_cd]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_cd]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[trk_tp_sz_desc]"
                       cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="pay_term_dflt_flg"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_dflt_flg]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_dflt_flg]" />
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_desc"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_desc]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_desc]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[pay_term_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[stnd_wgt_kgs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_kgs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[stnd_wgt_kgs_val]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_kgs_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[stnd_wgt_lbs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_lbs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[stnd_wgt_lbs_val]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_lbs_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[trk_tp_sz_rmk]"
                       cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="pay_term_cd"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_cd]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_cd]" />
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_rmk"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_rmk]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_rmk]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[pay_term_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="pay_term_nm"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_nm]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_nm]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[pay_term_rmk]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="pay_term_rmk"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_rmk]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_rmk]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].Columns[use_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].Columns[use_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="use_flg"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[use_flg]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[use_flg]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       dataType="wstr"
                       length="20"
                       name="co_cd" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_cd]"
                       dataType="wstr"
-                      length="1"
-                      name="pay_term_dflt_flg" />
+                      length="5"
+                      name="trk_tp_sz_cd" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_desc]"
                       dataType="wstr"
-                      length="20"
-                      name="pay_term_cd" />
+                      length="400"
+                      name="trk_tp_sz_desc" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_nm]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[trk_tp_sz_rmk]"
                       dataType="wstr"
-                      length="100"
-                      name="pay_term_nm" />
+                      length="400"
+                      name="trk_tp_sz_rmk" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_rmk]"
-                      dataType="wstr"
-                      length="200"
-                      name="pay_term_rmk" />
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
                       dataType="wstr"
                       length="1"
                       name="use_flg" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      name="cre_dt" />
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
                       dataType="wstr"
                       length="20"
                       name="cre_usr_id" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
                       dataType="dbTimeStamp"
-                      name="upd_dt" />
+                      name="cre_dt" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
                       dataType="wstr"
                       length="20"
                       name="upd_usr_id" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input].ExternalColumns[pay_term_mst_seq]"
-                      dataType="wstr"
-                      length="20"
-                      name="pay_term_mst_seq" />
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\acc_cr_term_mst\acc_cr_term_mst.Outputs[ODBC Destination Error Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Outputs[ODBC Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ODBC Destination Error Output"
-                  synchronousInputId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input]">
+                  synchronousInputId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\acc_cr_term_mst.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\acc_cr_term_mst.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\acc_cr_term_mst.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -265,7 +269,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\acc_cr_term_mst\Data Conversion"
+              refId="Package\bcm_trk_tp_sz_cd\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -273,100 +277,100 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="12"
                       cachedName="cre_usr_id"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="cre_dt"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_dt]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="12"
                       cachedName="upd_usr_id"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="upd_dt"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_dt]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="3"
                       cachedName="co_cd"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[trk_tp_sz_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="17"
-                      cachedName="pay_term_mst_seq"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_mst_seq]" />
+                      cachedLength="5"
+                      cachedName="trk_tp_sz_cd"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_cd]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[trk_tp_sz_desc]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="pay_term_dflt_flg"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_dflt_flg]" />
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_desc"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_desc]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[pay_term_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[stnd_wgt_kgs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_kgs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_kgs_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[stnd_wgt_lbs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_lbs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_lbs_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[trk_tp_sz_rmk]"
                       cachedCodepage="949"
                       cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="pay_term_cd"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_cd]" />
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_rmk"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_rmk]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[pay_term_nm]"
-                      cachedCodepage="949"
-                      cachedDataType="str"
-                      cachedLength="12"
-                      cachedName="pay_term_nm"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_nm]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[pay_term_rmk]"
-                      cachedCodepage="949"
-                      cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="pay_term_rmk"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_rmk]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input].Columns[use_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input].Columns[use_flg]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="use_flg"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[use_flg]" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[use_flg]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
                       name="cre_usr_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -374,7 +378,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -382,11 +386,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
                       name="cre_dt"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -394,7 +398,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -402,12 +406,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
                       name="upd_usr_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -415,7 +419,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -423,11 +427,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
                       name="upd_dt"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -435,7 +439,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -443,12 +447,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="3"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      length="20"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -456,7 +460,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -464,20 +468,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="17"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_mst_seq]"
-                      name="pay_term_mst_seq"
+                      length="5"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_cd]"
+                      name="trk_tp_sz_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_mst_seq]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -485,96 +489,98 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_desc]"
+                      name="trk_tp_sz_desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_desc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_kgs_val]"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_kgs_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_lbs_val]"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_lbs_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_rmk]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_rmk]"
+                      name="trk_tp_sz_rmk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_rmk]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="1"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_dflt_flg]"
-                      name="pay_term_dflt_flg"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_dflt_flg]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="3"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_cd]"
-                      name="pay_term_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_nm]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_nm]"
-                      name="pay_term_nm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_nm]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_rmk]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_rmk]"
-                      name="pay_term_rmk"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_rmk]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]"
                       name="use_flg"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -582,7 +588,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[use_flg]}</property>
+                          name="SourceInputColumnLineageID">#{Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[use_flg]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -593,22 +599,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -617,11 +623,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\acc_cr_term_mst\DELETE"
+              refId="Package\bcm_trk_tp_sz_cd\OLE DB Command"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="DELETE"
+              name="OLE DB Command"
               usesDispositions="true"
               version="2">
               <properties>
@@ -634,12 +640,11 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM us_fwd.acc_cr_term_mst
-WHERE 1=1
-AND co_cd = ?
-AND pay_term_dflt_flg = ?
-AND pay_term_cd = ?
-AND pay_term_mst_seq = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM 	
+	us_fwd.bcm_trk_tp_sz_cd
+WHERE	
+	co_cd = ?
+AND	trk_tp_sz_cd =? </property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -647,7 +652,7 @@ AND pay_term_mst_seq = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\acc_cr_term_mst\DELETE.Connections[OleDbConnection]"
+                  refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
                   connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
                   description="The OLE DB runtime connection used to access the database."
@@ -655,47 +660,33 @@ AND pay_term_mst_seq = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input]"
+                  refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].Columns[trk_tp_sz_cd]"
                       cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="pay_term_dflt_flg"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_dflt_flg]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].Columns[pay_term_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="pay_term_cd"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_cd]" />
-                    <inputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].Columns[pay_term_mst_seq]"
-                      cachedDataType="wstr"
-                      cachedLength="17"
-                      cachedName="pay_term_mst_seq"
+                      cachedLength="5"
+                      cachedName="trk_tp_sz_cd"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_mst_seq]" />
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_cd]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="nText"
                       name="Param_0">
                       <properties>
@@ -706,31 +697,9 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="nText"
                       name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="nText"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="nText"
-                      name="Param_3">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -743,29 +712,29 @@ AND pay_term_mst_seq = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Error Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -774,7 +743,7 @@ AND pay_term_mst_seq = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\acc_cr_term_mst\Sort"
+              refId="Package\bcm_trk_tp_sz_cd\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
@@ -793,15 +762,15 @@ AND pay_term_mst_seq = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input]"
+                  refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="cre_usr_id"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -814,10 +783,10 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[cre_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="cre_dt"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -830,11 +799,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="upd_usr_id"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -847,10 +816,10 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[upd_dt]"
                       cachedDataType="dbTimeStamp"
                       cachedName="upd_dt"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -863,11 +832,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -880,11 +849,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[trk_tp_sz_cd]"
                       cachedDataType="wstr"
-                      cachedLength="17"
-                      cachedName="pay_term_mst_seq"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_mst_seq]">
+                      cachedLength="5"
+                      cachedName="trk_tp_sz_cd"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -897,11 +866,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[trk_tp_sz_desc]"
                       cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="pay_term_dflt_flg"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_dflt_flg]">
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_desc"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_desc]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -914,11 +883,12 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[pay_term_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="pay_term_cd"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_cd]">
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[stnd_wgt_kgs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_kgs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_kgs_val]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -931,11 +901,12 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[pay_term_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="pay_term_nm"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_nm]">
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[stnd_wgt_lbs_val]"
+                      cachedDataType="numeric"
+                      cachedName="stnd_wgt_lbs_val"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_lbs_val]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -948,11 +919,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[pay_term_rmk]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[trk_tp_sz_rmk]"
                       cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="pay_term_rmk"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_rmk]">
+                      cachedLength="400"
+                      cachedName="trk_tp_sz_rmk"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_rmk]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -965,11 +936,11 @@ AND pay_term_mst_seq = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input].Columns[use_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input].Columns[use_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="use_flg"
-                      lineageId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]">
+                      lineageId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -987,69 +958,69 @@ AND pay_term_mst_seq = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
                       name="cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[cre_dt]"
                       name="cre_dt">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
                       name="upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[upd_dt]"
                       name="upd_dt">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       dataType="wstr"
-                      length="3"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      length="20"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[co_cd]"
                       name="co_cd"
                       sortKeyPosition="1">
                       <properties>
@@ -1057,92 +1028,94 @@ AND pay_term_mst_seq = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_cd]"
                       dataType="wstr"
-                      length="17"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_mst_seq]"
-                      name="pay_term_mst_seq"
+                      length="5"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_cd]"
+                      name="trk_tp_sz_cd"
                       sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_mst_seq]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_desc]"
+                      dataType="wstr"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_desc]"
+                      name="trk_tp_sz_desc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_desc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_kgs_val]"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_kgs_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[stnd_wgt_lbs_val]"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[stnd_wgt_lbs_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_rmk]"
+                      dataType="wstr"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[trk_tp_sz_rmk]"
+                      name="trk_tp_sz_rmk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[trk_tp_sz_rmk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[use_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_dflt_flg]"
-                      name="pay_term_dflt_flg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_dflt_flg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_cd]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_cd]"
-                      name="pay_term_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_nm]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_nm]"
-                      name="pay_term_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_nm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_rmk]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[pay_term_rmk]"
-                      name="pay_term_rmk">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[pay_term_rmk]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[use_flg]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output].Columns[use_flg]"
                       name="use_flg">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]}</property>
+                          name="SortColumnId">#{Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1151,11 +1124,11 @@ AND pay_term_mst_seq = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\acc_cr_term_mst\TB_TRDP"
+              refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="TB_TRDP"
+              name="TL_TRK_TP_CD"
               usesDispositions="true"
               version="7">
               <properties>
@@ -1175,18 +1148,20 @@ AND pay_term_mst_seq = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
-	'GPLW'	as	co_cd
-,	'CRT20130101000001'	AS pay_term_mst_seq
-,	'S'	as	pay_term_dflt_flg
-,	'PUR'	as	pay_term_cd	
-,	'Upon Receipt' as pay_term_nm	
-,	'' as pay_term_rmk
-,	'Y' as use_flg
-,	'admin'	as	cre_usr_id
-,	CAST ('20130101' AS DATE)	as	cre_dt
-,	'admin'	as	upd_usr_id
-,	CAST ('20130101' AS DATE)	as	upd_dt</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT		
+	'CLT'	AS	co_cd	
+,	TRK_TP_CT	AS	trk_tp_sz_cd
+,	DESCR	AS	trk_tp_sz_desc
+,	STNK_WGT	AS	stnd_wgt_kgs_val
+,	STND_CBM	AS	stnd_wgt_lbs_val
+,	RMK	AS	trk_tp_sz_rmk
+,	USE_YN	AS	use_flg
+,	RGST_USRID	AS	cre_usr_id
+,	RGST_TMS	AS	cre_dt
+,	MODI_USRID	AS	upd_usr_id
+,	MODI_TMS	AS	upd_dt
+FROM			
+	TL_TRK_TP_CD</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1211,7 +1186,7 @@ AND pay_term_mst_seq = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\acc_cr_term_mst\TB_TRDP.Connections[OleDbConnection]"
+                  refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Connections[OleDbConnection]"
                   connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
                   connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1219,189 +1194,187 @@ AND pay_term_mst_seq = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
                       name="cre_usr_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[cre_dt]"
                       name="cre_dt"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
                       length="12"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
                       name="upd_usr_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[upd_dt]"
                       name="upd_dt"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       length="3"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_mst_seq]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_mst_seq]"
-                      length="17"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_mst_seq]"
-                      name="pay_term_mst_seq"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_cd]"
+                      length="5"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_cd]"
+                      name="trk_tp_sz_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_dflt_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_desc]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_dflt_flg]"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_desc]"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_desc]"
+                      name="trk_tp_sz_desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[stnd_wgt_kgs_val]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_kgs_val]"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[stnd_wgt_lbs_val]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[stnd_wgt_lbs_val]"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_rmk]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_rmk]"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[trk_tp_sz_rmk]"
+                      name="trk_tp_sz_rmk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
                       length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_dflt_flg]"
-                      name="pay_term_dflt_flg"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_cd]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_cd]"
-                      length="3"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_cd]"
-                      name="pay_term_cd"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_nm]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_nm]"
-                      length="12"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_nm]"
-                      name="pay_term_nm"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_rmk]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_rmk]"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[pay_term_rmk]"
-                      name="pay_term_rmk"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[use_flg]"
-                      codePage="949"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].Columns[use_flg]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].Columns[use_flg]"
                       name="use_flg"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="5"
+                      length="20"
                       name="cre_usr_id" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
-                      dataType="wstr"
-                      length="10"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
                       name="cre_dt" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="5"
+                      length="20"
                       name="upd_usr_id" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
-                      dataType="wstr"
-                      length="10"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
                       name="upd_dt" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
-                      codePage="949"
-                      dataType="str"
-                      length="4"
-                      name="co_cd" />
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_mst_seq]"
-                      codePage="949"
-                      dataType="str"
-                      length="17"
-                      name="pay_term_mst_seq" />
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_dflt_flg]"
-                      codePage="949"
-                      dataType="str"
-                      length="1"
-                      name="pay_term_dflt_flg" />
-                    <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
                       codePage="949"
                       dataType="str"
                       length="3"
-                      name="pay_term_cd" />
+                      name="co_cd" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_nm]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_cd]"
                       codePage="949"
                       dataType="str"
-                      length="12"
-                      name="pay_term_nm" />
+                      length="5"
+                      name="trk_tp_sz_cd" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[pay_term_rmk]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_desc]"
                       codePage="949"
                       dataType="str"
-                      length="1"
-                      name="pay_term_rmk" />
+                      length="400"
+                      name="trk_tp_sz_desc" />
                     <externalMetadataColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[trk_tp_sz_rmk]"
+                      codePage="949"
+                      dataType="str"
+                      length="400"
+                      name="trk_tp_sz_rmk" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output].ExternalColumns[use_flg]"
                       codePage="949"
                       dataType="str"
                       length="1"
@@ -1409,95 +1382,93 @@ AND pay_term_mst_seq = ?</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output]"
+                  refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
-                      codePage="949"
-                      dataType="str"
-                      length="4"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[co_cd]"
-                      name="co_cd" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_mst_seq]"
-                      codePage="949"
-                      dataType="str"
-                      length="17"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_mst_seq]"
-                      name="pay_term_mst_seq" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_dflt_flg]"
-                      codePage="949"
-                      dataType="str"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_dflt_flg]"
-                      name="pay_term_dflt_flg" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_cd]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
                       dataType="str"
                       length="3"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_cd]"
-                      name="pay_term_cd" />
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      name="co_cd" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_nm]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_cd]"
                       codePage="949"
                       dataType="str"
-                      length="12"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_nm]"
-                      name="pay_term_nm" />
+                      length="5"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_cd]"
+                      name="trk_tp_sz_cd" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_rmk]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_desc]"
+                      codePage="949"
+                      dataType="str"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_desc]"
+                      name="trk_tp_sz_desc" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[stnd_wgt_kgs_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[stnd_wgt_kgs_val]"
+                      name="stnd_wgt_kgs_val"
+                      precision="15"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[stnd_wgt_lbs_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[stnd_wgt_lbs_val]"
+                      name="stnd_wgt_lbs_val"
+                      precision="15"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_rmk]"
+                      codePage="949"
+                      dataType="str"
+                      length="400"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[trk_tp_sz_rmk]"
+                      name="trk_tp_sz_rmk" />
+                    <outputColumn
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[use_flg]"
                       codePage="949"
                       dataType="str"
                       length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[pay_term_rmk]"
-                      name="pay_term_rmk" />
-                    <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[use_flg]"
-                      codePage="949"
-                      dataType="str"
-                      length="1"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[use_flg]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[use_flg]"
                       name="use_flg" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="5"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      length="20"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
                       name="cre_usr_id" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
                       name="cre_dt" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
                       codePage="949"
                       dataType="str"
-                      length="5"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      length="20"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
                       name="upd_usr_id" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
                       name="upd_dt" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1508,25 +1479,25 @@ AND pay_term_mst_seq = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\acc_cr_term_mst.Paths[Data Conversion Output]"
-              endId="Package\acc_cr_term_mst\Sort.Inputs[Sort Input]"
+              refId="Package\bcm_trk_tp_sz_cd.Paths[Data Conversion Output]"
+              endId="Package\bcm_trk_tp_sz_cd\Sort.Inputs[Sort Input]"
               name="Data Conversion Output"
-              startId="Package\acc_cr_term_mst\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\bcm_trk_tp_sz_cd\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\acc_cr_term_mst.Paths[OLE DB Command Output]"
-              endId="Package\acc_cr_term_mst\acc_cr_term_mst.Inputs[ODBC Destination Input]"
+              refId="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Command Output]"
+              endId="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd.Inputs[ODBC Destination Input]"
               name="OLE DB Command Output"
-              startId="Package\acc_cr_term_mst\DELETE.Outputs[OLE DB Command Output]" />
+              startId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Outputs[OLE DB Command Output]" />
             <path
-              refId="Package\acc_cr_term_mst.Paths[OLE DB Source Output]"
-              endId="Package\acc_cr_term_mst\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Source Output]"
+              endId="Package\bcm_trk_tp_sz_cd\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\acc_cr_term_mst\TB_TRDP.Outputs[OLE DB Source Output]" />
+              startId="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\acc_cr_term_mst.Paths[Sort Output]"
-              endId="Package\acc_cr_term_mst\DELETE.Inputs[OLE DB Command Input]"
+              refId="Package\bcm_trk_tp_sz_cd.Paths[Sort Output]"
+              endId="Package\bcm_trk_tp_sz_cd\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Sort Output"
-              startId="Package\acc_cr_term_mst\Sort.Outputs[Sort Output]" />
+              startId="Package\bcm_trk_tp_sz_cd\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1545,43 +1516,55 @@ AND pay_term_mst_seq = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\acc_cr_term_mst"
+          Size="168,42"
+          Id="Package\bcm_trk_tp_sz_cd"
           TopLeft="184.499992847442,149.23333448357" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\acc_cr_term_mst">
+    design-time-name="Package\bcm_trk_tp_sz_cd">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="99,42"
-          Id="Package\acc_cr_term_mst\Sort"
-          TopLeft="297.5,264.5" />
+          Id="Package\bcm_trk_tp_sz_cd\Sort"
+          TopLeft="251.5,257.5" />
         <NodeLayout
           Size="161,42"
-          Id="Package\acc_cr_term_mst\Data Conversion"
-          TopLeft="261.5,189.5" />
+          Id="Package\bcm_trk_tp_sz_cd\Data Conversion"
+          TopLeft="232.5,179.5" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\acc_cr_term_mst\TB_TRDP"
+          Size="162,42"
+          Id="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD"
           TopLeft="229.999990860622,108.333334194289" />
         <EdgeLayout
-          Id="Package\acc_cr_term_mst.Paths[Data Conversion Output]"
-          TopLeft="344.5,231.5">
+          Id="Package\bcm_trk_tp_sz_cd.Paths[Data Conversion Output]"
+          TopLeft="313,221.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="-12,36"
               Start="0,0"
-              End="0,25.5">
+              End="-12,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="-4,18" />
+                  <mssgle:LineSegment
+                    End="-8,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,18"
+                    Point2="-12,18"
+                    Point3="-12,22" />
+                  <mssgle:LineSegment
+                    End="-12,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1591,69 +1574,19 @@ AND pay_term_mst_seq = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\acc_cr_term_mst.Paths[OLE DB Source Output]"
-          TopLeft="294.499990860622,150.333334194289">
+          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Source Output]"
+          TopLeft="311.999995430311,150.333334194289">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="47.500009139378,39.166665805711"
+              EndConnector="0,29.166665805711"
               Start="0,0"
-              End="47.500009139378,31.666665805711">
+              End="0,21.666665805711">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5833329028555"
-                    Point2="0,19.5833329028555"
-                    Point3="4,19.5833329028555" />
-                  <mssgle:LineSegment
-                    End="43.500009139378,19.5833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="43.500009139378,19.5833329028555"
-                    Point2="47.500009139378,19.5833329028555"
-                    Point3="47.500009139378,23.5833329028555" />
-                  <mssgle:LineSegment
-                    End="47.500009139378,31.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="122,42"
-          Id="Package\acc_cr_term_mst\DELETE"
-          TopLeft="354.5,347.5" />
-        <EdgeLayout
-          Id="Package\acc_cr_term_mst.Paths[Sort Output]"
-          TopLeft="347,306.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="68.5,41"
-              Start="0,0"
-              End="68.5,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="64.5,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="64.5,20.5"
-                    Point2="68.5,20.5"
-                    Point3="68.5,24.5" />
-                  <mssgle:LineSegment
-                    End="68.5,33.5" />
+                    End="0,21.666665805711" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1663,23 +1596,49 @@ AND pay_term_mst_seq = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="163,42"
-          Id="Package\acc_cr_term_mst\acc_cr_term_mst"
-          TopLeft="556.5,346.5" />
+          Size="173,42"
+          Id="Package\bcm_trk_tp_sz_cd\OLE DB Command"
+          TopLeft="414.5,253.5" />
         <EdgeLayout
-          Id="Package\acc_cr_term_mst.Paths[OLE DB Command Output]"
-          TopLeft="476.5,368">
+          Id="Package\bcm_trk_tp_sz_cd.Paths[Sort Output]"
+          TopLeft="350.5,276.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80,0"
+              EndConnector="64,0"
               Start="0,0"
-              End="72.5,0">
+              End="56.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="72.5,0" />
+                    End="56.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd"
+          TopLeft="637.5,251.5" />
+        <EdgeLayout
+          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Command Output]"
+          TopLeft="587.5,273.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,0"
+              Start="0,0"
+              End="42.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1692,7 +1651,7 @@ AND pay_term_mst_seq = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\acc_cr_term_mst\TB_TRDP">
+    design-time-name="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1700,7 +1659,7 @@ AND pay_term_mst_seq = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\acc_cr_term_mst\acc_cr_term_mst">
+    design-time-name="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
