@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="VIS"
   DTS:PackageType="5"
-  DTS:VersionBuild="514"
-  DTS:VersionGUID="{D560A29D-02C8-4544-9BC4-94BF5AC5C331}">
+  DTS:VersionBuild="518"
+  DTS:VersionGUID="{FCEA4C51-E73C-4801-A56B-91FAA8B5D17E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -44,24 +44,24 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{2D7F8B56-65F3-4753-B486-178FC29C060E}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, '' AS trd_prnr_id&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, COALESCE(TRDP_CD,'')&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd&#xA;&#x9;, TRDP_TP_CD AS trd_prnr_tp_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, RGST_USRID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, RGST_TMS&#x9;AS&#x9;cre_dt&#xA;&#x9;, MODI_USRID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, MODI_TMS&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT &quot;+ @[$Project::co_cd] +&quot; AS&#x9;co_cd&#xA;&#x9;, COALESCE(TRDP_CD,'') AS trd_prnr_id&#xA;&#x9;, USRID&#x9;AS&#x9;usr_id&#xA;&#x9;, COALESCE(TRDP_CD,'')&#x9;AS&#x9;trd_prnr_cd&#xA;&#x9;, OTH_TRDP_CD&#x9;AS&#x9;opt_trd_prnr_cd&#xA;&#x9;, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd&#xA;&#x9;, TRDP_TP_CD AS trd_prnr_tp_cd&#xA;&#x9;, DELT_FLG&#x9;AS&#x9;delt_flg&#xA;&#x9;, COALESCE(RGST_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, COALESCE(RGST_TMS,GETDATE())&#x9;AS&#x9;cre_dt&#xA;&#x9;, COALESCE(MODI_USRID,&quot;+ @[$Project::user_id] +&quot;)&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, COALESCE(MODI_TMS,GETDATE())&#x9;AS&#x9;upd_dt&#xA;FROM VIS_USR_TRDP&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="vis_usr_trd_prnr">
       <DTS:VariableValue
         DTS:DataType="8">
 SELECT 'AIF' AS	co_cd
-	, '' AS trd_prnr_id
+	, COALESCE(TRDP_CD,'') AS trd_prnr_id
 	, USRID	AS	usr_id
 	, COALESCE(TRDP_CD,'')	AS	trd_prnr_cd
 	, OTH_TRDP_CD	AS	opt_trd_prnr_cd
 	, OTH_TRDP_TP_CD AS opt_trd_prnr_tp_cd
 	, TRDP_TP_CD AS trd_prnr_tp_cd
 	, DELT_FLG	AS	delt_flg
-	, RGST_USRID	AS	cre_usr_id
-	, RGST_TMS	AS	cre_dt
-	, MODI_USRID	AS	upd_usr_id
-	, MODI_TMS	AS	upd_dt
+	, COALESCE(RGST_USRID,'admin')	AS	cre_usr_id
+	, COALESCE(RGST_TMS,GETDATE())	AS	cre_dt
+	, COALESCE(MODI_USRID,'admin')	AS	upd_usr_id
+	, COALESCE(MODI_TMS,GETDATE())	AS	upd_dt
 FROM VIS_USR_TRDP
 </DTS:VariableValue>
     </DTS:Variable>
@@ -3689,51 +3689,58 @@ FROM
                       cachedSortKeyPosition="2"
                       lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_id]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[cre_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      cachedName="Data Conversion.cre_dt"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[upd_usr_id]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      cachedName="Data Conversion.upd_usr_id"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[upd_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      cachedName="Data Conversion.upd_dt"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[delt_flg]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.delt_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="delt_flg"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[delt_flg]" />
+                      cachedName="Data Conversion.delt_flg"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[usr_nm]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_nm]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="usr_nm"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_nm]" />
+                      cachedName="Data Conversion.usr_nm"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_nm]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[eml_addr]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.eml_addr]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="eml_addr"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[eml_addr]" />
+                      cachedName="Data Conversion.eml_addr"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.eml_addr]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[phn_no]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.phn_no]"
                       cachedDataType="wstr"
                       cachedLength="60"
-                      cachedName="phn_no"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[phn_no]" />
+                      cachedName="Data Conversion.phn_no"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.phn_no]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[usr_pwd]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_pwd]"
                       cachedDataType="wstr"
                       cachedLength="100"
-                      cachedName="usr_pwd"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_pwd]" />
+                      cachedName="Data Conversion.usr_pwd"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_pwd]" />
+                    <inputColumn
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3791,7 +3798,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[cre_dt]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3805,7 +3812,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[upd_usr_id]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3818,7 +3825,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[upd_dt]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3832,7 +3839,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[delt_flg]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.delt_flg]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3875,7 +3882,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[usr_nm]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_nm]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3889,7 +3896,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[eml_addr]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.eml_addr]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3903,7 +3910,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[phn_no]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.phn_no]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3917,7 +3924,21 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[usr_pwd]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_pwd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr + vis_usr_role\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\vis_usr + vis_usr_role\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join.Inputs[Merge Join Left Input].Columns[cre_usr_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3979,51 +4000,58 @@ FROM
                       cachedSortKeyPosition="2"
                       lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_id]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[cre_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      cachedName="Data Conversion.cre_dt"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[upd_usr_id]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      cachedName="Data Conversion.upd_usr_id"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[upd_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      cachedName="Data Conversion.upd_dt"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[delt_flg]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.delt_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="delt_flg"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[delt_flg]" />
+                      cachedName="Data Conversion.delt_flg"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[usr_nm]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_nm]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="usr_nm"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_nm]" />
+                      cachedName="Data Conversion.usr_nm"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_nm]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[eml_addr]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.eml_addr]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="eml_addr"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[eml_addr]" />
+                      cachedName="Data Conversion.eml_addr"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.eml_addr]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[phn_no]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.phn_no]"
                       cachedDataType="wstr"
                       cachedLength="60"
-                      cachedName="phn_no"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[phn_no]" />
+                      cachedName="Data Conversion.phn_no"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.phn_no]" />
                     <inputColumn
-                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[usr_pwd]"
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_pwd]"
                       cachedDataType="wstr"
                       cachedLength="100"
-                      cachedName="usr_pwd"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_pwd]" />
+                      cachedName="Data Conversion.usr_pwd"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_pwd]" />
+                    <inputColumn
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4088,7 +4116,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[cre_dt]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.cre_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4102,7 +4130,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[upd_usr_id]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_usr_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4115,7 +4143,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[upd_dt]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.upd_dt]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4129,7 +4157,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[delt_flg]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.delt_flg]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4173,7 +4201,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[usr_nm]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_nm]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4187,7 +4215,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[eml_addr]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.eml_addr]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4201,7 +4229,7 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[phn_no]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.phn_no]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4215,7 +4243,21 @@ FROM
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[usr_pwd]}</property>
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[Data Conversion.usr_pwd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr + vis_usr_role\Merge Join 1.Outputs[Merge Join Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\vis_usr + vis_usr_role\Merge Join 1.Outputs[Merge Join Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\vis_usr + vis_usr_role\Merge Join 1.Inputs[Merge Join Left Input].Columns[cre_usr_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4483,6 +4525,23 @@ FROM
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\vis_usr + vis_usr_role\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\vis_usr + vis_usr_role\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4509,10 +4568,10 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -4522,11 +4581,11 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -4536,10 +4595,10 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -4549,11 +4608,11 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[delt_flg]"
-                      name="delt_flg">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.delt_flg]"
+                      name="Data Conversion.delt_flg">
                       <properties>
                         <property
                           containsID="true"
@@ -4593,11 +4652,11 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_nm]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_nm]"
                       dataType="wstr"
                       length="200"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_nm]"
-                      name="usr_nm">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_nm]"
+                      name="Data Conversion.usr_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -4607,11 +4666,11 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[eml_addr]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.eml_addr]"
                       dataType="wstr"
                       length="200"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[eml_addr]"
-                      name="eml_addr">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.eml_addr]"
+                      name="Data Conversion.eml_addr">
                       <properties>
                         <property
                           containsID="true"
@@ -4621,11 +4680,11 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[phn_no]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.phn_no]"
                       dataType="wstr"
                       length="60"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[phn_no]"
-                      name="phn_no">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.phn_no]"
+                      name="Data Conversion.phn_no">
                       <properties>
                         <property
                           containsID="true"
@@ -4635,17 +4694,32 @@ FROM
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_pwd]"
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_pwd]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[usr_pwd]"
-                      name="usr_pwd">
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[Data Conversion.usr_pwd]"
+                      name="Data Conversion.usr_pwd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\vis_usr + vis_usr_role\Data Conversion.Outputs[Data Conversion Output].Columns[usr_pwd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\vis_usr + vis_usr_role\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\vis_usr + vis_usr_role\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5829,6 +5903,13 @@ FROM
                       cachedName="usr_pwd"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[usr_pwd]"
                       lineageId="Package\vis_usr + vis_usr_role\Merge Join.Outputs[Merge Join Output].Columns[usr_pwd]" />
+                    <inputColumn
+                      refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\vis_usr + vis_usr_role\Merge Join.Outputs[Merge Join Output].Columns[cre_usr_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5868,7 +5949,7 @@ FROM
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[usr_nm]"
                       dataType="wstr"
-                      length="100"
+                      length="300"
                       name="usr_nm" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
@@ -5878,12 +5959,12 @@ FROM
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[phn_no]"
                       dataType="wstr"
-                      length="30"
+                      length="300"
                       name="phn_no" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[eml_addr]"
                       dataType="wstr"
-                      length="100"
+                      length="300"
                       name="eml_addr" />
                     <externalMetadataColumn
                       refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[fax_no]"
@@ -5900,6 +5981,21 @@ FROM
                       dataType="wstr"
                       length="50"
                       name="sns_nm" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[co_alw_desc]"
+                      dataType="wstr"
+                      length="500"
+                      name="co_alw_desc" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[usr_co_nm]"
+                      dataType="wstr"
+                      length="100"
+                      name="usr_co_nm" />
+                    <externalMetadataColumn
+                      refId="Package\vis_usr + vis_usr_role\vis_usr.Inputs[ODBC Destination Input].ExternalColumns[mst_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="mst_flg" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6050,6 +6146,13 @@ FROM
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\vis_usr + vis_usr_role\vis_usr_role.Inputs[ODBC Destination Input].ExternalColumns[usr_id]"
                       lineageId="Package\vis_usr + vis_usr_role\Merge Join 1.Outputs[Merge Join Output].Columns[usr_id]" />
+                    <inputColumn
+                      refId="Package\vis_usr + vis_usr_role\vis_usr_role.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\vis_usr + vis_usr_role\vis_usr_role.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\vis_usr + vis_usr_role\Merge Join 1.Outputs[Merge Join Output].Columns[cre_usr_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6499,7 +6602,7 @@ FROM
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="1"
+                      length="100"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]"
                       name="trd_prnr_id"
                       truncationRowDisposition="FailComponent">
@@ -6520,7 +6623,7 @@ FROM
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="3"
+                      length="50"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]"
                       name="opt_trd_prnr_tp_cd"
                       truncationRowDisposition="FailComponent">
@@ -6541,7 +6644,7 @@ FROM
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="3"
+                      length="50"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]"
                       name="trd_prnr_tp_cd"
                       truncationRowDisposition="FailComponent">
@@ -6900,7 +7003,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[trd_prnr_id]"
                       cachedDataType="wstr"
-                      cachedLength="1"
+                      cachedLength="100"
                       cachedName="trd_prnr_id"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_id]">
                       <properties>
@@ -6917,7 +7020,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[opt_trd_prnr_tp_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="50"
                       cachedName="opt_trd_prnr_tp_cd"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[opt_trd_prnr_tp_cd]">
                       <properties>
@@ -6934,7 +7037,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Inputs[Sort Input].Columns[trd_prnr_tp_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="50"
                       cachedName="trd_prnr_tp_cd"
                       lineageId="Package\vis_usr_trd_prnr\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_tp_cd]">
                       <properties>
@@ -7088,7 +7191,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <outputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]"
                       dataType="wstr"
-                      length="1"
+                      length="100"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]"
                       name="Data Conversion.trd_prnr_id">
                       <properties>
@@ -7102,7 +7205,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <outputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
                       dataType="wstr"
-                      length="3"
+                      length="50"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
                       name="Data Conversion.opt_trd_prnr_tp_cd">
                       <properties>
@@ -7116,7 +7219,7 @@ AND TRD_PRNR_CD = ?	</property>
                     <outputColumn
                       refId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]"
                       dataType="wstr"
-                      length="3"
+                      length="50"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]"
                       name="Data Conversion.trd_prnr_tp_cd">
                       <properties>
@@ -7271,21 +7374,21 @@ AND TRD_PRNR_CD = ?	</property>
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.trd_prnr_id]"
                       cachedDataType="wstr"
-                      cachedLength="1"
+                      cachedLength="100"
                       cachedName="Data Conversion.trd_prnr_id"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_id]"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_id]" />
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.trd_prnr_tp_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="50"
                       cachedName="Data Conversion.trd_prnr_tp_cd"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_tp_cd]"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.trd_prnr_tp_cd]" />
                     <inputColumn
                       refId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].Columns[Data Conversion.opt_trd_prnr_tp_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="50"
                       cachedName="Data Conversion.opt_trd_prnr_tp_cd"
                       externalMetadataColumnId="Package\vis_usr_trd_prnr\vis_usr_trd_prnr.Inputs[ODBC Destination Input].ExternalColumns[opt_trd_prnr_tp_cd]"
                       lineageId="Package\vis_usr_trd_prnr\Sort.Outputs[Sort Output].Columns[Data Conversion.opt_trd_prnr_tp_cd]" />
@@ -8740,21 +8843,21 @@ AND TRD_PRNR_CD = ?	</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="192,42"
+          Id="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR"
+          TopLeft="80.0000017881393,8.99999989668526" />
+        <NodeLayout
           Size="99,42"
           Id="Package\vis_usr_trd_prnr\Sort"
           TopLeft="123.5,161.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\vis_usr_trd_prnr\vis_usr_trd_prnr"
-          TopLeft="377.5,232.5" />
         <NodeLayout
           Size="173,42"
           Id="Package\vis_usr_trd_prnr\OLE DB Command"
           TopLeft="105.5,247.5" />
         <NodeLayout
-          Size="192,42"
-          Id="Package\vis_usr_trd_prnr\VIS_USR_TRD_PRNR"
-          TopLeft="80.0000017881393,8.99999989668526" />
+          Size="158,42"
+          Id="Package\vis_usr_trd_prnr\vis_usr_trd_prnr"
+          TopLeft="377.5,232.5" />
         <NodeLayout
           Size="161,42"
           Id="Package\vis_usr_trd_prnr\Data Conversion"
