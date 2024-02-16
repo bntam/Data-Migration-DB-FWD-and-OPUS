@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="BCM"
   DTS:PackageType="5"
-  DTS:VersionBuild="543"
-  DTS:VersionGUID="{E85FB049-6EBE-456B-AD82-01BDD279387E}">
+  DTS:VersionBuild="546"
+  DTS:VersionGUID="{0C9EF306-F87A-4233-B5A7-F3079C63CC87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1115,6 +1115,41 @@ CASE
 		ELSE 2
 end as prio_no
 from tb_trdp_cntc_pson
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D401DFA9-228F-4A74-8EF0-998AC0E0D52D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;&quot;+ @[$Project::co_cd] +&quot;&#x9;as&#x9;co_cd&#xA;,&#x9;''&#x9;as&#x9;cnt_cd&#xA;,&#x9;''&#x9;as&#x9;tml_free_dy_use_flg&#xA;,&#x9;''&#x9;as&#x9;pd_free_dy_use_flg&#xA;,&#x9;0&#x9;as&#x9;dem_free_dy_val&#xA;,&#x9;''&#x9;as&#x9;dem_free_dy_use_flg&#xA;,&#x9;''&#x9;as&#x9;cmb_free_dy_use_flg&#xA;,&#x9;TRDP_CD&#x9;as&#x9;trd_prnr_cd&#xA;,&#x9;FRE_DAY_SEQ&#x9;as&#x9;free_dy_seq&#xA;,&#x9;CNTR_TPSZ_CD&#x9;as&#x9;cntr_tp_sz_cd&#xA;,&#x9;SCAC_CD&#x9;as&#x9;scac_cd&#xA;,&#x9;PORT_CD&#x9;as&#x9;port_cd&#xA;,&#x9;TMNL_FRE_DAY&#x9;as&#x9;tml_free_dy_val&#xA;,&#x9;PDM_FRE_DAY&#x9;as&#x9;pd_free_dy_val&#xA;,&#x9;COMB_FRE_DAY&#x9;as&#x9;cmb_free_dy_val&#xA;,&#x9;DELT_FLG&#x9;as&#x9;delt_flg&#xA;,&#x9;RGST_USRID&#x9;as&#x9;cre_usr_id&#xA;,&#x9;RGST_TMS&#x9;as&#x9;cre_dt&#xA;,&#x9;MODI_USRID&#x9;as&#x9;upd_usr_id&#xA;,&#x9;MODI_TMS&#x9;as&#x9;upd_dt&#xA;From &#x9;&#x9;&#x9;&#xA;&#x9;TB_TRDP_FRE_DAY&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="bcm_trd_prnr_free_dy_dtl">
+      <DTS:VariableValue
+        DTS:DataType="8">
+SELECT			
+	'AIF'	as	co_cd
+,	''	as	cnt_cd
+,	''	as	tml_free_dy_use_flg
+,	''	as	pd_free_dy_use_flg
+,	0	as	dem_free_dy_val
+,	''	as	dem_free_dy_use_flg
+,	''	as	cmb_free_dy_use_flg
+,	TRDP_CD	as	trd_prnr_cd
+,	FRE_DAY_SEQ	as	free_dy_seq
+,	CNTR_TPSZ_CD	as	cntr_tp_sz_cd
+,	SCAC_CD	as	scac_cd
+,	PORT_CD	as	port_cd
+,	TMNL_FRE_DAY	as	tml_free_dy_val
+,	PDM_FRE_DAY	as	pd_free_dy_val
+,	COMB_FRE_DAY	as	cmb_free_dy_val
+,	DELT_FLG	as	delt_flg
+,	RGST_USRID	as	cre_usr_id
+,	RGST_TMS	as	cre_dt
+,	MODI_USRID	as	upd_usr_id
+,	MODI_TMS	as	upd_dt
+From 			
+	TB_TRDP_FRE_DAY
 </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -54769,6 +54804,2344 @@ AND co_cd = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\bcm_trd_prnr_free_dy_dtl"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7e52ae4b-7e03-4a8d-ad64-8b9c3e2e8b1e}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="bcm_trd_prnr_free_dy_dtl"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="bcm_trd_prnr_free_dy_dtl"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."bcm_trd_prnr_free_dy_dtl"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cnt_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="cnt_cd"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cnt_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cnt_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[tml_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="tml_free_dy_use_flg"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[tml_free_dy_use_flg]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[pd_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="pd_free_dy_use_flg"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[pd_free_dy_use_flg]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[dem_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="dem_free_dy_val"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[dem_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[dem_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="dem_free_dy_use_flg"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[dem_free_dy_use_flg]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cmb_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="cmb_free_dy_use_flg"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cmb_free_dy_use_flg]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[trd_prnr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="trd_prnr_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[trd_prnr_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[free_dy_seq]"
+                      cachedDataType="numeric"
+                      cachedName="free_dy_seq"
+                      cachedPrecision="5"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[free_dy_seq]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[free_dy_seq]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cntr_tp_sz_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="cntr_tp_sz_cd"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cntr_tp_sz_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cntr_tp_sz_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[scac_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="scac_cd"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[scac_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[scac_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[port_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="port_cd"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[port_cd]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[port_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[tml_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="tml_free_dy_val"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[tml_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[pd_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="pd_free_dy_val"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[pd_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[cmb_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="cmb_free_dy_val"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cmb_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[delt_flg]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[trd_prnr_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="trd_prnr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[free_dy_seq]"
+                      dataType="numeric"
+                      name="free_dy_seq"
+                      precision="9" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cntr_tp_sz_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="cntr_tp_sz_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[scac_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="scac_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[port_cd]"
+                      dataType="wstr"
+                      length="5"
+                      name="port_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cnt_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="cnt_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[tml_free_dy_val]"
+                      dataType="numeric"
+                      name="tml_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[tml_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="tml_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[pd_free_dy_val]"
+                      dataType="numeric"
+                      name="pd_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[pd_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="pd_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[dem_free_dy_val]"
+                      dataType="numeric"
+                      name="dem_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[dem_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="dem_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      name="cmb_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cmb_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="cmb_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="delt_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cre_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[upd_usr_id]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[co_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="co_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cnt_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="cnt_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cnt_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[tml_free_dy_use_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="tml_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[pd_free_dy_use_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="pd_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[dem_free_dy_val]"
+                      cachedDataType="i4"
+                      cachedName="dem_free_dy_val"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[dem_free_dy_use_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="dem_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cmb_free_dy_use_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="cmb_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[trd_prnr_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="trd_prnr_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[trd_prnr_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[free_dy_seq]"
+                      cachedDataType="numeric"
+                      cachedName="free_dy_seq"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[free_dy_seq]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_tp_sz_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="cntr_tp_sz_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cntr_tp_sz_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[scac_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="scac_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[scac_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[port_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="port_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[port_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[tml_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="tml_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[pd_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="pd_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[cmb_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="cmb_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_val]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input].Columns[delt_flg]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[delt_flg]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cnt_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cnt_cd]"
+                      name="cnt_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cnt_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_use_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_use_flg]"
+                      name="tml_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_use_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_use_flg]"
+                      name="pd_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_val]"
+                      name="dem_free_dy_val"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_use_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_use_flg]"
+                      name="dem_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_use_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_use_flg]"
+                      name="cmb_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_cd]"
+                      name="trd_prnr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[trd_prnr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[free_dy_seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[free_dy_seq]"
+                      name="free_dy_seq"
+                      precision="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[free_dy_seq]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tp_sz_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tp_sz_cd]"
+                      name="cntr_tp_sz_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cntr_tp_sz_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[scac_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[scac_cd]"
+                      name="scac_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[scac_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[port_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[port_cd]"
+                      name="port_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[port_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_val]"
+                      name="tml_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_val]"
+                      name="pd_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_val]"
+                      name="cmb_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_val]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[delt_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE 	
+FROM 	
+	us_fwd.bcm_trd_prnr_free_dy_dtl
+WHERE	co_cd = ?
+AND	trd_prnr_cd =?
+AND	free_dy_seq= ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].Columns[trd_prnr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="trd_prnr_cd"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[trd_prnr_cd]" />
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].Columns[free_dy_seq]"
+                      cachedDataType="numeric"
+                      cachedName="free_dy_seq"
+                      cachedPrecision="5"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[free_dy_seq]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="numeric"
+                      name="Param_2"
+                      precision="39">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_trd_prnr_free_dy_dtl\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="upd_usr_id"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cnt_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="cnt_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cnt_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[tml_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="tml_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[pd_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="pd_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[dem_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="dem_free_dy_val"
+                      cachedPrecision="18"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[dem_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="dem_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cmb_free_dy_use_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="cmb_free_dy_use_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_use_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[trd_prnr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="trd_prnr_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[free_dy_seq]"
+                      cachedDataType="numeric"
+                      cachedName="free_dy_seq"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[free_dy_seq]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cntr_tp_sz_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="cntr_tp_sz_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tp_sz_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[scac_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="scac_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[scac_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[port_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="port_cd"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[port_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[tml_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="tml_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[pd_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="pd_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[cmb_free_dy_val]"
+                      cachedDataType="numeric"
+                      cachedName="cmb_free_dy_val"
+                      cachedPrecision="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_val]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="delt_flg"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      name="cre_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      name="cre_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      name="upd_usr_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      name="upd_dt">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[co_cd]"
+                      name="co_cd"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cnt_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cnt_cd]"
+                      name="cnt_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cnt_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_use_flg]"
+                      name="tml_free_dy_use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_use_flg]"
+                      name="pd_free_dy_use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_val]"
+                      name="dem_free_dy_val"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[dem_free_dy_use_flg]"
+                      name="dem_free_dy_use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[dem_free_dy_use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_use_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_use_flg]"
+                      name="cmb_free_dy_use_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[trd_prnr_cd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[trd_prnr_cd]"
+                      name="trd_prnr_cd"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[trd_prnr_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[free_dy_seq]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[free_dy_seq]"
+                      name="free_dy_seq"
+                      precision="5"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[free_dy_seq]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cntr_tp_sz_cd]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cntr_tp_sz_cd]"
+                      name="cntr_tp_sz_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tp_sz_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[scac_cd]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[scac_cd]"
+                      name="scac_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[scac_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[port_cd]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[port_cd]"
+                      name="port_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[port_cd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[tml_free_dy_val]"
+                      name="tml_free_dy_val"
+                      precision="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[tml_free_dy_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[pd_free_dy_val]"
+                      name="pd_free_dy_val"
+                      precision="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[pd_free_dy_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[cmb_free_dy_val]"
+                      name="cmb_free_dy_val"
+                      precision="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[cmb_free_dy_val]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output].Columns[delt_flg]"
+                      name="delt_flg">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output].Columns[delt_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TB_TRDP_FRE_DAY"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT			
+	'CLT'	as	co_cd
+,	''	as	cnt_cd
+,	''	as	tml_free_dy_use_flg
+,	''	as	pd_free_dy_use_flg
+,	0	as	dem_free_dy_val
+,	''	as	dem_free_dy_use_flg
+,	''	as	cmb_free_dy_use_flg
+,	TRDP_CD	as	trd_prnr_cd
+,	FRE_DAY_SEQ	as	free_dy_seq
+,	CNTR_TPSZ_CD	as	cntr_tp_sz_cd
+,	SCAC_CD	as	scac_cd
+,	PORT_CD	as	port_cd
+,	TMNL_FRE_DAY	as	tml_free_dy_val
+,	PDM_FRE_DAY	as	pd_free_dy_val
+,	COMB_FRE_DAY	as	cmb_free_dy_val
+,	DELT_FLG	as	delt_flg
+,	RGST_USRID	as	cre_usr_id
+,	RGST_TMS	as	cre_dt
+,	MODI_USRID	as	upd_usr_id
+,	MODI_TMS	as	upd_dt
+From 			
+	TB_TRDP_FRE_DAY</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::bcm_trd_prnr_free_dy_dtl</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Connections[OleDbConnection]"
+                  connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      length="3"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cnt_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cnt_cd]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cnt_cd]"
+                      name="cnt_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[tml_free_dy_use_flg]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_use_flg]"
+                      name="tml_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[pd_free_dy_use_flg]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_use_flg]"
+                      name="pd_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_val]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[dem_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_val]"
+                      name="dem_free_dy_val"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[dem_free_dy_use_flg]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[dem_free_dy_use_flg]"
+                      name="dem_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cmb_free_dy_use_flg]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_use_flg]"
+                      name="cmb_free_dy_use_flg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[trd_prnr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_cd]"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[trd_prnr_cd]"
+                      name="trd_prnr_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[free_dy_seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[free_dy_seq]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[free_dy_seq]"
+                      name="free_dy_seq"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cntr_tp_sz_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cntr_tp_sz_cd]"
+                      length="6"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cntr_tp_sz_cd]"
+                      name="cntr_tp_sz_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[scac_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[scac_cd]"
+                      length="4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[scac_cd]"
+                      name="scac_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[port_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[port_cd]"
+                      length="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[port_cd]"
+                      name="port_cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[tml_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[tml_free_dy_val]"
+                      name="tml_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[pd_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[pd_free_dy_val]"
+                      name="pd_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cmb_free_dy_val]"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[cmb_free_dy_val]"
+                      name="cmb_free_dy_val"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cnt_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="cnt_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[tml_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="tml_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[pd_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="pd_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[dem_free_dy_val]"
+                      dataType="i4"
+                      name="dem_free_dy_val" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[dem_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="dem_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cmb_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="cmb_free_dy_use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[trd_prnr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="trd_prnr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[free_dy_seq]"
+                      dataType="numeric"
+                      name="free_dy_seq"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cntr_tp_sz_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="cntr_tp_sz_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[scac_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="4"
+                      name="scac_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[port_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="port_cd" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[tml_free_dy_val]"
+                      dataType="numeric"
+                      name="tml_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[pd_free_dy_val]"
+                      dataType="numeric"
+                      name="pd_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      name="cmb_free_dy_val"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output].ExternalColumns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="delt_flg" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[co_cd]"
+                      name="co_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cnt_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cnt_cd]"
+                      name="cnt_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[tml_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[tml_free_dy_use_flg]"
+                      name="tml_free_dy_use_flg" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[pd_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[pd_free_dy_use_flg]"
+                      name="pd_free_dy_use_flg" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[dem_free_dy_val]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[dem_free_dy_val]"
+                      name="dem_free_dy_val" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[dem_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[dem_free_dy_use_flg]"
+                      name="dem_free_dy_use_flg" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cmb_free_dy_use_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cmb_free_dy_use_flg]"
+                      name="cmb_free_dy_use_flg" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[trd_prnr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[trd_prnr_cd]"
+                      name="trd_prnr_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[free_dy_seq]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[free_dy_seq]"
+                      name="free_dy_seq"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cntr_tp_sz_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cntr_tp_sz_cd]"
+                      name="cntr_tp_sz_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[scac_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[scac_cd]"
+                      name="scac_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[port_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[port_cd]"
+                      name="port_cd" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[tml_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[tml_free_dy_val]"
+                      name="tml_free_dy_val"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[pd_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[pd_free_dy_val]"
+                      name="pd_free_dy_val"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cmb_free_dy_val]"
+                      dataType="numeric"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cmb_free_dy_val]"
+                      name="cmb_free_dy_val"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[delt_flg]"
+                      name="delt_flg" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cre_usr_id]"
+                      name="cre_usr_id" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[cre_dt]"
+                      name="cre_dt" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[upd_usr_id]"
+                      name="upd_usr_id" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
+                      name="upd_dt" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\bcm_trd_prnr_free_dy_dtl.Paths[Data Conversion Output]"
+              endId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\bcm_trd_prnr_free_dy_dtl.Paths[OLE DB Command Output]"
+              endId="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\bcm_trd_prnr_free_dy_dtl.Paths[OLE DB Source Output]"
+              endId="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\bcm_trd_prnr_free_dy_dtl.Paths[Sort Output]"
+              endId="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Sort Output"
+              startId="Package\bcm_trd_prnr_free_dy_dtl\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\bcm_trd_prnr_rlt"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -60106,6 +62479,10 @@ FROM TB_VSL</property>
           Size="168,42"
           Id="Package\bcm_trk_tp_sz_cd"
           TopLeft="407,307" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl"
+          TopLeft="591,303" />
         <GroupLayout
           Text="BCM"
           ParentId="Package"
@@ -60141,6 +62518,7 @@ FROM TB_VSL</property>
             <s:String>Package\bcm_curr</s:String>
             <s:String>Package\bcm_ofc_misc_clss_cd</s:String>
             <s:String>Package\bcm_trk_tp_sz_cd</s:String>
+            <s:String>Package\bcm_trd_prnr_free_dy_dtl</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
@@ -64128,6 +66506,130 @@ FROM TB_VSL</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\bcm_trd_prnr_free_dy_dtl">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl\bcm_trd_prnr_free_dy_dtl"
+          TopLeft="658.5,253.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl\OLE DB Command"
+          TopLeft="439.5,255.5" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl\Sort"
+          TopLeft="278.5,255.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY"
+          TopLeft="231.999990860622,108.333334194289" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\bcm_trd_prnr_free_dy_dtl\Data Conversion"
+          TopLeft="247.5,179.5" />
+        <EdgeLayout
+          Id="Package\bcm_trd_prnr_free_dy_dtl.Paths[OLE DB Command Output]"
+          TopLeft="612.5,275.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46,0"
+              Start="0,0"
+              End="38.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trd_prnr_free_dy_dtl.Paths[OLE DB Source Output]"
+          TopLeft="326.499995430311,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.166665805711"
+              Start="0,0"
+              End="0,21.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trd_prnr_free_dy_dtl.Paths[Data Conversion Output]"
+          TopLeft="328,221.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trd_prnr_free_dy_dtl.Paths[Sort Output]"
+          TopLeft="377.5,276.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62,0"
+              Start="0,0"
+              End="54.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\bcm_trd_prnr_free_dy_dtl\TB_TRDP_FRE_DAY">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\bcm_trd_prnr_rlt">
     <LayoutInfo>
       <GraphLayout
@@ -64278,6 +66780,142 @@ FROM TB_VSL</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\bcm_trd_prnr_rlt\TB_TRDP_CB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\bcm_trk_tp_sz_cd">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,42"
+          Id="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd"
+          TopLeft="637.5,251.5" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\bcm_trk_tp_sz_cd\Sort"
+          TopLeft="251.5,257.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\bcm_trk_tp_sz_cd\Data Conversion"
+          TopLeft="232.5,179.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\bcm_trk_tp_sz_cd\OLE DB Command"
+          TopLeft="414.5,253.5" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD"
+          TopLeft="229.999990860622,108.333334194289" />
+        <EdgeLayout
+          Id="Package\bcm_trk_tp_sz_cd.Paths[Data Conversion Output]"
+          TopLeft="313,221.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,36"
+              Start="0,0"
+              End="-12,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="-4,18" />
+                  <mssgle:LineSegment
+                    End="-8,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8,18"
+                    Point2="-12,18"
+                    Point3="-12,22" />
+                  <mssgle:LineSegment
+                    End="-12,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trk_tp_sz_cd.Paths[Sort Output]"
+          TopLeft="350.5,276.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,0"
+              Start="0,0"
+              End="56.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Command Output]"
+          TopLeft="587.5,273.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,0"
+              Start="0,0"
+              End="42.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Source Output]"
+          TopLeft="311.999995430311,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.166665805711"
+              Start="0,0"
+              End="0,21.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -64462,142 +67100,6 @@ FROM TB_VSL</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\bcm_trk_tp_sz_cd">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="168,42"
-          Id="Package\bcm_trk_tp_sz_cd\bcm_trk_tp_sz_cd"
-          TopLeft="637.5,251.5" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\bcm_trk_tp_sz_cd\Sort"
-          TopLeft="251.5,257.5" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\bcm_trk_tp_sz_cd\Data Conversion"
-          TopLeft="232.5,179.5" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\bcm_trk_tp_sz_cd\OLE DB Command"
-          TopLeft="414.5,253.5" />
-        <NodeLayout
-          Size="162,42"
-          Id="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD"
-          TopLeft="229.999990860622,108.333334194289" />
-        <EdgeLayout
-          Id="Package\bcm_trk_tp_sz_cd.Paths[Data Conversion Output]"
-          TopLeft="313,221.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12,36"
-              Start="0,0"
-              End="-12,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="-4,18" />
-                  <mssgle:LineSegment
-                    End="-8,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8,18"
-                    Point2="-12,18"
-                    Point3="-12,22" />
-                  <mssgle:LineSegment
-                    End="-12,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_trk_tp_sz_cd.Paths[Sort Output]"
-          TopLeft="350.5,276.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="64,0"
-              Start="0,0"
-              End="56.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="56.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Command Output]"
-          TopLeft="587.5,273.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,0"
-              Start="0,0"
-              End="42.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="42.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\bcm_trk_tp_sz_cd.Paths[OLE DB Source Output]"
-          TopLeft="311.999995430311,150.333334194289">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29.166665805711"
-              Start="0,0"
-              End="0,21.666665805711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\bcm_trk_tp_sz_cd\TL_TRK_TP_CD">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
