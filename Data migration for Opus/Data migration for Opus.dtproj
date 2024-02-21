@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ADMIN-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAAB5+mMhr8qz01bz7iqGpq/59S1LmZWTCiGW0o9yzDopQgAAAAAOgAAAAAIAACAAAADbN5PJ8hhXYHoi2NX9zVmlWOdnl/UMcblu/4AxC5OGGZAAAADbIoeFggLUV1qotH9E2ADs70WDSa1zLE2UjVCjhgXGss7TNUU3wzww+YdUgXF99TJInK8aVALlv7wt34x6CS0Cnv53VnjNB7c3xqFjz8HB1rqRMFFRlmldPIEyJmUQfHvqzUf6jxPKVoFzzmU2mPFqT7cc+XyZywvnNICMRJcm9VlQ2lknne2iw0q7y7Xb4vtAAAAAD+rI2K6M5r1ig+IgeNDK91/iX31bZU8UjbtoQiyBmm30ExHKRVqIJ9CSgpnCvi2TCGBTGR6dXUGWGvCIFPceZA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAAD0iRVp2YY3kXgUQ2XmFMgLfVYLVEOWd4A6kbqTYBCiEQAAAAAOgAAAAAIAACAAAABBtZdG0+fYxbuGKJR9cdz1hoBOAfqH+S6g132+TMBnvZAAAADaK1Kzpf+KVgM0O7bsnhRQ87KZ/JLAJhQ0PAKap1FDA3kYObwp0rzqfQzsFKvJor+ojyjVP0Mu8RH3/a3SQwQ8HSkR4HqqX2GqnJ8W8zvFqupHjtFYWxjwOVRDlrGRqAhm+o36SPmY1bn8sYSE90L0fqtxtJVICFKn5qtuSudEJlnomY5eCH3gWaEcxx1AdEhAAAAAV9Lms6k+j4ZJsXgvKMWV9TrPlHz/aQQUOhVt0hD3Y1AEZoSWdSlEwfX6oglsbyOJka4JvKTIMK3Ns5g5ajMQBA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,6 +41,7 @@
           <SSIS:Package SSIS:Name="Z_TEST.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="WHM.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SAL.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Z_TEST 1.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="ODBC fwd.conmgr" />
@@ -509,10 +510,10 @@
                 <SSIS:Property SSIS:Name="Name">1_ALL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">617</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">625</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1E22B614-E19B-49E5-8FB5-894D459923DE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{65D9170E-A135-43BF-97D4-58458FAF5061}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -526,10 +527,10 @@
                 <SSIS:Property SSIS:Name="Name">1_ALL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">520</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">526</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8531509B-6BE7-4D3B-B975-558A0F91A543}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E61AE319-F41F-461C-855E-3F4FC65CF0F4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -594,10 +595,10 @@
                 <SSIS:Property SSIS:Name="Name">Z_TEST</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">177</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">224</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A9C41C1E-2DC7-4595-839E-50A7130CCA94}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{48FC0BD8-517D-4268-9EB8-DC71E49CCCB4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -632,6 +633,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{1F4FC439-F359-4DAF-AA5A-046F8B843763}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Z_TEST 1.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{908CA36A-8A66-4E90-93F9-0FA4EB504CCC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Z_TEST</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">213</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{03B406AB-1B29-464F-8159-06DF439B4C1B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

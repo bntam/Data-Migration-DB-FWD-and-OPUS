@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IVT"
   DTS:PackageType="5"
-  DTS:VersionBuild="511"
-  DTS:VersionGUID="{5484A4E5-ED58-4138-BFBA-754EAA89A24F}">
+  DTS:VersionBuild="517"
+  DTS:VersionGUID="{77973ACA-326B-4D65-AB90-78D01AD0DEB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -291,7 +291,7 @@ FROM
       DTS:CreationName=""
       DTS:DTSID="{A2062F2F-E40B-4B49-B489-E79AC92F35DD}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;, WH_NM&#x9;AS&#x9;wh_nm&#xA;&#x9;, WH_ALS_NM&#x9;AS&#x9;wh_als_nm&#xA;&#x9;, WH_ADDR&#x9;AS&#x9;wh_addr&#xA;&#x9;, WH_CTY_NM&#x9;AS&#x9;wh_cty_nm&#xA;&#x9;, WH_STE_CD&#x9;AS&#x9;wh_ste_cd&#xA;&#x9;, WH_ZIP_CD&#x9;AS&#x9;wh_zip_cd&#xA;&#x9;, WH_PHN_NO&#x9;AS&#x9;wh_phn_no&#xA;&#x9;, WH_FAX_NO&#x9;AS&#x9;wh_fax_no&#xA;&#x9;, WH_RMK&#x9;AS&#x9;wh_rmk&#xA;&#x9;, USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;, CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;, CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;, UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, &quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;WHM_WH&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;, WH_NM&#x9;AS&#x9;wh_nm&#xA;&#x9;, WH_ALS_NM&#x9;AS&#x9;wh_als_nm&#xA;&#x9;, WH_ADDR&#x9;AS&#x9;wh_addr&#xA;&#x9;, WH_CTY_NM&#x9;AS&#x9;wh_cty_nm&#xA;&#x9;, WH_STE_CD&#x9;AS&#x9;wh_ste_cd&#xA;&#x9;, WH_ZIP_CD&#x9;AS&#x9;wh_zip_cd&#xA;&#x9;, WH_PHN_NO&#x9;AS&#x9;wh_phn_no&#xA;&#x9;, WH_FAX_NO&#x9;AS&#x9;wh_fax_no&#xA;&#x9;, WH_RMK&#x9;AS&#x9;wh_rmk&#xA;&#x9;, USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;, CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;, CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;, UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;, UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;, (select USR.OFC_CD from TB_USR USR where USR.USRID = CRE_USR_ID)&#x9;AS&#x9;ofc_cd&#xA;&#x9;,&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;WHM_WH&#x9;&#x9;&#xA;UNION ALL&#x9;&#x9;&#x9;&#xA;SELECT&#x9;&#x9;&#x9;&#xA;&#x9;WH_CD&#x9;AS&#x9;wh_cd&#xA;&#x9;,WH_NM&#x9;AS&#x9;wh_nm&#xA;&#x9;,WH_ALS_NM&#x9;AS&#x9;wh_als_nm&#xA;&#x9;,WH_ADDR&#x9;AS&#x9;wh_addr&#xA;&#x9;,WH_CTY_NM&#x9;AS&#x9;wh_cty_nm&#xA;&#x9;,WH_STE_CD&#x9;AS&#x9;wh_ste_cd&#xA;&#x9;,WH_ZIP_CD&#x9;AS&#x9;wh_zip_cd&#xA;&#x9;,WH_PHN_NO&#x9;AS&#x9;wh_phn_no&#xA;&#x9;,WH_FAX_NO&#x9;AS&#x9;wh_fax_no&#xA;&#x9;,WH_RMK&#x9;AS&#x9;wh_rmk&#xA;&#x9;,USE_FLG&#x9;AS&#x9;use_flg&#xA;&#x9;,CRE_DT&#x9;AS&#x9;cre_dt&#xA;&#x9;,CRE_USR_ID&#x9;AS&#x9;cre_usr_id&#xA;&#x9;,UPD_DT&#x9;AS&#x9;upd_dt&#xA;&#x9;,UPD_USR_ID&#x9;AS&#x9;upd_usr_id&#xA;&#x9;,WH_OFC_CD&#x9;AS&#x9;ofc_cd&#xA;&#x9;,&quot;+ @[$Project::co_cd] +&quot;&#x9;AS&#x9;co_cd&#xA;FROM&#x9;&#x9;&#x9;&#xA;&#x9;TL_WH&#x9;&#x9;&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="mdm_wh">
@@ -313,9 +313,31 @@ SELECT
 	, CRE_USR_ID	AS	cre_usr_id
 	, UPD_DT	AS	upd_dt
 	, UPD_USR_ID	AS	upd_usr_id
-	, 'AIF'	AS	co_cd
+	, (select USR.OFC_CD from TB_USR USR where USR.USRID = CRE_USR_ID)	AS	ofc_cd
+	,'AIF'	AS	co_cd
 FROM			
-	WHM_WH
+	WHM_WH		
+UNION ALL			
+SELECT			
+	WH_CD	AS	wh_cd
+	,WH_NM	AS	wh_nm
+	,WH_ALS_NM	AS	wh_als_nm
+	,WH_ADDR	AS	wh_addr
+	,WH_CTY_NM	AS	wh_cty_nm
+	,WH_STE_CD	AS	wh_ste_cd
+	,WH_ZIP_CD	AS	wh_zip_cd
+	,WH_PHN_NO	AS	wh_phn_no
+	,WH_FAX_NO	AS	wh_fax_no
+	,WH_RMK	AS	wh_rmk
+	,USE_FLG	AS	use_flg
+	,CRE_DT	AS	cre_dt
+	,CRE_USR_ID	AS	cre_usr_id
+	,UPD_DT	AS	upd_dt
+	,UPD_USR_ID	AS	upd_usr_id
+	,WH_OFC_CD	AS	ofc_cd
+	,'AIF'	AS	co_cd
+FROM			
+	TL_WH		
 </DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
@@ -1572,12 +1594,12 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\ivt_cntc_pson.Inputs[ODBC Destination Input].ExternalColumns[cntc_pson_nm]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="cntc_pson_nm" />
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\ivt_cntc_pson.Inputs[ODBC Destination Input].ExternalColumns[cntc_pson_eml_addr]"
                       dataType="wstr"
-                      length="400"
+                      length="800"
                       name="cntc_pson_eml_addr" />
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\ivt_cntc_pson.Inputs[ODBC Destination Input].ExternalColumns[cntc_pson_phn_no]"
@@ -1592,7 +1614,7 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\ivt_cntc_pson.Inputs[ODBC Destination Input].ExternalColumns[cntc_pson_rmk]"
                       dataType="wstr"
-                      length="500"
+                      length="800"
                       name="cntc_pson_rmk" />
                     <externalMetadataColumn
                       refId="Package\ivt_cntc_pson\ivt_cntc_pson.Inputs[ODBC Destination Input].ExternalColumns[rcv_eml_flg]"
@@ -5207,12 +5229,12 @@ FROM
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[mst_bl_no]"
                       dataType="wstr"
-                      length="20"
+                      length="40"
                       name="mst_bl_no" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[hus_bl_no]"
                       dataType="wstr"
-                      length="20"
+                      length="40"
                       name="hus_bl_no" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[cust_cd]"
@@ -5232,12 +5254,12 @@ FROM
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[cmdt_cd]"
                       dataType="wstr"
-                      length="10"
+                      length="12"
                       name="cmdt_cd" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[cmdt_nm]"
                       dataType="wstr"
-                      length="100"
+                      length="300"
                       name="cmdt_nm" />
                     <externalMetadataColumn
                       refId="Package\ivt_doc_mst\ivt_doc_mst.Inputs[ODBC Destination Input].ExternalColumns[loc_nm]"
@@ -11162,340 +11184,6 @@ FROM	TL_WH_LOC</property>
                   synchronousInputId="Package\ivt_rcv_shp\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
-                      name="co_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
-                      name="cre_usr_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
-                      name="cre_dt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
-                      name="upd_usr_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
-                      name="upd_dt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[wh_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[wh_cd]"
-                      name="wh_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[wh_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[file_no]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[file_no]"
-                      name="file_no"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[file_no]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_tp_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_tp_cd]"
-                      name="rcv_shp_tp_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_tp_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_cd]"
-                      name="cust_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_cd]"
-                      name="splr_rcvr_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[splr_rcvr_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_cd]"
-                      name="trkr_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[trkr_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ref_no]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ref_no]"
-                      name="cust_ref_no"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_ref_no]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[inter_rmk]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="4000"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[inter_rmk]"
-                      name="inter_rmk"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[inter_rmk]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[xter_rmk]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="4000"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[xter_rmk]"
-                      name="xter_rmk"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[xter_rmk]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_flg]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_flg]"
-                      name="rcv_shp_flg"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_flg]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_cd]"
-                      name="opr_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[opr_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[bkg_dt]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -11510,69 +11198,6 @@ FROM	TL_WH_LOC</property>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[bkg_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[estm_rcv_dt]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[estm_rcv_dt]"
-                      name="estm_rcv_dt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[estm_rcv_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_dt]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_dt]"
-                      name="rcv_shp_dt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[plt_no]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[plt_no]"
-                      name="plt_no"
-                      precision="8"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[plt_no]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -11601,20 +11226,20 @@ FROM	TL_WH_LOC</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[mst_bl_no]"
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[mst_bl_no]"
-                      name="mst_bl_no"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[mst_bl_no]}</property>
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -11622,20 +11247,19 @@ FROM	TL_WH_LOC</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[hus_bl_no]"
-                      dataType="wstr"
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[hus_bl_no]"
-                      name="hus_bl_no"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[hus_bl_no]}</property>
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -11643,104 +11267,20 @@ FROM	TL_WH_LOC</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ofc_cd]"
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ofc_cd]"
-                      name="cust_ofc_cd"
+                      length="12"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_ofc_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_ofc_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_ofc_cd]"
-                      name="splr_rcvr_ofc_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[splr_rcvr_ofc_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_ofc_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_ofc_cd]"
-                      name="trkr_ofc_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[trkr_ofc_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_ofc_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_ofc_cd]"
-                      name="opr_ofc_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[opr_ofc_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[len_ut_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[len_ut_cd]"
-                      name="len_ut_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[len_ut_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -11769,20 +11309,62 @@ FROM	TL_WH_LOC</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
-                      name="rcv_shp_id"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_cd]"
+                      name="cust_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ofc_cd]"
+                      name="cust_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ref_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[cust_ref_no]"
+                      name="cust_ref_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[cust_ref_no]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -11804,6 +11386,446 @@ FROM	TL_WH_LOC</property>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[delt_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[estm_rcv_dt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[estm_rcv_dt]"
+                      name="estm_rcv_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[estm_rcv_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[file_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[file_no]"
+                      name="file_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[file_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[hus_bl_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[hus_bl_no]"
+                      name="hus_bl_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[hus_bl_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[inter_rmk]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[inter_rmk]"
+                      name="inter_rmk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[inter_rmk]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[len_ut_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[len_ut_cd]"
+                      name="len_ut_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[len_ut_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[mst_bl_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[mst_bl_no]"
+                      name="mst_bl_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[mst_bl_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_cd]"
+                      name="opr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[opr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[opr_ofc_cd]"
+                      name="opr_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[opr_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[plt_no]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[plt_no]"
+                      name="plt_no"
+                      precision="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[plt_no]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_dt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_dt]"
+                      name="rcv_shp_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_flg]"
+                      name="rcv_shp_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]"
+                      name="rcv_shp_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_tp_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_tp_cd]"
+                      name="rcv_shp_tp_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[rcv_shp_tp_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_cd]"
+                      name="splr_rcvr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[splr_rcvr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[splr_rcvr_ofc_cd]"
+                      name="splr_rcvr_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[splr_rcvr_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_cd]"
+                      name="trkr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[trkr_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[trkr_ofc_cd]"
+                      name="trkr_ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[trkr_ofc_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[upd_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[upd_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[wh_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[wh_cd]"
+                      name="wh_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[wh_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[xter_rmk]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[xter_rmk]"
+                      name="xter_rmk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\ivt_rcv_shp\WHM_RCV_SHP.Outputs[OLE DB Source Output].Columns[xter_rmk]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -12130,7 +12152,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_flg]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="1"
                       cachedName="Data Conversion.rcv_shp_flg"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_flg]"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]" />
@@ -12221,7 +12243,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.len_ut_cd]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="10"
                       cachedName="Data Conversion.len_ut_cd"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[len_ut_cd]"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]" />
@@ -12235,7 +12257,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].Columns[Data Conversion.rcv_shp_id]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="20"
                       cachedName="Data Conversion.rcv_shp_id"
                       externalMetadataColumnId="Package\ivt_rcv_shp\ivt_rcv_shp.Inputs[ODBC Destination Input].ExternalColumns[rcv_shp_id]"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]" />
@@ -12690,7 +12712,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\Sort.Inputs[Sort Input].Columns[rcv_shp_flg]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="1"
                       cachedName="rcv_shp_flg"
                       lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_flg]">
                       <properties>
@@ -12911,7 +12933,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\Sort.Inputs[Sort Input].Columns[len_ut_cd]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="10"
                       cachedName="len_ut_cd"
                       lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[len_ut_cd]">
                       <properties>
@@ -12945,7 +12967,7 @@ WHERE
                     <inputColumn
                       refId="Package\ivt_rcv_shp\Sort.Inputs[Sort Input].Columns[rcv_shp_id]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="20"
                       cachedName="rcv_shp_id"
                       lineageId="Package\ivt_rcv_shp\Data Conversion.Outputs[Data Conversion Output].Columns[rcv_shp_id]">
                       <properties>
@@ -13185,7 +13207,7 @@ WHERE
                     <outputColumn
                       refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]"
                       dataType="wstr"
-                      length="50"
+                      length="1"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_flg]"
                       name="Data Conversion.rcv_shp_flg">
                       <properties>
@@ -13367,7 +13389,7 @@ WHERE
                     <outputColumn
                       refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]"
                       dataType="wstr"
-                      length="20"
+                      length="10"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.len_ut_cd]"
                       name="Data Conversion.len_ut_cd">
                       <properties>
@@ -13395,7 +13417,7 @@ WHERE
                     <outputColumn
                       refId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]"
                       dataType="wstr"
-                      length="50"
+                      length="20"
                       lineageId="Package\ivt_rcv_shp\Sort.Outputs[Sort Output].Columns[Data Conversion.rcv_shp_id]"
                       name="Data Conversion.rcv_shp_id">
                       <properties>
@@ -17488,6 +17510,13 @@ FROM
                       cachedLength="1"
                       cachedName="use_flg"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[use_flg]" />
+                    <inputColumn
+                      refId="Package\mdm_wh\Data Conversion.Inputs[Data Conversion Input].Columns[ofc_cd]"
+                      cachedCodepage="949"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[ofc_cd]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -17827,6 +17856,27 @@ FROM
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[use_flg]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\mdm_wh\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\mdm_wh\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[ofc_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -18208,6 +18258,17 @@ WHERE
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[use_flg]"
                       name="use_flg"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[ofc_cd]"
+                      length="10"
+                      lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -18298,6 +18359,12 @@ WHERE
                       dataType="str"
                       length="1"
                       name="use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Output].ExternalColumns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="ofc_cd" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -18409,6 +18476,13 @@ WHERE
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[upd_dt]"
                       name="upd_dt" />
                     <outputColumn
+                      refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[ofc_cd]"
+                      name="ofc_cd" />
+                    <outputColumn
                       refId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\mdm_wh\MDM_WH.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -18506,31 +18580,31 @@ WHERE
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_cd]"
                       cachedDataType="wstr"
@@ -18540,75 +18614,82 @@ WHERE
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_cd]"
                       lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_cd]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_nm]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_nm]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="wh_nm"
+                      cachedName="Data Conversion.wh_nm"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_nm]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_nm]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_nm]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_als_nm]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_als_nm]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="wh_als_nm"
+                      cachedName="Data Conversion.wh_als_nm"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_als_nm]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_als_nm]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_als_nm]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_addr]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_addr]"
                       cachedDataType="wstr"
                       cachedLength="400"
-                      cachedName="wh_addr"
+                      cachedName="Data Conversion.wh_addr"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_addr]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_addr]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_addr]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_cty_nm]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_cty_nm]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="wh_cty_nm"
+                      cachedName="Data Conversion.wh_cty_nm"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_cty_nm]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_cty_nm]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cty_nm]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_ste_cd]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_ste_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="wh_ste_cd"
+                      cachedName="Data Conversion.wh_ste_cd"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_ste_cd]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_ste_cd]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_ste_cd]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_zip_cd]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_zip_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="wh_zip_cd"
+                      cachedName="Data Conversion.wh_zip_cd"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_zip_cd]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_zip_cd]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_zip_cd]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_phn_no]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_phn_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="wh_phn_no"
+                      cachedName="Data Conversion.wh_phn_no"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_phn_no]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_phn_no]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_phn_no]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_fax_no]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_fax_no]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="wh_fax_no"
+                      cachedName="Data Conversion.wh_fax_no"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_fax_no]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_fax_no]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_fax_no]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[wh_rmk]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.wh_rmk]"
                       cachedDataType="wstr"
                       cachedLength="400"
-                      cachedName="wh_rmk"
+                      cachedName="Data Conversion.wh_rmk"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_rmk]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_rmk]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_rmk]" />
                     <inputColumn
-                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[use_flg]"
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.use_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="use_flg"
+                      cachedName="Data Conversion.use_flg"
                       externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[use_flg]" />
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.use_flg]" />
+                    <inputColumn
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].Columns[Data Conversion.ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Data Conversion.ofc_cd"
+                      externalMetadataColumnId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.ofc_cd]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -18643,22 +18724,22 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_nm]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="wh_nm" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_als_nm]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="wh_als_nm" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_addr]"
                       dataType="wstr"
-                      length="500"
+                      length="800"
                       name="wh_addr" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_cty_nm]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="wh_cty_nm" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_ste_cd]"
@@ -18683,13 +18764,18 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[wh_rmk]"
                       dataType="wstr"
-                      length="500"
+                      length="800"
                       name="wh_rmk" />
                     <externalMetadataColumn
                       refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
                       dataType="wstr"
                       length="1"
                       name="use_flg" />
+                    <externalMetadataColumn
+                      refId="Package\mdm_wh\mdm_wh.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="ofc_cd" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -19011,6 +19097,23 @@ WHERE
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\mdm_wh\Sort.Inputs[Sort Input].Columns[ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ofc_cd"
+                      lineageId="Package\mdm_wh\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -19037,11 +19140,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -19051,10 +19154,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -19064,11 +19167,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -19078,10 +19181,10 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -19106,11 +19209,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_nm]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_nm]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_nm]"
-                      name="wh_nm">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_nm]"
+                      name="Data Conversion.wh_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -19120,11 +19223,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_als_nm]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_als_nm]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_als_nm]"
-                      name="wh_als_nm">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_als_nm]"
+                      name="Data Conversion.wh_als_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -19134,11 +19237,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_addr]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_addr]"
                       dataType="wstr"
                       length="400"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_addr]"
-                      name="wh_addr">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_addr]"
+                      name="Data Conversion.wh_addr">
                       <properties>
                         <property
                           containsID="true"
@@ -19148,11 +19251,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_cty_nm]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cty_nm]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_cty_nm]"
-                      name="wh_cty_nm">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_cty_nm]"
+                      name="Data Conversion.wh_cty_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -19162,11 +19265,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_ste_cd]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_ste_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_ste_cd]"
-                      name="wh_ste_cd">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_ste_cd]"
+                      name="Data Conversion.wh_ste_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19176,11 +19279,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_zip_cd]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_zip_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_zip_cd]"
-                      name="wh_zip_cd">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_zip_cd]"
+                      name="Data Conversion.wh_zip_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19190,11 +19293,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_phn_no]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_phn_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_phn_no]"
-                      name="wh_phn_no">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_phn_no]"
+                      name="Data Conversion.wh_phn_no">
                       <properties>
                         <property
                           containsID="true"
@@ -19204,11 +19307,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_fax_no]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_fax_no]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_fax_no]"
-                      name="wh_fax_no">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_fax_no]"
+                      name="Data Conversion.wh_fax_no">
                       <properties>
                         <property
                           containsID="true"
@@ -19218,11 +19321,11 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_rmk]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_rmk]"
                       dataType="wstr"
                       length="400"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[wh_rmk]"
-                      name="wh_rmk">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.wh_rmk]"
+                      name="Data Conversion.wh_rmk">
                       <properties>
                         <property
                           containsID="true"
@@ -19232,17 +19335,31 @@ WHERE
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[use_flg]"
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.use_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[use_flg]"
-                      name="use_flg">
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.use_flg]"
+                      name="Data Conversion.use_flg">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\mdm_wh\Data Conversion.Outputs[Data Conversion Output].Columns[use_flg]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.ofc_cd]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\mdm_wh\Sort.Outputs[Sort Output].Columns[Data Conversion.ofc_cd]"
+                      name="Data Conversion.ofc_cd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\mdm_wh\Data Conversion.Outputs[Data Conversion Output].Columns[ofc_cd]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -19376,7 +19493,7 @@ WHERE
     design-time-name="Package\ivt_cntc_pson">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="146,42"
           Id="Package\ivt_cntc_pson\ivt_cntc_pson"
@@ -19416,9 +19533,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19440,9 +19555,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19476,9 +19589,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19500,9 +19611,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19656,7 +19765,7 @@ WHERE
     design-time-name="Package\ivt_doc_mst">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="138,42"
           Id="Package\ivt_doc_mst\ivt_doc_mst"
@@ -19708,9 +19817,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19732,9 +19839,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19756,9 +19861,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19780,9 +19883,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19802,14 +19903,6 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99,42"
-          Id="Package\ivt_rcv_shp\Sort"
-          TopLeft="238,228.166665805711" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\ivt_rcv_shp\WHM_RCV_SHP"
-          TopLeft="203.499990860622,89" />
-        <NodeLayout
           Size="122,42"
           Id="Package\ivt_rcv_shp\DELETE"
           TopLeft="363,243.166665805711" />
@@ -19817,6 +19910,14 @@ WHERE
           Size="135,42"
           Id="Package\ivt_rcv_shp\ivt_rcv_shp"
           TopLeft="583,246.166665805711" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\ivt_rcv_shp\WHM_RCV_SHP"
+          TopLeft="203.499990860622,89" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\ivt_rcv_shp\Sort"
+          TopLeft="238,228.166665805711" />
         <NodeLayout
           Size="161,42"
           Id="Package\ivt_rcv_shp\Data Conversion"
@@ -19975,69 +20076,25 @@ WHERE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="99,42"
-          Id="Package\ivt_rcv_shp_itm\Sort"
-          TopLeft="245.500009139378,201.166665805711" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
-          TopLeft="195,59" />
+          Size="173,42"
+          Id="Package\ivt_rcv_shp_itm\OLE DB Command"
+          TopLeft="391.500009139378,203.166665805711" />
         <NodeLayout
           Size="155,42"
           Id="Package\ivt_rcv_shp_itm\ivt_rcv_shp_itm"
           TopLeft="626.500009139378,200.166665805711" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\ivt_rcv_shp_itm\OLE DB Command"
-          TopLeft="391.500009139378,203.166665805711" />
+          Size="189,42"
+          Id="Package\ivt_rcv_shp_itm\WHM_RCV_SHP_ITM"
+          TopLeft="195,59" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\ivt_rcv_shp_itm\Sort"
+          TopLeft="245.500009139378,201.166665805711" />
         <NodeLayout
           Size="161,42"
           Id="Package\ivt_rcv_shp_itm\Data Conversion"
           TopLeft="215.500009139378,128.166665805711" />
-        <EdgeLayout
-          Id="Package\ivt_rcv_shp_itm.Paths[Sort Output]"
-          TopLeft="344.500009139378,223.166665805711">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="47,0"
-              Start="0,0"
-              End="39.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="39.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ivt_rcv_shp_itm.Paths[OLE DB Source Output]"
-          TopLeft="292.750004569689,101">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.166665805711"
-              Start="0,0"
-              End="0,19.666665805711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\ivt_rcv_shp_itm.Paths[OLE DB Command Output]"
           TopLeft="564.500009139378,222.666665805711">
@@ -20082,6 +20139,50 @@ WHERE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ivt_rcv_shp_itm.Paths[Sort Output]"
+          TopLeft="344.500009139378,223.166665805711">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47,0"
+              Start="0,0"
+              End="39.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ivt_rcv_shp_itm.Paths[OLE DB Source Output]"
+          TopLeft="292.750004569689,101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.166665805711"
+              Start="0,0"
+              End="0,19.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -20110,7 +20211,7 @@ WHERE
     design-time-name="Package\mdm_wh">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="124,42"
           Id="Package\mdm_wh\mdm_wh"
@@ -20150,9 +20251,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20174,9 +20273,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20198,9 +20295,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20234,9 +20329,7 @@ WHERE
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -20247,6 +20340,19 @@ WHERE
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\mdm_wh\mdm_wh">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
