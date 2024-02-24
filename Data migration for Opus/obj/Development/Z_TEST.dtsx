@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Z_TEST"
   DTS:PackageType="5"
-  DTS:VersionBuild="259"
-  DTS:VersionGUID="{48C252A8-DAD9-4CDB-B927-9C583425943C}">
+  DTS:VersionBuild="260"
+  DTS:VersionGUID="{C1957B2D-421F-4158-91E2-AD6DA42FDEA2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty"
+      DTS:refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:DTSID="{640f104f-9477-4d62-bdfd-2a4f87837419}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="smtasm -&gt; tb_edi_cstms_bl_pty"
+      DTS:ObjectName="smtasm -&gt; tb_edi_cstms_bl_cntr"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,7 +32,7 @@
           version="1">
           <components>
             <component
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -40,128 +40,128 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[msg_id]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="14"
                       cachedName="msg_id"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[bl_no]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="bl_no"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_ofc_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="rgst_ofc_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[modi_ofc_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="modi_ofc_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_usrid]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="rgst_usrid"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[rgst_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="rgst_tms"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[modi_usrid]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="modi_usrid"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[modi_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="modi_tms"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[lod_mty_sts_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="lod_mty_sts_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[splr_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="splr_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no2]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="seal_no2"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no3]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="1"
                       cachedName="seal_no3"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_no]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="cntr_no"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[cntr_tpsz_cd]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="cntr_tpsz_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input].Columns[seal_no1]"
                       cachedCodepage="949"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="seal_no1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]" />
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="14"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]"
                       name="msg_id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -169,7 +169,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -177,12 +177,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="30"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]"
                       name="bl_no"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -190,7 +190,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -198,12 +198,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]"
                       name="rgst_ofc_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -211,7 +211,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -219,12 +219,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]"
                       name="modi_ofc_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -232,7 +232,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -240,12 +240,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]"
                       name="rgst_usrid"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -253,7 +253,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -261,11 +261,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]"
                       name="rgst_tms"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -273,7 +273,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -281,12 +281,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]"
                       name="modi_usrid"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -294,7 +294,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -302,11 +302,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]"
                       name="modi_tms"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -314,7 +314,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -322,12 +322,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]"
                       name="lod_mty_sts_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -335,7 +335,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -343,12 +343,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]"
                       name="splr_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -356,7 +356,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -364,12 +364,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]"
                       name="seal_no2"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -377,7 +377,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -385,12 +385,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]"
                       name="seal_no3"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -398,7 +398,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -406,12 +406,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="11"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]"
                       name="cntr_no"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -419,7 +419,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -427,12 +427,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]"
                       name="cntr_tpsz_cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -440,7 +440,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -448,12 +448,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]"
                       name="seal_no1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -461,7 +461,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]}</property>
+                          name="SourceInputColumnLineageID">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -472,22 +472,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -496,7 +496,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
@@ -526,7 +526,7 @@ AND cntr_no=?
               </properties>
               <connections>
                 <connection
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Connections[OleDbConnection]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
                   connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
                   description="The OLE DB runtime connection used to access the database."
@@ -534,40 +534,40 @@ AND cntr_no=?
               </connections>
               <inputs>
                 <input
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].Columns[msg_id]"
                       cachedDataType="wstr"
                       cachedLength="14"
                       cachedName="msg_id"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[msg_id]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[msg_id]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].Columns[bl_no]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="bl_no"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[bl_no]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[bl_no]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].Columns[cntr_no]"
                       cachedDataType="wstr"
                       cachedLength="11"
                       cachedName="cntr_no"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_no]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_no]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="nText"
                       name="Param_0">
                       <properties>
@@ -578,7 +578,7 @@ AND cntr_no=?
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="nText"
                       name="Param_1">
                       <properties>
@@ -589,7 +589,7 @@ AND cntr_no=?
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="nText"
                       name="Param_2">
                       <properties>
@@ -604,29 +604,29 @@ AND cntr_no=?
               </inputs>
               <outputs>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -635,7 +635,7 @@ AND cntr_no=?
               </outputs>
             </component>
             <component
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
@@ -654,15 +654,15 @@ AND cntr_no=?
               </properties>
               <inputs>
                 <input
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[msg_id]"
                       cachedDataType="wstr"
                       cachedLength="14"
                       cachedName="msg_id"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -675,11 +675,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[bl_no]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="bl_no"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -692,11 +692,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[rgst_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="rgst_ofc_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -709,11 +709,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[modi_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="modi_ofc_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -726,11 +726,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[rgst_usrid]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="rgst_usrid"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -743,10 +743,10 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[rgst_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="rgst_tms"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -759,11 +759,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[modi_usrid]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="modi_usrid"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -776,10 +776,10 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[modi_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="modi_tms"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -792,11 +792,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[lod_mty_sts_cd]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="lod_mty_sts_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -809,11 +809,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[splr_cd]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="splr_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -826,11 +826,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[seal_no2]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="seal_no2"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -843,11 +843,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[seal_no3]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="seal_no3"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -860,11 +860,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[cntr_no]"
                       cachedDataType="wstr"
                       cachedLength="11"
                       cachedName="cntr_no"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -877,11 +877,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[cntr_tpsz_cd]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="cntr_tpsz_cd"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -894,11 +894,11 @@ AND cntr_no=?
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input].Columns[seal_no1]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="seal_no1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]">
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -916,15 +916,15 @@ AND cntr_no=?
               </inputs>
               <outputs>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[msg_id]"
                       dataType="wstr"
                       length="14"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[msg_id]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[msg_id]"
                       name="msg_id"
                       sortKeyPosition="1">
                       <properties>
@@ -932,14 +932,14 @@ AND cntr_no=?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[msg_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[bl_no]"
                       dataType="wstr"
                       length="30"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[bl_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[bl_no]"
                       name="bl_no"
                       sortKeyPosition="2">
                       <properties>
@@ -947,187 +947,187 @@ AND cntr_no=?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[bl_no]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]"
                       name="rgst_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_ofc_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]"
                       name="modi_ofc_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_ofc_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_usrid]"
                       name="rgst_usrid">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_usrid]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_tms]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_tms]"
                       name="rgst_tms">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[rgst_tms]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_usrid]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_usrid]"
                       name="modi_usrid">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_usrid]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_tms]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_tms]"
                       name="modi_tms">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[modi_tms]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]"
                       name="lod_mty_sts_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[lod_mty_sts_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[splr_cd]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[splr_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[splr_cd]"
                       name="splr_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[splr_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no2]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no2]"
                       name="seal_no2">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no2]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no3]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no3]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no3]"
                       name="seal_no3">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no3]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_no]"
                       dataType="wstr"
                       length="11"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_no]"
                       name="cntr_no">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_no]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]"
                       dataType="wstr"
                       length="4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]"
                       name="cntr_tpsz_cd">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[cntr_tpsz_cd]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no1]"
                       dataType="wstr"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no1]"
                       name="seal_no1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]}</property>
+                          name="SortColumnId">#{Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output].Columns[seal_no1]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1136,7 +1136,7 @@ AND cntr_no=?
               </outputs>
             </component>
             <component
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr"
               componentClassID="Microsoft.SSISODBCDst"
               contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="ODBC Destination"
@@ -1192,7 +1192,7 @@ AND cntr_no=?
               </properties>
               <connections>
                 <connection
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Connections[ODBCConnection]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Connections[ODBCConnection]"
                   connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
                   description="The ODBC runtime connection used to access the database."
@@ -1200,7 +1200,7 @@ AND cntr_no=?
               </connections>
               <inputs>
                 <input
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
@@ -1208,184 +1208,184 @@ AND cntr_no=?
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[msg_id]"
                       cachedDataType="wstr"
                       cachedLength="14"
                       cachedName="msg_id"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[msg_id]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[msg_id]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[bl_no]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="bl_no"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[bl_no]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[bl_no]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="rgst_ofc_cd"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_ofc_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_ofc_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="modi_ofc_cd"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_ofc_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_usrid]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="rgst_usrid"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_usrid]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_usrid]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[rgst_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="rgst_tms"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[rgst_tms]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[rgst_tms]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_usrid]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="modi_usrid"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_usrid]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_usrid]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[modi_tms]"
                       cachedDataType="dbTimeStamp"
                       cachedName="modi_tms"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[modi_tms]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[modi_tms]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[lod_mty_sts_cd]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="lod_mty_sts_cd"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[lod_mty_sts_cd]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[lod_mty_sts_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[lod_mty_sts_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[splr_cd]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="splr_cd"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[splr_cd]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[splr_cd]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[splr_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[splr_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no2]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="seal_no2"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no2]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no2]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no2]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no3]"
                       cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="seal_no3"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no3]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no3]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no3]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no3]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[cntr_no]"
                       cachedDataType="wstr"
                       cachedLength="11"
                       cachedName="cntr_no"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_no]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_no]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_no]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[cntr_tpsz_cd]"
                       cachedDataType="wstr"
                       cachedLength="4"
                       cachedName="cntr_tpsz_cd"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_tpsz_cd]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_tpsz_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[cntr_tpsz_cd]" />
                     <inputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].Columns[seal_no1]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="seal_no1"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no1]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output].Columns[seal_no1]" />
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output].Columns[seal_no1]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[msg_id]"
                       dataType="wstr"
                       length="20"
                       name="msg_id" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[bl_no]"
                       dataType="wstr"
                       length="26"
                       name="bl_no" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_no]"
                       dataType="wstr"
                       length="14"
                       name="cntr_no" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[cntr_tpsz_cd]"
                       dataType="wstr"
                       length="10"
                       name="cntr_tpsz_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[lod_mty_sts_cd]"
                       dataType="wstr"
                       length="5"
                       name="lod_mty_sts_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[splr_cd]"
                       dataType="wstr"
                       length="14"
                       name="splr_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no1]"
                       dataType="wstr"
                       length="15"
                       name="seal_no1" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no2]"
                       dataType="wstr"
                       length="15"
                       name="seal_no2" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[seal_no3]"
                       dataType="wstr"
                       length="15"
                       name="seal_no3" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_usrid]"
                       dataType="wstr"
                       length="12"
                       name="rgst_usrid" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_ofc_cd]"
                       dataType="wstr"
                       length="10"
                       name="rgst_ofc_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[rgst_tms]"
                       dataType="dbTimeStamp"
                       name="rgst_tms" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_usrid]"
                       dataType="wstr"
                       length="12"
                       name="modi_usrid" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_ofc_cd]"
                       dataType="wstr"
                       length="10"
                       name="modi_ofc_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input].ExternalColumns[modi_tms]"
                       dataType="dbTimeStamp"
                       name="modi_tms" />
                   </externalMetadataColumns>
@@ -1393,22 +1393,22 @@ AND cntr_no=?
               </inputs>
               <outputs>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ODBC Destination Error Output"
-                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]">
+                  synchronousInputId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1417,7 +1417,7 @@ AND cntr_no=?
               </outputs>
             </component>
             <component
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1484,7 +1484,7 @@ AND cntr_no=?
               </properties>
               <connections>
                 <connection
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Connections[OleDbConnection]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Connections[OleDbConnection]"
                   connectionManagerID="{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}:external"
                   connectionManagerRefId="Project.ConnectionManagers[ODBC opus]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1492,255 +1492,255 @@ AND cntr_no=?
               </connections>
               <outputs>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[msg_id]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[msg_id]"
                       length="14"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[msg_id]"
                       name="msg_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
                       length="30"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[bl_no]"
                       name="bl_no"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_ofc_cd]"
                       name="rgst_ofc_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_ofc_cd]"
                       name="modi_ofc_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_usrid]"
                       name="rgst_usrid"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[rgst_tms]"
                       name="rgst_tms"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_usrid]"
                       name="modi_usrid"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[modi_tms]"
                       name="modi_tms"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[lod_mty_sts_cd]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[lod_mty_sts_cd]"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[lod_mty_sts_cd]"
                       name="lod_mty_sts_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[splr_cd]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[splr_cd]"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[splr_cd]"
                       name="splr_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no2]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no2]"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no2]"
                       name="seal_no2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no3]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no3]"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no3]"
                       name="seal_no3"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_no]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_no]"
                       length="11"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_no]"
                       name="cntr_no"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_cd]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_cd]"
                       length="4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[cntr_tpsz_cd]"
                       name="cntr_tpsz_cd"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]"
                       codePage="949"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no1]"
+                      externalMetadataColumnId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no1]"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].Columns[seal_no1]"
                       name="seal_no1"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[msg_id]"
                       codePage="949"
                       dataType="str"
                       length="14"
                       name="msg_id" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[bl_no]"
                       codePage="949"
                       dataType="str"
                       length="30"
                       name="bl_no" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       length="10"
                       name="rgst_ofc_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       length="10"
                       name="modi_ofc_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_usrid]"
                       codePage="949"
                       dataType="str"
                       length="15"
                       name="rgst_usrid" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[rgst_tms]"
                       dataType="dbTimeStamp"
                       name="rgst_tms" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_usrid]"
                       codePage="949"
                       dataType="str"
                       length="15"
                       name="modi_usrid" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[modi_tms]"
                       dataType="dbTimeStamp"
                       name="modi_tms" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[lod_mty_sts_cd]"
                       codePage="949"
                       dataType="str"
                       length="1"
                       name="lod_mty_sts_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[splr_cd]"
                       codePage="949"
                       dataType="str"
                       length="1"
                       name="splr_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no2]"
                       codePage="949"
                       dataType="str"
                       length="1"
                       name="seal_no2" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no3]"
                       codePage="949"
                       dataType="str"
                       length="1"
                       name="seal_no3" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_no]"
                       codePage="949"
                       dataType="str"
                       length="11"
                       name="cntr_no" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[cntr_tpsz_cd]"
                       codePage="949"
                       dataType="str"
                       length="4"
                       name="cntr_tpsz_cd" />
                     <externalMetadataColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output].ExternalColumns[seal_no1]"
                       codePage="949"
                       dataType="str"
                       length="15"
@@ -1748,121 +1748,121 @@ AND cntr_no=?
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output]"
+                  refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[lod_mty_sts_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[lod_mty_sts_cd]"
                       codePage="949"
                       dataType="str"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[lod_mty_sts_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[lod_mty_sts_cd]"
                       name="lod_mty_sts_cd" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[splr_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[splr_cd]"
                       codePage="949"
                       dataType="str"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[splr_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[splr_cd]"
                       name="splr_cd" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no2]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no2]"
                       codePage="949"
                       dataType="str"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no2]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no2]"
                       name="seal_no2" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no3]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no3]"
                       codePage="949"
                       dataType="str"
                       length="1"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no3]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no3]"
                       name="seal_no3" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[msg_id]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[msg_id]"
                       codePage="949"
                       dataType="str"
                       length="14"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[msg_id]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[msg_id]"
                       name="msg_id" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[bl_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[bl_no]"
                       codePage="949"
                       dataType="str"
                       length="30"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[bl_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[bl_no]"
                       name="bl_no" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_no]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_no]"
                       codePage="949"
                       dataType="str"
                       length="11"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_no]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_no]"
                       name="cntr_no" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_cd]"
                       codePage="949"
                       dataType="str"
                       length="4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[cntr_tpsz_cd]"
                       name="cntr_tpsz_cd" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no1]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no1]"
                       codePage="949"
                       dataType="str"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no1]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[seal_no1]"
                       name="seal_no1" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_ofc_cd]"
                       name="rgst_ofc_cd" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
                       codePage="949"
                       dataType="str"
                       length="10"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_ofc_cd]"
                       name="modi_ofc_cd" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
                       codePage="949"
                       dataType="str"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_usrid]"
                       name="rgst_usrid" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[rgst_tms]"
                       name="rgst_tms" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
                       codePage="949"
                       dataType="str"
                       length="15"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_usrid]"
                       name="modi_usrid" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[modi_tms]"
                       name="modi_tms" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1873,25 +1873,25 @@ AND cntr_no=?
           </components>
           <paths>
             <path
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[Data Conversion Output]"
-              endId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Inputs[Sort Input]"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[Data Conversion Output]"
+              endId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Inputs[Sort Input]"
               name="Data Conversion Output"
-              startId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[OLE DB Command Output]"
-              endId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[OLE DB Command Output]"
+              endId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr.Inputs[ODBC Destination Input]"
               name="OLE DB Command Output"
-              startId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Outputs[OLE DB Command Output]" />
+              startId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Outputs[OLE DB Command Output]" />
             <path
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[OLE DB Source Output]"
-              endId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[OLE DB Source Output]"
+              endId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS.Outputs[OLE DB Source Output]" />
+              startId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[Sort Output]"
-              endId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command.Inputs[OLE DB Command Input]"
+              refId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[Sort Output]"
+              endId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Sort Output"
-              startId="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort.Outputs[Sort Output]" />
+              startId="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1910,31 +1910,31 @@ AND cntr_no=?
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="234,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty"
+          Size="237,42"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr"
           TopLeft="214,100" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_pty">
+    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_cntr">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="99,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Sort"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Sort"
           TopLeft="333.5,321.5" />
         <NodeLayout
           Size="161,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty\Data Conversion"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\Data Conversion"
           TopLeft="298.5,250.5" />
         <NodeLayout
           Size="171,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS"
           TopLeft="292.5,176.865853658537" />
         <EdgeLayout
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[OLE DB Source Output]"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[OLE DB Source Output]"
           TopLeft="378.5,218.865853658537">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1956,7 +1956,7 @@ AND cntr_no=?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[Data Conversion Output]"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[Data Conversion Output]"
           TopLeft="381,292.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1979,10 +1979,10 @@ AND cntr_no=?
         </EdgeLayout>
         <NodeLayout
           Size="173,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty\OLE DB Command"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\OLE DB Command"
           TopLeft="467.5,322.5" />
         <EdgeLayout
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[Sort Output]"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[Sort Output]"
           TopLeft="432.5,343">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2005,10 +2005,10 @@ AND cntr_no=?
         </EdgeLayout>
         <NodeLayout
           Size="183,42"
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr"
           TopLeft="684.5,317.5" />
         <EdgeLayout
-          Id="Package\smtasm -&gt; tb_edi_cstms_bl_pty.Paths[OLE DB Command Output]"
+          Id="Package\smtasm -&gt; tb_edi_cstms_bl_cntr.Paths[OLE DB Command Output]"
           TopLeft="640.5,341">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2033,7 +2033,7 @@ AND cntr_no=?
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_pty\TB_EDI_SMTAMS">
+    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\TB_EDI_SMTAMS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2041,7 +2041,7 @@ AND cntr_no=?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_pty\tb_edi_cstms_bl_cntr">
+    design-time-name="Package\smtasm -&gt; tb_edi_cstms_bl_cntr\tb_edi_cstms_bl_cntr">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
