@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="BCM"
   DTS:PackageType="5"
-  DTS:VersionBuild="547"
-  DTS:VersionGUID="{499252D7-6BEB-4AA5-AF8A-30C51B33D55F}">
+  DTS:VersionBuild="548"
+  DTS:VersionGUID="{F2113447-D922-40AA-8C71-7FA420BEDC50}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -227,7 +227,7 @@ from tb_inv_xcrt
       DTS:CreationName=""
       DTS:DTSID="{C138F723-1907-4FDE-B964-288B707C1FC3}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;&#xA;select&#xA;loc_cd,&#xA;loc_nm,&#xA;loc_clss_cd as loc_clss_cd, &#xA;cnt_cd,&#xA;icao_cd_no as icao_cd,&#xA;use_flg,&#xA;descr as loc_desc,&#xA;rgst_usrid as cre_usr_id,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt,&#xA;state_cd as ste_cd,&#xA;iata_loc_cd,&#xA;un_loc_cd,&#xA;cbsa_loc_cd,&#xA;dock_rcpt_rmk,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd&#xA;from tb_loc&#xA;&quot;"
+      DTS:Expression="&quot;&#xA;select&#xA;loc_cd,&#xA;loc_nm,&#xA;loc_clss_cd as loc_clss_cd, &#xA;cnt_cd,&#xA;icao_cd_no as icao_cd,&#xA;use_flg,&#xA;LOC_TP_DESC as loc_desc,&#xA;DESCR AS loc_addr,&#xA;rgst_usrid as cre_usr_id,&#xA;rgst_tms as cre_dt,&#xA;modi_usrid as upd_usr_id,&#xA;modi_tms as upd_dt,&#xA;state_cd as ste_cd,&#xA;iata_loc_cd,&#xA;un_loc_cd,&#xA;cbsa_loc_cd,&#xA;dock_rcpt_rmk,&#xA;&quot;+ @[$Project::co_cd] +&quot; as co_cd&#xA;from tb_loc&#xA;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="bcm_loc_cd">
@@ -240,7 +240,8 @@ loc_clss_cd as loc_clss_cd,
 cnt_cd,
 icao_cd_no as icao_cd,
 use_flg,
-descr as loc_desc,
+LOC_TP_DESC as loc_desc,
+DESCR AS loc_addr,
 rgst_usrid as cre_usr_id,
 rgst_tms as cre_dt,
 modi_usrid as upd_usr_id,
@@ -17627,38 +17628,38 @@ AND co_cd = ?</property>
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="cre_usr_id"
+                      cachedName="Data Conversion.cre_usr_id"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_usr_id]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
+                      cachedName="Data Conversion.cre_dt"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_dt]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
                       cachedDataType="wstr"
                       cachedLength="12"
-                      cachedName="upd_usr_id"
+                      cachedName="Data Conversion.upd_usr_id"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_usr_id]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
+                      cachedName="Data Conversion.upd_dt"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_dt]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[loc_nm]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.loc_nm]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="loc_nm"
+                      cachedName="Data Conversion.loc_nm"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_nm]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_nm]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_nm]" />
                     <inputColumn
                       refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[loc_cd]"
                       cachedDataType="wstr"
@@ -17668,75 +17669,82 @@ AND co_cd = ?</property>
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_cd]"
                       lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[loc_clss_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.loc_clss_cd]"
                       cachedDataType="wstr"
                       cachedLength="2"
-                      cachedName="loc_clss_cd"
+                      cachedName="Data Conversion.loc_clss_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_clss_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_clss_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_clss_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[cnt_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.cnt_cd]"
                       cachedDataType="wstr"
                       cachedLength="2"
-                      cachedName="cnt_cd"
+                      cachedName="Data Conversion.cnt_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[cnt_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cnt_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cnt_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[ste_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.ste_cd]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="ste_cd"
+                      cachedName="Data Conversion.ste_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[ste_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[ste_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.ste_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[loc_desc]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.loc_desc]"
                       cachedDataType="wstr"
                       cachedLength="200"
-                      cachedName="loc_desc"
+                      cachedName="Data Conversion.loc_desc"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_desc]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_desc]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_desc]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[dock_rcpt_rmk]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.dock_rcpt_rmk]"
                       cachedDataType="wstr"
                       cachedLength="1000"
-                      cachedName="dock_rcpt_rmk"
+                      cachedName="Data Conversion.dock_rcpt_rmk"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[dock_rcpt_rmk]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[dock_rcpt_rmk]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.dock_rcpt_rmk]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[icao_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.icao_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="icao_cd"
+                      cachedName="Data Conversion.icao_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[icao_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[icao_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.icao_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[iata_loc_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.iata_loc_cd]"
                       cachedDataType="wstr"
                       cachedLength="3"
-                      cachedName="iata_loc_cd"
+                      cachedName="Data Conversion.iata_loc_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[iata_loc_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[iata_loc_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.iata_loc_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[un_loc_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.un_loc_cd]"
                       cachedDataType="wstr"
                       cachedLength="5"
-                      cachedName="un_loc_cd"
+                      cachedName="Data Conversion.un_loc_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[un_loc_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[un_loc_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.un_loc_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[cbsa_loc_cd]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.cbsa_loc_cd]"
                       cachedDataType="wstr"
                       cachedLength="4"
-                      cachedName="cbsa_loc_cd"
+                      cachedName="Data Conversion.cbsa_loc_cd"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[cbsa_loc_cd]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cbsa_loc_cd]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cbsa_loc_cd]" />
                     <inputColumn
-                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[use_flg]"
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.use_flg]"
                       cachedDataType="wstr"
                       cachedLength="1"
-                      cachedName="use_flg"
+                      cachedName="Data Conversion.use_flg"
                       externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[use_flg]"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[use_flg]" />
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.use_flg]" />
+                    <inputColumn
+                      refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].Columns[Data Conversion.loc_addr]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Data Conversion.loc_addr"
+                      externalMetadataColumnId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_addr]"
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_addr]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -17778,7 +17786,7 @@ AND co_cd = ?</property>
                     <externalMetadataColumn
                       refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[loc_clss_cd]"
                       dataType="wstr"
-                      length="1"
+                      length="6"
                       name="loc_clss_cd" />
                     <externalMetadataColumn
                       refId="Package\bcm_loc_cd\bcm_loc_cd.Inputs[ODBC Destination Input].ExternalColumns[cnt_cd]"
@@ -17998,6 +18006,12 @@ AND co_cd = ?</property>
                       cachedLength="1000"
                       cachedName="dock_rcpt_rmk"
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[dock_rcpt_rmk]" />
+                    <inputColumn
+                      refId="Package\bcm_loc_cd\Data Conversion.Inputs[Data Conversion Input].Columns[loc_addr]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="loc_addr"
+                      lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[loc_addr]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -18358,6 +18372,27 @@ AND co_cd = ?</property>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[dock_rcpt_rmk]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_loc_cd\Data Conversion.Outputs[Data Conversion Output].Columns[loc_addr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="200"
+                      lineageId="Package\bcm_loc_cd\Data Conversion.Outputs[Data Conversion Output].Columns[loc_addr]"
+                      name="loc_addr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[loc_addr]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -18819,6 +18854,23 @@ AND co_cd = ?</property>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\bcm_loc_cd\Sort 1.Inputs[Sort Input].Columns[loc_addr]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="loc_addr"
+                      lineageId="Package\bcm_loc_cd\Data Conversion.Outputs[Data Conversion Output].Columns[loc_addr]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -18830,11 +18882,11 @@ AND co_cd = ?</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_usr_id]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_usr_id]"
-                      name="cre_usr_id">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
+                      name="Data Conversion.cre_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -18859,10 +18911,10 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_dt]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cre_dt]"
-                      name="cre_dt">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
+                      name="Data Conversion.cre_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -18872,11 +18924,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_usr_id]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_usr_id]"
-                      name="upd_usr_id">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
+                      name="Data Conversion.upd_usr_id">
                       <properties>
                         <property
                           containsID="true"
@@ -18886,10 +18938,10 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_dt]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[upd_dt]"
-                      name="upd_dt">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
+                      name="Data Conversion.upd_dt">
                       <properties>
                         <property
                           containsID="true"
@@ -18899,11 +18951,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_nm]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_nm]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_nm]"
-                      name="loc_nm">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_nm]"
+                      name="Data Conversion.loc_nm">
                       <properties>
                         <property
                           containsID="true"
@@ -18928,11 +18980,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_clss_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_clss_cd]"
                       dataType="wstr"
                       length="2"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_clss_cd]"
-                      name="loc_clss_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_clss_cd]"
+                      name="Data Conversion.loc_clss_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -18942,11 +18994,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cnt_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cnt_cd]"
                       dataType="wstr"
                       length="2"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cnt_cd]"
-                      name="cnt_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cnt_cd]"
+                      name="Data Conversion.cnt_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -18956,11 +19008,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[icao_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.icao_cd]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[icao_cd]"
-                      name="icao_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.icao_cd]"
+                      name="Data Conversion.icao_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -18970,11 +19022,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[use_flg]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.use_flg]"
                       dataType="wstr"
                       length="1"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[use_flg]"
-                      name="use_flg">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.use_flg]"
+                      name="Data Conversion.use_flg">
                       <properties>
                         <property
                           containsID="true"
@@ -18984,11 +19036,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_desc]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_desc]"
                       dataType="wstr"
                       length="200"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[loc_desc]"
-                      name="loc_desc">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_desc]"
+                      name="Data Conversion.loc_desc">
                       <properties>
                         <property
                           containsID="true"
@@ -18998,11 +19050,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[ste_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.ste_cd]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[ste_cd]"
-                      name="ste_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.ste_cd]"
+                      name="Data Conversion.ste_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19012,11 +19064,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[iata_loc_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.iata_loc_cd]"
                       dataType="wstr"
                       length="3"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[iata_loc_cd]"
-                      name="iata_loc_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.iata_loc_cd]"
+                      name="Data Conversion.iata_loc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19026,11 +19078,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[un_loc_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.un_loc_cd]"
                       dataType="wstr"
                       length="5"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[un_loc_cd]"
-                      name="un_loc_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.un_loc_cd]"
+                      name="Data Conversion.un_loc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19040,11 +19092,11 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cbsa_loc_cd]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cbsa_loc_cd]"
                       dataType="wstr"
                       length="4"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[cbsa_loc_cd]"
-                      name="cbsa_loc_cd">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.cbsa_loc_cd]"
+                      name="Data Conversion.cbsa_loc_cd">
                       <properties>
                         <property
                           containsID="true"
@@ -19054,17 +19106,31 @@ AND co_cd = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[dock_rcpt_rmk]"
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.dock_rcpt_rmk]"
                       dataType="wstr"
                       length="1000"
-                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[dock_rcpt_rmk]"
-                      name="dock_rcpt_rmk">
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.dock_rcpt_rmk]"
+                      name="Data Conversion.dock_rcpt_rmk">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\bcm_loc_cd\Data Conversion.Outputs[Data Conversion Output].Columns[dock_rcpt_rmk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_addr]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\bcm_loc_cd\Sort 1.Outputs[Sort Output].Columns[Data Conversion.loc_addr]"
+                      name="Data Conversion.loc_addr">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\bcm_loc_cd\Data Conversion.Outputs[Data Conversion Output].Columns[loc_addr]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -19314,6 +19380,16 @@ AND co_cd = ?</property>
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[dock_rcpt_rmk]"
                       name="dock_rcpt_rmk"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[loc_addr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].ExternalColumns[loc_addr]"
+                      length="200"
+                      lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].Columns[loc_addr]"
+                      name="loc_addr"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -19413,6 +19489,11 @@ AND co_cd = ?</property>
                       dataType="wstr"
                       length="1000"
                       name="dock_rcpt_rmk" />
+                    <externalMetadataColumn
+                      refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Output].ExternalColumns[loc_addr]"
+                      dataType="wstr"
+                      length="200"
+                      name="loc_addr" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -19468,6 +19549,12 @@ AND co_cd = ?</property>
                       length="200"
                       lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[loc_desc]"
                       name="loc_desc" />
+                    <outputColumn
+                      refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[loc_addr]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[loc_addr]"
+                      name="loc_addr" />
                     <outputColumn
                       refId="Package\bcm_loc_cd\TB_LOC.Outputs[OLE DB Source Error Output].Columns[co_cd]"
                       codePage="949"
@@ -64235,7 +64322,7 @@ FROM TB_VSL</property>
     design-time-name="Package\bcm_loc_cd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="122,42"
           Id="Package\bcm_loc_cd\TB_LOC"
@@ -64287,9 +64374,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -64311,9 +64396,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -64347,9 +64430,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -64371,9 +64452,7 @@ FROM TB_VSL</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

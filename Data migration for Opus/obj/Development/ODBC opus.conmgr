@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=10.0.0.94;User ID=opus_fms;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAACIJusryVk+1DHkvIjVcRRRB5DS/cdP8riIMimjv1y0mQAAAAAOgAAAAAIAACAAAAB2I8EnHQipS99NUsGJkMPE3VtXAq3LQgnUTzTw3PcKK3AAAACwXeqynwtjrz7dJeuFYBzAXBxp3JqbGgiQPIHxJ9+bEk01UEejPygE6HGAXeXUQSVHKxCRpntUD4oOSTDPf32zGbyeUGC6uGC2lSDowXO96xJHlo1Y8K9ENYHUkWhCh0c59m9NSaVniz9yw3AqclmGQAAAAP6tXOyHQXT+IfsYGiVo3Ob/jsvmO20VQz09y1R9ssUw5f+nlrlOdrNUa0JeG/EaCKJPMU81aHI8u4pybElhnw4=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAAB81pjiMx/B4ppqXaxTdhYPVZT/eMVzq/jBcTMbRMAv8wAAAAAOgAAAAAIAACAAAAAjar2ENcFMkqwVeC7HRJxfQ+KQC7rJIAqv6bkDnE6sNnAAAAC1S4nFxkznhomK5Tairk03pW9XjNj+n+UdonbP4z9yi2/XeL6dhxBMIgphZOuJg90rZ/Py6yxxQtgBEb4iYkf75O3sebh/gJ98r2mmMDSZjPZ/dm6KDvftbgfA2pztSLJgdoE/DVEpsvUUbSv6jPevQAAAAAqzakFgXLtN0H1NUVlV0e+lFyql6JKAmuV9sNLiIW/Lfe8MEy2YR/rcUy6dn2QS8kn9GxNaR/1nxOouHdaLumc=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Z_TEST"
   DTS:PackageType="5"
-  DTS:VersionBuild="243"
-  DTS:VersionGUID="{4FEAA4DF-D5B6-41DF-A614-F7CF4C00D0EB}">
+  DTS:VersionBuild="255"
+  DTS:VersionGUID="{F0E468D9-8EF3-442D-8F75-26BDFEF42865}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,319 +30,319 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="949"
-          DTS:ConnectionString="C:\AIF\acc_inv_if_his.txt">
+          DTS:ConnectionString="D:\acc_inv_if_his.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="12"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cre_usr_id"
-              DTS:DTSID="{A85F5150-B88D-4372-91CF-F6155B822AD1}"
+              DTS:DTSID="{FE477FF9-E9B0-4A5A-BD34-7C63119EBA30}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="3"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="co_cd"
-              DTS:DTSID="{80DD0873-CA96-4614-885D-F15B08B93E36}"
+              DTS:DTSID="{24F28F15-E8B3-435D-9673-A5EE68E9897B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="cre_dt"
-              DTS:DTSID="{E1C6728D-9507-4041-B619-05A52D7A64AB}"
+              DTS:DTSID="{B2388CDC-8199-4C0B-9D57-1FCBF09DC8FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="12"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="upd_usr_id"
-              DTS:DTSID="{F195D7E4-9955-4A59-A979-BBE41B09E920}"
+              DTS:DTSID="{C3E3F455-E6A2-4DC3-9841-9F061B3822D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="upd_dt"
-              DTS:DTSID="{DE5750F6-7B48-4E55-BAAA-9F27A8823B23}"
+              DTS:DTSID="{5EDC8649-CDDD-4D66-B354-22E826AA5E1E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="21"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_id"
-              DTS:DTSID="{AE530B1B-39DF-435F-BBF1-975A383F7B2C}"
+              DTS:DTSID="{FE82FDB1-A654-4549-9488-F8E5884F218F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="cust_cd"
-              DTS:DTSID="{5C6368DE-0073-427E-B9BE-B49A659A13E9}"
+              DTS:DTSID="{BE7A816F-4052-45AB-8A45-5A1C772236E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="10"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ofc_cd"
-              DTS:DTSID="{0DCA63D1-CB78-41E3-9436-12A01BAEDDF0}"
+              DTS:DTSID="{EB96BC85-7EB2-44D9-8D50-FD2609077618}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="1"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="delt_flg"
-              DTS:DTSID="{50C68645-63FE-4209-A0A1-64CA5DD3C09E}"
+              DTS:DTSID="{810C164E-165D-4E49-890F-2AC9B2AC37D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="5"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dept_cd"
-              DTS:DTSID="{3430D2E1-3587-497D-B3D0-92C691810A0A}"
+              DTS:DTSID="{4A8218DD-1FA4-4CBE-BFB9-B15F1143C59E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="29"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="his_id"
-              DTS:DTSID="{A143C6FD-1543-471D-9015-E052E8F69B04}"
+              DTS:DTSID="{73CD1353-9B2F-4925-B6C4-E398D53C31C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="3"
               DTS:TextQualified="True"
               DTS:ObjectName="if_id"
-              DTS:DTSID="{3182BFDA-4DC6-481B-96C0-D81B0E0E7B57}"
+              DTS:DTSID="{F2A702E6-43C5-4D78-B2A6-E454A00EF468}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="10"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_cd"
-              DTS:DTSID="{ED708AC3-EE49-4848-9391-D7A3F2FC61AA}"
+              DTS:DTSID="{5DE880D8-5F81-47D0-BFC2-AB3F17F73B2B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="100"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_nm"
-              DTS:DTSID="{10EA2FC2-52CE-46F3-B0E8-E5B70D5D5964}"
+              DTS:DTSID="{F3374B18-66C5-454E-86C9-A0573A6943A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="frt_term_cd"
-              DTS:DTSID="{5F5EC540-FA99-4AC3-90F0-15DA7E596ABE}"
+              DTS:DTSID="{5C24FA6D-5C3C-4BB7-A952-CC8193D9B503}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="20"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="aply_ut_cd"
-              DTS:DTSID="{D477A1D9-49F2-425B-BACA-6FEC36985D88}"
+              DTS:DTSID="{CF55806E-32A3-4004-9056-76B6F17C7611}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cntr_tpsz_cd"
-              DTS:DTSID="{77C5BDC9-B263-423C-B047-4A21A704344E}"
+              DTS:DTSID="{D8878BA5-E4A0-4847-898C-0E368C9EE68D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="18"
               DTS:DataScale="6"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_vol_val"
-              DTS:DTSID="{6552AFAE-1E22-48E0-9297-FFA201A1449F}"
+              DTS:DTSID="{F26F4C80-A5E7-4961-AAAC-80CE07836D40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="20"
               DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_rt"
-              DTS:DTSID="{3262E3CD-2121-4010-A297-09EE526114EB}"
+              DTS:DTSID="{2A925217-B669-4E34-9B3F-5BAB478425B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="20"
               DTS:DataScale="4"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_amt"
-              DTS:DTSID="{C291F1E7-CD5F-4802-956E-EEF2947DEC6F}"
+              DTS:DTSID="{0C9C8A57-8154-41C9-ABFB-A46B7BAE4833}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="xch_curr_cd"
-              DTS:DTSID="{BEB81082-C04B-4FD8-B47F-CACF675910F7}"
+              DTS:DTSID="{BF3E5729-10DB-4167-9E05-C0ACE4A428C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="20"
               DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="xch_rt"
-              DTS:DTSID="{252BD2AB-52B5-4715-BA1B-8522AD2C875B}"
+              DTS:DTSID="{E1B100D2-03BE-4624-A4C5-0047F97AC072}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="20"
               DTS:DataScale="4"
               DTS:TextQualified="True"
               DTS:ObjectName="ttl_chg_amt"
-              DTS:DTSID="{65AD8022-974D-4A07-B259-90A6E40C1DF2}"
+              DTS:DTSID="{FEFA229A-EF3C-4A9A-B6D5-CDA44DC0FA63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_curr_cd"
-              DTS:DTSID="{C3625174-BE0D-44A9-8946-ADD38313FC54}"
+              DTS:DTSID="{1E1C54D9-6851-49B9-A0E0-758C2A667705}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="vat_tax_rt"
-              DTS:DTSID="{F89FEB74-7436-498F-A3F1-1BB0705D9E73}"
+              DTS:DTSID="{68E789E9-C7E3-409D-86E8-3250A0AB31EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="whld_tax_rt"
-              DTS:DTSID="{41CE52F1-18EB-4322-9BEE-8CB40DF09B92}"
+              DTS:DTSID="{16D78734-195C-418C-A90D-89C275566275}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="cust_nm"
-              DTS:DTSID="{6771BEA6-A92D-4D9A-91E1-874DED8B8737}"
+              DTS:DTSID="{3576E278-0FF4-43A1-927B-795164B0290C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="20"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="shp_id"
-              DTS:DTSID="{D409EC25-5B26-4679-BAE2-1EC453E8B1E0}"
+              DTS:DTSID="{DC496496-4674-4B1E-8D43-1B7B287D8BFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="40"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="mst_bl_no"
-              DTS:DTSID="{65301F05-CF3A-4136-8D5A-13CAA162672B}"
+              DTS:DTSID="{6737E36A-E0E5-42CA-931F-C9F4D2B6E5C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="40"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="hbl_no"
-              DTS:DTSID="{8DB5699C-E5ED-4036-8884-2962E8EB5F35}"
+              DTS:DTSID="{38251A2D-CB52-47B6-9ED0-FE7E7BB4C41C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="20"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="file_no"
-              DTS:DTSID="{DD701005-6CD9-4DC6-9189-7387370160D8}"
+              DTS:DTSID="{72BFC3AD-86E2-475C-AB76-76908808F4C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
               DTS:DataPrecision="12"
               DTS:TextQualified="True"
               DTS:ObjectName="frt_seq"
-              DTS:DTSID="{11A8B771-8622-42C6-9FFD-3081695CFC78}"
+              DTS:DTSID="{DA2838B8-3087-4506-9510-CDC393BE0A29}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:MaximumWidth="2"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_tp_cd"
-              DTS:DTSID="{08B0A4AC-1056-4E8E-A1CE-96A8CD534749}"
+              DTS:DTSID="{21E4891A-46AD-4F58-BDBD-3C017F3C3674}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="vat_tax_amt"
-              DTS:DTSID="{2544C2DD-C27B-4141-A8C3-4BE69123BE61}"
+              DTS:DTSID="{88B29998-0D03-4572-BA30-F26B85259BEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="whld_tax_amt"
-              DTS:DTSID="{65F6D76E-530B-4689-B0C0-48A30E6963A6}"
+              DTS:DTSID="{4936AE65-E0A6-456B-ADC5-058C7C92AAE9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -352,7 +352,7 @@
               DTS:DataScale="4"
               DTS:TextQualified="True"
               DTS:ObjectName="ttl_amt"
-              DTS:DTSID="{AE021ECF-19CC-4807-AD3E-93406E86B5AC}"
+              DTS:DTSID="{AB82FCA4-84D9-4764-8979-980D9932CAD3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3543,7 +3543,1747 @@ LEFT JOIN tb_intg_bl mbl
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1" />
+          version="1">
+          <components>
+            <component
+              refId="Package\acc_inv_if_his 1\acc_inv_if_his"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="acc_inv_if_his"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"us_fwd"."acc_inv_if_his"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_inv_if_his 1\acc_inv_if_his.Connections[ODBCConnection]"
+                  connectionManagerID="{C3CEBC70-A298-4B1A-9081-A51866C368FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ODBC fwd]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cre_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="cre_dt"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_dt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[inv_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="inv_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cust_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cust_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ofc_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ofc_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ofc_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[delt_flg]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="delt_flg"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[delt_flg]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[dept_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="dept_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[dept_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[dept_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[his_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="his_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[his_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[his_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[if_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="if_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[if_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[if_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="chg_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_nm]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="chg_nm"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_nm]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_nm]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[frt_term_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="frt_term_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[frt_term_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_term_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[aply_ut_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="aply_ut_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[aply_ut_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[aply_ut_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_vol_val]"
+                      cachedDataType="numeric"
+                      cachedName="chg_vol_val"
+                      cachedPrecision="20"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_vol_val]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_vol_val]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_rt]"
+                      cachedDataType="numeric"
+                      cachedName="chg_rt"
+                      cachedPrecision="20"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_rt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_amt]"
+                      cachedDataType="numeric"
+                      cachedName="chg_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_amt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[xch_curr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="xch_curr_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[xch_curr_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_curr_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[xch_rt]"
+                      cachedDataType="numeric"
+                      cachedName="xch_rt"
+                      cachedPrecision="20"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[xch_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_rt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ttl_chg_amt]"
+                      cachedDataType="numeric"
+                      cachedName="ttl_chg_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_chg_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_chg_amt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[inv_curr_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="inv_curr_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_curr_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_curr_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[vat_tax_rt]"
+                      cachedDataType="numeric"
+                      cachedName="vat_tax_rt"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_rt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[whld_tax_rt]"
+                      cachedDataType="numeric"
+                      cachedName="whld_tax_rt"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_rt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cust_nm]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cust_nm"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_nm]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_nm]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[shp_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="shp_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[shp_id]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[shp_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[mst_bl_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="mst_bl_no"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[mst_bl_no]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[mst_bl_no]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[hbl_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="hbl_no"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[hbl_no]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[hbl_no]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[file_no]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="file_no"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[file_no]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[file_no]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[frt_seq]"
+                      cachedDataType="numeric"
+                      cachedName="frt_seq"
+                      cachedPrecision="12"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[frt_seq]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_seq]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[inv_tp_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="inv_tp_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_tp_cd]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_tp_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[vat_tax_amt]"
+                      cachedDataType="numeric"
+                      cachedName="vat_tax_amt"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_amt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[whld_tax_amt]"
+                      cachedDataType="numeric"
+                      cachedName="whld_tax_amt"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_amt]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ttl_amt]"
+                      cachedDataType="numeric"
+                      cachedName="ttl_amt"
+                      cachedPrecision="20"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_amt]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[if_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="if_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="inv_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[his_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="his_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="chg_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_nm]"
+                      dataType="wstr"
+                      length="100"
+                      name="chg_nm" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_curr_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="inv_curr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_rt]"
+                      dataType="numeric"
+                      name="vat_tax_rt"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_rt]"
+                      dataType="numeric"
+                      name="whld_tax_rt"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[xch_curr_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="xch_curr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[delt_flg]"
+                      dataType="wstr"
+                      length="1"
+                      name="delt_flg" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="cust_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_nm]"
+                      dataType="wstr"
+                      length="200"
+                      name="cust_nm" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[shp_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="shp_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[mst_bl_no]"
+                      dataType="wstr"
+                      length="40"
+                      name="mst_bl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[hbl_no]"
+                      dataType="wstr"
+                      length="30"
+                      name="hbl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[file_no]"
+                      dataType="wstr"
+                      length="20"
+                      name="file_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[dept_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="dept_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[frt_seq]"
+                      dataType="numeric"
+                      name="frt_seq"
+                      precision="9" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_vol_val]"
+                      dataType="numeric"
+                      name="chg_vol_val"
+                      precision="11"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[xch_rt]"
+                      dataType="numeric"
+                      name="xch_rt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[aply_ut_cd]"
+                      dataType="wstr"
+                      length="20"
+                      name="aply_ut_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cntr_tp_sz_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="cntr_tp_sz_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[frt_term_cd]"
+                      dataType="wstr"
+                      length="6"
+                      name="frt_term_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_tp_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="inv_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_rt]"
+                      dataType="numeric"
+                      name="chg_rt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_amt]"
+                      dataType="numeric"
+                      name="chg_amt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_amt]"
+                      dataType="numeric"
+                      name="vat_tax_amt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_amt]"
+                      dataType="numeric"
+                      name="whld_tax_amt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_amt]"
+                      dataType="numeric"
+                      name="ttl_amt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_chg_amt]"
+                      dataType="numeric"
+                      name="ttl_chg_amt"
+                      precision="23"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ngtv_vat_tax_rt]"
+                      dataType="numeric"
+                      name="ngtv_vat_tax_rt"
+                      precision="5"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_inv_if_his 1\acc_inv_if_his.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\acc_inv_if_his.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\acc_inv_if_his.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\acc_inv_if_his.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_inv_if_his 1\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_inv_if_his 1\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[acc_inv_if_his]"
+                  connectionManagerRefId="Package.ConnectionManagers[acc_inv_if_his]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cre_usr_id]"
+                      length="12"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[co_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cre_dt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[upd_usr_id]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_usr_id]"
+                      name="upd_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[upd_dt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[upd_dt]"
+                      name="upd_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_id]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_id]"
+                      name="inv_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cust_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_cd]"
+                      name="cust_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ofc_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ofc_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ofc_cd]"
+                      name="ofc_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[delt_flg]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[delt_flg]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[delt_flg]"
+                      name="delt_flg"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[dept_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dept_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[dept_cd]"
+                      name="dept_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[his_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[his_id]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[his_id]"
+                      name="his_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[if_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[if_id]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[if_id]"
+                      name="if_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_cd]"
+                      name="chg_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_nm]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_nm]"
+                      length="100"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_nm]"
+                      name="chg_nm"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_term_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[frt_term_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_term_cd]"
+                      name="frt_term_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[aply_ut_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aply_ut_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[aply_ut_cd]"
+                      name="aply_ut_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cntr_tpsz_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cntr_tpsz_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cntr_tpsz_cd]"
+                      name="cntr_tpsz_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_vol_val]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_vol_val]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_vol_val]"
+                      name="chg_vol_val"
+                      precision="20"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_rt]"
+                      name="chg_rt"
+                      precision="20"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[chg_amt]"
+                      name="chg_amt"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_curr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xch_curr_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_curr_cd]"
+                      name="xch_curr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xch_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[xch_rt]"
+                      name="xch_rt"
+                      precision="20"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_chg_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ttl_chg_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_chg_amt]"
+                      name="ttl_chg_amt"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_curr_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_curr_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_curr_cd]"
+                      name="inv_curr_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vat_tax_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_rt]"
+                      name="vat_tax_rt"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_rt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[whld_tax_rt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_rt]"
+                      name="whld_tax_rt"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_nm]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cust_nm]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[cust_nm]"
+                      name="cust_nm"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[shp_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[shp_id]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[shp_id]"
+                      name="shp_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[mst_bl_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mst_bl_no]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[mst_bl_no]"
+                      name="mst_bl_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[hbl_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hbl_no]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[hbl_no]"
+                      name="hbl_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[file_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[file_no]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[file_no]"
+                      name="file_no"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_seq]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[frt_seq]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[frt_seq]"
+                      name="frt_seq"
+                      precision="12"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_tp_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_tp_cd]"
+                      length="50"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_tp_cd]"
+                      name="inv_tp_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vat_tax_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[vat_tax_amt]"
+                      name="vat_tax_amt"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[whld_tax_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[whld_tax_amt]"
+                      name="whld_tax_amt"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_amt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ttl_amt]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[ttl_amt]"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cre_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="cre_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[co_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="3"
+                      name="co_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      name="cre_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[upd_usr_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="12"
+                      name="upd_usr_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[upd_dt]"
+                      dataType="dbTimeStamp"
+                      name="upd_dt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="21"
+                      name="inv_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cust_cd]"
+                      dataType="i4"
+                      name="cust_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ofc_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="ofc_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[delt_flg]"
+                      codePage="949"
+                      dataType="str"
+                      length="1"
+                      name="delt_flg" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dept_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="5"
+                      name="dept_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[his_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="29"
+                      name="his_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[if_id]"
+                      dataType="numeric"
+                      name="if_id"
+                      precision="3" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="10"
+                      name="chg_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_nm]"
+                      codePage="949"
+                      dataType="str"
+                      length="100"
+                      name="chg_nm" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[frt_term_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="frt_term_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[aply_ut_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="aply_ut_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cntr_tpsz_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="cntr_tpsz_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_vol_val]"
+                      dataType="numeric"
+                      name="chg_vol_val"
+                      precision="18"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_rt]"
+                      dataType="numeric"
+                      name="chg_rt"
+                      precision="20"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[chg_amt]"
+                      dataType="numeric"
+                      name="chg_amt"
+                      precision="20"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xch_curr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="xch_curr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xch_rt]"
+                      dataType="numeric"
+                      name="xch_rt"
+                      precision="20"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ttl_chg_amt]"
+                      dataType="numeric"
+                      name="ttl_chg_amt"
+                      precision="20"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_curr_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="6"
+                      name="inv_curr_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vat_tax_rt]"
+                      dataType="i4"
+                      name="vat_tax_rt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[whld_tax_rt]"
+                      dataType="i4"
+                      name="whld_tax_rt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cust_nm]"
+                      dataType="i4"
+                      name="cust_nm" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[shp_id]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="shp_id" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mst_bl_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="40"
+                      name="mst_bl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hbl_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="40"
+                      name="hbl_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[file_no]"
+                      codePage="949"
+                      dataType="str"
+                      length="20"
+                      name="file_no" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[frt_seq]"
+                      dataType="numeric"
+                      name="frt_seq"
+                      precision="12" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[inv_tp_cd]"
+                      codePage="949"
+                      dataType="str"
+                      length="2"
+                      name="inv_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vat_tax_amt]"
+                      dataType="i4"
+                      name="vat_tax_amt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[whld_tax_amt]"
+                      dataType="i4"
+                      name="whld_tax_amt" />
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ttl_amt]"
+                      dataType="numeric"
+                      name="ttl_amt"
+                      precision="20"
+                      scale="4" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="949"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_inv_if_his 1\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE	FROM
+us_fwd.acc_inv_if_his	
+WHERE	
+co_cd = ?	
+AND his_id = ?	
+AND if_id = ?	
+AND inv_id = ?	</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\acc_inv_if_his 1\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[co_cd]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].Columns[his_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="his_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[his_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].Columns[if_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="if_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[if_id]" />
+                    <inputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].Columns[inv_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="inv_id"
+                      externalMetadataColumnId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output].Columns[inv_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="nText"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="nText"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="nText"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\acc_inv_if_his 1.Paths[Flat File Source Output]"
+              endId="Package\acc_inv_if_his 1\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Flat File Source Output"
+              startId="Package\acc_inv_if_his 1\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\acc_inv_if_his 1.Paths[OLE DB Command Output]"
+              endId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\acc_inv_if_his 1\OLE DB Command.Outputs[OLE DB Command Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -5565,7 +7305,7 @@ LEFT JOIN tb_intg_bl mbl
               refId="Package\acc_inv_pay_his\Multicast"
               componentClassID="Microsoft.Multicast"
               contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a data so that some values can be masked before sharing with external partners."
               name="Multicast">
               <inputs>
                 <input
@@ -29171,61 +30911,73 @@ from tb_edi_isf_trns</property>
         <NodeLayout
           Size="148,42"
           Id="Package\acc_inv_if_his"
-          TopLeft="124.857142857143,111" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\acc_inv_pay_his"
-          TopLeft="355,281.857142857146" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\tb_edi_isf_cntr"
-          TopLeft="565,207" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\tb_edi_isf_hdr"
-          TopLeft="561,141" />
-        <NodeLayout
-          Size="146,42"
-          Id="Package\tb_edi_isf_his"
-          TopLeft="565,276" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\tb_edi_isf_informal"
-          TopLeft="559,342" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\tb_edi_isf_pty"
-          TopLeft="567,407" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\tb_edi_isf_rcv_err"
-          TopLeft="557,478" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\tb_edi_isf_shp_ref"
-          TopLeft="582,554" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\tb_edi_isf_trns"
-          TopLeft="607,616" />
+          TopLeft="903.857142857143,102" />
         <NodeLayout
           Size="148,42"
           Id="Package\acc_inv_if_his 1"
-          TopLeft="129,186" />
+          TopLeft="906,163" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\acc_inv_pay_his"
+          TopLeft="912,238.857142857146" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\tb_edi_isf_cntr"
+          TopLeft="1087,181" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\tb_edi_isf_hdr"
+          TopLeft="1083,115" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\tb_edi_isf_his"
+          TopLeft="1087,250" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\tb_edi_isf_informal"
+          TopLeft="1081,316" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\tb_edi_isf_pty"
+          TopLeft="1089,381" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\tb_edi_isf_rcv_err"
+          TopLeft="1079,452" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\tb_edi_isf_shp_ref"
+          TopLeft="1104,528" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\tb_edi_isf_trns"
+          TopLeft="1129,590" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="200.928571428572,153">
+          TopLeft="903.857142857143,123">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="2.142857142857,61"
               Start="0,0"
-              End="0,25.5">
+              End="-5.357142857143,61">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,57"
+                    Point2="-22.5,61"
+                    Point3="-18.5,61" />
+                  <mssgle:LineSegment
+                    End="-5.357142857143,61" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -29296,10 +31048,106 @@ from tb_edi_isf_trns</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\acc_inv_if_his 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,42"
+          Id="Package\acc_inv_if_his 1\acc_inv_if_his"
+          TopLeft="652,169" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\acc_inv_if_his 1\Flat File Source"
+          TopLeft="154.5,34.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\acc_inv_if_his 1\OLE DB Command"
+          TopLeft="395,142" />
+        <EdgeLayout
+          Id="Package\acc_inv_if_his 1.Paths[OLE DB Command Output]"
+          TopLeft="568,163">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84,27"
+              Start="0,0"
+              End="76.5,27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38,0"
+                    Point2="42,0"
+                    Point3="42,4" />
+                  <mssgle:LineSegment
+                    End="42,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42,23"
+                    Point2="42,27"
+                    Point3="46,27" />
+                  <mssgle:LineSegment
+                    End="76.5,27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\acc_inv_if_his 1.Paths[Flat File Source Output]"
+          TopLeft="232.5,76.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="249,65.5"
+              Start="0,0"
+              End="249,58">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.75"
+                    Point2="0,32.75"
+                    Point3="4,32.75" />
+                  <mssgle:LineSegment
+                    End="245,32.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="245,32.75"
+                    Point2="249,32.75"
+                    Point3="249,36.75" />
+                  <mssgle:LineSegment
+                    End="249,58" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\acc_inv_pay_his">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="123,42"
+          Id="Package\acc_inv_pay_his\Multicast"
+          TopLeft="415.5,161.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\acc_inv_pay_his\Data Conversion"
+          TopLeft="210.5,101.5" />
         <NodeLayout
           Size="171,42"
           Id="Package\acc_inv_pay_his\TB_INV_HIS_MST"
@@ -29312,48 +31160,6 @@ from tb_edi_isf_trns</property>
           Size="99,42"
           Id="Package\acc_inv_pay_his\Sort"
           TopLeft="236.5,200.5" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\acc_inv_pay_his\Data Conversion"
-          TopLeft="210.5,101.5" />
-        <EdgeLayout
-          Id="Package\acc_inv_pay_his.Paths[OLE DB Source Output]"
-          TopLeft="326.5,66">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-35.5,35.5"
-              Start="0,0"
-              End="-35.5,28">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.75"
-                    Point2="0,17.75"
-                    Point3="-4,17.75" />
-                  <mssgle:LineSegment
-                    End="-31.5,17.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-31.5,17.75"
-                    Point2="-35.5,17.75"
-                    Point3="-35.5,21.75" />
-                  <mssgle:LineSegment
-                    End="-35.5,28" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\acc_inv_pay_his\Multicast"
-          TopLeft="415.5,161.5" />
         <EdgeLayout
           Id="Package\acc_inv_pay_his.Paths[Sort Output]"
           TopLeft="335.5,221.5">
@@ -29385,7 +31191,45 @@ from tb_edi_isf_trns</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\acc_inv_pay_his.Paths[OLE DB Source Output]"
+          TopLeft="326.5,66">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-35.5,35.5"
+              Start="0,0"
+              End="-35.5,28">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.75"
+                    Point2="0,17.75"
+                    Point3="-4,17.75" />
+                  <mssgle:LineSegment
+                    End="-31.5,17.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.5,17.75"
+                    Point2="-35.5,17.75"
+                    Point3="-35.5,21.75" />
+                  <mssgle:LineSegment
+                    End="-35.5,28" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29419,7 +31263,9 @@ from tb_edi_isf_trns</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -29441,7 +31287,9 @@ from tb_edi_isf_trns</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -30546,56 +32394,6 @@ from tb_edi_isf_trns</property>
             <mssgm:EdgeLabel
               BoundingBox="0,0,0,0"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\acc_inv_if_his 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="169,42"
-          Id="80"
-          TopLeft="79.0000017881393,9.99999989668526" />
-        <NodeLayout
-          Size="176,42"
-          Id="2"
-          TopLeft="109.5,115.5" />
-        <EdgeLayout
-          Id="203"
-          TopLeft="163.500001788139,51.9999998966853">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33.9999982118607,63.5000001033147"
-              Start="0,0"
-              End="33.9999982118607,56.0000001033147">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.7500000516574" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.7500000516574"
-                    Point2="0,31.7500000516574"
-                    Point3="4,31.7500000516574" />
-                  <mssgle:LineSegment
-                    End="29.9999982118607,31.7500000516574" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.9999982118607,31.7500000516574"
-                    Point2="33.9999982118607,31.7500000516574"
-                    Point3="33.9999982118607,35.7500000516574" />
-                  <mssgle:LineSegment
-                    End="33.9999982118607,56.0000001033147" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

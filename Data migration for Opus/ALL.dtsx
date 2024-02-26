@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Z_TEST"
   DTS:PackageType="5"
-  DTS:VersionBuild="251"
-  DTS:VersionGUID="{F8C07CB1-0F0F-40C4-908B-9F0C8547824F}">
+  DTS:VersionBuild="255"
+  DTS:VersionGUID="{F0E468D9-8EF3-442D-8F75-26BDFEF42865}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30911,61 +30911,73 @@ from tb_edi_isf_trns</property>
         <NodeLayout
           Size="148,42"
           Id="Package\acc_inv_if_his"
-          TopLeft="124.857142857143,111" />
+          TopLeft="903.857142857143,102" />
         <NodeLayout
           Size="148,42"
           Id="Package\acc_inv_if_his 1"
-          TopLeft="129,186" />
+          TopLeft="906,163" />
         <NodeLayout
           Size="160,42"
           Id="Package\acc_inv_pay_his"
-          TopLeft="355,281.857142857146" />
+          TopLeft="912,238.857142857146" />
         <NodeLayout
           Size="151,42"
           Id="Package\tb_edi_isf_cntr"
-          TopLeft="565,207" />
+          TopLeft="1087,181" />
         <NodeLayout
           Size="144,42"
           Id="Package\tb_edi_isf_hdr"
-          TopLeft="561,141" />
+          TopLeft="1083,115" />
         <NodeLayout
           Size="146,42"
           Id="Package\tb_edi_isf_his"
-          TopLeft="565,276" />
+          TopLeft="1087,250" />
         <NodeLayout
           Size="171,42"
           Id="Package\tb_edi_isf_informal"
-          TopLeft="559,342" />
+          TopLeft="1081,316" />
         <NodeLayout
           Size="147,42"
           Id="Package\tb_edi_isf_pty"
-          TopLeft="567,407" />
+          TopLeft="1089,381" />
         <NodeLayout
           Size="166,42"
           Id="Package\tb_edi_isf_rcv_err"
-          TopLeft="557,478" />
+          TopLeft="1079,452" />
         <NodeLayout
           Size="169,42"
           Id="Package\tb_edi_isf_shp_ref"
-          TopLeft="582,554" />
+          TopLeft="1104,528" />
         <NodeLayout
           Size="151,42"
           Id="Package\tb_edi_isf_trns"
-          TopLeft="607,616" />
+          TopLeft="1129,590" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="200.928571428572,153">
+          TopLeft="903.857142857143,123">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="2.142857142857,61"
               Start="0,0"
-              End="0,25.5">
+              End="-5.357142857143,61">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,57"
+                    Point2="-22.5,61"
+                    Point3="-18.5,61" />
+                  <mssgle:LineSegment
+                    End="-5.357142857143,61" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
