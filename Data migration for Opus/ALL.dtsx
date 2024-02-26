@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Z_TEST"
   DTS:PackageType="5"
-  DTS:VersionBuild="236"
-  DTS:VersionGUID="{0A29BF84-F515-462A-AF1A-1CA3A501DA1D}">
+  DTS:VersionBuild="243"
+  DTS:VersionGUID="{4FEAA4DF-D5B6-41DF-A614-F7CF4C00D0EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3532,9 +3532,25 @@ LEFT JOIN tb_intg_bl mbl
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\acc_inv_if_his 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0f2790a3-55b0-4b45-adf6-16076ecc7d61}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="acc_inv_if_his 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\acc_inv_pay_his"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{fcf93578-0912-4ce1-a75d-14642c5c0356}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5541,6 +5557,37 @@ LEFT JOIN tb_intg_bl mbl
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\acc_inv_pay_his\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\acc_inv_pay_his\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\acc_inv_pay_his\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\acc_inv_pay_his\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\acc_inv_pay_his\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\acc_inv_pay_his\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -8402,13 +8449,18 @@ ORDER BY CONCAT (
               name="Data Conversion Output"
               startId="Package\acc_inv_pay_his\Data Conversion.Outputs[Data Conversion Output]" />
             <path
+              refId="Package\acc_inv_pay_his.Paths[Multicast Output 1]"
+              endId="Package\acc_inv_pay_his\acc_inv_pay_his.Inputs[Flat File Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\acc_inv_pay_his\Multicast.Outputs[Multicast Output 1]" />
+            <path
               refId="Package\acc_inv_pay_his.Paths[OLE DB Source Output]"
               endId="Package\acc_inv_pay_his\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\acc_inv_pay_his\TB_INV_HIS_MST.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\acc_inv_pay_his.Paths[Sort Output]"
-              endId="Package\acc_inv_pay_his\acc_inv_pay_his.Inputs[Flat File Destination Input]"
+              endId="Package\acc_inv_pay_his\Multicast.Inputs[Multicast Input 1]"
               name="Sort Output"
               startId="Package\acc_inv_pay_his\Sort.Outputs[Sort Output]" />
           </paths>
@@ -8419,6 +8471,7 @@ ORDER BY CONCAT (
       DTS:refId="Package\tb_edi_isf_cntr"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{771126e9-2c10-44f7-b7ee-af9d61aacdc4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -18881,6 +18934,7 @@ from tb_edi_isf_hdr</property>
       DTS:refId="Package\tb_edi_isf_his"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{af3b7327-d8eb-4ef5-8a3a-338b6cd214ea}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -20518,6 +20572,7 @@ from tb_edi_isf_hts</property>
       DTS:refId="Package\tb_edi_isf_informal"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{b1d5c0b9-2e24-46a8-a534-62c92f45d8ee}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -22343,6 +22398,7 @@ from tb_edi_isf_informal</property>
       DTS:refId="Package\tb_edi_isf_pty"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{f82b0271-927e-474a-b7d5-6331a5053d46}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -25424,6 +25480,7 @@ from tb_edi_isf_party</property>
       DTS:refId="Package\tb_edi_isf_rcv_err"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{9a80a955-e1ff-470c-9da4-ff6a836b034e}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -26707,6 +26764,7 @@ from tb_edi_isf_rcv_err</property>
       DTS:refId="Package\tb_edi_isf_shp_ref"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{b6d15ec0-32b7-4c01-9d53-ab738d43cbe7}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -28348,6 +28406,7 @@ from tb_edi_isf_ship_ref</property>
       DTS:refId="Package\tb_edi_isf_trns"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{b6e4d212-e588-4c09-bc9b-42f16aaeae04}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -29087,6 +29146,16 @@ from tb_edi_isf_trns</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0B396637-D5A7-47E4-BF21-5153D9EEAB46}"
+      DTS:From="Package\acc_inv_if_his"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\acc_inv_if_his 1" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -29098,15 +29167,15 @@ from tb_edi_isf_trns</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="148,42"
           Id="Package\acc_inv_if_his"
-          TopLeft="212.857142857143,133" />
+          TopLeft="124.857142857143,111" />
         <NodeLayout
           Size="160,42"
           Id="Package\acc_inv_pay_his"
-          TopLeft="212,193.857142857146" />
+          TopLeft="355,281.857142857146" />
         <NodeLayout
           Size="151,42"
           Id="Package\tb_edi_isf_cntr"
@@ -29139,6 +29208,32 @@ from tb_edi_isf_trns</property>
           Size="151,42"
           Id="Package\tb_edi_isf_trns"
           TopLeft="607,616" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\acc_inv_if_his 1"
+          TopLeft="129,186" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="200.928571428572,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -29204,11 +29299,11 @@ from tb_edi_isf_trns</property>
     design-time-name="Package\acc_inv_pay_his">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161,42"
-          Id="Package\acc_inv_pay_his\Data Conversion"
-          TopLeft="210.5,101.5" />
+          Size="171,42"
+          Id="Package\acc_inv_pay_his\TB_INV_HIS_MST"
+          TopLeft="241,24" />
         <NodeLayout
           Size="160,42"
           Id="Package\acc_inv_pay_his\acc_inv_pay_his"
@@ -29218,69 +29313,9 @@ from tb_edi_isf_trns</property>
           Id="Package\acc_inv_pay_his\Sort"
           TopLeft="236.5,200.5" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\acc_inv_pay_his\TB_INV_HIS_MST"
-          TopLeft="241,24" />
-        <EdgeLayout
-          Id="Package\acc_inv_pay_his.Paths[Data Conversion Output]"
-          TopLeft="288.5,143.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\acc_inv_pay_his.Paths[Sort Output]"
-          TopLeft="286,242.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.5,41"
-              Start="0,0"
-              End="53.5,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="49.5,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.5,20.5"
-                    Point2="53.5,20.5"
-                    Point3="53.5,24.5" />
-                  <mssgle:LineSegment
-                    End="53.5,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="161,42"
+          Id="Package\acc_inv_pay_his\Data Conversion"
+          TopLeft="210.5,101.5" />
         <EdgeLayout
           Id="Package\acc_inv_pay_his.Paths[OLE DB Source Output]"
           TopLeft="326.5,66">
@@ -29312,9 +29347,101 @@ from tb_edi_isf_trns</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="123,42"
+          Id="Package\acc_inv_pay_his\Multicast"
+          TopLeft="415.5,161.5" />
+        <EdgeLayout
+          Id="Package\acc_inv_pay_his.Paths[Sort Output]"
+          TopLeft="335.5,221.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80,-39"
+              Start="0,0"
+              End="72.5,-39">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,0"
+                    Point2="40,0"
+                    Point3="40,-4" />
+                  <mssgle:LineSegment
+                    End="40,-35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40,-35"
+                    Point2="40,-39"
+                    Point3="44,-39" />
+                  <mssgle:LineSegment
+                    End="72.5,-39" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\acc_inv_pay_his.Paths[Multicast Output 1]"
+          TopLeft="477,203.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.5,80"
+              Start="0,0"
+              End="-137.5,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="-4,40" />
+                  <mssgle:LineSegment
+                    End="-133.5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.5,40"
+                    Point2="-137.5,40"
+                    Point3="-137.5,44" />
+                  <mssgle:LineSegment
+                    End="-137.5,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\acc_inv_pay_his.Paths[Data Conversion Output]"
+          TopLeft="288.5,143.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -30376,15 +30503,15 @@ from tb_edi_isf_trns</property>
     design-time-name="Package\tb_edi_isf_trns">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\tb_edi_isf_trns\tb_edi_isf_trns"
-          TopLeft="175.5,127.5" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\tb_edi_isf_trns\TB_EDI_ISF_TRNS"
           TopLeft="78.0000017881393,12.9999998966853" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\tb_edi_isf_trns\tb_edi_isf_trns"
+          TopLeft="175.5,127.5" />
         <EdgeLayout
           Id="Package\tb_edi_isf_trns.Paths[OLE DB Source Output]"
           TopLeft="166.500001788139,54.9999998966853">
@@ -30411,6 +30538,58 @@ from tb_edi_isf_trns</property>
                     Point3="84.4999982118607,40.2500000516574" />
                   <mssgle:LineSegment
                     End="84.4999982118607,65.0000001033147" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\acc_inv_if_his 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="80"
+          TopLeft="79.0000017881393,9.99999989668526" />
+        <NodeLayout
+          Size="176,42"
+          Id="2"
+          TopLeft="109.5,115.5" />
+        <EdgeLayout
+          Id="203"
+          TopLeft="163.500001788139,51.9999998966853">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.9999982118607,63.5000001033147"
+              Start="0,0"
+              End="33.9999982118607,56.0000001033147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.7500000516574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.7500000516574"
+                    Point2="0,31.7500000516574"
+                    Point3="4,31.7500000516574" />
+                  <mssgle:LineSegment
+                    End="29.9999982118607,31.7500000516574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.9999982118607,31.7500000516574"
+                    Point2="33.9999982118607,31.7500000516574"
+                    Point3="33.9999982118607,35.7500000516574" />
+                  <mssgle:LineSegment
+                    End="33.9999982118607,56.0000001033147" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

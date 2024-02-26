@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="WHM"
   DTS:PackageType="5"
-  DTS:VersionBuild="518"
-  DTS:VersionGUID="{1D667CFE-6126-469D-90B8-36E368E0DDC4}">
+  DTS:VersionBuild="519"
+  DTS:VersionGUID="{BBC922E4-9240-492A-8526-D78ABB616105}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -19560,27 +19560,44 @@ FROM
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
           Size="128,42"
           Id="Package\whm_blck"
-          TopLeft="251,186" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\whm_ppt"
-          TopLeft="255,250" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\whm_zn"
-          TopLeft="249,125" />
+          TopLeft="7.5,66.5" />
         <NodeLayout
           Size="121,42"
           Id="Package\whm_ob"
-          TopLeft="404,126" />
+          TopLeft="160.5,6.5" />
         <NodeLayout
           Size="141,42"
           Id="Package\whm_ob_itm"
-          TopLeft="406,191" />
+          TopLeft="162.5,71.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\whm_ppt"
+          TopLeft="11.5,130.5" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\whm_zn"
+          TopLeft="5.5,5.5" />
+        <GroupLayout
+          Text="Group "
+          ParentId="Package"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="308,228"
+          Size="308,270"
+          Id="a6e784a8-a135-4aa4-bd17-299496362ad4"
+          TopLeft="243.5,26.5">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\whm_blck</s:String>
+            <s:String>Package\whm_ob</s:String>
+            <s:String>Package\whm_ob_itm</s:String>
+            <s:String>Package\whm_ppt</s:String>
+            <s:String>Package\whm_zn</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -19726,290 +19743,6 @@ FROM
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\whm_blck\TL_WH_BLOCK">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\whm_ppt">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="99,42"
-          Id="Package\whm_ppt\Sort"
-          TopLeft="271.5,257.5" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\whm_ppt\whm_ppt"
-          TopLeft="620.5,256.5" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\whm_ppt\Data Conversion"
-          TopLeft="216.5,184.5" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\whm_ppt\TL_WH_PROP"
-          TopLeft="230.999990860622,108.333334194289" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\whm_ppt\OLE DB Command"
-          TopLeft="410.5,260.5" />
-        <EdgeLayout
-          Id="Package\whm_ppt.Paths[OLE DB Source Output]"
-          TopLeft="307.499990860622,150.333334194289">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.499990860622,34.166665805711"
-              Start="0,0"
-              End="-10.499990860622,26.666665805711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.0833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.0833329028555"
-                    Point2="0,17.0833329028555"
-                    Point3="-4,17.0833329028555" />
-                  <mssgle:LineSegment
-                    End="-6.49999086062201,17.0833329028555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.49999086062201,17.0833329028555"
-                    Point2="-10.499990860622,17.0833329028555"
-                    Point3="-10.499990860622,21.0833329028555" />
-                  <mssgle:LineSegment
-                    End="-10.499990860622,26.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_ppt.Paths[Data Conversion Output]"
-          TopLeft="297,226.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="24,31"
-              Start="0,0"
-              End="24,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
-                  <mssgle:LineSegment
-                    End="20,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20,15.5"
-                    Point2="24,15.5"
-                    Point3="24,19.5" />
-                  <mssgle:LineSegment
-                    End="24,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_ppt.Paths[Sort Output]"
-          TopLeft="370.5,280">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40,0"
-              Start="0,0"
-              End="32.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="32.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_ppt.Paths[OLE DB Command Output]"
-          TopLeft="583.5,279.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37,0"
-              Start="0,0"
-              End="29.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\whm_ppt\TL_WH_PROP">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\whm_zn">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="99,42"
-          Id="Package\whm_zn\Sort"
-          TopLeft="275.5,262.5" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\whm_zn\TL_WH_ZONE"
-          TopLeft="229.999990860622,108.333334194289" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\whm_zn\Data Conversion"
-          TopLeft="232.5,194.5" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\whm_zn\whm_zn"
-          TopLeft="635.5,270.5" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\whm_zn\OLE DB Command"
-          TopLeft="411.5,266.5" />
-        <EdgeLayout
-          Id="Package\whm_zn.Paths[Data Conversion Output]"
-          TopLeft="313,236.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12,26"
-              Start="0,0"
-              End="12,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="8,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8,13"
-                    Point2="12,13"
-                    Point3="12,17" />
-                  <mssgle:LineSegment
-                    End="12,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_zn.Paths[Sort Output]"
-          TopLeft="374.5,285.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37,0"
-              Start="0,0"
-              End="29.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_zn.Paths[OLE DB Source Output]"
-          TopLeft="309.749995430311,150.333334194289">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.166665805711"
-              Start="0,0"
-              End="0,36.666665805711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.666665805711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\whm_zn.Paths[OLE DB Command Output]"
-          TopLeft="584.5,289.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51,0"
-              Start="0,0"
-              End="43.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="43.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\whm_zn\TL_WH_ZONE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -20294,6 +20027,290 @@ FROM
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\whm_ob_itm\TL_WH_OB_ITEM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\whm_ppt">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\whm_ppt\Sort"
+          TopLeft="271.5,257.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\whm_ppt\whm_ppt"
+          TopLeft="620.5,256.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\whm_ppt\Data Conversion"
+          TopLeft="216.5,184.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\whm_ppt\TL_WH_PROP"
+          TopLeft="230.999990860622,108.333334194289" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\whm_ppt\OLE DB Command"
+          TopLeft="410.5,260.5" />
+        <EdgeLayout
+          Id="Package\whm_ppt.Paths[OLE DB Source Output]"
+          TopLeft="307.499990860622,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.499990860622,34.166665805711"
+              Start="0,0"
+              End="-10.499990860622,26.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.0833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.0833329028555"
+                    Point2="0,17.0833329028555"
+                    Point3="-4,17.0833329028555" />
+                  <mssgle:LineSegment
+                    End="-6.49999086062201,17.0833329028555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.49999086062201,17.0833329028555"
+                    Point2="-10.499990860622,17.0833329028555"
+                    Point3="-10.499990860622,21.0833329028555" />
+                  <mssgle:LineSegment
+                    End="-10.499990860622,26.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_ppt.Paths[Data Conversion Output]"
+          TopLeft="297,226.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24,31"
+              Start="0,0"
+              End="24,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="20,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,15.5"
+                    Point2="24,15.5"
+                    Point3="24,19.5" />
+                  <mssgle:LineSegment
+                    End="24,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_ppt.Paths[Sort Output]"
+          TopLeft="370.5,280">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,0"
+              Start="0,0"
+              End="32.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_ppt.Paths[OLE DB Command Output]"
+          TopLeft="583.5,279.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,0"
+              Start="0,0"
+              End="29.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\whm_ppt\TL_WH_PROP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\whm_zn">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\whm_zn\Sort"
+          TopLeft="275.5,262.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\whm_zn\TL_WH_ZONE"
+          TopLeft="229.999990860622,108.333334194289" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\whm_zn\Data Conversion"
+          TopLeft="232.5,194.5" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\whm_zn\whm_zn"
+          TopLeft="635.5,270.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\whm_zn\OLE DB Command"
+          TopLeft="411.5,266.5" />
+        <EdgeLayout
+          Id="Package\whm_zn.Paths[Data Conversion Output]"
+          TopLeft="313,236.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12,26"
+              Start="0,0"
+              End="12,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="8,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8,13"
+                    Point2="12,13"
+                    Point3="12,17" />
+                  <mssgle:LineSegment
+                    End="12,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_zn.Paths[Sort Output]"
+          TopLeft="374.5,285.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,0"
+              Start="0,0"
+              End="29.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_zn.Paths[OLE DB Source Output]"
+          TopLeft="309.749995430311,150.333334194289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.166665805711"
+              Start="0,0"
+              End="0,36.666665805711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.666665805711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\whm_zn.Paths[OLE DB Command Output]"
+          TopLeft="584.5,289.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,0"
+              Start="0,0"
+              End="43.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\whm_zn\TL_WH_ZONE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
