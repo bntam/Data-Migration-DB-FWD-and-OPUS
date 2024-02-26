@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="RUN"
   DTS:PackageType="5"
-  DTS:VersionBuild="745"
-  DTS:VersionGUID="{A0D62AD1-990C-47E3-A6EF-47BA118ECA6D}">
+  DTS:VersionBuild="747"
+  DTS:VersionGUID="{9B864474-C5B3-4FD8-8F8F-B2203BB0E0E0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,20 +36,20 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="12"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cre_usr_id"
-              DTS:DTSID="{9FF3F0B8-29C8-4D43-B490-8E0D59989312}"
+              DTS:DTSID="{5CC6985E-1FAD-4397-92E5-AD2C698EA9FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="3"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="co_cd"
-              DTS:DTSID="{D847A570-E44B-4B05-83C3-7E0153607A10}"
+              DTS:DTSID="{CF9CE08F-12DF-434D-B812-C1245711DE8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,16 +57,16 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="cre_dt"
-              DTS:DTSID="{C7CD6338-A924-4A50-9E52-1A8E39CD131F}"
+              DTS:DTSID="{C0F01CE8-A11C-42F4-B1EE-621BC9CE38EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="12"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="upd_usr_id"
-              DTS:DTSID="{F400A82D-13AE-478B-8540-DD70293FA30E}"
+              DTS:DTSID="{0CC06AF0-255E-4042-B5D0-4441909FF512}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,34 +74,34 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="upd_dt"
-              DTS:DTSID="{CFE1F9BE-9363-4873-BF2D-728BA6AF2951}"
+              DTS:DTSID="{68D629EA-D0C5-43F5-9B6E-6257D483DD04}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="21"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_id"
-              DTS:DTSID="{9B064C28-4A55-4D22-97AB-B214DC950196}"
+              DTS:DTSID="{F1F65266-9223-4E5A-B4CE-C3FF77C9B3DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cust_cd"
-              DTS:DTSID="{556CED74-FF88-44B7-A3E0-7DF2DA007F63}"
+              DTS:DTSID="{2202FE7C-0CF8-419A-A962-99ED81164B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ofc_cd"
-              DTS:DTSID="{2E136594-29F5-4F9F-BA12-3AC0C82C0882}"
+              DTS:DTSID="{362258E1-00D6-4F5E-95E0-15EDD009233A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,43 +110,43 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="delt_flg"
-              DTS:DTSID="{295663F0-4B79-47B3-BD84-AEA8C27F10DD}"
+              DTS:DTSID="{E32ED89B-BA9F-4C0A-BC36-1689E4279C3C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="5"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="dept_cd"
-              DTS:DTSID="{F4365C93-63ED-4A2B-BDB3-078E6CBDEC19}"
+              DTS:DTSID="{5A407AAE-F68B-4134-AF81-A9C298D3210E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="29"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="his_id"
-              DTS:DTSID="{69BC68BC-3ED1-4639-AE17-0B435F082E10}"
+              DTS:DTSID="{9BAB2808-CC4E-46FA-AB78-B1F6014835FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="3"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="if_id"
-              DTS:DTSID="{16FB2D4D-20E1-4F03-899C-E38707F4D95A}"
+              DTS:DTSID="{C688C1A5-A3EB-42F2-9D95-7DF18B19634D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_cd"
-              DTS:DTSID="{3E0A6F3A-B80B-45B1-83DB-BF9A954D26DA}"
+              DTS:DTSID="{08F29765-FEEB-4A7B-AECD-943B9C57A7E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +155,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_nm"
-              DTS:DTSID="{7A4A2A74-034C-4F74-9FE9-E66058E9B238}"
+              DTS:DTSID="{082E57BF-0463-4E58-8AC3-5A9068DD0DD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +164,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="frt_term_cd"
-              DTS:DTSID="{0944921F-FC30-4F6A-853E-A8571A35236C}"
+              DTS:DTSID="{0C9D6C2E-B65A-494B-88BF-A0C0302316B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="aply_ut_cd"
-              DTS:DTSID="{71A3F165-53AC-4428-A27A-4E0A7C2731BB}"
+              DTS:DTSID="{73C2AC85-3F1A-4951-980B-E15B47E50FD9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,37 +182,37 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cntr_tpsz_cd"
-              DTS:DTSID="{644CF34C-E9A8-44FB-847E-162A3EE8D44D}"
+              DTS:DTSID="{8DC80E52-AD52-44E2-998D-9716235D704C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="18"
-              DTS:DataScale="6"
+              DTS:DataPrecision="11"
+              DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_vol_val"
-              DTS:DTSID="{6613F28E-3ACE-458F-B63C-F9F46101274D}"
+              DTS:DTSID="{A1FB9550-6EC4-4276-89D9-5D58E9B8ABEB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="20"
+              DTS:DataPrecision="23"
               DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_rt"
-              DTS:DTSID="{2BF5785D-D2C3-4C8D-8AC2-F341FE251326}"
+              DTS:DTSID="{BC44496C-A553-4907-B35E-EC9E61BEB18A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="20"
-              DTS:DataScale="4"
+              DTS:DataPrecision="23"
+              DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="chg_amt"
-              DTS:DTSID="{7CBC41B7-8C02-4E20-B83D-1ACDF73DE3B3}"
+              DTS:DTSID="{C7D4239F-904F-4130-9131-511D5D341E2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,27 +221,27 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="xch_curr_cd"
-              DTS:DTSID="{D35D0F7A-F516-488E-82FB-CBE450573935}"
+              DTS:DTSID="{16E308EE-E9C6-4A9F-BF0E-92722CB4650E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="20"
+              DTS:DataPrecision="23"
               DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="xch_rt"
-              DTS:DTSID="{F9DB397B-37CE-47D7-AA85-CCCB08345426}"
+              DTS:DTSID="{F4AA1698-DDA4-4C61-8E62-50C2EFEFFD88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="20"
-              DTS:DataScale="4"
+              DTS:DataPrecision="23"
+              DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="ttl_chg_amt"
-              DTS:DTSID="{A13E0F95-27B7-45FB-9004-7E6A17D51443}"
+              DTS:DTSID="{FCC8E9DD-0CC5-484C-B548-78FF23F3B191}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -250,34 +250,36 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_curr_cd"
-              DTS:DTSID="{D0C53779-D1C7-4685-84B8-E2322379953D}"
+              DTS:DTSID="{1563846C-E9EA-43BF-BFB1-33E9417D1C9C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="vat_tax_rt"
-              DTS:DTSID="{378D2550-C2EE-42FA-948D-4365F269FFE1}"
+              DTS:DTSID="{A0534BC0-83FE-4112-8863-530EC769AD58}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="whld_tax_rt"
-              DTS:DTSID="{8EEE561A-F0CF-494D-A83E-8917C9F06DF1}"
+              DTS:DTSID="{922F11BC-0292-4ACB-9CC6-77D85CE64D92}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="200"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cust_nm"
-              DTS:DTSID="{B13D1E5B-2747-4173-A9F0-A79DDD0036E6}"
+              DTS:DTSID="{2D46F8E5-6801-45DD-93F8-89DF1165E260}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -286,7 +288,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="shp_id"
-              DTS:DTSID="{147F7DCB-2AEA-4CF4-B296-26EF1713D932}"
+              DTS:DTSID="{D6A988BF-9471-4723-9934-A5DD735563D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -295,16 +297,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="mst_bl_no"
-              DTS:DTSID="{8E48F474-7AEB-4BEE-9581-B0A08ACC2DEA}"
+              DTS:DTSID="{8A5ED19A-3D90-4F50-A9D5-A9C3CC0A7766}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
-              DTS:MaximumWidth="40"
+              DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="hbl_no"
-              DTS:DTSID="{350DA0E0-B3D0-4369-B4C3-3858F1D48F94}"
+              DTS:DTSID="{F32EF078-131A-48EB-AFB7-C00060674831}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -313,7 +315,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="file_no"
-              DTS:DTSID="{F69BB205-1F2A-4C42-89BA-6D713B03C599}"
+              DTS:DTSID="{8CF61754-C2CC-46CE-9517-DCF496A097CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -322,7 +324,7 @@
               DTS:DataPrecision="12"
               DTS:TextQualified="True"
               DTS:ObjectName="frt_seq"
-              DTS:DTSID="{7093D2A0-17A7-4AC3-9386-754DF8065DEC}"
+              DTS:DTSID="{2FAC6AF4-F6A4-46E0-A37E-066C1A506BAD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -331,35 +333,37 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="inv_tp_cd"
-              DTS:DTSID="{6A8DB49A-B791-4E5F-BBFD-2D93DDFFB61A}"
+              DTS:DTSID="{EB8DC704-664E-4A5D-931C-1E43B552DF5F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataPrecision="23"
+              DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="vat_tax_amt"
-              DTS:DTSID="{1C276619-28FB-4272-B523-B27AA0A0B1E9}"
+              DTS:DTSID="{F344639A-B1C5-4BED-ACE5-61B4F468938E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x007C_"
               DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataPrecision="23"
+              DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="whld_tax_amt"
-              DTS:DTSID="{1FA6075F-F2A7-4797-9517-CBA1AF344B24}"
+              DTS:DTSID="{35ABB79E-6CFC-40EA-B1AC-8D8C8E4EDA92}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000D__x000A_"
               DTS:DataType="131"
-              DTS:DataPrecision="20"
-              DTS:DataScale="4"
+              DTS:DataPrecision="23"
+              DTS:DataScale="8"
               DTS:TextQualified="True"
               DTS:ObjectName="ttl_amt"
-              DTS:DTSID="{1789A70B-F983-42BC-820F-FC60D8F3D234}"
+              DTS:DTSID="{F3052AAF-91DB-439C-866B-A36EA9C4837A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -7199,13 +7203,13 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[cre_usr_id]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="20"
                       name="cre_usr_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[co_cd]"
                       codePage="1252"
                       dataType="str"
-                      length="3"
+                      length="20"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[cre_dt]"
@@ -7215,7 +7219,7 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[upd_usr_id]"
                       codePage="1252"
                       dataType="str"
-                      length="12"
+                      length="20"
                       name="upd_usr_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[upd_dt]"
@@ -7225,19 +7229,19 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[inv_id]"
                       codePage="1252"
                       dataType="str"
-                      length="21"
+                      length="20"
                       name="inv_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[cust_cd]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="20"
                       name="cust_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[ofc_cd]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="20"
                       name="ofc_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[delt_flg]"
@@ -7249,24 +7253,25 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[dept_cd]"
                       codePage="1252"
                       dataType="str"
-                      length="5"
+                      length="20"
                       name="dept_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[his_id]"
                       codePage="1252"
                       dataType="str"
-                      length="29"
+                      length="20"
                       name="his_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[if_id]"
-                      dataType="numeric"
-                      name="if_id"
-                      precision="3" />
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="if_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[chg_cd]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="20"
                       name="chg_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[chg_nm]"
@@ -7296,20 +7301,20 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[chg_vol_val]"
                       dataType="numeric"
                       name="chg_vol_val"
-                      precision="18"
-                      scale="6" />
+                      precision="11"
+                      scale="3" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[chg_rt]"
                       dataType="numeric"
                       name="chg_rt"
-                      precision="20"
+                      precision="23"
                       scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[chg_amt]"
                       dataType="numeric"
                       name="chg_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[xch_curr_cd]"
                       codePage="1252"
@@ -7320,14 +7325,14 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[xch_rt]"
                       dataType="numeric"
                       name="xch_rt"
-                      precision="20"
+                      precision="23"
                       scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[ttl_chg_amt]"
                       dataType="numeric"
                       name="ttl_chg_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[inv_curr_cd]"
                       codePage="1252"
@@ -7338,17 +7343,19 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[vat_tax_rt]"
                       dataType="numeric"
                       name="vat_tax_rt"
-                      precision="18" />
+                      precision="5"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[whld_tax_rt]"
                       dataType="numeric"
                       name="whld_tax_rt"
-                      precision="18" />
+                      precision="5"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[cust_nm]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="200"
                       name="cust_nm" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[shp_id]"
@@ -7366,7 +7373,7 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[hbl_no]"
                       codePage="1252"
                       dataType="str"
-                      length="40"
+                      length="30"
                       name="hbl_no" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[file_no]"
@@ -7389,18 +7396,20 @@ FROM
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[vat_tax_amt]"
                       dataType="numeric"
                       name="vat_tax_amt"
-                      precision="18" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[whld_tax_amt]"
                       dataType="numeric"
                       name="whld_tax_amt"
-                      precision="18" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his\acc_inv_if_his.Inputs[Flat File Destination Input].ExternalColumns[ttl_amt]"
                       dataType="numeric"
                       name="ttl_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -8441,14 +8450,14 @@ TB_INV_HIS_DTL</property>
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="20"
                       cachedName="cre_usr_id"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cre_usr_id]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
-                      cachedLength="3"
+                      cachedLength="20"
                       cachedName="co_cd"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[co_cd]" />
@@ -8461,7 +8470,7 @@ TB_INV_HIS_DTL</property>
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="20"
                       cachedName="upd_usr_id"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[upd_usr_id]" />
@@ -8474,21 +8483,21 @@ TB_INV_HIS_DTL</property>
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[inv_id]"
                       cachedDataType="wstr"
-                      cachedLength="21"
+                      cachedLength="20"
                       cachedName="inv_id"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[inv_id]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[inv_id]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cust_cd]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="20"
                       cachedName="cust_cd"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_cd]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cust_cd]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ofc_cd]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="20"
                       cachedName="ofc_cd"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ofc_cd]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ofc_cd]" />
@@ -8502,28 +8511,28 @@ TB_INV_HIS_DTL</property>
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[dept_cd]"
                       cachedDataType="wstr"
-                      cachedLength="5"
+                      cachedLength="20"
                       cachedName="dept_cd"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[dept_cd]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[dept_cd]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[his_id]"
                       cachedDataType="wstr"
-                      cachedLength="29"
+                      cachedLength="20"
                       cachedName="his_id"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[his_id]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[his_id]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[if_id]"
-                      cachedDataType="numeric"
+                      cachedDataType="wstr"
+                      cachedLength="20"
                       cachedName="if_id"
-                      cachedPrecision="3"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[if_id]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[if_id]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_cd]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="20"
                       cachedName="chg_cd"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_cd]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_cd]" />
@@ -8552,15 +8561,15 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_vol_val]"
                       cachedDataType="numeric"
                       cachedName="chg_vol_val"
-                      cachedPrecision="18"
-                      cachedScale="6"
+                      cachedPrecision="11"
+                      cachedScale="3"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_vol_val]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_vol_val]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_rt]"
                       cachedDataType="numeric"
                       cachedName="chg_rt"
-                      cachedPrecision="20"
+                      cachedPrecision="23"
                       cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_rt]" />
@@ -8568,8 +8577,8 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[chg_amt]"
                       cachedDataType="numeric"
                       cachedName="chg_amt"
-                      cachedPrecision="20"
-                      cachedScale="4"
+                      cachedPrecision="23"
+                      cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[chg_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_amt]" />
                     <inputColumn
@@ -8583,7 +8592,7 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[xch_rt]"
                       cachedDataType="numeric"
                       cachedName="xch_rt"
-                      cachedPrecision="20"
+                      cachedPrecision="23"
                       cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[xch_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[xch_rt]" />
@@ -8591,8 +8600,8 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ttl_chg_amt]"
                       cachedDataType="numeric"
                       cachedName="ttl_chg_amt"
-                      cachedPrecision="20"
-                      cachedScale="4"
+                      cachedPrecision="23"
+                      cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_chg_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ttl_chg_amt]" />
                     <inputColumn
@@ -8606,20 +8615,22 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[vat_tax_rt]"
                       cachedDataType="numeric"
                       cachedName="vat_tax_rt"
-                      cachedPrecision="18"
+                      cachedPrecision="5"
+                      cachedScale="2"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[vat_tax_rt]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[whld_tax_rt]"
                       cachedDataType="numeric"
                       cachedName="whld_tax_rt"
-                      cachedPrecision="18"
+                      cachedPrecision="5"
+                      cachedScale="2"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[whld_tax_rt]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[cust_nm]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="200"
                       cachedName="cust_nm"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[cust_nm]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cust_nm]" />
@@ -8640,7 +8651,7 @@ TB_INV_HIS_DTL</property>
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[hbl_no]"
                       cachedDataType="wstr"
-                      cachedLength="40"
+                      cachedLength="30"
                       cachedName="hbl_no"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[hbl_no]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[hbl_no]" />
@@ -8669,22 +8680,24 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[vat_tax_amt]"
                       cachedDataType="numeric"
                       cachedName="vat_tax_amt"
-                      cachedPrecision="18"
+                      cachedPrecision="23"
+                      cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[vat_tax_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[vat_tax_amt]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[whld_tax_amt]"
                       cachedDataType="numeric"
                       cachedName="whld_tax_amt"
-                      cachedPrecision="18"
+                      cachedPrecision="23"
+                      cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[whld_tax_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[whld_tax_amt]" />
                     <inputColumn
                       refId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].Columns[ttl_amt]"
                       cachedDataType="numeric"
                       cachedName="ttl_amt"
-                      cachedPrecision="20"
-                      cachedScale="4"
+                      cachedPrecision="23"
+                      cachedScale="8"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\acc_inv_if_his.Inputs[ODBC Destination Input].ExternalColumns[ttl_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ttl_amt]" />
                     <inputColumn
@@ -8956,7 +8969,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cre_usr_id]"
-                      length="12"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cre_usr_id]"
                       name="cre_usr_id"
                       truncationRowDisposition="FailComponent">
@@ -8977,7 +8990,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[co_cd]"
-                      length="3"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[co_cd]"
                       name="co_cd"
                       truncationRowDisposition="FailComponent">
@@ -9018,7 +9031,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[upd_usr_id]"
-                      length="12"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[upd_usr_id]"
                       name="upd_usr_id"
                       truncationRowDisposition="FailComponent">
@@ -9059,7 +9072,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[inv_id]"
-                      length="21"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[inv_id]"
                       name="inv_id"
                       truncationRowDisposition="FailComponent">
@@ -9080,7 +9093,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cust_cd]"
-                      length="50"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cust_cd]"
                       name="cust_cd"
                       truncationRowDisposition="FailComponent">
@@ -9101,7 +9114,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ofc_cd]"
-                      length="10"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ofc_cd]"
                       name="ofc_cd"
                       truncationRowDisposition="FailComponent">
@@ -9143,7 +9156,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[dept_cd]"
-                      length="5"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[dept_cd]"
                       name="dept_cd"
                       truncationRowDisposition="FailComponent">
@@ -9164,7 +9177,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[his_id]"
-                      length="29"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[his_id]"
                       name="his_id"
                       truncationRowDisposition="FailComponent">
@@ -9181,13 +9194,13 @@ TB_INV_HIS_DTL</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[if_id]"
-                      dataType="numeric"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[if_id]"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[if_id]"
                       name="if_id"
-                      precision="3"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9206,7 +9219,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_cd]"
-                      length="10"
+                      length="20"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_cd]"
                       name="chg_cd"
                       truncationRowDisposition="FailComponent">
@@ -9313,8 +9326,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_vol_val]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_vol_val]"
                       name="chg_vol_val"
-                      precision="18"
-                      scale="6"
+                      precision="11"
+                      scale="3"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9335,7 +9348,7 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_rt]"
                       name="chg_rt"
-                      precision="20"
+                      precision="23"
                       scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -9357,8 +9370,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[chg_amt]"
                       name="chg_amt"
-                      precision="20"
-                      scale="4"
+                      precision="23"
+                      scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9400,7 +9413,7 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[xch_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[xch_rt]"
                       name="xch_rt"
-                      precision="20"
+                      precision="23"
                       scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -9422,8 +9435,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ttl_chg_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ttl_chg_amt]"
                       name="ttl_chg_amt"
-                      precision="20"
-                      scale="4"
+                      precision="23"
+                      scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9465,7 +9478,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[vat_tax_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[vat_tax_rt]"
                       name="vat_tax_rt"
-                      precision="18"
+                      precision="5"
+                      scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9486,7 +9500,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[whld_tax_rt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[whld_tax_rt]"
                       name="whld_tax_rt"
-                      precision="18"
+                      precision="5"
+                      scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9505,7 +9520,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cust_nm]"
-                      length="50"
+                      length="200"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[cust_nm]"
                       name="cust_nm"
                       truncationRowDisposition="FailComponent">
@@ -9568,7 +9583,7 @@ TB_INV_HIS_DTL</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[hbl_no]"
-                      length="40"
+                      length="30"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[hbl_no]"
                       name="hbl_no"
                       truncationRowDisposition="FailComponent">
@@ -9654,7 +9669,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[vat_tax_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[vat_tax_amt]"
                       name="vat_tax_amt"
-                      precision="18"
+                      precision="23"
+                      scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9675,7 +9691,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[whld_tax_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[whld_tax_amt]"
                       name="whld_tax_amt"
-                      precision="18"
+                      precision="23"
+                      scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9696,8 +9713,8 @@ TB_INV_HIS_DTL</property>
                       externalMetadataColumnId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ttl_amt]"
                       lineageId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].Columns[ttl_amt]"
                       name="ttl_amt"
-                      precision="20"
-                      scale="4"
+                      precision="23"
+                      scale="8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -9716,12 +9733,12 @@ TB_INV_HIS_DTL</property>
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cre_usr_id]"
                       dataType="wstr"
-                      length="12"
+                      length="20"
                       name="cre_usr_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[co_cd]"
                       dataType="wstr"
-                      length="3"
+                      length="20"
                       name="co_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cre_dt]"
@@ -9730,7 +9747,7 @@ TB_INV_HIS_DTL</property>
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[upd_usr_id]"
                       dataType="wstr"
-                      length="12"
+                      length="20"
                       name="upd_usr_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[upd_dt]"
@@ -9739,17 +9756,17 @@ TB_INV_HIS_DTL</property>
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[inv_id]"
                       dataType="wstr"
-                      length="21"
+                      length="20"
                       name="inv_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cust_cd]"
                       dataType="wstr"
-                      length="50"
+                      length="20"
                       name="cust_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ofc_cd]"
                       dataType="wstr"
-                      length="10"
+                      length="20"
                       name="ofc_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[delt_flg]"
@@ -9759,22 +9776,22 @@ TB_INV_HIS_DTL</property>
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[dept_cd]"
                       dataType="wstr"
-                      length="5"
+                      length="20"
                       name="dept_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[his_id]"
                       dataType="wstr"
-                      length="29"
+                      length="20"
                       name="his_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[if_id]"
-                      dataType="numeric"
-                      name="if_id"
-                      precision="3" />
+                      dataType="wstr"
+                      length="20"
+                      name="if_id" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_cd]"
                       dataType="wstr"
-                      length="10"
+                      length="20"
                       name="chg_cd" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_nm]"
@@ -9800,20 +9817,20 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_vol_val]"
                       dataType="numeric"
                       name="chg_vol_val"
-                      precision="18"
-                      scale="6" />
+                      precision="11"
+                      scale="3" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_rt]"
                       dataType="numeric"
                       name="chg_rt"
-                      precision="20"
+                      precision="23"
                       scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[chg_amt]"
                       dataType="numeric"
                       name="chg_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[xch_curr_cd]"
                       dataType="wstr"
@@ -9823,14 +9840,14 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[xch_rt]"
                       dataType="numeric"
                       name="xch_rt"
-                      precision="20"
+                      precision="23"
                       scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ttl_chg_amt]"
                       dataType="numeric"
                       name="ttl_chg_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[inv_curr_cd]"
                       dataType="wstr"
@@ -9840,16 +9857,18 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[vat_tax_rt]"
                       dataType="numeric"
                       name="vat_tax_rt"
-                      precision="18" />
+                      precision="5"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[whld_tax_rt]"
                       dataType="numeric"
                       name="whld_tax_rt"
-                      precision="18" />
+                      precision="5"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[cust_nm]"
                       dataType="wstr"
-                      length="50"
+                      length="200"
                       name="cust_nm" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[shp_id]"
@@ -9864,7 +9883,7 @@ TB_INV_HIS_DTL</property>
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[hbl_no]"
                       dataType="wstr"
-                      length="40"
+                      length="30"
                       name="hbl_no" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[file_no]"
@@ -9885,18 +9904,20 @@ TB_INV_HIS_DTL</property>
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[vat_tax_amt]"
                       dataType="numeric"
                       name="vat_tax_amt"
-                      precision="18" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[whld_tax_amt]"
                       dataType="numeric"
                       name="whld_tax_amt"
-                      precision="18" />
+                      precision="23"
+                      scale="8" />
                     <externalMetadataColumn
                       refId="Package\acc_inv_if_his 1\i-acc_inv_if_his.Outputs[Flat File Source Output].ExternalColumns[ttl_amt]"
                       dataType="numeric"
                       name="ttl_amt"
-                      precision="20"
-                      scale="4" />
+                      precision="23"
+                      scale="8" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -24846,13 +24867,13 @@ and cfg_no = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="148,42"
-          Id="Package\acc_inv_if_his 1\acc_inv_if_his"
-          TopLeft="169.5,150.5" />
-        <NodeLayout
           Size="154,42"
           Id="Package\acc_inv_if_his 1\i-acc_inv_if_his"
           TopLeft="142.5,43.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\acc_inv_if_his 1\acc_inv_if_his"
+          TopLeft="169.5,150.5" />
         <EdgeLayout
           Id="Package\acc_inv_if_his 1.Paths[Flat File Source Output]"
           TopLeft="219.5,85.5">
