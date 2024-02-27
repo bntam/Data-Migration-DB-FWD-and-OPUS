@@ -8,7 +8,7 @@
       DTS:ConnectionString="server=10.0.68.204;uid=us_fwd_dev;Dsn=PostgreSQL35W;database=us_fwd_dev;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
       <DTS:Password
         DTS:Name="pwd"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAC4Z0wf2g8tZjgM9i+6Bn2oA7UFm7gfainyn+NTW6d/wAAAAAAOgAAAAAIAACAAAACJTGAxW3Z9Q2hrvs0q0Qw7ot7MZBTXxsMOMdBrqOt+CnAAAAA+m5lrswt4TjVzjot2yOFIEzBwhZSqgkxdKc0WEDXLSaRFwMsjwKG8jRMk0/J7U3o97chWraaJ2Brzbk3X8hHIv4v3KESBx8j5Ze2mz7BQQ3U+Za1kI1VIiqLAqCUl5zcBgzwYye77cQTcDHRUXd1KQAAAAJ+rTaiVqbF4xwfDDHH4E9C4yGRAZ/AcyBt7i4fXoFy1ts4zzWJ6UDLiVUQa2gZiyf7ToNI9QeojdjNNw0Dyks8=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAADVAtTiWbYKvXWGlV+snvmSvMrtbKQ4bsQ88TScK5sHowAAAAAOgAAAAAIAACAAAACkMJvi3VxPCJ7jIrZiIGv6bAa8hdR11KZBpLEdB2QQM3AAAAD/Le2/8hty7TSlRYKmZjNpraUj17EbGk3G3T+eJI6cQRiH5yL1vg8QdMC9IOM7pOl7e6efeNPC6Wc+shnEwnvKtMXhLSIEqln2DVRD0ydi63hEWVQF9ADyCj7zpujn01Ch8pdBuP9XYEaQARwk5d8dQAAAANFhjkHvF8XoMFceRYizAhcJxLg9dNSY1ONI3V7rVwBitF6O1thAKzdYSYQwivM2SiGTgq1EvNHjFzO8fhZFFx8=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
