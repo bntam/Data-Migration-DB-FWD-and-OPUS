@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Data migration for Opus</Name>
-    <LastWriteTime>2024-02-26T12:26:06.4153847Z</LastWriteTime>
+    <LastWriteTime>2024-02-27T09:18:17.8424851Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -17,11 +17,6 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>ACC.dtsx</Name>
-      <LastWriteTime>2024-02-27T05:43:40.5722135Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>BKG.dtsx</Name>
       <LastWriteTime>2024-02-27T02:14:35.9449949Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
@@ -33,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>VIS.dtsx</Name>
-      <LastWriteTime>2024-01-24T10:33:12.8004157Z</LastWriteTime>
+      <LastWriteTime>2024-02-27T10:27:07.3728458Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -48,22 +43,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>WHM.dtsx</Name>
-      <LastWriteTime>2024-02-26T06:01:09.1250528Z</LastWriteTime>
+      <LastWriteTime>2024-02-27T10:27:11.4834322Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SAL.dtsx</Name>
-      <LastWriteTime>2024-02-05T04:36:38.5769206Z</LastWriteTime>
+      <LastWriteTime>2024-02-27T10:27:14.2916888Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>ALL.dtsx</Name>
-      <LastWriteTime>2024-02-26T09:11:36.4726811Z</LastWriteTime>
+      <Name>1.DELETE.dtsx</Name>
+      <LastWriteTime>2024-02-27T11:33:43.4185883Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>RUN.dtsx</Name>
-      <LastWriteTime>2024-02-26T12:26:02.1088591Z</LastWriteTime>
+      <Name>2.MIGRATE.dtsx</Name>
+      <LastWriteTime>2024-02-27T15:00:57.3193086Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
