@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="1 DELETE"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{742F92AB-2D8D-4307-88E6-40B93884A023}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{25EAAEC2-0362-4ABF-BFE5-BDCFAD199D50}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2741,10 +2741,1260 @@
                 </output>
                 <output
                   refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 14]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 14"
                   synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 15]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 15"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 16]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 16"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 17]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 17"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 18]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 18"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 19]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 19"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 20]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 20"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 21]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 21"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 22]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 22"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 23]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 23"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 24]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 24"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="sal_ctrt_itm"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	us_fwd.sal_ctrt_itm	
+WHERE	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="sal_ctrt_itm_atch_file"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	us_fwd.sal_ctrt_itm_atch_file	
+WHERE	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="sal_ctrt_itm_spl"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	us_fwd.sal_ctrt_itm_spl	
+WHERE	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\vis_role"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="vis_role"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">  DELETE FROM 	
+	us_fwd.vis_role 
+WHERE	
+	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_role.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\vis_usr"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="vis_usr"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">  DELETE FROM 	
+	us_fwd.vis_usr
+WHERE	
+	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="vis_usr_role"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM 	
+	us_fwd.vis_usr_role
+WHERE	
+	co_cd = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="vis_usr_trd_prnr"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM US_FWD.VIS_USR_TRD_PRNR	
+WHERE CO_CD = ?	</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\whm_blck"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="whm_blck"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	
+	us_fwd.WHM_BLCK
+WHERE	
+	CO_CD = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\whm_ob"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="whm_ob"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	
+	us_fwd.WHM_OB
+WHERE	
+	CO_CD = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="whm_ob_itm"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	
+	us_fwd.WHM_OB_ITM
+WHERE	
+	CO_CD = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="whm_ppt"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	
+	us_fwd.whm_ppt
+WHERE	
+	CO_CD = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DELETE ALL TABLE MIGRATE\whm_zn"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="whm_zn"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM	
+	us_fwd.WHM_ZN
+WHERE	
+	CO_CD = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Connections[OleDbConnection]"
+                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input].Columns[co_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="co_cd"
+                      externalMetadataColumnId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="nText"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -2782,10 +4032,60 @@
               name="Multicast Output 13"
               startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 13]" />
             <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 14]"
+              endId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm.Inputs[OLE DB Command Input]"
+              name="Multicast Output 14"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 14]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 15]"
+              endId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file.Inputs[OLE DB Command Input]"
+              name="Multicast Output 15"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 15]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 16]"
+              endId="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl.Inputs[OLE DB Command Input]"
+              name="Multicast Output 16"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 16]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 17]"
+              endId="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm.Inputs[OLE DB Command Input]"
+              name="Multicast Output 17"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 17]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 18]"
+              endId="Package\DELETE ALL TABLE MIGRATE\whm_ob.Inputs[OLE DB Command Input]"
+              name="Multicast Output 18"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 18]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 19]"
+              endId="Package\DELETE ALL TABLE MIGRATE\whm_ppt.Inputs[OLE DB Command Input]"
+              name="Multicast Output 19"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 19]" />
+            <path
               refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 2]"
               endId="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if.Inputs[OLE DB Command Input]"
               name="Multicast Output 2"
               startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 20]"
+              endId="Package\DELETE ALL TABLE MIGRATE\whm_blck.Inputs[OLE DB Command Input]"
+              name="Multicast Output 20"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 20]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 21]"
+              endId="Package\DELETE ALL TABLE MIGRATE\whm_zn.Inputs[OLE DB Command Input]"
+              name="Multicast Output 21"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 21]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 22]"
+              endId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Inputs[OLE DB Command Input]"
+              name="Multicast Output 22"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 22]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 23]"
+              endId="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr.Inputs[OLE DB Command Input]"
+              name="Multicast Output 23"
+              startId="Package\DELETE ALL TABLE MIGRATE\Multicast.Outputs[Multicast Output 23]" />
             <path
               refId="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 3]"
               endId="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if.Inputs[OLE DB Command Input]"
@@ -2827,65 +4127,75 @@
               name="ODBC Source Output"
               startId="Package\DELETE ALL TABLE MIGRATE\GET co_cd.Outputs[ODBC Source Output]" />
             <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output6]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl.Inputs[OLE DB Command Input]"
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output13]"
+              endId="Package\DELETE ALL TABLE MIGRATE\vis_role.Inputs[OLE DB Command Input]"
               name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl_his.Outputs[OLE DB Command Output]" />
+              startId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Outputs[OLE DB Command Output]" />
             <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output5]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his.Inputs[OLE DB Command Input]"
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output12]"
+              endId="Package\DELETE ALL TABLE MIGRATE\vis_usr.Inputs[OLE DB Command Input]"
               name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl.Outputs[OLE DB Command Output]" />
+              startId="Package\DELETE ALL TABLE MIGRATE\vis_usr_role.Outputs[OLE DB Command Output]" />
             <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output9]"
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output11]"
               endId="Package\DELETE ALL TABLE MIGRATE\acc_jnl_mst.Inputs[OLE DB Command Input]"
               name="OLE DB Command Output"
               startId="Package\DELETE ALL TABLE MIGRATE\acc_jnl_dtl.Outputs[OLE DB Command Output]" />
             <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output4]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl_his.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output3]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output2]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_mst.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if.Outputs[OLE DB Command Output]" />
-            <path
               refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output10]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_mst.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_dtl.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output1]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_mst.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_if.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output11]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd_his.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output]"
-              endId="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_mst.Inputs[OLE DB Command Input]"
-              name="OLE DB Command Output"
-              startId="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if.Outputs[OLE DB Command Output]" />
-            <path
-              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output8]"
               endId="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst.Inputs[OLE DB Command Input]"
               name="OLE DB Command Output"
               startId="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst_his.Outputs[OLE DB Command Output]" />
             <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output9]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output8]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl_his.Outputs[OLE DB Command Output]" />
+            <path
               refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output7]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output5]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_mst.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_dtl.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output3]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd_his.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output2]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_mst.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output1]"
               endId="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst_his.Inputs[OLE DB Command Input]"
               name="OLE DB Command Output"
               startId="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl_his.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output6]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_mst.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output4]"
+              endId="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_mst.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_if.Outputs[OLE DB Command Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2914,18 +4224,22 @@
     design-time-name="Package\DELETE ALL TABLE MIGRATE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
           Size="134,42"
           Id="Package\DELETE ALL TABLE MIGRATE\GET co_cd"
-          TopLeft="536.5,16.5" />
+          TopLeft="536.5,25.5" />
         <NodeLayout
           Size="161,42"
           Id="Package\DELETE ALL TABLE MIGRATE\Data Conversion"
-          TopLeft="527.5,68.5" />
+          TopLeft="527.5,77.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\Multicast"
+          TopLeft="546.5,131.5" />
         <EdgeLayout
           Id="Package\DELETE ALL TABLE MIGRATE.Paths[ODBC Source Output]"
-          TopLeft="536.5,37.5">
+          TopLeft="536.5,46.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2957,162 +4271,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\Multicast"
-          TopLeft="546.5,123.5" />
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Data Conversion Output]"
-          TopLeft="527.5,95.1666666666667">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 9]"
+          TopLeft="605.261904761905,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19,49.3333333333333"
+              EndConnector="-11.7619047619048,86.5"
               Start="0,0"
-              End="11.5,49.3333333333333">
+              End="-11.7619047619048,79">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-18.5,0" />
+                    End="0,38.2652940011879" />
                   <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
+                    Point1="0,38.2652940011879"
+                    Point2="0,42.2652940011879"
+                    Point3="-4,42.2652940011879" />
                   <mssgle:LineSegment
-                    End="-22.5,45.3333333333333" />
+                    End="-7.76190476190482,42.2652940011879" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,45.3333333333333"
-                    Point2="-22.5,49.3333333333333"
-                    Point3="-18.5,49.3333333333333" />
+                    Point1="-7.76190476190482,42.2652940011879"
+                    Point2="-11.7619047619048,42.2652940011879"
+                    Point3="-11.7619047619048,46.2652940011879" />
                   <mssgle:LineSegment
-                    End="11.5,49.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_mst"
-          TopLeft="350.5,285.5" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_mst"
-          TopLeft="504.5,281.5" />
-        <NodeLayout
-          Size="146,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_if"
-          TopLeft="354.5,236.5" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if"
-          TopLeft="498.5,233.5" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_blck_his"
-          TopLeft="669.5,413.5" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_chg"
-          TopLeft="679.5,459.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst"
-          TopLeft="210.5,457.5" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his"
-          TopLeft="211.5,416.5" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl"
-          TopLeft="211.5,371.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl_his"
-          TopLeft="209.5,327.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst"
-          TopLeft="368.5,456.5" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst_his"
-          TopLeft="363.5,413.5" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl"
-          TopLeft="366.5,368.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl_his"
-          TopLeft="358.5,325.5" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_inv_if_his"
-          TopLeft="518.5,412.5" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_inv_pay_his"
-          TopLeft="516.5,456.5" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd_his"
-          TopLeft="653.5,324.5" />
-        <NodeLayout
-          Size="128,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd"
-          TopLeft="659.5,369.5" />
-        <NodeLayout
-          Size="137,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_jnl_mst"
-          TopLeft="512.5,368.5" />
-        <NodeLayout
-          Size="131,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_jnl_dtl"
-          TopLeft="517.5,324.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_mst"
-          TopLeft="656.5,282.5" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_dtl"
-          TopLeft="652.5,235.5" />
-        <NodeLayout
-          Size="126,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_bank"
-          TopLeft="813.5,234.5" />
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 1]"
-          TopLeft="608,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-180.5,71"
-              Start="0,0"
-              End="-180.5,63.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5"
-                    Point2="0,35.5"
-                    Point3="-4,35.5" />
-                  <mssgle:LineSegment
-                    End="-176.5,35.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-176.5,35.5"
-                    Point2="-180.5,35.5"
-                    Point3="-180.5,39.5" />
-                  <mssgle:LineSegment
-                    End="-180.5,63.5" />
+                    End="-11.7619047619048,79" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3122,31 +4306,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output1]"
-          TopLeft="354.5,257.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 8]"
+          TopLeft="594.309523809524,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-4,49"
+              EndConnector="-135.309523809524,306.5"
               Start="0,0"
-              End="-11.5,49">
+              End="-135.309523809524,299">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-22.5,0" />
+                    End="0,130.056196906992" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,0"
-                    Point2="-26.5,0"
-                    Point3="-26.5,4" />
+                    Point1="0,130.056196906992"
+                    Point2="0,134.056196906992"
+                    Point3="-4,134.056196906992" />
                   <mssgle:LineSegment
-                    End="-26.5,45" />
+                    End="-131.309523809524,134.056196906992" />
                   <mssgle:CubicBezierSegment
-                    Point1="-26.5,45"
-                    Point2="-26.5,49"
-                    Point3="-22.5,49" />
+                    Point1="-131.309523809524,134.056196906992"
+                    Point2="-135.309523809524,134.056196906992"
+                    Point3="-135.309523809524,138.056196906992" />
                   <mssgle:LineSegment
-                    End="-11.5,49" />
+                    End="-135.309523809524,299" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3156,31 +4340,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 2]"
-          TopLeft="636.75,165.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 7]"
+          TopLeft="588.833333333333,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-61.75,68"
+              EndConnector="-133.833333333333,262.5"
               Start="0,0"
-              End="-61.75,60.5">
+              End="-133.833333333333,255">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.6286472148541" />
+                    End="0,103.022471910112" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.6286472148541"
-                    Point2="0,23.6286472148541"
-                    Point3="-4,23.6286472148541" />
+                    Point1="0,103.022471910112"
+                    Point2="0,107.022471910112"
+                    Point3="-4,107.022471910112" />
                   <mssgle:LineSegment
-                    End="-57.75,23.6286472148541" />
+                    End="-129.833333333333,107.022471910112" />
                   <mssgle:CubicBezierSegment
-                    Point1="-57.75,23.6286472148541"
-                    Point2="-61.75,23.6286472148541"
-                    Point3="-61.75,27.6286472148541" />
+                    Point1="-129.833333333333,107.022471910112"
+                    Point2="-133.833333333333,107.022471910112"
+                    Point3="-133.833333333333,111.022471910112" />
                   <mssgle:LineSegment
-                    End="-61.75,60.5" />
+                    End="-133.833333333333,255" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3190,65 +4374,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output2]"
-          TopLeft="498.5,254.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 6]"
+          TopLeft="583.357142857143,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="6,48"
+              EndConnector="-136.857142857143,174.5"
               Start="0,0"
-              End="-1.5,48">
+              End="-136.857142857143,167">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-18.5,0" />
+                    End="0,61.3899782135077" />
                   <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
+                    Point1="0,61.3899782135077"
+                    Point2="0,65.3899782135077"
+                    Point3="-4,65.3899782135077" />
                   <mssgle:LineSegment
-                    End="-22.5,44" />
+                    End="-132.857142857143,65.3899782135077" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,44"
-                    Point2="-22.5,48"
-                    Point3="-18.5,48" />
+                    Point1="-132.857142857143,65.3899782135077"
+                    Point2="-136.857142857143,65.3899782135077"
+                    Point3="-136.857142857143,69.3899782135077" />
                   <mssgle:LineSegment
-                    End="-1.5,48" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output3]"
-          TopLeft="375.5,437.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-21,41"
-              Start="0,0"
-              End="-13.5,41">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,37" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,37"
-                    Point2="22.5,41"
-                    Point3="18.5,41" />
-                  <mssgle:LineSegment
-                    End="-13.5,41" />
+                    End="-136.857142857143,167" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3259,134 +4409,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 5]"
-          TopLeft="566.928571428571,165.5">
+          TopLeft="561.452380952381,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-278.428571428571,162"
+              EndConnector="-409.452380952381,178.5"
               Start="0,0"
-              End="-278.428571428571,154.5">
+              End="-409.452380952381,171">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.3940714908457" />
+                    End="0,30.9106197446279" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36.3940714908457"
-                    Point2="0,40.3940714908457"
-                    Point3="-4,40.3940714908457" />
+                    Point1="0,30.9106197446279"
+                    Point2="0,34.9106197446279"
+                    Point3="-4,34.9106197446279" />
                   <mssgle:LineSegment
-                    End="-274.428571428571,40.3940714908457" />
+                    End="-405.452380952381,34.9106197446279" />
                   <mssgle:CubicBezierSegment
-                    Point1="-274.428571428571,40.3940714908457"
-                    Point2="-278.428571428571,40.3940714908457"
-                    Point3="-278.428571428571,44.3940714908457" />
+                    Point1="-405.452380952381,34.9106197446279"
+                    Point2="-409.452380952381,34.9106197446279"
+                    Point3="-409.452380952381,38.9106197446279" />
                   <mssgle:LineSegment
-                    End="-278.428571428571,154.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output4]"
-          TopLeft="367.5,348.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-18,44"
-              Start="0,0"
-              End="-10.5,44">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,40"
-                    Point2="22.5,44"
-                    Point3="18.5,44" />
-                  <mssgle:LineSegment
-                    End="-10.5,44" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output5]"
-          TopLeft="349.5,394">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-56,22.5"
-              Start="0,0"
-              End="-56,15">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-52,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-52,0"
-                    Point2="-56,0"
-                    Point3="-56,4" />
-                  <mssgle:LineSegment
-                    End="-56,15" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_mst"
-          TopLeft="205.5,281.5" />
-        <NodeLayout
-          Size="144,42"
-          Id="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if"
-          TopLeft="207.5,235.5" />
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output]"
-          TopLeft="207.5,256.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-2,46"
-              Start="0,0"
-              End="-9.5,46">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-20.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.5,0"
-                    Point2="-24.5,0"
-                    Point3="-24.5,4" />
-                  <mssgle:LineSegment
-                    End="-24.5,42" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.5,42"
-                    Point2="-24.5,46"
-                    Point3="-20.5,46" />
-                  <mssgle:LineSegment
-                    End="-9.5,46" />
+                    End="-409.452380952381,171" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3397,30 +4443,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 4]"
-          TopLeft="583.357142857143,165.5">
+          TopLeft="572.404761904762,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-145.857142857143,160"
+              EndConnector="-272.404761904762,176.5"
               Start="0,0"
-              End="-145.857142857143,152.5">
+              End="-272.404761904762,169">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.9564270152506" />
+                    End="0,48.3105420866249" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,55.9564270152506"
-                    Point2="0,59.9564270152506"
-                    Point3="-4,59.9564270152506" />
+                    Point1="0,48.3105420866249"
+                    Point2="0,52.3105420866249"
+                    Point3="-4,52.3105420866249" />
                   <mssgle:LineSegment
-                    End="-141.857142857143,59.9564270152506" />
+                    End="-268.404761904762,52.3105420866249" />
                   <mssgle:CubicBezierSegment
-                    Point1="-141.857142857143,59.9564270152506"
-                    Point2="-145.857142857143,59.9564270152506"
-                    Point3="-145.857142857143,63.9564270152506" />
+                    Point1="-268.404761904762,52.3105420866249"
+                    Point2="-272.404761904762,52.3105420866249"
+                    Point3="-272.404761904762,56.3105420866249" />
                   <mssgle:LineSegment
-                    End="-145.857142857143,152.5" />
+                    End="-272.404761904762,169" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3430,31 +4476,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output6]"
-          TopLeft="516.5,346.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 3]"
+          TopLeft="555.97619047619,173.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12,43"
+              EndConnector="-412.97619047619,86.5"
               Start="0,0"
-              End="-4.5,43">
+              End="-412.97619047619,79">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
+                    End="0,7.54880912445489" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
+                    Point1="0,7.54880912445489"
+                    Point2="0,11.5488091244549"
+                    Point3="-4,11.5488091244549" />
                   <mssgle:LineSegment
-                    End="22.5,39" />
+                    End="-408.97619047619,11.5488091244549" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.5,39"
-                    Point2="22.5,43"
-                    Point3="18.5,43" />
+                    Point1="-408.97619047619,11.5488091244549"
+                    Point2="-412.97619047619,11.5488091244549"
+                    Point3="-412.97619047619,15.5488091244549" />
                   <mssgle:LineSegment
-                    End="-4.5,43" />
+                    End="-412.97619047619,79" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3464,8 +4510,606 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output7]"
-          TopLeft="504.5,391">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 21]"
+          TopLeft="654.547619047619,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="454.452380952381,274.5"
+              Start="0,0"
+              End="454.452380952381,267">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.6860791030832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.6860791030832"
+                    Point2="0,53.6860791030832"
+                    Point3="4,53.6860791030832" />
+                  <mssgle:LineSegment
+                    End="450.452380952381,53.6860791030832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="450.452380952381,53.6860791030832"
+                    Point2="454.452380952381,53.6860791030832"
+                    Point3="454.452380952381,57.6860791030832" />
+                  <mssgle:LineSegment
+                    End="454.452380952381,267" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 20]"
+          TopLeft="654.547619047619,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="454.452380952381,228.5"
+              Start="0,0"
+              End="454.452380952381,221">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.6895048271567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.6895048271567"
+                    Point2="0,44.6895048271567"
+                    Point3="4,44.6895048271567" />
+                  <mssgle:LineSegment
+                    End="450.452380952381,44.6895048271567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="450.452380952381,44.6895048271567"
+                    Point2="454.452380952381,44.6895048271567"
+                    Point3="454.452380952381,48.6895048271567" />
+                  <mssgle:LineSegment
+                    End="454.452380952381,221" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 2]"
+          TopLeft="577.880952380952,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-140.380952380952,84.5"
+              Start="0,0"
+              End="-140.380952380952,77">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5493463214561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5493463214561"
+                    Point2="0,28.5493463214561"
+                    Point3="-4,28.5493463214561" />
+                  <mssgle:LineSegment
+                    End="-136.380952380952,28.5493463214561" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-136.380952380952,28.5493463214561"
+                    Point2="-140.380952380952,28.5493463214561"
+                    Point3="-140.380952380952,32.5493463214561" />
+                  <mssgle:LineSegment
+                    End="-140.380952380952,77" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 19]"
+          TopLeft="649.071428571429,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="455.928571428571,182.5"
+              Start="0,0"
+              End="455.928571428571,175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5056669572799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.5056669572799"
+                    Point2="0,45.5056669572799"
+                    Point3="4,45.5056669572799" />
+                  <mssgle:LineSegment
+                    End="451.928571428571,45.5056669572799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="451.928571428571,45.5056669572799"
+                    Point2="455.928571428571,45.5056669572799"
+                    Point3="455.928571428571,49.5056669572799" />
+                  <mssgle:LineSegment
+                    End="455.928571428571,175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 18]"
+          TopLeft="643.595238095238,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="459.904761904762,130.5"
+              Start="0,0"
+              End="459.904761904762,123">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.6771996731136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.6771996731136"
+                    Point2="0,38.6771996731136"
+                    Point3="4,38.6771996731136" />
+                  <mssgle:LineSegment
+                    End="455.904761904762,38.6771996731136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="455.904761904762,38.6771996731136"
+                    Point2="459.904761904762,38.6771996731136"
+                    Point3="459.904761904762,42.6771996731136" />
+                  <mssgle:LineSegment
+                    End="459.904761904762,123" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 17]"
+          TopLeft="660.02380952381,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="451.47619047619,82.5"
+              Start="0,0"
+              End="451.47619047619,75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.01476014760148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.01476014760148"
+                    Point2="0,11.0147601476015"
+                    Point3="4,11.0147601476015" />
+                  <mssgle:LineSegment
+                    End="447.47619047619,11.0147601476015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="447.47619047619,11.0147601476015"
+                    Point2="451.47619047619,11.0147601476015"
+                    Point3="451.47619047619,15.0147601476015" />
+                  <mssgle:LineSegment
+                    End="451.47619047619,75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 16]"
+          TopLeft="625.5,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="284,190.5"
+              Start="0,0"
+              End="284,183">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.4502369668246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.4502369668246"
+                    Point2="0,79.4502369668246"
+                    Point3="4,79.4502369668246" />
+                  <mssgle:LineSegment
+                    End="280,79.4502369668246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="280,79.4502369668246"
+                    Point2="284,79.4502369668246"
+                    Point3="284,83.4502369668246" />
+                  <mssgle:LineSegment
+                    End="284,183" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 15]"
+          TopLeft="630.5,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="288.5,140.5"
+              Start="0,0"
+              End="288.5,133">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5223880597015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.5223880597015"
+                    Point2="0,54.5223880597015"
+                    Point3="4,54.5223880597015" />
+                  <mssgle:LineSegment
+                    End="284.5,54.5223880597015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="284.5,54.5223880597015"
+                    Point2="288.5,54.5223880597015"
+                    Point3="288.5,58.5223880597015" />
+                  <mssgle:LineSegment
+                    End="288.5,133" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 14]"
+          TopLeft="620.5,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="275,86.5"
+              Start="0,0"
+              End="275,79">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3574660633484" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.3574660633484"
+                    Point2="0,38.3574660633484"
+                    Point3="4,38.3574660633484" />
+                  <mssgle:LineSegment
+                    End="271,38.3574660633484" />
+                  <mssgle:CubicBezierSegment
+                    Point1="271,38.3574660633484"
+                    Point2="275,38.3574660633484"
+                    Point3="275,42.3574660633484" />
+                  <mssgle:LineSegment
+                    End="275,79" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 13]"
+          TopLeft="621.690476190476,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="118.309523809524,84.5"
+              Start="0,0"
+              End="118.309523809524,77">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.9583968634285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.9583968634285"
+                    Point2="0,36.9583968634285"
+                    Point3="4,36.9583968634285" />
+                  <mssgle:LineSegment
+                    End="114.309523809524,36.9583968634285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="114.309523809524,36.9583968634285"
+                    Point2="118.309523809524,36.9583968634285"
+                    Point3="118.309523809524,40.9583968634285" />
+                  <mssgle:LineSegment
+                    End="118.309523809524,77" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 12]"
+          TopLeft="606.869047619048,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,310.5"
+              Start="0,0"
+              End="0,303">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,303" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 11]"
+          TopLeft="616.214285714286,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.2142857142857,264.5"
+              Start="0,0"
+              End="-12.2142857142857,257">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,118.785936527691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,118.785936527691"
+                    Point2="0,122.785936527691"
+                    Point3="-4,122.785936527691" />
+                  <mssgle:LineSegment
+                    End="-8.21428571428567,122.785936527691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.21428571428567,122.785936527691"
+                    Point2="-12.2142857142857,122.785936527691"
+                    Point3="-12.2142857142857,126.785936527691" />
+                  <mssgle:LineSegment
+                    End="-12.2142857142857,257" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 10]"
+          TopLeft="599.785714285714,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.28571428571433,174.5"
+              Start="0,0"
+              End="-8.28571428571433,167">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.0062227753579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,77.0062227753579"
+                    Point2="0,81.0062227753579"
+                    Point3="-4,81.0062227753579" />
+                  <mssgle:LineSegment
+                    End="-4.28571428571433,81.0062227753579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.28571428571433,81.0062227753579"
+                    Point2="-8.28571428571433,81.0062227753579"
+                    Point3="-8.28571428571433,85.0062227753579" />
+                  <mssgle:LineSegment
+                    End="-8.28571428571433,167" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 1]"
+          TopLeft="566.928571428571,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-276.928571428571,86.5"
+              Start="0,0"
+              End="-276.928571428571,79">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5684394071491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5684394071491"
+                    Point2="0,21.5684394071491"
+                    Point3="-4,21.5684394071491" />
+                  <mssgle:LineSegment
+                    End="-272.928571428571,21.5684394071491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-272.928571428571,21.5684394071491"
+                    Point2="-276.928571428571,21.5684394071491"
+                    Point3="-276.928571428571,25.5684394071491" />
+                  <mssgle:LineSegment
+                    End="-276.928571428571,79" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Data Conversion Output]"
+          TopLeft="527.5,104.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,48.3333333333333"
+              Start="0,0"
+              End="11.5,48.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,44.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,44.3333333333333"
+                    Point2="-22.5,48.3333333333333"
+                    Point3="-18.5,48.3333333333333" />
+                  <mssgle:LineSegment
+                    End="11.5,48.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="137,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_jnl_mst"
+          TopLeft="312.5,140.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst"
+          TopLeft="10.5,229.5" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_chg"
+          TopLeft="479.5,231.5" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_jnl_dtl"
+          TopLeft="317.5,96.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl_his"
+          TopLeft="9.5,99.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_blck_his"
+          TopLeft="469.5,185.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_inv_pay_his"
+          TopLeft="316.5,228.5" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl"
+          TopLeft="11.5,143.5" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_bank"
+          TopLeft="613.5,6.5" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst_his"
+          TopLeft="163.5,185.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_inv_if_his"
+          TopLeft="318.5,184.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_mst"
+          TopLeft="304.5,53.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_mst"
+          TopLeft="5.5,53.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_mst"
+          TopLeft="168.5,228.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd_his"
+          TopLeft="453.5,96.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if"
+          TopLeft="298.5,5.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if"
+          TopLeft="7.5,7.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl_his"
+          TopLeft="158.5,97.5" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_gl_cd"
+          TopLeft="459.5,141.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_mst"
+          TopLeft="456.5,54.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_mst"
+          TopLeft="150.5,57.5" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl"
+          TopLeft="166.5,140.5" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his"
+          TopLeft="11.5,188.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_cr_term_dtl"
+          TopLeft="452.5,7.5" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_if"
+          TopLeft="154.5,8.5" />
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output1]"
+          TopLeft="304.5,163">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3492,8 +5136,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output8]"
-          TopLeft="527.5,434.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output10]"
+          TopLeft="327.5,206.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3526,31 +5170,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 3]"
-          TopLeft="569.666666666667,165.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output2]"
+          TopLeft="7.5,28.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-290.166666666667,70"
+              EndConnector="-2,46"
               Start="0,0"
-              End="-290.166666666667,62.5">
+              End="-9.5,46">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.1535433070866" />
+                    End="-20.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.1535433070866"
-                    Point2="0,19.1535433070866"
-                    Point3="-4,19.1535433070866" />
+                    Point1="-20.5,0"
+                    Point2="-24.5,0"
+                    Point3="-24.5,4" />
                   <mssgle:LineSegment
-                    End="-286.166666666667,19.1535433070866" />
+                    End="-24.5,42" />
                   <mssgle:CubicBezierSegment
-                    Point1="-286.166666666667,19.1535433070866"
-                    Point2="-290.166666666667,19.1535433070866"
-                    Point3="-290.166666666667,23.1535433070866" />
+                    Point1="-24.5,42"
+                    Point2="-24.5,46"
+                    Point3="-20.5,46" />
                   <mssgle:LineSegment
-                    End="-290.166666666667,62.5" />
+                    End="-9.5,46" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3560,246 +5204,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 6]"
-          TopLeft="599.785714285714,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.7857142857143,159"
-              Start="0,0"
-              End="-16.7857142857143,151.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.8108276291226" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,69.8108276291226"
-                    Point2="0,73.8108276291226"
-                    Point3="-4,73.8108276291226" />
-                  <mssgle:LineSegment
-                    End="-12.7857142857143,73.8108276291226" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.7857142857143,73.8108276291226"
-                    Point2="-16.7857142857143,73.8108276291226"
-                    Point3="-16.7857142857143,77.8108276291226" />
-                  <mssgle:LineSegment
-                    End="-16.7857142857143,151.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output9]"
-          TopLeft="648.5,345.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="1,44"
-              Start="0,0"
-              End="8.5,44">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="19.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,0"
-                    Point2="23.5,0"
-                    Point3="23.5,4" />
-                  <mssgle:LineSegment
-                    End="23.5,40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.5,40"
-                    Point2="23.5,44"
-                    Point3="19.5,44" />
-                  <mssgle:LineSegment
-                    End="8.5,44" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 7]"
-          TopLeft="608,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-15.5,247"
-              Start="0,0"
-              End="-15.5,239.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,119.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,119.5"
-                    Point2="0,123.5"
-                    Point3="-4,123.5" />
-                  <mssgle:LineSegment
-                    End="-11.5,123.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11.5,123.5"
-                    Point2="-15.5,123.5"
-                    Point3="-15.5,127.5" />
-                  <mssgle:LineSegment
-                    End="-15.5,239.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 8]"
-          TopLeft="616.214285714286,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19.7142857142857,291"
-              Start="0,0"
-              End="-19.7142857142857,283.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,131.087741132545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,131.087741132545"
-                    Point2="0,135.087741132545"
-                    Point3="-4,135.087741132545" />
-                  <mssgle:LineSegment
-                    End="-15.7142857142857,135.087741132545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.7142857142857,135.087741132545"
-                    Point2="-19.7142857142857,135.087741132545"
-                    Point3="-19.7142857142857,139.087741132545" />
-                  <mssgle:LineSegment
-                    End="-19.7142857142857,283.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 9]"
-          TopLeft="654,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="77,70"
-              Start="0,0"
-              End="77,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.0909090909091" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.0909090909091"
-                    Point2="0,14.0909090909091"
-                    Point3="4,14.0909090909091" />
-                  <mssgle:LineSegment
-                    End="73,14.0909090909091" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73,14.0909090909091"
-                    Point2="77,14.0909090909091"
-                    Point3="77,18.0909090909091" />
-                  <mssgle:LineSegment
-                    End="77,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output10]"
-          TopLeft="652.5,256.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="4,47"
-              Start="0,0"
-              End="-3.5,47">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,43" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,43"
-                    Point2="-22.5,47"
-                    Point3="-18.5,47" />
-                  <mssgle:LineSegment
-                    End="-3.5,47" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 10]"
-          TopLeft="624.428571428571,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103.571428571429,159"
-              Start="0,0"
-              End="103.571428571429,151.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63.2446380697051" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,63.2446380697051"
-                    Point2="0,67.2446380697051"
-                    Point3="4,67.2446380697051" />
-                  <mssgle:LineSegment
-                    End="99.5714285714286,67.2446380697051" />
-                  <mssgle:CubicBezierSegment
-                    Point1="99.5714285714286,67.2446380697051"
-                    Point2="103.571428571429,67.2446380697051"
-                    Point3="103.571428571429,71.2446380697051" />
-                  <mssgle:LineSegment
-                    End="103.571428571429,151.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output11]"
-          TopLeft="802.5,345.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output3]"
+          TopLeft="602.5,117.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3832,31 +5238,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 11]"
-          TopLeft="649.071428571429,165.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output4]"
+          TopLeft="154.5,29.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="91.4285714285714,248"
+              EndConnector="-4,49"
               Start="0,0"
-              End="91.4285714285714,240.5">
+              End="-11.5,49">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.8378378378379" />
+                    End="-22.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,57.8378378378379"
-                    Point2="0,61.8378378378379"
-                    Point3="4,61.8378378378379" />
+                    Point1="-22.5,0"
+                    Point2="-26.5,0"
+                    Point3="-26.5,4" />
                   <mssgle:LineSegment
-                    End="87.4285714285714,61.8378378378379" />
+                    End="-26.5,45" />
                   <mssgle:CubicBezierSegment
-                    Point1="87.4285714285714,61.8378378378379"
-                    Point2="91.4285714285714,61.8378378378379"
-                    Point3="91.4285714285714,65.8378378378379" />
+                    Point1="-26.5,45"
+                    Point2="-26.5,49"
+                    Point3="-22.5,49" />
                   <mssgle:LineSegment
-                    End="91.4285714285714,240.5" />
+                    End="-11.5,49" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3866,31 +5272,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 12]"
-          TopLeft="640.857142857143,165.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output5]"
+          TopLeft="452.5,28.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.6428571428571,294"
+              EndConnector="4,47"
               Start="0,0"
-              End="98.6428571428571,286.5">
+              End="-3.5,47">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.418383518225" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,89.418383518225"
-                    Point2="0,93.418383518225"
-                    Point3="4,93.418383518225" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="94.6428571428571,93.418383518225" />
+                    End="-22.5,43" />
                   <mssgle:CubicBezierSegment
-                    Point1="94.6428571428571,93.418383518225"
-                    Point2="98.6428571428571,93.418383518225"
-                    Point3="98.6428571428571,97.418383518225" />
+                    Point1="-22.5,43"
+                    Point2="-22.5,47"
+                    Point3="-18.5,47" />
                   <mssgle:LineSegment
-                    End="98.6428571428571,286.5" />
+                    End="-3.5,47" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3900,31 +5306,478 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 13]"
-          TopLeft="657.285714285714,165.5">
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output6]"
+          TopLeft="298.5,26.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="219.214285714286,69"
+              EndConnector="6,48"
               Start="0,0"
-              End="219.214285714286,61.5">
+              End="-1.5,48">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.43313953488369" />
+                    End="-18.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,7.43313953488369"
-                    Point2="0,11.4331395348837"
-                    Point3="4,11.4331395348837" />
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="215.214285714286,11.4331395348837" />
+                    End="-22.5,44" />
                   <mssgle:CubicBezierSegment
-                    Point1="215.214285714286,11.4331395348837"
-                    Point2="219.214285714286,11.4331395348837"
-                    Point3="219.214285714286,15.4331395348837" />
+                    Point1="-22.5,44"
+                    Point2="-22.5,48"
+                    Point3="-18.5,48" />
                   <mssgle:LineSegment
-                    End="219.214285714286,61.5" />
+                    End="-1.5,48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output7]"
+          TopLeft="175.5,209.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21,41"
+              Start="0,0"
+              End="-13.5,41">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,37"
+                    Point2="22.5,41"
+                    Point3="18.5,41" />
+                  <mssgle:LineSegment
+                    End="-13.5,41" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output8]"
+          TopLeft="167.5,120.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18,44"
+              Start="0,0"
+              End="-10.5,44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,40"
+                    Point2="22.5,44"
+                    Point3="18.5,44" />
+                  <mssgle:LineSegment
+                    End="-10.5,44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output11]"
+          TopLeft="448.5,117.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1,44"
+              Start="0,0"
+              End="8.5,44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="19.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,0"
+                    Point2="23.5,0"
+                    Point3="23.5,4" />
+                  <mssgle:LineSegment
+                    End="23.5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.5,40"
+                    Point2="23.5,44"
+                    Point3="19.5,44" />
+                  <mssgle:LineSegment
+                    End="8.5,44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output9]"
+          TopLeft="149.5,166">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-56,22.5"
+              Start="0,0"
+              End="-56,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-52,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-52,0"
+                    Point2="-56,0"
+                    Point3="-56,4" />
+                  <mssgle:LineSegment
+                    End="-56,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output]"
+          TopLeft="316.5,118.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12,43"
+              Start="0,0"
+              End="-4.5,43">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,39"
+                    Point2="22.5,43"
+                    Point3="18.5,43" />
+                  <mssgle:LineSegment
+                    End="-4.5,43" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <GroupLayout
+          Text="ACC"
+          ParentId="Package\DELETE ALL TABLE MIGRATE"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="745,329"
+          Size="745,372"
+          Id="868171f2-6f75-4c29-979f-bbee64c04a04"
+          TopLeft="63,209">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_jnl_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dps_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_chg</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_jnl_dtl</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_blck_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_inv_pay_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dps_dtl</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_bank</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_pay_mst_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_inv_if_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dc_note_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_pay_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_gl_cd_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dc_note_if</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_ar_inv_if</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_gl_cd</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_cr_term_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_mst</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_pay_dtl</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_dps_mst_his</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_cr_term_dtl</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\acc_ap_inv_if</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output1]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output10]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output2]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output3]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output4]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output5]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output6]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output7]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output8]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output11]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output9]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output]</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+        <NodeLayout
+          Size="135,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file"
+          TopLeft="5.5,60.5" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl"
+          TopLeft="10.5,109.5" />
+        <GroupLayout
+          Text="SAL"
+          ParentId="Package\DELETE ALL TABLE MIGRATE"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="192,157"
+          Size="192,200"
+          Id="360779ab-ba57-4334-a321-ba7d501affeb"
+          TopLeft="822,210.557829181495">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_atch_file</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\sal_ctrt_itm_spl</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+        <NodeLayout
+          Size="141,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\whm_ob_itm"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\whm_ob"
+          TopLeft="8.5,54.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\whm_ppt"
+          TopLeft="8.5,105.5" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\whm_blck"
+          TopLeft="10.5,151.5" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\whm_zn"
+          TopLeft="14.5,198.5" />
+        <GroupLayout
+          Text="WHM"
+          ParentId="Package\DELETE ALL TABLE MIGRATE"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="152,246"
+          Size="152,289"
+          Id="1f9468a1-0b8d-489c-b76d-0844e2cf627b"
+          TopLeft="1035,206.557829181495">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\whm_ob_itm</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\whm_ob</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\whm_ppt</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\whm_blck</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\whm_zn</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr"
+          TopLeft="30,149.471153846154" />
+        <NodeLayout
+          Size="117,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\vis_role"
+          TopLeft="30,99.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\vis_usr"
+          TopLeft="28,52.5" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\DELETE ALL TABLE MIGRATE\vis_usr_role"
+          TopLeft="25,4.5" />
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output12]"
+          TopLeft="163,25.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21,42.3333333333333"
+              Start="0,0"
+              End="-13.5,42.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,38.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,38.3333333333333"
+                    Point2="22.5,42.3333333333333"
+                    Point3="18.5,42.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-13.5,42.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output13]"
+          TopLeft="28,73.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="2,47"
+              Start="0,0"
+              End="-5.5,47">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,43"
+                    Point2="-22.5,47"
+                    Point3="-18.5,47" />
+                  <mssgle:LineSegment
+                    End="-5.5,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <GroupLayout
+          Text="VIS"
+          ParentId="Package\DELETE ALL TABLE MIGRATE"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="194,202"
+          Size="194,245"
+          Id="71f38456-a3e6-4660-8e04-68ab10e16e6f"
+          TopLeft="822,418.028846153846">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\vis_usr_trd_prnr</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\vis_role</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\vis_usr</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE\vis_usr_role</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output12]</s:String>
+            <s:String>Package\DELETE ALL TABLE MIGRATE.Paths[OLE DB Command Output13]</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 22]"
+          TopLeft="630.5,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="285.5,291.5"
+              Start="0,0"
+              End="285.5,284">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.119402985075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,109.119402985075"
+                    Point2="0,113.119402985075"
+                    Point3="4,113.119402985075" />
+                  <mssgle:LineSegment
+                    End="281.5,113.119402985075" />
+                  <mssgle:CubicBezierSegment
+                    Point1="281.5,113.119402985075"
+                    Point2="285.5,113.119402985075"
+                    Point3="285.5,117.119402985075" />
+                  <mssgle:LineSegment
+                    End="285.5,284" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DELETE ALL TABLE MIGRATE.Paths[Multicast Output 23]"
+          TopLeft="640.5,173.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="290.5,436.5"
+              Start="0,0"
+              End="290.5,429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,135.872928176796" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,135.872928176796"
+                    Point2="0,139.872928176796"
+                    Point3="4,139.872928176796" />
+                  <mssgle:LineSegment
+                    End="286.5,139.872928176796" />
+                  <mssgle:CubicBezierSegment
+                    Point1="286.5,139.872928176796"
+                    Point2="290.5,139.872928176796"
+                    Point3="290.5,143.872928176796" />
+                  <mssgle:LineSegment
+                    End="290.5,429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
