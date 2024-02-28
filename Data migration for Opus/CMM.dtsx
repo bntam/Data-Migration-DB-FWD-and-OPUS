@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CMM"
   DTS:PackageType="5"
-  DTS:VersionBuild="502"
-  DTS:VersionGUID="{05E9C529-BCB3-4067-9CA9-3AD2EFFACDE8}">
+  DTS:VersionBuild="503"
+  DTS:VersionGUID="{4DDC38DA-51FF-47A1-96FD-5B14B6DCF210}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -256,117 +256,115 @@ WHERE 1=1
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[upd_usr_id]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="upd_usr_id"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[upd_dt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="upd_dt"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[sts_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="sts_cd"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[sts_cd]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[sts_cd]" />
+                    <inputColumn
                       refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[co_cd]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="co_cd"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[co_cd]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[co_cd]" />
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]" />
                     <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="Data Conversion.cre_usr_id"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.cre_dt]"
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[cre_dt]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="Data Conversion.cre_dt"
+                      cachedName="cre_dt"
                       externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[cre_dt]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]" />
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]" />
                     <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_usr_id]"
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[cre_usr_id]"
                       cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="Data Conversion.upd_usr_id"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[upd_usr_id]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]" />
+                      cachedLength="20"
+                      cachedName="cre_usr_id"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[cre_usr_id]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]" />
                     <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.upd_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Data Conversion.upd_dt"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[upd_dt]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]" />
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[doc_nm]"
+                      cachedDataType="wstr"
+                      cachedLength="300"
+                      cachedName="doc_nm"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_nm]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_nm]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[doc_no]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="doc_no"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_no]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_no]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[his_rmk]"
+                      cachedDataType="wstr"
+                      cachedLength="2000"
+                      cachedName="his_rmk"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[his_rmk]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_rmk]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[list_file_no_ctnt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="list_file_no_ctnt"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_file_no_ctnt]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_file_no_ctnt]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[rcpnt_eml_addr]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="rcpnt_eml_addr"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[rcpnt_eml_addr]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[rcpnt_eml_addr]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[err_msg_desc]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="err_msg_desc"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[err_msg_desc]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[list_inv_no_ctnt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="list_inv_no_ctnt"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_inv_no_ctnt]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[list_mst_bl_no_ctnt]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="list_mst_bl_no_ctnt"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_mst_bl_no_ctnt]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]" />
+                    <inputColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[mzd_cd]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="mzd_cd"
+                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[mzd_cd]"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]" />
                     <inputColumn
                       refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[his_id]"
                       cachedDataType="wstr"
                       cachedLength="40"
                       cachedName="his_id"
-                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[his_id]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[his_id]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.mzd_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="Data Conversion.mzd_cd"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[mzd_cd]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.mzd_cd]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.list_mst_bl_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="Data Conversion.list_mst_bl_no_ctnt"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_mst_bl_no_ctnt]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_mst_bl_no_ctnt]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.list_inv_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Data Conversion.list_inv_no_ctnt"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_inv_no_ctnt]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_inv_no_ctnt]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.sts_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="Data Conversion.sts_cd"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[sts_cd]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.sts_cd]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.err_msg_desc]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="Data Conversion.err_msg_desc"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[err_msg_desc]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.err_msg_desc]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.rcpnt_eml_addr]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="Data Conversion.rcpnt_eml_addr"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[rcpnt_eml_addr]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.rcpnt_eml_addr]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.list_file_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="400"
-                      cachedName="Data Conversion.list_file_no_ctnt"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[list_file_no_ctnt]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_file_no_ctnt]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.his_rmk]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="Data Conversion.his_rmk"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[his_rmk]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.his_rmk]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.doc_no]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="Data Conversion.doc_no"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_no]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_no]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].Columns[Data Conversion.doc_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="300"
-                      cachedName="Data Conversion.doc_nm"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_nm]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_nm]" />
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -478,6 +476,16 @@ WHERE 1=1
                       dataType="wstr"
                       length="100"
                       name="doc_tp_nm" />
+                    <externalMetadataColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_tp_cd]"
+                      dataType="wstr"
+                      length="2"
+                      name="doc_tp_cd" />
+                    <externalMetadataColumn
+                      refId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input].ExternalColumns[doc_id]"
+                      dataType="wstr"
+                      length="20"
+                      name="doc_id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -637,73 +645,11 @@ WHERE 1=1
                   synchronousInputId="Package\cmm_eml_prn_his\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
-                      name="co_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="12"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
-                      name="cre_usr_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
-                      name="cre_dt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="12"
+                      length="20"
                       lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]"
                       name="upd_usr_id"
                       truncationRowDisposition="FailComponent">
@@ -740,95 +686,11 @@ WHERE 1=1
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="40"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
-                      name="his_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[his_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="2"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]"
-                      name="mzd_cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[mzd_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="40"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]"
-                      name="list_mst_bl_no_ctnt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[list_mst_bl_no_ctnt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]"
-                      name="list_inv_no_ctnt"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[list_inv_no_ctnt]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[sts_cd]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="1"
+                      length="4"
                       lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[sts_cd]"
                       name="sts_cd"
                       truncationRowDisposition="FailComponent">
@@ -838,27 +700,6 @@ WHERE 1=1
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[sts_cd]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="1000"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]"
-                      name="err_msg_desc"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[err_msg_desc]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -887,11 +728,74 @@ WHERE 1=1
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]"
+                      name="mzd_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[mzd_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]"
+                      name="list_mst_bl_no_ctnt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[list_mst_bl_no_ctnt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4000"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]"
+                      name="list_inv_no_ctnt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[list_inv_no_ctnt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_file_no_ctnt]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="400"
+                      length="4000"
                       lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_file_no_ctnt]"
                       name="list_file_no_ctnt"
                       truncationRowDisposition="FailComponent">
@@ -912,7 +816,7 @@ WHERE 1=1
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="1000"
+                      length="2000"
                       lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_rmk]"
                       name="his_rmk"
                       truncationRowDisposition="FailComponent">
@@ -922,6 +826,48 @@ WHERE 1=1
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[his_rmk]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="40"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]"
+                      name="his_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[his_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1000"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]"
+                      name="err_msg_desc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[err_msg_desc]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -970,6 +916,68 @@ WHERE 1=1
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]"
+                      name="cre_usr_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[cre_usr_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]"
+                      name="cre_dt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[cre_dt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]"
+                      name="co_cd"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output].Columns[co_cd]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -992,656 +1000,6 @@ WHERE 1=1
                       lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\cmm_eml_prn_his\DELETE"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="DELETE"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM us_fwd.cmm_eml_prn_his
-WHERE co_cd = ?
-AND his_id = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\cmm_eml_prn_his\DELETE.Connections[OleDbConnection]"
-                  connectionManagerID="{E1547DA3-FD20-4A3A-A195-F51D9ACFF0F5}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[OLEDB fwd]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[co_cd]" />
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].Columns[his_id]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="his_id"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[his_id]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="nText"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="nText"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\cmm_eml_prn_his\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[co_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="co_cd"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[cre_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="cre_usr_id"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[cre_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="cre_dt"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[upd_usr_id]"
-                      cachedDataType="wstr"
-                      cachedLength="12"
-                      cachedName="upd_usr_id"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[upd_dt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="upd_dt"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[his_id]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="his_id"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[mzd_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="mzd_cd"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[list_mst_bl_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="list_mst_bl_no_ctnt"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[list_inv_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="list_inv_no_ctnt"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[sts_cd]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="sts_cd"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[sts_cd]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[err_msg_desc]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="err_msg_desc"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[rcpnt_eml_addr]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="rcpnt_eml_addr"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[rcpnt_eml_addr]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[list_file_no_ctnt]"
-                      cachedDataType="wstr"
-                      cachedLength="400"
-                      cachedName="list_file_no_ctnt"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_file_no_ctnt]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[his_rmk]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="his_rmk"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_rmk]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[doc_no]"
-                      cachedDataType="wstr"
-                      cachedLength="40"
-                      cachedName="doc_no"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_no]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input].Columns[doc_nm]"
-                      cachedDataType="wstr"
-                      cachedLength="300"
-                      cachedName="doc_nm"
-                      lineageId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_nm]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[co_cd]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[co_cd]"
-                      name="co_cd"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[co_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_usr_id]"
-                      name="Data Conversion.cre_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.cre_dt]"
-                      name="Data Conversion.cre_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[cre_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
-                      dataType="wstr"
-                      length="12"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_usr_id]"
-                      name="Data Conversion.upd_usr_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_usr_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.upd_dt]"
-                      name="Data Conversion.upd_dt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[upd_dt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[his_id]"
-                      dataType="wstr"
-                      length="40"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[his_id]"
-                      name="his_id"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.mzd_cd]"
-                      dataType="wstr"
-                      length="2"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.mzd_cd]"
-                      name="Data Conversion.mzd_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[mzd_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_mst_bl_no_ctnt]"
-                      dataType="wstr"
-                      length="40"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_mst_bl_no_ctnt]"
-                      name="Data Conversion.list_mst_bl_no_ctnt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_mst_bl_no_ctnt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_inv_no_ctnt]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_inv_no_ctnt]"
-                      name="Data Conversion.list_inv_no_ctnt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_inv_no_ctnt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.sts_cd]"
-                      dataType="wstr"
-                      length="1"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.sts_cd]"
-                      name="Data Conversion.sts_cd">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[sts_cd]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.err_msg_desc]"
-                      dataType="wstr"
-                      length="1000"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.err_msg_desc]"
-                      name="Data Conversion.err_msg_desc">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[err_msg_desc]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.rcpnt_eml_addr]"
-                      dataType="wstr"
-                      length="1000"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.rcpnt_eml_addr]"
-                      name="Data Conversion.rcpnt_eml_addr">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[rcpnt_eml_addr]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_file_no_ctnt]"
-                      dataType="wstr"
-                      length="400"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.list_file_no_ctnt]"
-                      name="Data Conversion.list_file_no_ctnt">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[list_file_no_ctnt]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.his_rmk]"
-                      dataType="wstr"
-                      length="1000"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.his_rmk]"
-                      name="Data Conversion.his_rmk">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[his_rmk]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_no]"
-                      dataType="wstr"
-                      length="40"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_no]"
-                      name="Data Conversion.doc_no">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_no]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_nm]"
-                      dataType="wstr"
-                      length="300"
-                      lineageId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output].Columns[Data Conversion.doc_nm]"
-                      name="Data Conversion.doc_nm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output].Columns[doc_nm]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2108,24 +1466,14 @@ AND his_id = ?</property>
           <paths>
             <path
               refId="Package\cmm_eml_prn_his.Paths[Data Conversion Output]"
-              endId="Package\cmm_eml_prn_his\Sort.Inputs[Sort Input]"
+              endId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input]"
               name="Data Conversion Output"
               startId="Package\cmm_eml_prn_his\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\cmm_eml_prn_his.Paths[OLE DB Command Output]"
-              endId="Package\cmm_eml_prn_his\cmm_eml_prn_his.Inputs[ODBC Destination Input]"
-              name="OLE DB Command Output"
-              startId="Package\cmm_eml_prn_his\DELETE.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\cmm_eml_prn_his.Paths[OLE DB Source Output]"
               endId="Package\cmm_eml_prn_his\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\cmm_eml_prn_his\TB_RD_HIS.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\cmm_eml_prn_his.Paths[Sort Output]"
-              endId="Package\cmm_eml_prn_his\DELETE.Inputs[OLE DB Command Input]"
-              name="Sort Output"
-              startId="Package\cmm_eml_prn_his\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2167,15 +1515,7 @@ AND his_id = ?</property>
     design-time-name="Package\cmm_eml_prn_his">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="98,42"
-          Id="Package\cmm_eml_prn_his\Sort"
-          TopLeft="248.833332008785,256.766667892668" />
-        <NodeLayout
-          Size="119,42"
-          Id="Package\cmm_eml_prn_his\DELETE"
-          TopLeft="387.999993145466,258.500001239777" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="135,42"
           Id="Package\cmm_eml_prn_his\TB_RD_HIS"
@@ -2184,32 +1524,6 @@ AND his_id = ?</property>
           Size="156,42"
           Id="Package\cmm_eml_prn_his\Data Conversion"
           TopLeft="215.5,179.633333946334" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\cmm_eml_prn_his\cmm_eml_prn_his"
-          TopLeft="572.1666536861,257.300000991822" />
-        <EdgeLayout
-          Id="Package\cmm_eml_prn_his.Paths[Sort Output]"
-          TopLeft="346.433332008785,278.433334566223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="41.5666611366806,0"
-              Start="0,0"
-              End="34.0666611366806,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="34.0666611366806,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\cmm_eml_prn_his.Paths[OLE DB Source Output]"
           TopLeft="277.6,138.6">
@@ -2244,42 +1558,36 @@ AND his_id = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\cmm_eml_prn_his.Paths[OLE DB Command Output]"
-          TopLeft="506.999993145466,278.9000011158">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="65.1666605406339,0"
-              Start="0,0"
-              End="57.6666605406339,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="57.6666605406339,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\cmm_eml_prn_his\cmm_eml_prn_his"
+          TopLeft="400,412" />
         <EdgeLayout
           Id="Package\cmm_eml_prn_his.Paths[Data Conversion Output]"
-          TopLeft="295.566666004393,221.233333946334">
+          TopLeft="293.5,221.633333946334">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.533333946334"
+              EndConnector="191,190.366666053666"
               Start="0,0"
-              End="0,28.033333946334">
+              End="191,182.866666053666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.033333946334" />
+                    End="0,91.183333026833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,91.183333026833"
+                    Point2="0,95.183333026833"
+                    Point3="4,95.183333026833" />
+                  <mssgle:LineSegment
+                    End="187,95.183333026833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="187,95.183333026833"
+                    Point2="191,95.183333026833"
+                    Point3="191,99.183333026833" />
+                  <mssgle:LineSegment
+                    End="191,182.866666053666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
