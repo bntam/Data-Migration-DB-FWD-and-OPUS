@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ADMIN-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAAAoEbQc/nId4OUeAAk7Lqbfgi6DTsOZCmLWgycv+9M9JAAAAAAOgAAAAAIAACAAAAB+BFgJ2de7dCydNzgrjB9cxuBaEHIX8GrKs7gAL3WDZZAAAAAzI8TI2nhnrZBhwZ02JwPqY7r7y1L4SWpgj/TOGN6kNefw8ASlX0IiMsebDZcz0h1teL5l0YkVt0QZiVhgUy72V5kkq+xf9rvHrpbp+K8Xc/qWLjwlieLH0dakkMB2a92f/V0ksCpaS+NPckIQGidDNA76hYg5UMQQkC+jeGQDdRof/Ax0pmVwAGqXIHs+ty5AAAAA3Ou981NX9UvuYDDYNdb69EpcFPGz+dcAPfCqXldvSJ6hk1K/8yxkT5At+26sZkVY53nrqk70PCDvcCh18CaViA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAABBShT4rjl3IgB3V45x/HV2+d4+BMXbxx55ADhs87uJvQAAAAAOgAAAAAIAACAAAADwntb1IU2qQPGytLwoHYdzFIe+FPcZPqvqoX9hJi0njZAAAAA9STx1OnFWuJq4UpbEGyEO/r+7U2m5bssVs1No+FoD4CF3QhQQQ3t9yT0sQMDrAkMobhTACLO+AUz2WtpYEOjfC183GxV0QTSJ28tp4fsMKjgavNKe4jlcVqy95HjHZyLpERRW73jCwJW7lS6/sbmrC77dPQujI0ds98P5XGDxnWQB7nwMCUUzRIgTf2t7AQdAAAAAAUUOOR8sWIBGcUKK0B+NbQzOo4r5GFVPstQuRNf/D5vkZKESpOwplDjN5gKpCyH62Z/4Az+3ayr5VZoNsx5t+Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -169,7 +169,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.94;User ID=opus_fms;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.68.201;User ID=sa;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -273,7 +273,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">10.0.0.94</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">10.0.68.201</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -288,7 +288,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">opus_fms</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">sa</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -466,10 +466,10 @@
                 <SSIS:Property SSIS:Name="Name">ACC</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">816</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">821</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{503EF5A0-0EE0-41C3-BEFB-3BD81E4B7EC7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5A8F3C2A-A11C-4FFB-B769-9AB6E54B8521}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -7,10 +7,10 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=10.0.0.94;User ID=opus_fms;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;">
+      DTS:ConnectionString="Data Source=10.0.68.201;User ID=sa;Initial Catalog=opusfms_aif;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-TB_INTG_BL-{80E1F4F4-7AA8-46C0-8679-FDE4AE6F8728}10.0.68.204.fwdaif.sa;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI3EvFfHjb0igyvqf63QIRQAAAAACAAAAAAAQZgAAAAEAACAAAAC+kGS81D02fFTonZigvVKdwiqgAuPWn+ElvgctFk01ZAAAAAAOgAAAAAIAACAAAAA4QkCANzqpMxSb6ENOG6VW87xl+sGZXc9z4njWuRGiZ3AAAAD+4eUb+NMEeR9gAy0ySe+x1K7aAFTkk6NejAQQDANBXP+S7MR2R53IUcp7NxPGpIR5sLZZuYT3cP8DhcbZwap/Klopv0X/VfvJugMFkKh8mV5M5fNs44R0btQ7TNX3ths5fYebaFteHsovRenR64G+QAAAADjt1WTt6DAbnyKmLxYuu6nNrLsZC308pO19CI3Pbo09QJWpIna083i106/tWfaFs1aJyr/jsbJl6OoUXppTTYw=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlo5oLDXiaECOwr8WIsKvsQAAAAACAAAAAAAQZgAAAAEAACAAAADyL6Af20j2OsBNlO7y9izxrs6637yGdEIDM4yIclujcwAAAAAOgAAAAAIAACAAAAB2rkM57vLGiK1+rhYtAptrwmXkERgsQ9nf8TWUsEXrZ4AAAAAc+QsDGph6YM/f5gq10nNSTYg8XSZDNmhmoMwSF3DGE9daDl9euM2qM1bxSYx7PC3IWB8X94vlmQUiWFbScwpfS18uGP2DvAUOU5Zp+lowikBkznWgiVXp7bZC0Rm9FMUCozHSD2ZnTTHC1R187rBumoIn/LmRx11UaWYqRW8g9EAAAABpnc8qqM6ywUoy9NIF2h5FPF362LGsjvAHb7Pzct87VzINz/8wy/xPk1GKQFxmMDetFfoeIp3eiksQgRA2lL2k</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
